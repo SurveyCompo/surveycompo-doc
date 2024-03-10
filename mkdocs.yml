@@ -2,6 +2,7 @@ site_name: SurveyCompo
 site_url: https://www.surveycompo.com
 theme:
   name: material
+  custom_dir: overrides
   features:
     # - navigation.tabs
     - navigation.sections
@@ -10,6 +11,7 @@ theme:
     - navigation.top
     - search.suggest
     - search.highlight
+    - search.share
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
@@ -32,6 +34,8 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
+      primary: white
+      accent: blue
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
@@ -39,11 +43,18 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
+      primary: grey
+      accent: blue
 
 extra_css:
   - stylesheets/extra.css
+extra_javascript:
+  - https://tag.surveycompo.com/v1.js
+  - javascripts/doc.js
+
 extra:
   homepage: https://www.surveycompo.com
+  generator: false # hide Make by Mkdocs
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -55,13 +66,19 @@ markdown_extensions:
       generic: true
   - footnotes
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      preserve_tabs: true
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.mark
   - attr_list
+  - md_in_html
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
+plugins:
+  - search
 
 copyright: |
   &copy; 2024 <a href="https://www.surveycompo.com"  target="_blank" rel="noopener">SurveyCompo</a>
