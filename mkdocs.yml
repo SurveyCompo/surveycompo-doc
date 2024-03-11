@@ -78,6 +78,7 @@ markdown_extensions:
 
 plugins:
   - search
+  - mkdocs-nav-weight
 
 copyright: |
   &copy; 2024 <a href="https://www.surveycompo.com"  target="_blank" rel="noopener">SurveyCompo</a>
