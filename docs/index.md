@@ -145,7 +145,7 @@ To get started, simply embed into your website with a `<script>` tag and the Sur
 
     ---
 
-    As a web component, SurveyCompo works with Angular, React, Vue, jQuery, or vanilla JavaScript, ensuring easy integration with your web tech stack through its event system and reactive API.
+    As a web component, SurveyCompo works with Angular, React, Vue, jQuery, or vanilla JavaScript, ensuring easy integration with your web tech stack through its event system and component interface.
 
 </div>
 

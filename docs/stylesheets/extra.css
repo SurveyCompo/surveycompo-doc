@@ -21,3 +21,8 @@ code {
   margin-right: 0.5rem;
   vertical-align: middle;
 }
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
