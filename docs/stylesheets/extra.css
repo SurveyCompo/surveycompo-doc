@@ -14,15 +14,19 @@ code {
 
 .right-icon {
   margin-left: 0.5rem;
-  vertical-align: middle;
+  vertical-align: text-bottom !important;
 }
 
 .left-icon {
   margin-right: 0.5rem;
-  vertical-align: middle;
+  vertical-align: text-bottom !important;
 }
 
 .center {
   display: block;
   margin: 0 auto;
+}
+
+.small-text {
+  font-size: 0.65em;
 }

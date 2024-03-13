@@ -12,7 +12,7 @@ To get started, simply embed into your website with a `<script>` tag and the Sur
 
 
 
-## Minimal example [:material-github:{.right-icon}](https://github.com/SurveyCompo/examples/tree/main/examples/basic){:target="\_blank"}
+## Minimal example [:material-github:{.right-icon} view source](https://github.com/SurveyCompo/examples/tree/main/examples/basic){:target="\_blank" .small-text}
 
 
 <div style="resize: both; border: 1px solid gray; width: 320px; height: 460px">
@@ -23,7 +23,7 @@ To get started, simply embed into your website with a `<script>` tag and the Sur
 
 === "index.html"
 
-    ``` html
+    ``` html linenums="1"
     <!DOCTYPE html>
     <html lang="en">
 
@@ -44,7 +44,7 @@ To get started, simply embed into your website with a `<script>` tag and the Sur
 
 === "common.css"
 
-    ``` CSS
+    ``` CSS linenums="1"
     html, body {
         font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
@@ -57,7 +57,7 @@ To get started, simply embed into your website with a `<script>` tag and the Sur
 
 === "source.json"
 
-    ``` JSON
+    ``` JSON linenums="1"
 	{
 		"name": "Basic",
 		"startScreens": [

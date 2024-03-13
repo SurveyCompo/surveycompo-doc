@@ -49,7 +49,7 @@ By understanding the JSON structure, you can easily create, modify, and manage y
 
 The following example showcases how components translate into code so far. While we've omitted some details for brevity, this example should give you a solid foundation for understanding the core structure.
 
-```json
+```json linenums="1"
 {
     "name": "My Survey",
     "startScreens": [
