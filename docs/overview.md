@@ -27,7 +27,7 @@ At the top level, a SurveyCompo survey consists of the following key elements:
 
     SurveyCompo offers two customizable end screens to manage your survey flow. **Completion screens** thank respondents and provide further instructions after successful submission, while **abort screens** display upon disqualification,  informing users when they don't meet survey criteria.
 
-## The user flow
+## The User Flow
 
 ![user-flow](assets/images/user-flow.png){: .center}
 
@@ -39,7 +39,7 @@ Imagine a user journey through the survey:
 1. At any point, the user might encounter a disqualification based on their responses or other conditions. If so, they are directed to the **Abort Screen**.
 1. If the user successfully completes all survey pages, they are presented with the **Completion Screen**, which might offer a thank you message, further instructions, or a link to additional resources.
 
-## The Survey data model
+## The Survey Data Model
 
 Now that you've explored the major building blocks of a SurveyCompo survey - screens, pages, blocks, and inputs - let's dive into how these elements translate into the world of code. The magic happens through **JSON (JavaScript Object Notation)**. JSON is a lightweight and human-readable format that acts like a blueprint for your survey.
 

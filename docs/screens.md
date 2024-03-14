@@ -49,7 +49,7 @@ SurveyCompo allows for multiple start and end screens in a single survey. You ca
 
     The visibility condition logic will be covered in subsequent sections.
 
-## The Screen data model
+## The Screen Data Model
 
 Start, completion, and abort screens, despite their different roles, share a common data structure within the survey's JSON format.
 
