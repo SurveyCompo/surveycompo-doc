@@ -67,29 +67,21 @@ Prevent response bias by shuffling the order of pages. SurveyCompo's `randomized
 The following code example demonstrates how a page integrates into the survey JSON data model. [:material-github:{.right-icon} view source](https://github.com/SurveyCompo/examples/blob/main/examples/anatomy/source.json)
 
 
-```json linenums="1" hl_lines="7-15"
+```json linenums="1" hl_lines="5-11"
 {
     "name": "My Survey",
-    "startScreens": [
-        ...
-    ],
+    "startScreens": [ /* ... */ ],
     "pages": [
       {
         "header": "Basic Information",
         "htmlDescription": "<p>Let’s begin by gathering some essential details. <br />We assure you that we will not share personal information.</p>",
         "htmlFooter": "<p class='footnote'><a href=''>privacy</a> & <a href=''>cookie policy<a></p>",
-        "blocks": [
-          ...
-        ],
+        "blocks": [ /* ... */ ],
         "nextButtonLabel": "Next"
       },
-       ...
+      /* ... */
     ],
-    "completeScreens": [
-       ...
-    ],
-    "abortScreens": [
-       ...
-    ]
+    "completeScreens": [ /* ... */ ],
+    "abortScreens": [ /* ... */ ]
 }
 ```

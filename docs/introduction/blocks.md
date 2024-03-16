@@ -83,3 +83,36 @@ Blocks feature a powerful grid layout engine to arrange input elements:
 !!! note "Note"
 
     Block layout customization will be covered in subsequent sections.
+
+
+## The Block Data Model
+
+The following code example demonstrates how blocks integrate into the survey JSON data model. [:material-github:{.right-icon} view source](https://github.com/SurveyCompo/examples/blob/main/examples/anatomy/source.json)
+
+
+```json linenums="1" hl_lines="8-17"
+{
+    "name": "My Survey",
+    "startScreens": [ /* ... */ ],
+    "pages": [
+      {
+        /* ... */
+        "blocks": [
+          {
+            "title": "Gender",
+            "layoutColumnCount": 2,
+            "layoutColumnWidth": "50%",
+            "inputs": [ /* ... */ ]
+          },
+          {
+            "title": "Age",
+            "inputs": [ /* ... */ ]
+          }
+        ]
+      },
+      /* ... */
+    ],
+    "completeScreens": [ /* ... */ ],
+    "abortScreens": [ /* ... */ ]
+}
+```

@@ -74,21 +74,8 @@ The following code example demonstrates how a screen integrates into the survey 
         "cancelButtonLabel": "Skip"
         }
     ],
-    "pages": [
-       {
-         "blocks": [
-            {
-                "inputs": [...]
-            },
-            ...
-       },
-       ...
-    ],
-    "completeScreens": [
-       ...
-    ],
-    "abortScreens": [
-       ...
-    ]
+    "pages": [ /* ... */ ],
+    "completeScreens": [ /* ... */ ],
+    "abortScreens": [ /* ... */ ]
 }
 ```
