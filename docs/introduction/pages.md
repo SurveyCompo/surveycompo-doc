@@ -13,7 +13,7 @@ Pages are the backbone of your SurveyCompo surveys. They contain your survey que
 A page can include the following optional elements:
 
 
-![page-anatomy](assets/images/anatomy-page.png){: .center}
+![page-anatomy](../assets/images/anatomy-page.png){: .center}
 
 - **Header**: A dedicated area at the top for titles or instructions.
 

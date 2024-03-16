@@ -34,7 +34,7 @@ Imagine your SurveyCompo survey as a journey. Here's a visual breakdown of the k
 
 ## The User Flow
 
-![user-flow](assets/images/user-flow.png){: .center}
+![user-flow](../assets/images/user-flow.png){: .center}
 
 Imagine a user journey through the survey:
 

@@ -11,7 +11,7 @@ Blocks are the fundamental building blocks of your SurveyCompo surveys, housing 
 
 Blocks can contain the following optional elements:
 
-![block-anatomy](assets/images/anatomy-block.png){: .center}
+![block-anatomy](../assets/images/anatomy-block.png){: .center}
 
 - **Index**:  A numerical indicator to help organize and order questions.
 - **Title**: The primary text of your survey question.

@@ -16,7 +16,7 @@ Screens are the visual gateways of your SurveyCompo surveys.  They introduce res
 
 A screen can include the following optional elements:
 
-![screen-anatomy](assets/images/anatomy-screen.png){: .center}
+![screen-anatomy](../assets/images/anatomy-screen.png){: .center}
 
 - **Header**: A prominent area for the survey title, section headings, or instructions.
 
