@@ -1,14 +1,18 @@
-# Introduction
+# Overview
 
-Welcome to the SurveyCompo documentation.
+Welcome to the SurveyCompo documentation! Let's dive into how SurveyCompo can transform the way you collect feedback, conduct research, and engage with your users.
 
 
 ## What is SurveyCompo?
 
-SurveyCompo is an embeddable web component designed to seamlessly integrate surveys into your website. Whether you’re gathering customer feedback, conducting market research, or evaluating user satisfaction, SurveyCompo simplifies the process.
+SurveyCompo is a powerful and versatile web component that seamlessly embeds surveys directly into your website.  It empowers you to create engaging, on-brand surveys for various purposes, including:
 
+- Customer Feedback
+- Market Research
+- User Satisfaction Studies
+- And more!
 
-To get started, simply embed into your website with a `<script>` tag and the SurveyCompo web component. The web component will then be ready to render surveys based on the JSON data you provide.
+Getting started is simple.  Embed SurveyCompo into your website with a `<script>` tag and provide your JSON survey data – it's ready to go!
 
 
 
@@ -101,51 +105,51 @@ To get started, simply embed into your website with a `<script>` tag and the Sur
 	}
   	```
 
-## Features
+## FeatKey Featuresures
 
 
 <div class="grid cards" markdown>
 
--   :fontawesome-solid-sliders:{ .left-icon } __Customizable__
+-   :fontawesome-solid-sliders:{ .left-icon } __Highly Customizable__
 
     ---
 
-    Customize your surveys to align with your brand and style. Select from the predefined themes or unleash your creativity to craft a unique design that precisely meets your requirements.
+    Tailor your surveys' look and feel to match your brand perfectly – choose from themes or go fully custom.
 
 
 -   :material-code-block-tags:{ .left-icon } __Programmable__
 
     ---
 
-    Powered by JSON-based survey data models, SurveyCompo empowers you with survey source control, dynamic loading, updates, user retargeting, A/B testing, and beyond.
+    JSON data models give you complete control for versioning, dynamic updates, A/B testing, and advanced use cases.
 
 
--   :fontawesome-solid-sliders:{ .left-icon } __Capable__
-
-    ---
-
-    SurveyCompo supports a variety of common input types, including Likert scales and matrix questions. Additionally, it offers a rich set of survey features such as input validation, skip logic, branching, disqualification, randomization, piping, and custom variables.
-
-
--   :fontawesome-solid-sliders:{ .left-icon } __Flexible__
+-   :fontawesome-solid-sliders:{ .left-icon } __Powerful Survey Tools__
 
     ---
 
-    SurveyCompo is designed to support both traditional and conversational surveys, featuring a robust layout system that provides unparalleled flexibility in the presentation of survey screens, pages, blocks, and input fields.
+    Likert scales, matrix questions, input validation, logic-based branching, randomization, and more.
 
 
-
--   :material-security:{ .left-icon } __Data Control and Ownership__
-
-    ---
-
-    SurveyCompo’s self-hosting options allow users to host survey source and response data on their own infrastructure, providing full control over their data for regulatory compliance and ownership.
-
--   :fontawesome-solid-gears:{ .left-icon } __Easy Integration__
+-   :fontawesome-solid-sliders:{ .left-icon } __Flexible Design__
 
     ---
 
-    As a web component, SurveyCompo works with Angular, React, Vue, jQuery, or vanilla JavaScript, ensuring easy integration with your web tech stack through its event system and component interface.
+    Craft traditional or conversational surveys with unparalleled control over the layout of screens, pages, blocks, and input fields.
+
+
+
+-   :material-security:{ .left-icon } __Secure and Private__
+
+    ---
+
+    Options for self-hosting ensure complete ownership of both survey and response data, ideal for compliance-sensitive scenarios.
+
+-   :fontawesome-solid-gears:{ .left-icon } __Integrates Seamlessly__
+
+    ---
+
+    Works effortlessly with your existing tech stack – Angular, React, Vue, jQuery, or plain JavaScript.
 
 </div>
 

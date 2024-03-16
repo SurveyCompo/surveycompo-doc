@@ -5,53 +5,59 @@ weight: 11
 
 # Screens
 
-Screens are one of the building blocks for displaying information and capturing user intent within your SurveyCompo survey. Each screen can be customized to provide a clear and engaging experience for respondents.
+Screens are the visual gateways of your SurveyCompo surveys.  They introduce respondents to the survey, provide closure upon completion,  and inform users of eligibility or termination. Let's explore their key functions:
+
+- **Start Screens**: These screens welcome users, present essential information, and invite them to participate in your survey.
+- **Complete Screens**:  These screens thank respondents for their time, signaling that the survey has been successfully completed.
+- **Abort Screens**:  These screens inform users that they are ineligible or the survey has been terminated, providing clear reasons as needed.
+
 
 ## Screen Composition
 
-A screen can include the following elements. All screen elements (header, description, footer, and action buttons) are optional.
+A screen can include the following optional elements:
 
 ![screen-anatomy](assets/images/anatomy-screen.png){: .center}
 
-- **Header**: This section grabs the user's attention and typically displays the survey title or current section.
+- **Header**: A prominent area for the survey title, section headings, or instructions.
 
-- **Description**: The description area provides more details about the screen's purpose or any instructions for the user
+- **Description**: Provides context, additional details, or instructions for the user.
 
-- **Footer**: The footer can be used for additional information or legal statements.
+- **Footer**: Use this for additional information, or legal disclaimers.
 
 - **Action Buttons**: Each screen can include up to two customizable action buttons. These buttons determine how users navigate through your survey, allowing them to either proceed or exit the current screen.
 
 
 ## Customizing Screens with HTML
 
-SurveyCompo empowers you to personalize the header, description, and footer elements using custom HTML syntax. This allows for:
+Enhance your screens with the power of HTML:
 
 - **Enhanced Formatting**: Change font size, color, or add emphasis using HTML tags.
 - **Embedding Media**: Include images, videos, or audio files to enhance the user experience.
 - **Interactive Elements**: Include links to privacy statements or cookie policies.
 
-To leverage HTML within these elements, SurveyCompo utilizes specific keys with an html prefix.  For example, to incorporate a custom HTML header, you would use the htmlHeader field within your JSON code. Here's a breakdown of the relevant keys:
+SurveyCompo uses specific 'html' keys for custom content:
 
-- `htmlHeader`: For custom HTML content in the screen header.
-- `htmlDescription`: For custom HTML content in the screen description.
-- `htmlFooter`: For custom HTML content in the screen footer.
+- `htmlHeader`
+- `htmlDescription`
+- `htmlFooter`
 
 !!! warning "Warning"
 
-    While HTML customization offers flexibility, ensure you use valid syntax to avoid unexpected results. Always prioritize safety when using HTML. Avoid incorporating code from unknown sources or user input, as it could pose security risks.
+    Use valid HTML syntax and prioritize security. Avoid incorporating code from unknown sources or user input, as it could introduce vulnerabilities.
 
 
 ## Multiple Screens and Visibility Condition Logic
 
-SurveyCompo allows for multiple start and end screens in a single survey. You can configure each screen using the `visibleIf` setting to display it based on specific conditions within the survey logic. If multiple screens meet the current conditions, the first matching screen will be shown.
+SurveyCompo supports multiple start and end screens for flexible survey design. Use the `visibleIf` setting to conditionally show screens based on survey responses or variables.
 
 !!! note "Note"
 
-    The visibility condition logic will be covered in subsequent sections.
+    Details on visibility logic will be covered in subsequent sections.
+
 
 ## The Screen Data Model
 
-Start, completion, and abort screens, despite their different roles, share a common data structure within the survey's JSON format.
+Start, completion, and abort screens share a common data structure within your survey's JSON format.
 
 The following code example demonstrates how a screen integrates into the survey JSON data model. [:material-github:{.right-icon} view source](https://github.com/SurveyCompo/examples/blob/main/examples/anatomy/source.json)
 
