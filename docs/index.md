@@ -105,7 +105,7 @@ Getting started is simple.  Embed SurveyCompo into your website with a `<script>
 	}
   	```
 
-## FeatKey Featuresures
+## Key Features
 
 
 <div class="grid cards" markdown>
