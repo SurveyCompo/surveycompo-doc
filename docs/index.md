@@ -110,46 +110,47 @@ Getting started is simple.  Embed SurveyCompo into your website with a `<script>
 
 <div class="grid cards" markdown>
 
+
+-   :material-security:{ .left-icon } __Full Data Control__
+
+    ---
+
+    With the **self-hosting option**, you maintain full control and ownership of your sensitive survey data. Ensure compliance with privacy regulations and meet your specific security needs.
+
+
 -   :fontawesome-solid-sliders:{ .left-icon } __Highly Customizable__
 
     ---
 
-    Tailor your surveys' look and feel to match your brand perfectly – choose from themes or go fully custom.
+    Adjust its size, position, and styling to seamlessly blend with your brand and style using **CSS**. Choose a **theme** or create a unique design that perfectly suits your needs.
+
+
+-   :fontawesome-solid-gears:{ .left-icon } __Easy Integration__
+
+    ---
+
+    Leverage **event listeners** for seamless data capture and dynamic interactions. SurveyCompo seamlessly integrates with your existing tech stack, whether it’s **Angular**, **React**, **Vue**, **jQuery**, or **plain JavaScript**.
+
+
+-   :fontawesome-solid-sliders:{ .left-icon } __Exceptional Flexibility__
+
+    ---
+
+    Craft **traditional** surveys or opt for engaging **conversational** formats. With SurveyCompo‘s intuitive **block-based** layout, you have unmatched flexibility and control over the structure and flow of your questions.
+
+-   :fontawesome-solid-sliders:{ .left-icon } __Powerful Survey Tools__
+
+    ---
+
+    SurveyCompo puts a comprehensive toolkit at your fingertips. Craft dynamic, intelligent surveys using features like input **validation**, **skip logic**, **branching**, **randomization**, **piping**, and **custom variables**.
 
 
 -   :material-code-block-tags:{ .left-icon } __Programmable__
 
     ---
 
-    JSON data models give you complete control for versioning, dynamic updates, A/B testing, and advanced use cases.
+    SurveyCompo‘s JSON-based design makes your surveys truly adaptable. Effortlessly manage versions, **load content dynamically, conduct A/B testing**, and unlock advanced strategies like Survey **Segmentation** and Audient **Retargeting**.
 
-
--   :fontawesome-solid-sliders:{ .left-icon } __Powerful Survey Tools__
-
-    ---
-
-    Likert scales, matrix questions, input validation, logic-based branching, randomization, and more.
-
-
--   :fontawesome-solid-sliders:{ .left-icon } __Flexible Design__
-
-    ---
-
-    Craft traditional or conversational surveys with unparalleled control over the layout of screens, pages, blocks, and input fields.
-
-
-
--   :material-security:{ .left-icon } __Secure and Private__
-
-    ---
-
-    Options for self-hosting ensure complete ownership of both survey and response data, ideal for compliance-sensitive scenarios.
-
--   :fontawesome-solid-gears:{ .left-icon } __Integrates Seamlessly__
-
-    ---
-
-    Works effortlessly with your existing tech stack – Angular, React, Vue, jQuery, or plain JavaScript.
 
 </div>
 
