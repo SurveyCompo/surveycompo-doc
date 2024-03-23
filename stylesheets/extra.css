@@ -1,0 +1,32 @@
+:root > * {
+  --md-footer-fg-color:                hsla(0, 0%, 0%, 1);
+  --md-footer-fg-color--light:         hsla(0, 0%, 0%, 0.7);
+  --md-footer-fg-color--lighter:       hsla(0, 0%, 0%, 0.45);
+  --md-footer-bg-color:                hsla(0, 0%, 100%, 1);
+  --md-footer-bg-color--dark:
+       hsla(0, 0%, 80%, 1);
+}
+
+/* mkdocs default to 4 spaces tabs */
+code {
+  tab-size: 2
+}
+
+.right-icon {
+  margin-left: 0.5rem;
+  vertical-align: text-bottom !important;
+}
+
+.left-icon {
+  margin-right: 0.5rem;
+  vertical-align: text-bottom !important;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.small-text {
+  font-size: 0.65em;
+}
