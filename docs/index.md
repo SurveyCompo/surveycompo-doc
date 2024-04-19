@@ -1,4 +1,8 @@
-# Overview
+---
+weight: 100
+---
+
+# Introduction
 
 Welcome to the SurveyCompo documentation! Let's dive into how SurveyCompo can transform the way you collect feedback, conduct research, and engage with your users.
 
@@ -15,8 +19,7 @@ SurveyCompo is a powerful and versatile web component that seamlessly embeds sur
 Getting started is simple.  Embed SurveyCompo into your website with a `<script>` tag and provide your JSON survey data – it's ready to go!
 
 
-
-## Minimal example [:material-github:{.right-icon} view source](https://github.com/SurveyCompo/examples/tree/main/examples/basic){:target="\_blank" .small-text}
+## Minimal example
 
 
 <div style="resize: both; border: 1px solid gray; width: 320px; height: 460px">
@@ -24,6 +27,9 @@ Getting started is simple.  Embed SurveyCompo into your website with a `<script>
 		src="https://surveycompo.github.io/examples/examples/basic/source.json"
 	/>
 </div>
+
+
+[:material-github:{.right-icon} view source](https://github.com/SurveyCompo/examples/tree/main/examples/basic){:target="\_blank" .small-text}
 
 === "index.html"
 
