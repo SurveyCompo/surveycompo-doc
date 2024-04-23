@@ -27,6 +27,12 @@ code {
   margin: 0 auto;
 }
 
+.embedded {
+  max-width: 764px !important;
+  padding: 1em;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+
 .small-text {
   font-size: 0.65em;
 }

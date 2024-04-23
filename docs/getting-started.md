@@ -4,46 +4,437 @@ weight: 200
 
 # Getting Started
 
-Welcome to the tutorial !
+Welcome to the Getting Started Tutorial !
 
-In this tutorial, we'll build a Health and Wellbeing survey using SurveyCompo. This survey is perfect for research purposes, collecting valuable insights into participants' lifestyles, diet, and mental health. This survey targets participants 18 years or older. We'll incorporate logic to ensure younger users are ineligible.
+In this tutorial, we'll build a Product Satisfaction Survey using SurveyCompo. This survey is perfect for creating a feedback loop with your customers to understand their needs and preferences. We'll cover the basics of creating a survey, adding logic, and using advanced features to tailor the survey experience.
 
 
-## Building a Health and Wellbeing Survey
+## Building a Product Satisfaction Survey
+
+The survey commences with a welcome screen and concludes with a thank you message. To gather demographic data, we will inquire about age and preferred contact method. Additionally, we will ask participants to indicate how they became aware of our product or service. Finally, the survey will assess product satisfaction through a rating scale and open-ended feedback questions. Participants who are under the age of 18 will be disqualified from completing the survey.
+
+
 Let's take a look at the questions we'll be turning into an interactive survey:
 
-**Demographics and Lifestyle**
+**About You**
 
-- Question 1: What is your age group?
-- Question 2: How often do you exercise?
-- Question 3: On average, how many hours of sleep do you get per night?
+- Question 1: Please enter your age
+- Question 2: What is your preferred method of contact?
+- Question 3: How did you hear about us?
 
-**Diet and Nutrition**
+**Product Satisfaction**
 
-- Question 4: How many servings of fruits and vegetables do you typically eat per day?
-- Question 5: Please select all that apply to your diet (Options: Vegetarian, Vegan, Gluten-Free, Dairy-Free, Other).
-
-**Mental Wellbeing**
-
-- Question 6: Over the past two weeks, how often have you felt down, depressed, or hopeless?
-- Question 7: Please describe your current stress level.
-- Question 8: Do you have any additional comments about your health and wellbeing?
-
-
-## Tutorial Roadmap
-
-1. **The Survey Builder**: We'll use this powerful tool to easily construct our survey with code completion and validation.
-1. **Survey Structure**: We'll learn how SurveyCompo uses JSON to define surveys.
-3. **Adding Logic**: We'll ensure the survey is restricted to participants 18 and older.
-4. **Advanced Features**: Dive into piping, disqualification logic, randomization, and other tools to tailor the survey experience.
+- Question 4: Overall, how satisfied are you with our product?
+- Question 5: What do you like most about our product? (if satisfied)
+- Question 6: What could be improved about our product? (if not satisfied)
 
 
 <!-- todo: add screen shot and links to source code -->
 
-**Let's Get Started!**
+Let's Get Started!
 
 
-!!! note  "Note"
+!!! tip  "Tip"
 
     If you don't have a SurveyCompo account, register for a free one at SurveyCompo: [https://www.surveycompo.com/](https://www.surveycompo.com/).
-    Once you have registered, you can log in to the SurveyCompo Survey Builder and start creating surveys.
+    Once you have registered, you can log in to the SurveyCompo Portal and start creating surveys.
+
+
+## The SurveyCompo Survey Builder
+
+The SurveyCompo Survey Builder is a powerful tool for creating and managing your surveys. Whether you're a seasoned JSON expert or prefer visual tools, our builder offers flexibility and ease of use.
+
+
+![Survey Builder](../assets/images/survey-builder.png){: .center .embedded}
+
+**Key Features**:
+
+- **Code Like a Pro**: Write and edit your survey definitions directly in JSON within a rich editor that offers auto-formatting, code hints, and validation.
+- **Visual Tools**: No coding? No problem! Use our intuitive visual building tools. Access it through the toolbar and create your survey using familiar form controls. The visual tools automatically generate the corresponding JSON code.
+- **Live Preview**: See your survey take shape in real-time as you update your JSON code.
+- **Survey Templates**: Start quickly with our selection of ready-made survey templates for common use cases.
+- **Import/Export**:  Take your work with you! Easily upload existing JSON survey sources or download your creation for offline use.
+
+As a registered SurveyCompo user, you'll find the Survey Builder easily accessible at [https://app.surveycompo.com/surveys](https://app.surveycompo.com/surveys).
+
+The following sections of this tutorial will dive into the JSON data model used to define surveys in SurveyCompo. We won't cover the Survey Builder's visual interface in detail.  While the Survey Builder is a powerful tool for creating surveys, understanding the JSON data model gives you direct control and flexibility over your survey design.
+
+!!! tip  "Do you know?"
+
+    You don't have to register a SurveyCompo account and use the Survey Builder to create surveys.
+    You can also create a survey JSON source file using your favorite text editor. The Survey Builder is a convenient tool for creating and managing surveys, but it's not the only way to use SurveyCompo.
+
+## Creating a New Survey
+
+To create a new survey, click the `New Survey` button in the SurveyCompo [Portal](https://app.surveycompo.com). You can then create a new survey from scratch or choose from a selection of survey templates. For this tutorial, we'll create a new survey from scratch.
+
+
+A minimal survey JSON source looks like this:
+
+```json
+{
+  "name": "Product Satisfaction Survey",
+}
+```
+
+The survey JSON source is a structured document that defines the survey's questions, answers, and logic. The JSON source is the foundation of your survey and is used to render the survey in the Survey Builder. A `name` is required for the survey JSON source, and it's the only required property. The `name` is displayed in the SurveyCompo Portal and helps you identify your survey.
+
+Let's start by adding the start screen.
+
+## Adding the Start Screen
+
+The welcome screen is the first screen participants see when they start the survey. It provides an introduction to the survey and sets the stage for the questions to follow.
+
+Here's the JSON source with a welcome screen:
+
+```json
+{
+  "name": "Product Satisfaction Survey",
+  "startScreens": [
+    {
+      "header": "Welcome to Our Survey!",
+      "description": "Thank you for participating.",
+      "okButtonLabel": "Start Survey"
+    }
+  ]
+}
+```
+
+The welcome screen JSON source includes the following properties:
+
+- `header`: The header of the welcome screen.
+- `description`: The description or message displayed on the welcome screen.
+- `okButtonLabel`: The text displayed on the button that participants click to start the survey.
+
+The `startScreens` property is an array that can contain multiple screens. If there are multiple screens, one of them is randomly selected as the start screen when the survey is loaded. In this case, we have only one screen.
+
+!!! info  "Info"
+
+    For a full list of screen properties, see the [Screen](/data-model/#screen) documentation.
+
+Let's add the welcome screen to our survey JSON source and preview it in the Survey Builder.
+
+![Tutorial - Welcome Screen](../assets/images/tutorial-welcome-screen.png){: .center}
+
+
+## Adding the first page
+
+The first page of the survey will ask participants to enter their age. We'll use a text input field for this question.
+
+Here's the JSON source with the first page:
+
+```json
+{
+  "name": "Product Satisfaction Survey",
+  "startScreens": [ /* ... */ ],
+  "pages": [
+       {
+      "header": "About You",
+      "blocks": [
+        {
+          "title": "Please enter your age",
+          "inputs": [
+            {
+              "type": "TEXT",
+              "textInputType": "NUMBER"
+            }
+          ]
+        },
+        {
+          "title": "What is your preferred method of contact?",
+          "inputs": [
+            {
+              "type": "DROPDOWN",
+              "hint": "Please select",
+              "dropdownInputOptions":  ["Email", "Phone", "Text Message"]
+            }
+          ]
+        },
+        {
+          "title": "How did you hear about us?",
+          "inputs": [
+            {
+              "type": "CHECKBOX",
+              "label":  "Friend/Family"
+            },
+            {
+              "type": "CHECKBOX",
+              "label": "Online Ad"
+            },
+            {
+              "type": "CHECKBOX",
+              "label":  "Social Media"
+
+            },
+            {
+              "type": "CHECKBOX",
+              "label":  "Search Engine"
+            },
+            {
+              "type": "CHECKBOX_TEXT",
+              "label":  "Others"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+The first page JSON source includes the following properties:
+
+- `header`: The header of the page.
+- `blocks`: An array of 3 blocks that contain questions or content. Each block represents a section of the page.
+
+Each block of the page includes the following properties:
+
+- `title`: The title of the block. This is the question text.
+- `inputs`: An array of input fields.
+
+The 'Age' question input includes the following properties:
+
+- `type`: The type of input field. In this case, it's a text input field.
+- `textInputType`: The type of text input. In this case, it's a number input.
+
+The 'method of contact' question input includes the following properties:
+
+- `type`: The type of input field. In this case, it's a dropdown input field.
+- `hint`: The hint text displayed in the dropdown field.
+- `dropdownInputOptions`: An array of options for the dropdown field.
+
+The 'How did you hear about us?' question inputs include the following properties:
+
+- `type`: The type of input field. In this case, it's a checkbox input field.
+- `label`: The label or question text displayed with the input field.
+
+Note that the last input field has the `type` of `CHECKBOX_TEXT`, and it includes a text input field for participants to enter additional information.
+
+!!! tip  "Tip"
+
+    The `type` and `textInputType` property values are case-insensitive. You can use uppercase, lowercase, or a combination of both. However, it is recommended to use UPPERCASE for consistency.
+
+!!! info  "Info"
+
+    The `type` property determines the type of input field displayed in the survey. SurveyCompo supports various input types, including text, radio buttons, checkboxes, dropdowns, and more. For a full list of input properties, see the [Input](/data-model/#input) documentation.
+
+
+Let's add the first page to our survey JSON source and preview it in the Survey Builder.
+
+![Tutorial - First Page](../assets/images/tutorial-first-page.png){: .center}
+
+
+## Adding the second page
+
+The second page of the survey will ask participants to rate their overall satisfaction with our product. Here's the JSON source with the first page:
+
+```json
+{
+  "name": "Product Satisfaction Survey",
+  "startScreens": [ /* ... */ ],
+  "pages": [
+    /* ... First Page ... */
+    {
+      "header": "Product Satisfaction",
+      "blocks": [
+        {
+          "title": "Overall, how satisfied are you with our product?",
+          "inputs": [
+            {
+              "type": "LIKERT_SCALE",
+              "likertInputPreset": "SATISFACTION_5"
+            }
+          ]
+        },
+        {
+          "title": "What do you like most about our product?",
+          "inputs": [
+            {
+              "type": "TEXTAREA",
+              "hint": "Please share your thoughts"
+            }
+          ]
+        },
+        {
+          "title": "What could be improved about our product?",
+          "inputs": [
+            {
+              "type": "TEXTAREA",
+              "hint": "Please share your thoughts"
+            }
+          ]
+        }
+      ],
+      "nextButtonLabel": "Submit"
+    }
+  ]
+
+}
+```
+
+The second page JSON source includes 3 blocks/questions:
+
+- The `Overall satisfaction` question contains one input of type `LIKERT_SCALE`. While we can use `likertInputOptions` to specify the options, SurveyCompo offers a variety of presets to streamline your survey creation process. In this case, it's a 5-point satisfaction scale: `SATISFACTION_5`.
+
+- The next two questions invite participants to provide open-ended feedback about what they like most and what could be improved about our product. Both questions use a `TEXTAREA` input field.
+
+!!! tip  "Tip"
+
+    The LIKERT_SCALE input functions as a collection of RADIO type inputs, making it an excellent tool for gathering feedback on a scale. SurveyCompo provides a variety of Likert scale presets, including SATISFACTION_5, LIKELIHOOD_5, and AGREEMENT_5, to facilitate your survey creation process. For a full list of Likert scale presets, see the [Input](/data-model/#input) documentation.
+
+Let's preview the second page in the Survey Builder.
+
+![Tutorial - Second Page](../assets/images/tutorial-second-page.png){: .center}
+
+The `nextButtonLabel` property is set to "Submit," which is the label displayed on the button that participants use to advance to the subsequent page. If this property is left unspecified, the button defaults to the label "Next". With the addition of multiple pages to our survey, a navigation bar now appears at the bottom of each page, enabling participants to move between pages. The navigation bar displays the page number and the total number of pages in the survey. The navigation bar can be hidden using the `uiShowNavigation` survey property. For more information, see the [Survey](/data-model/#survey) documentation.
+
+
+## Adding a Complete Screen
+
+The final screen of the survey is the complete screen. It provides a closing message to participants and confirms that their responses have been recorded. Here's the JSON source with the complete screen:
+
+```json
+{
+  "name": "Product Satisfaction Survey",
+  "startScreens": [ /* ... */ ],
+  "pages": [ /* ... */ ],
+  "completeScreens": [
+    {
+      "header": "Thank You!",
+      "description": "Your feedback is greatly appreciated.",
+      "okButtonLabel": "Close"
+    }
+  ]
+}
+```
+
+Let's preview the complete screen in the Survey Builder.
+
+![Tutorial - Complete Screen](../assets/images/tutorial-complete-screen.png){: .center}
+
+
+## Randomization
+
+SurveyCompo supports randomization of questions and answer options. Randomization is a powerful tool for reducing bias and ensuring that participants receive a unique survey experience. You can randomize pages, blocks, and inputs. For more information on randomization, see the [Randomization](/advanced/#randomization) documentation.
+
+In this tutorial, you will add randomization to the 'How did you hear about us?' question. The inputs will be randomized to prevent order bias.
+
+``` json
+{
+  "name": "Product Satisfaction Survey",
+  "startScreens": [ /* ... */ ],
+  "pages": [
+    {
+      "header": "Product Satisfaction",
+      "blocks": [
+        /* ... first block ...  */
+        /* ... second block ... */
+        {
+          "title": "How did you hear about us?",
+          "inputs": [
+            {
+              "type": "CHECKBOX",
+              "randomWithinGroup": "something",
+              "label":  "Friend/Family"
+            },
+            {
+              "type": "CHECKBOX",
+              "randomWithinGroup": "something",
+              "label": "Online Ad"
+            },
+            {
+              "type": "CHECKBOX",
+              "randomWithinGroup": "something",
+              "label":  "Social Media"
+
+            },
+            {
+              "type": "CHECKBOX",
+              "randomWithinGroup": "something",
+              "label":  "Search Engine"
+            },
+            {
+              "type": "CHECKBOX_TEXT",
+              "label":  "Others"
+            }
+          ]
+        }
+      ]
+    }
+    /* ... Second Page ... */
+  ],
+  "completeScreens": [ /* ... */ ]
+}
+```
+
+The `randomWithinGroup` attribute serves as a powerful tool for introducing randomization within your survey. By assigning the same `randomWithinGroup` string value to a group of inputs, you can shuffle their order while preserving the sequence of other questions.
+
+In our example, all inputs, excluding the final 'Others' input, are grouped for randomization. The 'Others' input remains ungrouped to ensure its consistent placement at the end of the list, irrespective of the randomization of preceding inputs.
+
+It's important to note that the randomization occurs upon survey load and remains consistent throughout the survey duration. To observe the varying order resulting from randomization, simply refresh the page.
+
+Let's preview the randomization in the Survey Builder:
+
+
+![Tutorial - Second Page](../assets/images/tutorial-randomization.png){: .center}
+
+## Disqualification
+
+SurveyCompo supports disqualification logic to exclude participants who do not meet specific criteria. Disqualification logic is a powerful tool for ensuring that only eligible participants complete your survey. You can disqualify participants based on their inputs, and variables. For more information on disqualification, see the [Disqualification](/advanced/#disqualification) documentation.
+
+In this tutorial, you will add disqualification logic to the survey to exclude participants under the age of 18 from completing the survey. The disqualification logic will be applied to the 'Age' input and an Abort Screen.
+
+``` json linenums="1" hl_lines="13 24-31"
+{
+  "name": "Product Satisfaction Survey",
+  "startScreens": [ /* ... */ ],
+  "pages": [
+    {
+      "header": "About You",
+      "blocks": [
+        {
+          "title": "Please enter your age",
+          "inputs": [
+            {
+              "type": "TEXT",
+              "id": "age",
+              "textInputType": "NUMBER"
+            }
+          ]
+        }
+        /* ... other blocks ... */
+      ]
+    },
+    /* ... other pages ... */
+  ],
+  "completeScreens": [ /* ... */ ],
+  "abortScreens": [
+    {
+      "header": "Disqualified",
+      "description": "You must be 18 years or older to participate.",
+      "okButtonLabel": "Close",
+      "visibleIf": "#age < 18"
+    }
+  ]
+}
+```
+
+The 'Age' input includes an `id` property to uniquely identify the input. The `id` property is used to reference the input in the disqualification logic. The `visibleIf` property in the Abort Screen specifies the condition for disqualification. In this case, the participant is disqualified if the value of the 'Age' input is less than 18.
+
+SurveyCompo supports multiple abort screens, allowing you to create custom disqualification messages for different scenarios. The abort screen is displayed when the disqualification condition is met, and the participant is excluded from completing the survey. If
+multiple abort screens are defined, the most specific screen is displayed based on the disqualification condition.
+
+!!! tip  "Tip"
+
+    The `visibleIf` attribute is a powerful tool for creating conditional logic in your survey. By referencing input values and/or external variables, you can dynamically show or hide pages, screens, blocks, and inputs based on participant responses. For more information on conditional logic, see the [Conditional Logic](/advanced/#conditional-logic) documentation.
+
+Let's preview the disqualification logic in the Survey Builder:
+
+![Tutorial - Disqualification](../assets/images/tutorial-abort-screen.png){: .center}
+
+## Validation
+
+SurveyCompo supports input validation to ensure that participants provide accurate and complete responses. Validation is a powerful tool for improving data quality and reducing errors in your survey. You can validate inputs based on their type, format, and value. For more information on validation, see the [Validation](/advanced/#validation) documentation.
+
+
+## Branching Logic

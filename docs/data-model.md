@@ -2,9 +2,9 @@
 weight: 300
 ---
 
-# Concepts
+# Data Model
 
-## Surveys
+## Survey
 
 SurveyCompo offers a powerful and versatile way to design surveys using a flexible data model written in JSON. This section introduces you to the key building blocks of a SurveyCompo survey.
 
@@ -18,7 +18,10 @@ Imagine your SurveyCompo survey as a journey. Here's a visual breakdown of the k
 
   *Survey Pages*
 
-  :   The heart of your survey, where questions are asked and data is collected.  Each page is made up of one or more "Blocks".
+  :   The heart of your survey, where questions are asked and data is collected.  Each page is made up of one or more "Blocks". SurveyCompo gives you the freedom to design your surveys in either of these styles:
+
+      - **Single Page**: All questions are displayed on one page.
+      - **Multi-Page**: Questions are divided into multiple pages, guiding users through the survey.
 
   *Blocks*
 
@@ -78,7 +81,7 @@ SurveyCompo uses **JSON** (JavaScript Object Notation) to define your survey's s
 
 ----
 
-## Screens
+## Screen
 
 Screens are the visual gateways of your SurveyCompo surveys.  They introduce respondents to the survey, provide closure upon completion,  and inform users of eligibility or termination. Let's explore their key functions:
 
@@ -159,7 +162,7 @@ The following code example demonstrates how a screen integrates into the survey 
 
 ----
 
-## Pages
+## Page
 
 Pages are the backbone of your SurveyCompo surveys. They contain your survey questions, guide user progress, and offer versatile customization options. Let's explore their structure and features.
 
@@ -249,9 +252,9 @@ The following code example demonstrates how a page integrates into the survey JS
 ----
 
 
-## Blocks
+## Block
 
-Blocks are the fundamental building blocks of your SurveyCompo surveys, housing questions and collecting user input. Each block typically represents one survey question, and they offer a high degree of flexibility in how you present information and gather responses.
+A ‘Block’ in SurveyCompo is a section of content on a survey page - it’s the building block of your survey. It can serve as a container for a survey question, housing both the question itself and its corresponding input controls for answers,  and it offers a high degree of flexibility in how you present information and gather responses. It can also be utilized to provide instructions or explanations, guiding your respondents through the survey.
 
 ### Block Structure
 
@@ -293,10 +296,8 @@ For example, a block titled "Tell us about yourself" could include a text input 
 <!-- - **FILE**: A file upload input. -->
 <!-- - **HTML**: A custom HTML input. -->
 
-Blocks without input elements have two primary uses:
 
-- Conditional Display: Use the `requiresVisibleInputs` settings to hide the empty block.
-- Section Markers: Disable the question index and use these blocks to visually divide your survey into sections, improving organization.
+When a Block is used to provide instructions or explanations rather than to collect user inputs, it will have an empty list of inputs. This is a common practice in survey design to guide respondents through the survey flow. For example, a block titled "Instructions" may contain only a description and footnote, with no input controls. This is a powerful feature that allows you to create dynamic and engaging surveys tailored to your specific needs. SurveyCompo gives you the flexibility to design your survey in a way that best suits your goals and audience.
 
 ### Advanced Customization with HTML
 
@@ -368,7 +369,7 @@ The following code example demonstrates how blocks integrate into the survey JSO
 
 ----
 
-## Inputs
+## Input
 
 Inputs are the heart of data collection within your SurveyCompo surveys.  They provide the interactive elements where users submit their answers, opinions, and feedback. SurveyCompo offers a wide range of input types to accommodate diverse survey needs.
 
