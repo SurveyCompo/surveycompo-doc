@@ -436,5 +436,111 @@ Let's preview the disqualification logic in the Survey Builder:
 
 SurveyCompo supports input validation to ensure that participants provide accurate and complete responses. Validation is a powerful tool for improving data quality and reducing errors in your survey. You can validate inputs based on their type, format, and value. For more information on validation, see the [Validation](/advanced/#validation) documentation.
 
+This tutorial guides you through the process of enhancing your survey with validation rules. You'll ensure the 'Age' input accepts only numerical entries within the 0-100 range. Additionally, you'll make the 'Method of Contact' question mandatory and enforce a minimum selection of two options for the 'How did you hear about us?' question.
+
+The updated JSON source includes the following validation rules:
+
+``` json linenums="1" hl_lines="15-29 44-49 59-65"
+{
+  "name": "Product Satisfaction Survey",
+  "startScreens": [ /* ... */ ],
+  "pages": [
+    {
+      "header": "About You",
+      "blocks": [
+        {
+          "title": "Please enter your age",
+          "inputs": [
+            {
+              "type": "TEXT",
+              "id": "age",
+              "textInputType": "NUMBER",
+              "validations": [
+                {
+                  "type": "INTEGER",
+                  "message": "Please enter your age in whole number"
+                },
+                {
+                  "type": "MAX_VALUE",
+                  "value": 100,
+                  "message": "Please enter a valid age"
+                },
+                {
+                  "type": "REQUIRED",
+                  "message": "Please enter your age"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "What is your preferred method of contact?",
+          "inputs": [
+            {
+              "type": "DROPDOWN",
+              "hint": "Please select",
+              "dropdownInputOptions": [
+                "Email",
+                "Phone",
+                "Text Message"
+              ],
+              "validations": [
+                {
+                  "type": "REQUIRED",
+                  "message": "Please select your preferred method of contact"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "How did you hear about us?",
+          "subtitle": "Please select 2",
+          "inputs": [
+            /** ... **/
+          ],
+          "validations": [
+            {
+              "type": "MIN_SELECTION",
+              "value": 2,
+              "message": "Please select 2 or more options"
+            }
+          ]
+        }
+      ]
+    },
+    /* ... other pages ... */
+  ],
+  "completeScreens": [ /* ... */ ],
+  "abortScreens": [ /* ... */ ]
+}
+```
+
+The 'Age' input includes three validation rules:
+
+- `INTEGER`: Ensures the input value is an integer.
+- `MAX_VALUE`: Specifies the maximum value allowed for the input.
+- `REQUIRED`: Makes the input mandatory.
+
+The 'Method of Contact' question includes a `REQUIRED` validation rule to ensure that participants select a preferred contact method.
+
+The 'How did you hear about us?' block includes a `MIN_SELECTION` validation rule to enforce a minimum selection of two options.
+
+When a block includes a 'required' validation rule, surveyCompo automatically appends an asterisk ('*') after the block index number.
+
+
+
+!!! tip  "Tip"
+
+    Please note that setting `textInputType` to `NUMBER` for the 'Age' input does not inherently restrict the input to numerical values. While this setting enhances the user interface with features like a number keyboard and a number stepper, it does not enforce validation. Consequently, it remains necessary to apply the `INTEGER` validation rule to ensure the input format and value range are as desired. For an in-depth exploration of input types and their corresponding validation rules, consult the [Validation](/data-model/#validation) section of our documentation.
+
+This tutorial illustrates how to apply one or more validation rules to inputs or blocks. By implementing these rules, you can effectively navigate participants through the survey, ensuring they provide precise and valid responses.
+
+Now, let's examine the functionality of these validation rules within the Survey Builder:
+
+
+![Tutorial - Validation](../assets/images/tutorial-validation.png){: .center}
+
+
 
 ## Branching Logic
