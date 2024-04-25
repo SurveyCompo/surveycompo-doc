@@ -543,4 +543,94 @@ Now, let's examine the functionality of these validation rules within the Survey
 
 
 
-## Branching Logic
+## Conditional Logic
+
+SurveyCompo supports conditional logic to show/hide specific pages, blocks and inputs based on their responses or external variables. Conditional logic is a powerful tool for tailoring the survey experience to individual participants and ensuring they receive relevant questions. For more information on conditional logic, see the [Conditional Logic](/advanced/#condition) documentation.
+
+In this tutorial, we will incorporate conditional logic into the survey. This will present a follow-up question tailored to the participant's response to the 'Overall satisfaction' question. If a participant expresses dissatisfaction, we will prompt them for additional feedback on potential product improvements. Conversely, if a participant is satisfied, we will ask them to share what they appreciate most about the product.
+
+Below is the revised JSON source code for the second page of the survey:
+
+``` json linenums="1" hl_lines="15 28-32 43-47"
+{
+  "name": "Product Satisfaction Survey",
+  "startScreens": [ /* ... */ ],
+  "pages": [
+    /* ... first page ... */
+    {
+      "header": "Product Satisfaction",
+      "nextButtonLabel": "Submit",
+      "blocks": [
+        {
+          "title": "Overall, how satisfied are you with our product?",
+          "inputs": [
+            {
+              "type": "LIKERT_SCALE",
+              "id": "satisfaction",
+              "likertInputPreset": "SATISFACTION_5"
+            }
+          ]
+        },
+        {
+          "title": "What do you like most about our product?",
+          "inputs": [
+            {
+              "type": "TEXTAREA",
+              "hint": "Please share your thoughts"
+            }
+          ],
+          "visibleIf": {
+            "$or": [
+              "#satisfaction == Very satisfied",
+              "#satisfaction == Satisfied"
+            ]
+          }
+        },
+        {
+          "title": "What could be improved about our product?",
+          "inputs": [
+            {
+              "type": "TEXTAREA",
+              "hint": "Please share your thoughts"
+            }
+          ],
+          "visibleIf": {
+            "$or": [
+              "#satisfaction == Very dissatisfied",
+              "#satisfaction == Dissatisfied"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "completeScreens": [ /* ... */ ],
+  "abortScreens": [ /* ... */ ]
+}
+```
+
+We first assign an 'id' (`satisfaction`) to the "how satisfied are you" input. We then use this id to define the `visibleIf` conditional logic. The `visibleIf` property is a powerful tool for creating conditional logic in your survey. By referencing input values and/or external variables, you can dynamically show or hide pages, screens, blocks, and inputs based on participant responses.
+
+SurveyCompo uses Condition Expression to defined the visible condition.  In this case, we use the `$or` operator to display the 'What do you like most about our product?' block if the participant selects 'Very satisfied' or 'Satisfied' on the 'Overall satisfaction' question. Conversely, we display the 'What could be improved about our product?' block if the participant selects 'Very dissatisfied' or 'Dissatisfied'. If the participant selects 'Neither dissatisfied nor satisfied', the follow-up questions are hidden.
+
+The Condition Expression accommodates a wide range of operators, such as `$and`, `$or`, `$not`, `>=`, `<=`, `==`, `!=`, `>`, and `<`. For a comprehensive list of operators and their application, refer to the [Conditional Logic](/advanced/#condition) section in our documentation.
+
+To enhance user experience, you might consider segregating the conditional blocks onto a separate page. However, for the purpose of this tutorial, we will retain them on the same page to illustrate how conditional logic can dynamically display or conceal blocks based on participant responses.
+
+Let's preview the conditional logic in the Survey Builder:
+
+![Tutorial - Conditional Logic](../assets/images/tutorial-condition.png){: .center}
+
+## Adding Input Identifiers
+
+## Publishing Survey (self-hosting)
+
+## Hosted Survey Page
+
+## Events
+
+## Collecting data
+
+## Removing branding
+
+## Conclusion

@@ -124,7 +124,7 @@ SurveyCompo uses specific 'html' keys for custom content:
     Use valid HTML syntax and prioritize security. Avoid incorporating code from unknown sources or user input, as it could introduce vulnerabilities.
 
 
-### Multiple Screens and Visibility Condition Logic
+### Multiple Screens and Visibility Conditional Logic
 
 SurveyCompo supports multiple start and end screens for flexible survey design. Use the `visibleIf` setting to conditionally show screens based on survey responses or variables.
 
