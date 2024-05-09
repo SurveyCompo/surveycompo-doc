@@ -545,7 +545,7 @@ Now, let's examine the functionality of these validation rules within the Survey
 
 ## Conditional Logic
 
-SurveyCompo supports conditional logic to show/hide specific pages, blocks and inputs based on their responses or external variables. Conditional logic is a powerful tool for tailoring the survey experience to individual participants and ensuring they receive relevant questions. For more information on conditional logic, see the [Conditional Logic](/advanced/#condition) documentation.
+SurveyCompo supports conditional logic to show/hide specific pages, blocks and inputs based on participant responses or external variables. Conditional logic is a powerful tool for tailoring the survey experience to individual participants and ensuring they receive relevant questions. For more information on conditional logic, see the [Conditional Logic](/advanced/#condition) documentation.
 
 In this tutorial, we will incorporate conditional logic into the survey. This will present a follow-up question tailored to the participant's response to the 'Overall satisfaction' question. If a participant expresses dissatisfaction, we will prompt them for additional feedback on potential product improvements. Conversely, if a participant is satisfied, we will ask them to share what they appreciate most about the product.
 
@@ -620,6 +620,138 @@ To enhance user experience, you might consider segregating the conditional block
 Let's preview the conditional logic in the Survey Builder:
 
 ![Tutorial - Conditional Logic](../assets/images/tutorial-condition.png){: .center}
+
+## Customization
+
+SurveyCompo offers a variety of customization options to tailor the survey experience to your brand and audience. You can customize the survey fonts, colors, layout and more.
+
+In this tutorial, we will customize the survey theme to use a custom color palette and default radius for buttons, boxes and inputs. We will also change the font family to Arial.
+
+``` json linenums="1" hl_lines="3-7"
+{
+  "name": "Product Satisfaction Survey",
+  "theme": {
+    "primaryColor": "#3b82f6",
+    "fontFamily": "Arial, sans-serif",
+    "defaultRadius": "2em",
+    "textareaRadius": "1em"
+  },
+  "startScreens": [ /* ... */ ],
+  "pages": [ /* ... */ ],
+  "completeScreens": [ /* ... */ ],
+  "abortScreens": [ /* ... */ ]
+}
+```
+By default, SurveyCompo generates the color palette based on the `primaryColor` provided. The generated colors are used for  buttons, boxes, and inputs.  The `fontFamily` property sets the font family for all text elements in the survey. The `defaultRadius` property defines the default radius for buttons, boxes, and inputs. The `textareaRadius` property sets the radius for Textareas inputs, if not specified, the `defaultRadius` is used for Textareas.
+
+Let's preview the customization in the Survey Builder:
+
+![Tutorial - Customization](../assets/images/tutorial-customization.png){: .center}
+
+Customization doesn't stop at colors and fonts. SurveyCompo offers a variety of customization options to tailor the survey experience to your brand and audience. You can customize the survey fonts, colors, layout, and more. For a comprehensive list of customization options, refer to the [Customization](/advanced/#customization) section in our documentation.
+
+
+## HTML Text
+
+SurveyCompo supports HTML text in the survey to enhance the visual appeal and readability of your questions and descriptions. HTML text allows you to format text, add images, and embed videos in your survey. For more information on HTML text, see the [HTML Text](/advanced/#html-text) documentation.
+
+In this tutorial, we will add HTML text to the Page footer to provide a link to the privacy policy.
+
+``` json linenums="1" hl_lines="11"
+{
+  "name": "Product Satisfaction Survey",
+  "theme": { /* ... */ },
+  "startScreens": [ /* ... */ ],
+  "pages": [
+    /* ... first page ... */
+    {
+      "header": "Product Satisfaction",
+      "nextButtonLabel": "Submit",
+      "blocks": [ /* ... */ ],
+      "htmlFooter": "<p>By submitting this survey, you agree to our <a href='https://www.surveycompo.com/privacy-policy'>Privacy Policy</a></p>"
+    }
+  ],
+  "completeScreens": [ /* ... */ ],
+  "abortScreens": [ /* ... */ ]
+}
+```
+
+The `htmlFooter` property allows you to add HTML text to the footer of the page. You can use HTML tags to format text, add links, and embed media. In this example, we use an anchor tag to create a hyperlink to the privacy policy.
+
+![Tutorial - HTML footer](../assets/images/tutorial-customization-footer1.png){: .center}
+
+However, a problem arises as the link in the footer does not resemble a typical hyperlink. Usually, hyperlinks are distinguished by a different color and often underlined for clarity.
+
+SurveyCompo does not include default styles for custom HTML elements. However, you can utilize inline styles or CSS to personalize these elements. In this instance, we'll employ CSS to enhance the appearance of the hyperlink.
+
+
+``` json linenums="1" hl_lines="4 12"
+{
+  "name": "Product Satisfaction Survey",
+  "theme": { /* ... */ },
+  "css": ".my-link { color: #3b82f6; text-decoration: underline; }",
+  "startScreens": [ /* ... */ ],
+  "pages": [
+    /* ... first page ... */
+    {
+      "header": "Product Satisfaction",
+      "nextButtonLabel": "Submit",
+      "blocks": [ /* ... */ ],
+      "htmlFooter": "<p>By submitting this survey, you agree to our <a href='https://www.surveycompo.com/privacy-policy' class='my-link'>Privacy Policy</a></p>"
+    }
+  ],
+  "completeScreens": [ /* ... */ ],
+  "abortScreens": [ /* ... */ ]
+}
+```
+
+We first assign a class name `my-link` to the hyperlink in the `htmlFooter` property. We then define the CSS class in the `css` property. The CSS class specifies the hyperlink's color and text decoration. By applying the CSS class to the hyperlink, we can customize its appearance.
+
+Let's preview the customized hyperlink in the Survey Builder:
+
+![Tutorial - HTML footer](../assets/images/tutorial-customization-footer2.png){: .center}
+
+It looks better now! HTML text applies to various elements in the survey. You can use HTML in Screens, Pages and Blocks.  For more information on HTML text, see the [HTML Text](/advanced/#html-text) documentation.
+
+
+## Using Templates
+
+We've recently appended an HTML footer to the survey's final page. But what if we want this footer to appear on all pages? Manually adding identical HTML to each page can be tedious and susceptible to errors. Fortunately, SurveyCompo provides a solution: templates. Templates are reusable components that allow you to define common elements, such as headers, footers, and styles, and apply them across multiple pages or blocks. For more information on templates, see the [Templates](/advanced/#templates) documentation.
+
+In this tutorial, we will create a template for the HTML footer and apply it to all pages in the survey.
+
+``` json linenums="1" hl_lines="5-8 13 18"
+{
+  "name": "Product Satisfaction Survey",
+  "theme": { /* ... */ },
+  "css": ".my-link { color: #3b82f6; text-decoration: underline; }",
+  "pageTemplates": [{
+    "templateName": "pageWithFooter",
+    "htmlFooter": "<p>By submitting this survey, you agree to our <a href='https://www.surveycompo.com/privacy-policy' class='my-link'>Privacy Policy</a></p>"
+  }],
+  "startScreens": [ /* ... */ ],
+  "pages": [
+    {
+      "header": "Product Satisfaction",
+      "template": "pageWithFooter",
+      "blocks": [ /* ... */ ],
+    },
+    {
+      "header": "Product Satisfaction",
+      "template": "pageWithFooter",
+      "nextButtonLabel": "Submit",
+      "blocks": [ /* ... */ ],
+    }
+  ],
+  "completeScreens": [ /* ... */ ],
+  "abortScreens": [ /* ... */ ]
+}
+```
+
+We've successfully created a page template named `pageWithFooter` that includes an HTML footer. This template has been applied to both survey pages. Remember, if necessary, you can override the properties of the template on any specific page.
+
+When previewed in the survey builder, the same footer will be visible on both pages.
+
 
 ## Adding Input Identifiers
 
