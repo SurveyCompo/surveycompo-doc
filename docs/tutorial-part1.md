@@ -1,9 +1,9 @@
 ---
 weight: 200
-title: Tutorial 1 - Build your survey
+title: Tutorial 1 - Build Your Survey
 ---
 
-# Tutorial - Build your survey
+# Tutorial - Build Your Survey
 
 Welcome to this Getting Started Tutorial !
 
@@ -118,7 +118,7 @@ Let's add the welcome screen to our survey JSON source and preview it in the Sur
 ![Tutorial - Welcome Screen](../assets/images/tutorial-welcome-screen.png){: .center}
 
 
-## Adding the first page
+## Adding the First Page
 
 The first page of the survey will ask participants to enter their age. We'll use a text input field for this question.
 
@@ -225,7 +225,7 @@ Let's add the first page to our survey JSON source and preview it in the Survey 
 ![Tutorial - First Page](../assets/images/tutorial-first-page.png){: .center}
 
 
-## Adding the second page
+## Adding the Second Page
 
 The second page of the survey will ask participants to rate their overall satisfaction with our product. Here's the JSON source with the first page:
 
@@ -432,6 +432,33 @@ multiple abort screens are defined, the most specific screen is displayed based 
 Let's preview the disqualification logic in the Survey Builder:
 
 ![Tutorial - Disqualification](../assets/images/tutorial-abort-screen.png){: .center}
+
+## Piping
+
+SurveyCompo supports piping to personalize survey questions and responses based on participant inputs. Piping is a powerful tool for creating dynamic surveys that adapt to individual participants. You can pipe input values, and external variables. For more information on piping, see the [Piping](/advanced/#piping) documentation.
+
+In this tutorial, you will add piping to the survey to personalize the 'Disqualified Screen' to include participant's age.
+
+``` json linenums="1" hl_lines="13-18"
+{
+  "name": "Product Satisfaction Survey",
+  /*  ... */
+  "abortScreens": [
+    {
+      "header": "Disqualified",
+      "description": "You must be 18 years or older to participate. You are currently {#age} years old.",
+      "okButtonLabel": "Close",
+      "visibleIf": "#age < 18"
+    }
+  ]
+}
+```
+
+The `description` property of the Abort Screen includes the `{#age}` placeholder, which references the 'Age' input value using the id of `age`. When the participant is disqualified, the placeholder is replaced with the participant's age. Piping allows you to personalize the survey experience and provide participants with relevant information based on their responses.
+
+Let's preview the piping in the Survey Builder and enter the age value of 11 to see the personalized message:
+
+![Tutorial - Piping](../assets/images/tutorial-piping.png){: .center}
 
 ## Validation
 
@@ -798,7 +825,7 @@ While input identifiers are primarily for reporting purposes, SurveyCompo doesn'
 Let's add some identifiers to the survey inputs in our survey:
 
 
-``` json linenums="1" hl_lines="13 23 34 39 44 49 54"
+``` json linenums="1" hl_lines="13 23 34 44 40 46 52 58"
 {
   "name": "Product Satisfaction Survey",
   "startScreens": [ /* ... */ ],
@@ -833,21 +860,25 @@ Let's add some identifiers to the survey inputs in our survey:
             {
               "type": "CHECKBOX",
               "id": "friendFamily",
+              "randomWithinGroup": "something",
               "label": "Friend/Family"
             },
             {
               "type": "CHECKBOX",
               "id": "onlineAd",
+              "randomWithinGroup": "something",
               "label": "Online Ad"
             },
             {
               "type": "CHECKBOX",
               "id": "socialMedia",
+              "randomWithinGroup": "something",
               "label": "Social Media"
             },
             {
               "type": "CHECKBOX",
               "id": "searchEngine",
+              "randomWithinGroup": "something",
               "label": "Search Engine"
             },
             {
@@ -868,7 +899,7 @@ Let's add some identifiers to the survey inputs in our survey:
 Identifiers can also be assigned to blocks and pages. These identifiers will then be accessible within SurveyCompo events. For a more detailed understanding of survey events, refer to the [Events](/advanced/#events) section in our documentation.
 
 
-## What's next?
+## What's Next?
 
 Congratulations! You've successfully created a survey in SurveyCompo using the JSON data model. You've learned how to define survey questions, answers, logic, and customization options. You've also explored advanced features like randomization, disqualification, validation, conditional logic, and HTML text. By mastering these concepts, you can create engaging and interactive surveys that provide valuable insights.
 

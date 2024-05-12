@@ -1,9 +1,9 @@
 ---
 weight: 210
-title: Tutorial 2 - Collect data
+title: Tutorial 2 - Collect Data
 ---
 
-# Tutorial - Collect data
+# Tutorial - Collect Data
 
 
 
