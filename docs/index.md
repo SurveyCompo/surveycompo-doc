@@ -19,7 +19,7 @@ With SurveyCompo, you gain full control over every aspect of your surveys. Unlea
 ## Minimal example
 
 
-<div style="resize: both; border: 1px solid gray; width: 320px; height: 460px">
+<div style="border: 1px solid gray; width: 320px; height: 460px; padding-bottom: 10px" class="resizable">
 	<survey-compo
 		src="https://surveycompo.github.io/examples/examples/basic/source.json"
 	/>

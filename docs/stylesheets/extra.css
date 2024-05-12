@@ -36,3 +36,11 @@ code {
 .small-text {
   font-size: 0.65em;
 }
+
+.resizable {
+  resize: both;
+  overflow: auto;
+}
+.resizable:active {
+   height: 0;
+}

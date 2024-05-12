@@ -1,10 +1,11 @@
 ---
 weight: 200
+title: Tutorial 1 - Build your survey
 ---
 
-# Getting Started
+# Tutorial - Build your survey
 
-Welcome to the Getting Started Tutorial !
+Welcome to this Getting Started Tutorial !
 
 In this tutorial, we'll build a Product Satisfaction Survey using SurveyCompo. This survey is perfect for creating a feedback loop with your customers to understand their needs and preferences. We'll cover the basics of creating a survey, adding logic, and using advanced features to tailor the survey experience.
 
@@ -627,7 +628,7 @@ SurveyCompo offers a variety of customization options to tailor the survey exper
 
 In this tutorial, we will customize the survey theme to use a custom color palette and default radius for buttons, boxes and inputs. We will also change the font family to Arial.
 
-``` json linenums="1" hl_lines="3-7"
+``` json linenums="1" hl_lines="3-8"
 {
   "name": "Product Satisfaction Survey",
   "theme": {
@@ -755,14 +756,121 @@ When previewed in the survey builder, the same footer will be visible on both pa
 
 ## Adding Input Identifiers
 
-## Publishing Survey (self-hosting)
+We're close to finalizing the survey's look and feel. However, there's one last step to make the survey functional. When we collect survey responses, SurveyCompo reports respondents' inputs and selections for each survey input. For instance, if a respondent enters '18' for the age input, we expect to collect data like "input: 'age', value: 18". Hence, it's important to assign identifiers to each input in the survey.
 
-## Hosted Survey Page
+These identifiers are useful for referencing inputs in conditional logic, validation rules, and piping. We've already added the `id` attribute to the 'Age' input on the survey's first page for implementing the 'disqualifying' logic. The input's `id` will also be reported along with its values upon survey completion. Without this identifier, it would be challenging to determine which input the value corresponds to.
 
-## Events
 
-## Collecting data
+``` json linenums="1" hl_lines="13"
+{
+  "name": "Product Satisfaction Survey",
+  "startScreens": [ /* ... */ ],
+  "pages": [
+    {
+      "header": "About You",
+      "blocks": [
+        {
+          "title": "Please enter your age",
+          "inputs": [
+            {
+              "type": "TEXT",
+              "id": "age",
+              "textInputType": "NUMBER"
+            }
+          ]
+        }
+        /* ... other blocks ... */
+      ]
+    },
+    /* ... other pages ... */
+  ]
+}
+```
 
-## Removing branding
+SurveyCompo supports these optional input identifiers:
 
-## Conclusion
+- `id`: An optional identifier for the input. The `id` attribute is useful for referencing inputs in conditional logic, validation rules, and piping.
+- `name`: A name for the input, primarily used for human reference. If `id` is not provided, the `name` will be used to generate a value for `id`
+- `customRef`: An optional custom reference for the input. The `customRef` attribute is useful for referencing inputs in external systems.
+
+While input identifiers are primarily for reporting purposes, SurveyCompo doesn't require them to be unique. However, it's crucial for the `id` attribute to be unique when used for conditional logic, validation rules, and piping.
+
+Let's add some identifiers to the survey inputs in our survey:
+
+
+``` json linenums="1" hl_lines="13 23 34 39 44 49 54"
+{
+  "name": "Product Satisfaction Survey",
+  "startScreens": [ /* ... */ ],
+  "pages": [
+    {
+      "header": "About You",
+      "blocks": [
+        {
+          "title": "Please enter your age",
+          "inputs": [
+            {
+              "type": "TEXT",
+              "id": "age",
+              "textInputType": "NUMBER"
+            }
+          ]
+        },
+        {
+          "title": "What is your preferred method of contact?",
+          "inputs": [
+            {
+              "type": "DROPDOWN",
+              "id": "contactMethod",
+              "hint": "Please select",
+              "dropdownInputOptions": ["Email", "Phone", "Text Message"]
+            }
+          ]
+        },
+        {
+          "title": "How did you hear about us?",
+          "inputs": [
+            {
+              "type": "CHECKBOX",
+              "id": "friendFamily",
+              "label": "Friend/Family"
+            },
+            {
+              "type": "CHECKBOX",
+              "id": "onlineAd",
+              "label": "Online Ad"
+            },
+            {
+              "type": "CHECKBOX",
+              "id": "socialMedia",
+              "label": "Social Media"
+            },
+            {
+              "type": "CHECKBOX",
+              "id": "searchEngine",
+              "label": "Search Engine"
+            },
+            {
+              "type": "CHECKBOX_TEXT",
+              "id": "others",
+              "label": "Others"
+            }
+          ]
+        }
+      ]
+    },
+    /* ... other pages ... */
+  ],
+  "completeScreens": [ /* ... */ ],
+  "abortScreens": [ /* ... */ ]
+}
+```
+Identifiers can also be assigned to blocks and pages. These identifiers will then be accessible within SurveyCompo events. For a more detailed understanding of survey events, refer to the [Events](/advanced/#events) section in our documentation.
+
+
+## What's next?
+
+Congratulations! You've successfully created a survey in SurveyCompo using the JSON data model. You've learned how to define survey questions, answers, logic, and customization options. You've also explored advanced features like randomization, disqualification, validation, conditional logic, and HTML text. By mastering these concepts, you can create engaging and interactive surveys that provide valuable insights.
+
+In the next part of the tutorial, we'll explore how to distribute your survey, collect responses, and analyze the results. We'll also cover advanced topics like survey events, webhooks, and integrations. Stay tuned for more exciting content!
+
