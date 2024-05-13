@@ -903,5 +903,7 @@ Identifiers can also be assigned to blocks and pages. These identifiers will the
 
 Congratulations! You've successfully created a survey in SurveyCompo using the JSON data model. You've learned how to define survey questions, answers, logic, and customization options. You've also explored advanced features like randomization, disqualification, validation, conditional logic, and HTML text. By mastering these concepts, you can create engaging and interactive surveys that provide valuable insights.
 
+Feel free to preview the [survey](https://surveycompo.github.io/examples/examples/tutorial/index.html){:target=”_blank”} and explore the corresponding [source code](https://github.com/SurveyCompo/examples/tree/main/examples/tutorial){:target=”_blank”} on GitHub.
+
 In the next part of the tutorial, we'll explore how to distribute your survey, collect responses, and analyze the results. We'll also cover advanced topics like survey events, webhooks, and integrations. Stay tuned for more exciting content!
 
