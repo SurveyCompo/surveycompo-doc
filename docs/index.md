@@ -152,7 +152,7 @@ With SurveyCompo, you gain full control over every aspect of your surveys. Unlea
 
     ---
 
-    SurveyCompo‘s JSON-based design makes your surveys truly adaptable. Effortlessly manage versions, **load content dynamically, conduct A/B testing**, and unlock advanced strategies like Survey **Segmentation** and Audient **Retargeting**.
+    SurveyCompo‘s JSON-based design makes your surveys truly adaptable. It allows you to **manage versions**, load content **dynamically**, conduct **A/B testing**, and unlock advanced strategies like Survey **Segmentation** and Audient **Retargeting**.
 
 
 </div>
