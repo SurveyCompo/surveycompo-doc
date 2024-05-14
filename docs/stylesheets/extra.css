@@ -25,6 +25,8 @@ code {
 .center {
   display: block;
   margin: 0 auto;
+  width: 100%;
+  max-width: 32rem !important;
 }
 
 .embedded {
@@ -32,6 +34,15 @@ code {
   padding: 1em;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 }
+
+.center.small {
+  max-width: 18rem !important;
+}
+
+.center.md {
+  max-width: 24rem !important;
+}
+
 
 .small-text {
   font-size: 0.65em;

@@ -115,7 +115,7 @@ The `startScreens` property is an array that can contain multiple screens. If th
 
 Let's add the welcome screen to our survey JSON source and preview it in the Survey Builder.
 
-![Tutorial - Welcome Screen](../assets/images/tutorial-welcome-screen.png){: .center}
+![Tutorial - Welcome Screen](../assets/images/tutorial-welcome-screen.png){: .center .small}
 
 
 ## Adding the First Page
@@ -222,7 +222,7 @@ Note that the last input field has the `type` of `CHECKBOX_TEXT`, and it include
 
 Let's add the first page to our survey JSON source and preview it in the Survey Builder.
 
-![Tutorial - First Page](../assets/images/tutorial-first-page.png){: .center}
+![Tutorial - First Page](../assets/images/tutorial-first-page.png){: .center .small}
 
 
 ## Adding the Second Page
@@ -285,7 +285,7 @@ The second page JSON source includes 3 blocks/questions:
 
 Let's preview the second page in the Survey Builder.
 
-![Tutorial - Second Page](../assets/images/tutorial-second-page.png){: .center}
+![Tutorial - Second Page](../assets/images/tutorial-second-page.png){: .center .small}
 
 The `nextButtonLabel` property is set to "Submit," which is the label displayed on the button that participants use to advance to the subsequent page. If this property is left unspecified, the button defaults to the label "Next". With the addition of multiple pages to our survey, a navigation bar now appears at the bottom of each page, enabling participants to move between pages. The navigation bar displays the page number and the total number of pages in the survey. The navigation bar can be hidden using the `uiShowNavigation` survey property. For more information, see the [Survey](/data-model/#survey) documentation.
 
@@ -311,7 +311,7 @@ The final screen of the survey is the complete screen. It provides a closing mes
 
 Let's preview the complete screen in the Survey Builder.
 
-![Tutorial - Complete Screen](../assets/images/tutorial-complete-screen.png){: .center}
+![Tutorial - Complete Screen](../assets/images/tutorial-complete-screen.png){: .center .small}
 
 
 ## Randomization
@@ -377,7 +377,7 @@ It's important to note that the randomization occurs upon survey load and remain
 Let's preview the randomization in the Survey Builder:
 
 
-![Tutorial - Second Page](../assets/images/tutorial-randomization.png){: .center}
+![Tutorial - Second Page](../assets/images/tutorial-randomization.png){: .center .small}
 
 ## Disqualification
 
@@ -431,7 +431,7 @@ multiple abort screens are defined, the most specific screen is displayed based 
 
 Let's preview the disqualification logic in the Survey Builder:
 
-![Tutorial - Disqualification](../assets/images/tutorial-abort-screen.png){: .center}
+![Tutorial - Disqualification](../assets/images/tutorial-abort-screen.png){: .center .small}
 
 ## Piping
 
@@ -458,7 +458,7 @@ The `description` property of the Abort Screen includes the `{#age}` placeholder
 
 Let's preview the piping in the Survey Builder and enter the age value of 11 to see the personalized message:
 
-![Tutorial - Piping](../assets/images/tutorial-piping.png){: .center}
+![Tutorial - Piping](../assets/images/tutorial-piping.png){: .center .small}
 
 ## Validation
 
@@ -567,7 +567,7 @@ This tutorial illustrates how to apply one or more validation rules to inputs or
 Now, let's examine the functionality of these validation rules within the Survey Builder:
 
 
-![Tutorial - Validation](../assets/images/tutorial-validation.png){: .center}
+![Tutorial - Validation](../assets/images/tutorial-validation.png){: .center .small}
 
 
 
@@ -647,7 +647,7 @@ To enhance user experience, you might consider segregating the conditional block
 
 Let's preview the conditional logic in the Survey Builder:
 
-![Tutorial - Conditional Logic](../assets/images/tutorial-condition.png){: .center}
+![Tutorial - Conditional Logic](../assets/images/tutorial-condition.png){: .center .small}
 
 ## Customization
 
@@ -674,7 +674,7 @@ By default, SurveyCompo generates the color palette based on the `primaryColor` 
 
 Let's preview the customization in the Survey Builder:
 
-![Tutorial - Customization](../assets/images/tutorial-customization.png){: .center}
+![Tutorial - Customization](../assets/images/tutorial-customization.png){: .center .small}
 
 Customization doesn't stop at colors and fonts. SurveyCompo offers a variety of customization options to tailor the survey experience to your brand and audience. You can customize the survey fonts, colors, layout, and more. For a comprehensive list of customization options, refer to the [Customization](/advanced/#customization) section in our documentation.
 
@@ -706,7 +706,7 @@ In this tutorial, we will add HTML text to the Page footer to provide a link to 
 
 The `htmlFooter` property allows you to add HTML text to the footer of the page. You can use HTML tags to format text, add links, and embed media. In this example, we use an anchor tag to create a hyperlink to the privacy policy.
 
-![Tutorial - HTML footer](../assets/images/tutorial-customization-footer1.png){: .center}
+![Tutorial - HTML footer](../assets/images/tutorial-customization-footer1.png){: .center .md}
 
 However, a problem arises as the link in the footer does not resemble a typical hyperlink. Usually, hyperlinks are distinguished by a different color and often underlined for clarity.
 
@@ -737,7 +737,7 @@ We first assign a class name `my-link` to the hyperlink in the `htmlFooter` prop
 
 Let's preview the customized hyperlink in the Survey Builder:
 
-![Tutorial - HTML footer](../assets/images/tutorial-customization-footer2.png){: .center}
+![Tutorial - HTML footer](../assets/images/tutorial-customization-footer2.png){: .center .small}
 
 It looks better now! HTML text applies to various elements in the survey. You can use HTML in Screens, Pages and Blocks.  For more information on HTML text, see the [HTML Text](/advanced/#html-text) documentation.
 
