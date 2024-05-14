@@ -52,8 +52,13 @@ Now, let's have a look at the hosted page for the survey we created in the previ
 
 [https://app.surveycompo.com/page/OJqcevPh0qoDNcO0mRau.html](https://app.surveycompo.com/page/OJqcevPh0qoDNcO0mRau.html){:target="_blank"}
 
-## Survey data
+## Survey Data
 
+SurveyCompo offers a dashboard for viewing and exporting survey responses. This dashboard presents real-time survey responses and performance metrics:
+
+![Tutorial - Survey Data](../assets/images/tutorial-survey-data.png){: .center .md}
 
 
 ## Conclusion
+
+Congratulations! You have successfully created a survey, published it, and collected responses. In this tutorial, we explored the various options for hosting and collecting survey data. We also learned how to view and export survey responses using the SurveyCompo dashboard.
