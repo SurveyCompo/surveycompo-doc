@@ -12,25 +12,24 @@ SurveyCompo offers a powerful and versatile way to design surveys using a flexib
 
 Imagine your SurveyCompo survey as a journey. Here's a visual breakdown of the key elements:
 
-  *Start Screen (Optional)*
+_Start Screen (Optional)_
 
-  :   Welcomes users, sets the stage, and provides initial instructions.
+: Welcomes users, sets the stage, and provides initial instructions.
 
-  *Survey Pages*
+_Survey Pages_
 
-  :   The heart of your survey, where questions are asked and data is collected.  Each page is made up of one or more "Blocks". SurveyCompo gives you the freedom to design your surveys in either of these styles:
+: The heart of your survey, where questions are asked and data is collected. Each page is made up of one or more "Blocks". SurveyCompo gives you the freedom to design your surveys in either of these styles:
 
       - **Single Page**: All questions are displayed on one page.
       - **Multi-Page**: Questions are divided into multiple pages, guiding users through the survey.
 
-  *Blocks*
+_Blocks_
 
-  :   The fundamental units that hold your questions. They contain input controls where users provide their responses. SurveyCompo offers a variety of input controls, from text boxes to specialized elements like Likert scales.
+: The fundamental units that hold your questions. They contain input controls where users provide their responses. SurveyCompo offers a variety of input controls, from text boxes to specialized elements like Likert scales.
 
+_End Screen (Optional)_
 
-  *End Screen (Optional)*
-
-  :   Signal the end of the survey.
+: Signal the end of the survey.
 
       SurveyCompo offers two customizable end screens to manage your survey flow.
 
@@ -46,49 +45,72 @@ Imagine a user journey through the survey:
 1. **Invitation**: The optional Start Screen introduces the survey.
 1. **Questions and Answers**: Users navigate through Survey Pages, providing responses in Blocks.
 1. **Outcome**:
-    - **Success**: Upon completion, they see the Completion Screen.
-    - **Disqualification**: If ineligible, they are directed to the Abort Screen.
-
+   - **Success**: Upon completion, they see the Completion Screen.
+   - **Disqualification**: If ineligible, they are directed to the Abort Screen.
 
 ### The Survey Data Model
 
-SurveyCompo uses **JSON** (JavaScript Object Notation) to define your survey's structure. Think of JSON as a blueprint, using key-value pairs to describe each survey element and its properties.  Here's a simplified example:
+SurveyCompo uses **JSON** (JavaScript Object Notation) to define your survey's structure. Think of JSON as a blueprint, using key-value pairs to describe each survey element and its properties. Here's a simplified example:
 
 ```json linenums="1"
 {
-    "name": "My Survey",
-    "startScreens": [ /* ... */ ],
-    "pages": [
-       {
-          "blocks": [
-            {
-              "inputs": [/* ... */]
-            }
-          ],
-          /* ... */
-       },
-       /* ... */
-    ],
-   "completeScreens": [ /* ... */ ],
-   "abortScreens": [ /* ... */ ]
+  "name": "My Survey",
+  "startScreens": [
+    /* ... */
+  ],
+  "pages": [
+    {
+      "blocks": [
+        {
+          "inputs": [
+            /* ... */
+          ]
+        }
+      ]
+      /* ... */
+    }
+    /* ... */
+  ],
+  "completeScreens": [
+    /* ... */
+  ],
+  "abortScreens": [
+    /* ... */
+  ]
 }
 ```
 
+| Method             | Type     | Required | Default | Description                                                                                                                      |
+| ------------------ | -------- | -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `name`             | string   | Yes      | n/a     | Describes the name of the survey.                                                                                                |
+| `customRef`        | string   | No       | null    | A custom reference ID for your survey.                                                                                           |
+| `uiShowNavigation` | boolean  | No       | true    | you want to show the navigation buttons.                                                                                         |
+| `uiShowProgress`   | boolean  | No       | true    | If you want to show the page progress indicator.                                                                                 |
+| `uiUseAnimation`   | boolean  | No       | true    | If you prefer to use a sliding animation for page navigation.                                                                    |
+| `timeoutSeconds`   | number   | No       | 1800    | The duration of inactivity, in seconds, before the survey session times out and the survey resets.                               |
+| `pageTemplates`    | Page[]   | No       | []      | An array of Page models used to share common key values across pages.                                                            |
+| `blockTemplates`   | Block[]  | No       | []      | An array of Block models used to share common key values across blocks.                                                          |
+| `pages`            | Page[]   | Yes      | []      | An array of Page models in the survey.                                                                                           |
+| `theme`            | Theme    | No       | n/a     | The Theme model for customizing the survey look and feel.                                                                        |
+| `css`              | string   | No       | n/a     | Global custom CSS applicable to custom HTML elements.                                                                            |
+| `startScreens`     | Screen[] | No       | []      | An array of Screen models, one of which will be displayed at the start of the survey.                                            |
+| `abortScreens`     | Screen[] | No       | []      | An array of Screen models, one of which will be displayed when the participant is disqualified from the survey.                  |
+| `completeScreens`  | Screen[] | No       | []      | An array of Screen models, one of which will be shown upon the survey's completion.                                              |
+| `variables`        | object   | No       | {}      | A map of external key-value pairs, such as user name, product name, etc. Variables can be used with piping and conditional logic |
+
 !!! info "Info"
 
-    **Why Arrays for Screens?** SurveyCompo supports multiple start, completion, and abort screens, allowing you to tailor the survey experience based on user responses..
+    **Why Arrays for Screens?** SurveyCompo supports multiple start, completion, and abort screens. By using conditional logic, these multiple screens enable you to customize the survey experience based on user responses and/or external variables.
 
-
-----
+---
 
 ## Screen
 
-Screens are the visual gateways of your SurveyCompo surveys.  They introduce respondents to the survey, provide closure upon completion,  and inform users of eligibility or termination. Let's explore their key functions:
+Screens are the visual gateways of your SurveyCompo surveys. They introduce respondents to the survey, provide closure upon completion, and inform users of eligibility or termination. Let's explore their key functions:
 
 - **Start Screens**: These screens welcome users, present essential information, and invite them to participate in your survey.
-- **Complete Screens**:  These screens thank respondents for their time, signaling that the survey has been successfully completed.
-- **Abort Screens**:  These screens inform users that they are ineligible or the survey has been terminated, providing clear reasons as needed.
-
+- **Complete Screens**: These screens thank respondents for their time, signaling that the survey has been successfully completed.
+- **Abort Screens**: These screens inform users that they are ineligible or the survey has been terminated, providing clear reasons as needed.
 
 ### Screen Composition
 
@@ -103,7 +125,6 @@ A screen can include the following optional elements:
 - **Footer**: Use this for additional information, or legal disclaimers.
 
 - **Action Buttons**: Each screen can include up to two customizable action buttons. These buttons determine how users navigate through your survey, allowing them to either proceed or exit the current screen.
-
 
 ### Customizing Screens with HTML
 
@@ -123,7 +144,6 @@ SurveyCompo uses specific 'html' keys for custom content:
 
     Use valid HTML syntax and prioritize security. Avoid incorporating code from unknown sources or user input, as it could introduce vulnerabilities.
 
-
 ### Multiple Screens and Visibility Conditional Logic
 
 SurveyCompo supports multiple start and end screens for flexible survey design. Use the `visibleIf` setting to conditionally show screens based on survey responses or variables.
@@ -132,45 +152,45 @@ SurveyCompo supports multiple start and end screens for flexible survey design. 
 
     Details on visibility logic will be covered in subsequent sections.
 
-
 ### The Screen Data Model
 
 Start, completion, and abort screens share a common data structure within your survey's JSON format.
 
 The following code example demonstrates how a screen integrates into the survey JSON data model. [:material-github:{.right-icon} view source](https://github.com/SurveyCompo/examples/blob/main/examples/anatomy/source.json)
 
-
 ```json linenums="1" hl_lines="4-10"
 {
-    "name": "My Survey",
-    "startScreens": [
-        {
-        "header": "We value your opinion!",
-        "description": "Please take a moment to participate in our brief survey.",
-        "htmlFooter": "<p class='footnote'><a href=''>privacy</a> & <a href=''>cookie policy<a></p>",
-        "okButtonLabel": "Start Survey",
-        "cancelButtonLabel": "Skip"
-        }
-    ],
-    "pages": [ /* ... */ ],
-    "completeScreens": [ /* ... */ ],
-    "abortScreens": [ /* ... */ ]
+  "name": "My Survey",
+  "startScreens": [
+    {
+      "header": "We value your opinion!",
+      "description": "Please take a moment to participate in our brief survey.",
+      "htmlFooter": "<p class='footnote'><a href=''>privacy</a> & <a href=''>cookie policy<a></p>",
+      "okButtonLabel": "Start Survey",
+      "cancelButtonLabel": "Skip"
+    }
+  ],
+  "pages": [
+    /* ... */
+  ],
+  "completeScreens": [
+    /* ... */
+  ],
+  "abortScreens": [
+    /* ... */
+  ]
 }
 ```
 
-
-
-----
+---
 
 ## Page
 
 Pages are the backbone of your SurveyCompo surveys. They contain your survey questions, guide user progress, and offer versatile customization options. Let's explore their structure and features.
 
-
 ### Page Structure
 
 A page can include the following optional elements:
-
 
 ![page-anatomy](../assets/images/anatomy-page.png){: .center}
 
@@ -180,10 +200,9 @@ A page can include the following optional elements:
 
 - **Blocks**: The fundamental building blocks of your survey questions. A page can contain multiple blocks, each typically representing one question. (See the 'Blocks' section for a detailed breakdown.)
 
-- **Footer**:  Use this for additional information, navigation, or legal statements.
+- **Footer**: Use this for additional information, navigation, or legal statements.
 
-- **Next Button**:  Allows users to progress to the following page. Clicking "Next" also triggers validation of the inputs on the current page.
-
+- **Next Button**: Allows users to progress to the following page. Clicking "Next" also triggers validation of the inputs on the current page.
 
 ### Page Layout
 
@@ -194,12 +213,11 @@ To customize the arrangement of your page elements, SurveyCompo offers the follo
 
 ### Customization with HTML
 
-
 Enhance headers, descriptions, and footers with custom HTML syntax for:
 
 - **Rich Formatting**: Control fonts, colors, text size, emphasis (bold, italics), and more.
 - **Embed Media**: Integrate images, videos, or audio clips to enhance your questions.
-- **Interactive Elements**:  Add buttons, links, or other interactive components directly within a page.
+- **Interactive Elements**: Add buttons, links, or other interactive components directly within a page.
 
 SurveyCompo uses specific 'html' keys for custom content:
 
@@ -215,46 +233,46 @@ Use the `visibleIf` setting to conditionally show or hide pages based on survey 
 
     Details on visibility logic will be covered in subsequent sections.
 
-
 ### Page Randomization
 
 Prevent response bias by shuffling the order of pages. SurveyCompo's `randomizedWithinGroup` setting allows for randomization of all or selected pages. (More on randomization in the following section.)
-
 
 ### The Page Data Model
 
 The following code example demonstrates how a page integrates into the survey JSON data model. [:material-github:{.right-icon} view source](https://github.com/SurveyCompo/examples/blob/main/examples/anatomy/source.json)
 
-
 ```json linenums="1" hl_lines="5-11"
 {
-    "name": "My Survey",
-    "startScreens": [ /* ... */ ],
-    "pages": [
-      {
-        "header": "Basic Information",
-        "htmlDescription": "<p>Let’s begin by gathering some essential details. <br />We assure you that we will not share personal information.</p>",
-        "htmlFooter": "<p class='footnote'><a href=''>privacy</a> & <a href=''>cookie policy<a></p>",
-        "blocks": [ /* ... */ ],
-        "nextButtonLabel": "Next"
-      },
-      /* ... */
-    ],
-    "completeScreens": [ /* ... */ ],
-    "abortScreens": [ /* ... */ ]
+  "name": "My Survey",
+  "startScreens": [
+    /* ... */
+  ],
+  "pages": [
+    {
+      "header": "Basic Information",
+      "htmlDescription": "<p>Let’s begin by gathering some essential details. <br />We assure you that we will not share personal information.</p>",
+      "htmlFooter": "<p class='footnote'><a href=''>privacy</a> & <a href=''>cookie policy<a></p>",
+      "blocks": [
+        /* ... */
+      ],
+      "nextButtonLabel": "Next"
+    }
+    /* ... */
+  ],
+  "completeScreens": [
+    /* ... */
+  ],
+  "abortScreens": [
+    /* ... */
+  ]
 }
 ```
 
-
-
-
-
-----
-
+---
 
 ## Block
 
-A ‘Block’ in SurveyCompo is a section of content on a survey page - it’s the building block of your survey. It can serve as a container for a survey question, housing both the question itself and its corresponding input controls for answers,  and it offers a high degree of flexibility in how you present information and gather responses. It can also be utilized to provide instructions or explanations, guiding your respondents through the survey.
+A ‘Block’ in SurveyCompo is a section of content on a survey page - it’s the building block of your survey. It can serve as a container for a survey question, housing both the question itself and its corresponding input controls for answers, and it offers a high degree of flexibility in how you present information and gather responses. It can also be utilized to provide instructions or explanations, guiding your respondents through the survey.
 
 ### Block Structure
 
@@ -262,13 +280,12 @@ Blocks can contain the following optional elements:
 
 ![block-anatomy](../assets/images/anatomy-block.png){: .center}
 
-- **Index**:  A numerical indicator to help organize and order questions.
+- **Index**: A numerical indicator to help organize and order questions.
 - **Title**: The primary text of your survey question.
 - **Subtitle**: Provides hints, instructions, or additional context for the question.
 - **Description**: Offers further detailed instructions or explanations related to the question.
-- **Footnote**:  Use this to include references, links to legal information, or other relevant details.
+- **Footnote**: Use this to include references, links to legal information, or other relevant details.
 - **Inputs**: The interactive elements where users provide their responses (e.g., text boxes, dropdowns, checkboxes, and more).
-
 
 ### Inputs within Block
 
@@ -296,7 +313,6 @@ For example, a block titled "Tell us about yourself" could include a text input 
 <!-- - **FILE**: A file upload input. -->
 <!-- - **HTML**: A custom HTML input. -->
 
-
 When a Block is used to provide instructions or explanations rather than to collect user inputs, it will have an empty list of inputs. This is a common practice in survey design to guide respondents through the survey flow. For example, a block titled "Instructions" may contain only a description and footnote, with no input controls. This is a powerful feature that allows you to create dynamic and engaging surveys tailored to your specific needs. SurveyCompo gives you the flexibility to design your survey in a way that best suits your goals and audience.
 
 ### Advanced Customization with HTML
@@ -305,7 +321,7 @@ All text elements within a block (title, subtitle, description, footnote) suppor
 
 - **Rich Formatting**: Control fonts, colors, text size, emphasis (bold, italics), and more.
 - **Embed Media**: Integrate images, videos, or audio clips to enhance your questions.
-- **Interactive Elements**:  Add buttons, links, or other interactive components directly within a block.
+- **Interactive Elements**: Add buttons, links, or other interactive components directly within a block.
 
 ### Branching/Skipping Logic
 
@@ -314,7 +330,6 @@ The `visibleIf` setting lets you control a block's display based on specific sur
 !!! note "Note"
 
     Details about visibility logic will be covered in subsequent sections.
-
 
 ### Question Randomization
 
@@ -331,64 +346,66 @@ Blocks feature a powerful grid layout engine to arrange input elements:
 
     Block layout customization will be covered in subsequent sections.
 
-
 ### The Block Data Model
 
 The following code example demonstrates how blocks integrate into the survey JSON data model. [:material-github:{.right-icon} view source](https://github.com/SurveyCompo/examples/blob/main/examples/anatomy/source.json)
 
-
 ```json linenums="1" hl_lines="8-17"
 {
-    "name": "My Survey",
-    "startScreens": [ /* ... */ ],
-    "pages": [
-      {
-        /* ... */
-        "blocks": [
-          {
-            "title": "Gender",
-            "layoutColumnCount": 2,
-            "layoutColumnWidth": "50%",
-            "inputs": [ /* ... */ ]
-          },
-          {
-            "title": "Age",
-            "inputs": [ /* ... */ ]
-          }
-        ]
-      },
+  "name": "My Survey",
+  "startScreens": [
+    /* ... */
+  ],
+  "pages": [
+    {
       /* ... */
-    ],
-    "completeScreens": [ /* ... */ ],
-    "abortScreens": [ /* ... */ ]
+      "blocks": [
+        {
+          "title": "Gender",
+          "layoutColumnCount": 2,
+          "layoutColumnWidth": "50%",
+          "inputs": [
+            /* ... */
+          ]
+        },
+        {
+          "title": "Age",
+          "inputs": [
+            /* ... */
+          ]
+        }
+      ]
+    }
+    /* ... */
+  ],
+  "completeScreens": [
+    /* ... */
+  ],
+  "abortScreens": [
+    /* ... */
+  ]
 }
 ```
 
-
-
-
-----
+---
 
 ## Input
 
-Inputs are the heart of data collection within your SurveyCompo surveys.  They provide the interactive elements where users submit their answers, opinions, and feedback. SurveyCompo offers a wide range of input types to accommodate diverse survey needs.
-
+Inputs are the heart of data collection within your SurveyCompo surveys. They provide the interactive elements where users submit their answers, opinions, and feedback. SurveyCompo offers a wide range of input types to accommodate diverse survey needs.
 
 ### Key Concepts
 
+- **Inputs within Blocks**: Remember, Blocks act as containers for one or more input controls. SurveyCompo gives you the flexibility to combine different input types within a single Block.
 
-- **Inputs within Blocks**:  Remember, Blocks act as containers for one or more input controls. SurveyCompo gives you the flexibility to combine different input types within a single Block.
+- **Labels and Hints**: Most inputs can have an optional label (the question or instruction) and a hint (additional guidance for the user). Both support HTML for customization.
 
-- **Labels and Hints**:  Most inputs can have an optional label (the question or instruction) and a hint (additional guidance for the user). Both support HTML for customization.
+- **Input Values**: Each input type collects data differently. Some have boolean values (true/false), others text values, numerical values, or selections from a list.
 
-- **Input Values**:  Each input type collects data differently. Some have boolean values (true/false), others text values, numerical values, or selections from a list.
+- **Input Randomization**: You can randomize the order in which inputs appear within a block to prevent response bias.
 
-- **Input Randomization**:  You can randomize the order in which inputs appear within a block to prevent response bias.
+- **Branching Logic**: Utilize the `visibleIf` property for inputs to show or hide them based on specific survey responses or variables. This creates dynamic surveys that adapt to user input.
 
-- **Branching Logic**:  Utilize the `visibleIf` property for inputs to show or hide them based on specific survey responses or variables. This creates dynamic surveys that adapt to user input.
-
-- **Input Validation**:  Define validation rules to ensure users provide data in the expected format (e.g., valid email addresses, numeric values within a range). This improves data quality and the user experience.
-
+- **Input Validation**: Define validation rules to ensure users provide data in the expected format (e.g., valid email addresses, numeric values within a range). This improves data quality and the user experience.
 
 ### Input Types
 
@@ -419,58 +436,70 @@ Here's a quick overview of the input types currently supported. We'll dive into 
 - **IMAGE**: Images as selectable options (text values of selected images).
 - **MATRIX**: A grid-based question format for collecting responses to multiple related questions using a consistent scale.
 
-
 ### The Input Data Model
 
 The following code example demonstrates how inputs integrate into the survey JSON data model. [:material-github:{.right-icon} view source](https://github.com/SurveyCompo/examples/blob/main/examples/anatomy/source.json)
 
-
 ```json linenums="1" hl_lines="13-28 34-38"
 {
-    "name": "My Survey",
-    "startScreens": [ /* ... */ ],
-    "pages": [
-      {
-        /* ... */
-        "blocks": [
-          {
-            "title": "Gender",
-            "layoutColumnCount": 2,
-            "layoutColumnWidth": "50%",
-            "inputs": [
-                {
-                  "type": "RADIO",
-                  "label": "Male"
-                },
-                {
-                  "type": "RADIO",
-                  "label": "Female"
-                },
-                {
-                  "type": "RADIO",
-                  "label": "Non-binary"
-                },
-                {
-                  "type": "RADIO",
-                  "label": "Prefer not to say"
-                }
-            ]
-          },
-          {
-            "title": "Age",
-            "inputs": [
-              {
-                "type": "DROPDOWN",
-                "hint": "Please select ...",
-                "dropdownInputOptions": ["Under 18", "18-24", "25-34", "35-44", "45-54", "55-64", "65 or over"]
-              }
-            ]
-          }
-        ]
-      },
+  "name": "My Survey",
+  "startScreens": [
+    /* ... */
+  ],
+  "pages": [
+    {
       /* ... */
-    ],
-    "completeScreens": [ /* ... */ ],
-    "abortScreens": [ /* ... */ ]
+      "blocks": [
+        {
+          "title": "Gender",
+          "layoutColumnCount": 2,
+          "layoutColumnWidth": "50%",
+          "inputs": [
+            {
+              "type": "RADIO",
+              "label": "Male"
+            },
+            {
+              "type": "RADIO",
+              "label": "Female"
+            },
+            {
+              "type": "RADIO",
+              "label": "Non-binary"
+            },
+            {
+              "type": "RADIO",
+              "label": "Prefer not to say"
+            }
+          ]
+        },
+        {
+          "title": "Age",
+          "inputs": [
+            {
+              "type": "DROPDOWN",
+              "hint": "Please select ...",
+              "dropdownInputOptions": [
+                "Under 18",
+                "18-24",
+                "25-34",
+                "35-44",
+                "45-54",
+                "55-64",
+                "65 or over"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    /* ... */
+  ],
+  "completeScreens": [
+    /* ... */
+  ],
+  "abortScreens": [
+    /* ... */
+  ]
 }
 ```

@@ -368,7 +368,7 @@ In this tutorial, you will add randomization to the 'How did you hear about us?'
 }
 ```
 
-The `randomWithinGroup` attribute serves as a powerful tool for introducing randomization within your survey. By assigning the same `randomWithinGroup` string value to a group of inputs, you can shuffle their order while preserving the sequence of other questions.
+The `randomWithinGroup` key serves as a powerful tool for introducing randomization within your survey. By assigning the same `randomWithinGroup` string value to a group of inputs, you can shuffle their order while preserving the sequence of other questions.
 
 In our example, all inputs, excluding the final 'Others' input, are grouped for randomization. The 'Others' input remains ungrouped to ensure its consistent placement at the end of the list, irrespective of the randomization of preceding inputs.
 
@@ -427,7 +427,7 @@ multiple abort screens are defined, the most specific screen is displayed based 
 
 !!! tip  "Tip"
 
-    The `visibleIf` attribute is a powerful tool for creating conditional logic in your survey. By referencing input values and/or external variables, you can dynamically show or hide pages, screens, blocks, and inputs based on participant responses. For more information on conditional logic, see the [Conditional Logic](/advanced/#conditional-logic) documentation.
+    The `visibleIf` key is a powerful tool for creating conditional logic in your survey. By referencing input values and/or external variables, you can dynamically show or hide pages, screens, blocks, and inputs based on participant responses. For more information on conditional logic, see the [Conditional Logic](/advanced/#conditional-logic) documentation.
 
 Let's preview the disqualification logic in the Survey Builder:
 
@@ -785,7 +785,7 @@ When previewed in the survey builder, the same footer will be visible on both pa
 
 We're close to finalizing the survey's look and feel. However, there's one last step to make the survey functional. When we collect survey responses, SurveyCompo reports respondents' inputs and selections for each survey input. For instance, if a respondent enters '18' for the age input, we expect to collect data like "input: 'age', value: 18". Hence, it's important to assign identifiers to each input in the survey.
 
-These identifiers are useful for referencing inputs in conditional logic, validation rules, and piping. We've already added the `id` attribute to the 'Age' input on the survey's first page for implementing the 'disqualifying' logic. The input's `id` will also be reported along with its values upon survey completion. Without this identifier, it would be challenging to determine which input the value corresponds to.
+These identifiers are useful for referencing inputs in conditional logic, validation rules, and piping. We've already added the `id` key to the 'Age' input on the survey's first page for implementing the 'disqualifying' logic. The input's `id` will also be reported along with its values upon survey completion. Without this identifier, it would be challenging to determine which input the value corresponds to.
 
 
 ``` json linenums="1" hl_lines="13"
@@ -816,11 +816,11 @@ These identifiers are useful for referencing inputs in conditional logic, valida
 
 SurveyCompo supports these optional input identifiers:
 
-- `id`: An optional identifier for the input. The `id` attribute is useful for referencing inputs in conditional logic, validation rules, and piping.
+- `id`: An optional identifier for the input. The `id` key is useful for referencing inputs in conditional logic, validation rules, and piping.
 - `name`: A name for the input, primarily used for human reference. If `id` is not provided, the `name` will be used to generate a value for `id`
-- `customRef`: An optional custom reference for the input. The `customRef` attribute is useful for referencing inputs in external systems.
+- `customRef`: An optional custom reference for the input. The `customRef` key is useful for referencing inputs in external systems.
 
-While input identifiers are primarily for reporting purposes, SurveyCompo doesn't require them to be unique. However, it's crucial for the `id` attribute to be unique when used for conditional logic, validation rules, and piping.
+While input identifiers are primarily for reporting purposes, SurveyCompo doesn't require them to be unique. However, it's crucial for the `id` key to be unique when used for conditional logic, validation rules, and piping.
 
 Let's add some identifiers to the survey inputs in our survey:
 
