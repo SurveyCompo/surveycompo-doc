@@ -80,23 +80,24 @@ SurveyCompo uses **JSON** (JavaScript Object Notation) to define your survey's s
 }
 ```
 
-| Method             | Type     | Required | Default | Description                                                                                                                      |
-| ------------------ | -------- | -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `name`             | string   | Yes      | n/a     | Describes the name of the survey.                                                                                                |
-| `customRef`        | string   | No       | null    | A custom reference ID for your survey.                                                                                           |
-| `uiShowNavigation` | boolean  | No       | true    | you want to show the navigation buttons.                                                                                         |
-| `uiShowProgress`   | boolean  | No       | true    | If you want to show the page progress indicator.                                                                                 |
-| `uiUseAnimation`   | boolean  | No       | true    | If you prefer to use a sliding animation for page navigation.                                                                    |
-| `timeoutSeconds`   | number   | No       | 1800    | The duration of inactivity, in seconds, before the survey session times out and the survey resets.                               |
-| `pageTemplates`    | Page[]   | No       | []      | An array of Page models used to share common key values across pages.                                                            |
-| `blockTemplates`   | Block[]  | No       | []      | An array of Block models used to share common key values across blocks.                                                          |
-| `pages`            | Page[]   | Yes      | []      | An array of Page models in the survey.                                                                                           |
-| `theme`            | Theme    | No       | n/a     | The Theme model for customizing the survey look and feel.                                                                        |
-| `css`              | string   | No       | n/a     | Global custom CSS applicable to custom HTML elements.                                                                            |
-| `startScreens`     | Screen[] | No       | []      | An array of Screen models, one of which will be displayed at the start of the survey.                                            |
-| `abortScreens`     | Screen[] | No       | []      | An array of Screen models, one of which will be displayed when the participant is disqualified from the survey.                  |
-| `completeScreens`  | Screen[] | No       | []      | An array of Screen models, one of which will be shown upon the survey's completion.                                              |
-| `variables`        | object   | No       | {}      | A map of external key-value pairs, such as user name, product name, etc. Variables can be used with piping and conditional logic |
+| Method              | Type     | Default        | Description                                                                                                                      |
+| ------------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `name`              | string   | n/a (Required) | Describes the name of the survey.                                                                                                |
+| `customRef`         | string   | null           | A custom reference ID for your survey.                                                                                           |
+| `uiShowNavigation`  | boolean  | true           | you want to show the navigation buttons.                                                                                         |
+| `uiShowProgress`    | boolean  | true           | If you want to show the page progress indicator.                                                                                 |
+| `uiShowCloseButton` | boolean  | false          | If you want to show a close button at the top-right corner.indicator.                                                            |
+| `uiUseAnimation`    | boolean  | true           | If you prefer to use a sliding animation for page navigation.                                                                    |
+| `timeoutSeconds`    | number   | 1800           | The duration of inactivity, in seconds, before the survey session times out and the survey resets.                               |
+| `pageTemplates`     | Page[]   | []             | An array of Page models used to share common key values across pages.                                                            |
+| `blockTemplates`    | Block[]  | []             | An array of Block models used to share common key values across blocks.                                                          |
+| `pages`             | Page[]   | []             | An array of Page models in the survey.                                                                                           |
+| `theme`             | Theme    | null           | The Theme model for customizing the survey look and feel.                                                                        |
+| `css`               | string   | null           | Global custom CSS applicable to custom HTML elements.                                                                            |
+| `startScreens`      | Screen[] | []             | An array of Screen models, one of which will be displayed at the start of the survey.                                            |
+| `abortScreens`      | Screen[] | []             | An array of Screen models, one of which will be displayed when the participant is disqualified from the survey.                  |
+| `completeScreens`   | Screen[] | []             | An array of Screen models, one of which will be shown upon the survey's completion.                                              |
+| `variables`         | object   | {}             | A map of external key-value pairs, such as user name, product name, etc. Variables can be used with piping and conditional logic |
 
 !!! info "Info"
 
@@ -116,7 +117,7 @@ Screens are the visual gateways of your SurveyCompo surveys. They introduce resp
 
 A screen can include the following optional elements:
 
-![screen-anatomy](../assets/images/anatomy-screen.png){: .center}
+![screen-anatomy](../assets/images/anatomy-screen.png){: .center .md}
 
 - **Header**: A prominent area for the survey title, section headings, or instructions.
 
@@ -150,7 +151,7 @@ SurveyCompo supports multiple start and end screens for flexible survey design. 
 
 !!! note "Note"
 
-    Details on visibility logic will be covered in subsequent sections.
+    Details on conditional logic will be covered in subsequent sections.
 
 ### The Screen Data Model
 
@@ -182,6 +183,24 @@ The following code example demonstrates how a screen integrates into the survey 
 }
 ```
 
+| Method              | Type      | Default | Description                                                                            |
+| ------------------- | --------- | ------- | -------------------------------------------------------------------------------------- |
+| `name`              | string    | null    | Describes the name of the screen.                                                      |
+| `customRef`         | string    | null    | A custom reference ID for the screen.                                                  |
+| `header`            | string    | null    | Screen header text.                                                                    |
+| `htmlHeader`        | string    | null    | Screen header in HTML format.                                                          |
+| `footer`            | string    | null    | Screen footer text.                                                                    |
+| `htmlFooter`        | string    | null    | Screen footer in HTML format.                                                          |
+| `description`       | string    | null    | Screen description text.                                                               |
+| `htmlDescription`   | string    | null    | Screen description in HTML format.                                                     |
+| `okButtonLabel`     | string    | null    | Label on the screen's OK button.                                                       |
+| `okButtonURL`       | string    | null    | URL to redirect to when the OK button is clicked.                                      |
+| `cancelButtonLabel` | string    | null    | Label on the screen's Cancel button.                                                   |
+| `cancelButtonURL`   | string    | null    | URL to redirect to when the Cancel button is clicked.                                  |
+| `hCentered`         | boolean   | true    | If true, center screen content horizontally.                                           |
+| `vCentered`         | boolean   | true    | If true, center screen content vertically.                                             |
+| `visibleIf`         | Condition | true    | Screen visibility condition. The screen is visible only if the condition is satisfied. |
+
 ---
 
 ## Page
@@ -192,7 +211,7 @@ Pages are the backbone of your SurveyCompo surveys. They contain your survey que
 
 A page can include the following optional elements:
 
-![page-anatomy](../assets/images/anatomy-page.png){: .center}
+![page-anatomy](../assets/images/anatomy-page.png){: .center .md}
 
 - **Header**: A dedicated area at the top for titles or instructions.
 
@@ -231,7 +250,7 @@ Use the `visibleIf` setting to conditionally show or hide pages based on survey 
 
 !!! note "Note"
 
-    Details on visibility logic will be covered in subsequent sections.
+    Details on conditional logic will be covered in subsequent sections.
 
 ### Page Randomization
 
@@ -241,7 +260,7 @@ Prevent response bias by shuffling the order of pages. SurveyCompo's `randomized
 
 The following code example demonstrates how a page integrates into the survey JSON data model. [:material-github:{.right-icon} view source](https://github.com/SurveyCompo/examples/blob/main/examples/anatomy/source.json)
 
-```json linenums="1" hl_lines="5-11"
+```json linenums="1" hl_lines="7-15"
 {
   "name": "My Survey",
   "startScreens": [
@@ -268,6 +287,28 @@ The following code example demonstrates how a page integrates into the survey JS
 }
 ```
 
+| Method                  | Type      | Default | Description                                                                                     |
+| ----------------------- | --------- | ------- | ----------------------------------------------------------------------------------------------- |
+| `name`                  | string    | null    | Describes the name of the page.                                                                 |
+| `customRef`             | string    | null    | Custom reference associated with the page.                                                      |
+| `templateName`          | string    | null    | Name of the page template. The current page inherits properties from the matched page template. |
+| `header`                | string    | null    | Page header text.                                                                               |
+| `htmlHeader`            | string    | null    | Page header in HTML format.                                                                     |
+| `description`           | string    | null    | Page description text.                                                                          |
+| `htmlDescription`       | string    | null    | Page description in HTML format.                                                                |
+| `footer`                | string    | null    | Page footer text.                                                                               |
+| `htmlFooter`            | string    | null    | Page footer in HTML format.                                                                     |
+| `nextButtonLabel`       | string    | null    | Label on the page's next button.                                                                |
+| `nextButtonURL`         | string    | null    | URL to redirect to when the next button is clicked.                                             |
+| `nextButtonHidden`      | boolean   | false   | If true, the next button is hidden.                                                             |
+| `hCentered`             | boolean   | false   | If true, center page content horizontally.                                                      |
+| `vCentered`             | boolean   | false   | If true, center page content vertically.                                                        |
+| `autoAdvancePage`       | boolean   | false   | If true, advance to the next page automatically when applicable.                                |
+| `randomWithinGroup`     | string    | false   | If set, randomize the display order amongst peer pages that share the same set group name.      |
+| `visibleIf`             | Condition | false   | Page conditional logic. If set, the page displays only if the condition is satisfied.           |
+| `requiresVisibleBlocks` | boolean   | false   | If true, the page is displayed only if there are visible blocks on the page.                    |
+| `blocks`                | Block[]   | []      | Array of blocks on the page.                                                                    |
+
 ---
 
 ## Block
@@ -278,7 +319,7 @@ A ‘Block’ in SurveyCompo is a section of content on a survey page - it’s t
 
 Blocks can contain the following optional elements:
 
-![block-anatomy](../assets/images/anatomy-block.png){: .center}
+![block-anatomy](../assets/images/anatomy-block.png){: .center .md}
 
 - **Index**: A numerical indicator to help organize and order questions.
 - **Title**: The primary text of your survey question.
@@ -292,26 +333,6 @@ Blocks can contain the following optional elements:
 SurveyCompo stands out by allowing you to combine **multiple input types** within a single block. This gives you significant flexibility in question design.
 
 For example, a block titled "Tell us about yourself" could include a text input for the user's name, a dropdown for age range, and a checkbox list for areas of interest.
-
-<!-- Here's a list of the available input types:
-
-- **TEXT**: A single-line text input.
-- **TEXTAREA**: A multi-line text input.
-- **RADIO**: A single-choice radio button.
-- **CHECKBOX**: A multi-choice checkbox.
-- **SELECT**: A dropdown selection.
-- **LIKERT**: A Likert scale input.
-- **MATRIX**: A matrix question input.
-- **RANK**: A ranking input.
-- **RATING**: A rating input.
-- **DATE**: A date picker input.
-- **TIME**: A time picker input.
-- **EMAIL**: An email input.
-- **URL**: A URL input.
-- **NUMBER**: A number input.
-- **PHONE**: A phone number input. -->
-<!-- - **FILE**: A file upload input. -->
-<!-- - **HTML**: A custom HTML input. -->
 
 When a Block is used to provide instructions or explanations rather than to collect user inputs, it will have an empty list of inputs. This is a common practice in survey design to guide respondents through the survey flow. For example, a block titled "Instructions" may contain only a description and footnote, with no input controls. This is a powerful feature that allows you to create dynamic and engaging surveys tailored to your specific needs. SurveyCompo gives you the flexibility to design your survey in a way that best suits your goals and audience.
 
@@ -329,7 +350,7 @@ The `visibleIf` setting lets you control a block's display based on specific sur
 
 !!! note "Note"
 
-    Details about visibility logic will be covered in subsequent sections.
+    Details about conditional logic will be covered in subsequent sections.
 
 ### Question Randomization
 
@@ -350,7 +371,7 @@ Blocks feature a powerful grid layout engine to arrange input elements:
 
 The following code example demonstrates how blocks integrate into the survey JSON data model. [:material-github:{.right-icon} view source](https://github.com/SurveyCompo/examples/blob/main/examples/anatomy/source.json)
 
-```json linenums="1" hl_lines="8-17"
+```json linenums="1" hl_lines="10-17"
 {
   "name": "My Survey",
   "startScreens": [
@@ -386,6 +407,33 @@ The following code example demonstrates how blocks integrate into the survey JSO
   ]
 }
 ```
+
+| Method                         | Type         | Default | Description                                                                                      |
+| ------------------------------ | ------------ | ------- | ------------------------------------------------------------------------------------------------ |
+| `name`                         | string       | null    | Describes the name of the block.                                                                 |
+| `customRef`                    | string       | null    | Custom reference associated with the block.                                                      |
+| `templateName`                 | string       | null    | Name of the block template. The current block inherits properties from the matched template.     |
+| `title`                        | string       | null    | Title of the block.                                                                              |
+| `htmlTitle`                    | string       | null    | Title of the block in HTML format.                                                               |
+| `subtitle`                     | string       | null    | Subtitle of the block.                                                                           |
+| `htmlSubtitle`                 | string       | null    | Subtitle of the block in HTML format.                                                            |
+| `description`                  | string       | null    | Description of the block.                                                                        |
+| `htmlDescription`              | string       | null    | Description of the block in HTML format.                                                         |
+| `footnote`                     | string       | null    | Footnote of the block.                                                                           |
+| `htmlFootnote`                 | string       | null    | Footnote of the block in HTML format.                                                            |
+| `showIndexNumber`              | boolean      | true    | If true, display index numbers for inputs in the block.                                          |
+| `validations`                  | Validation[] | []      | Array of validation rules for the block.                                                         |
+| `visibleIf`                    | Condition    | null    | Block visibility condition. If set, the block displays only if the condition is satisfied.       |
+| `randomWithinGroup`            | string       | null    | If set, randomize the display order amongst peer blocks that share the same group name.          |
+| `inputs`                       | Input[]      | []      | Array of inputs within the block.                                                                |
+| `requiresVisibleInputs`        | boolean      | false   | If true, the block is displayed only if there are visible inputs in the block.                   |
+| `layoutColumnCount`            | number       | 1       | Column count of the block layout.                                                                |
+| `layoutColumnWidth`            | string       | '100%'  | Column width of the block layout. Takes css width values. e.g. 200px, 50%                        |
+| `layoutColumnGap`              | string       | '0'     | Column gap of the block layout. Takes css width values. e.g. 5px, 1em                            |
+| `layoutRowGap`                 | string       | '1em'   | Row gap of the block layout. Takes css width values. e.g. 5px, 1em                               |
+| `layoutCenterAligned`          | boolean      | false   | Column gap of the block layout. Takes css width values. e.g. 5px, 1em                            |
+| `layoutLikertMatrixWidth`      | string       | '100%'  | Width of the Likert Matrix table. Only applicable to Likert input types. Takes css width values. |
+| `layoutLikertMatrixLabelWidth` | string       | '25%'   | Width of the label column in a Likert Matrix. Only applicable to Likert input types.             |
 
 ---
 
