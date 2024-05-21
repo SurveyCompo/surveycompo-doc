@@ -1,15 +1,15 @@
 :root > * {
-  --md-footer-fg-color:                hsla(0, 0%, 0%, 1);
-  --md-footer-fg-color--light:         hsla(0, 0%, 0%, 0.7);
-  --md-footer-fg-color--lighter:       hsla(0, 0%, 0%, 0.45);
-  --md-footer-bg-color:                hsla(0, 0%, 100%, 1);
-  --md-footer-bg-color--dark:
-       hsla(0, 0%, 80%, 1);
+  --md-footer-fg-color: hsla(0, 0%, 0%, 1);
+  --md-footer-fg-color--light: hsla(0, 0%, 0%, 0.7);
+  --md-footer-fg-color--lighter: hsla(0, 0%, 0%, 0.45);
+  --md-footer-bg-color: hsla(0, 0%, 100%, 1);
+  --md-footer-bg-color--dark: hsla(0, 0%, 80%, 1);
 }
 
 /* mkdocs default to 4 spaces tabs */
 code {
-  tab-size: 2
+  tab-size: 2;
+  font-size: 0.8em !important;
 }
 
 .right-icon {
@@ -43,7 +43,6 @@ code {
   max-width: 24rem !important;
 }
 
-
 .small-text {
   font-size: 0.65em;
 }
@@ -53,5 +52,5 @@ code {
   overflow: auto;
 }
 .resizable:active {
-   height: 0;
+  height: 0;
 }
