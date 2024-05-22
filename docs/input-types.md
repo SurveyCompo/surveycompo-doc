@@ -296,13 +296,132 @@ The `numberScaleInputLabels` key assigns labels to the scale. These labels, repr
 
 ## Star Rating
 
+The `STAR_RATING` input type is designed to capture ratings on a scale. It is depicted as a set of stars that users can select. The `STAR_RATING` input type is commonly used for capturing ratings on a scale, such as satisfaction ratings, agreement levels, and likelihood scores.
+
+The `starInputCount` key is used to specify the maximum number of stars in the rating scale. The default value is 5. The `starInputColor` determines the color of the stars. The default color is yellow (#f1c40f).
+
+=== "Preview"
+
+    ![Input - Star](../assets/images/input-star.png){: .small .embedded}
+
+=== "JSON"
+
+    ```json
+    "inputs": [
+      {
+        "type": "STAR_SCALE",
+        "label": "Ease of Use:",
+        "labelPosition": "LEFT",
+        "labelWidth": "10em"
+      },
+      {
+        "type": "STAR_SCALE",
+        "label": "Value for money:",
+        "labelPosition": "LEFT",
+        "labelWidth": "10em"
+      },
+      {
+        "type": "STAR_SCALE",
+        "label": "Customer support:",
+        "labelPosition": "LEFT",
+        "labelWidth": "10em"
+      }
+    ]
+    ```
+
 ## Image
 
+The `IMAGE` input type is designed for displaying and selecting images within surveys.
+
+By default, the `IMAGE` input behaves similarly to a `RADIO` input, except for the visual representation. Users can select or deselect the image. When an `IMAGE` input is selected, a checkmark icon appears at the top right corner of the image. The position of this checkmark icon can be adjusted by setting the `imageInputCheckmarkPosition` key to `BOTTOM`.
+
+To enable the selection of multiple `IMAGE` inputs within the same block, set the `imageInputMultiple` key to `true`. This setting removes the exclusivity of the selection, allowing users to choose multiple images within the same block.
+
+The `imageInputPadding` key allows you to add additional padding around the image for aesthetic or clarity purposes, while the `imageInputNoBorder` key removes the box border surrounding the image. This is particularly useful when you prefer to display the image without any border.
+
+Keep in mind that SurveyCompo automatically resizes the image to fit within the block. You can utilize the block layout settings to fine-tune the size and spacing of the images.
+
+=== "Preview"
+
+    ![Input - Image](../assets/images/input-image.png){: .small .embedded}
+
+=== "JSON"
+
+    ```json
+    {
+      "title": "Which of these images best represents your experience with SurveyCompo?",
+      "layoutColumnCount": 5,
+      "layoutColumnWidth": "80px",
+      "layoutColumnGap": "1em",
+      "inputs": [
+        {
+          "type": "IMAGE",
+          "imageInputSrc": "https://surveycompo.github.io/examples/images/face-laughing.svg",
+          "imageInputNoBorder": true,
+          "label": "Excellent"
+        },
+        {
+          "type": "IMAGE",
+          "imageInputSrc": "https://surveycompo.github.io/examples/images/face-smile.svg",
+          "imageInputNoBorder": true,
+          "label": "Good"
+        },
+        {
+          "type": "IMAGE",
+          "imageInputSrc": "https://surveycompo.github.io/examples/images/face-neutral.svg",
+          "imageInputNoBorder": true,
+          "label": "Average"
+        },
+        {
+          "type": "IMAGE",
+          "imageInputSrc": "https://surveycompo.github.io/examples/images/face-frown.svg",
+          "imageInputNoBorder": true,
+          "label": "Bad"
+        },
+        {
+          "type": "IMAGE",
+          "imageInputSrc": "https://surveycompo.github.io/examples/images/face-angry.svg",
+          "imageInputNoBorder": true,
+          "label": "terrible"
+        }
+      ]
+    }
+    ```
+
 ## Toggle
+
+The `TOGGLE` input type is designed to capture binary data. It is depicted as a toggle switch that users can slide to the left or right. The value of the toggle switch is `true` when slid to the right and `false` when slid to the left. The `TOGGLE` input type is commonly used for capturing binary data such as yes/no questions, true/false statements, and on/off settings.
+
+=== "Preview"
+
+    ![Input - Toggle](../assets/images/input-toggle.png){: .small .embedded}
+
+=== "JSON"
+
+    ```json
+    "inputs": [
+      {
+        "type": "TOGGLE",
+        "label": "Promotion",
+        "labelPosition": "LEFT",
+        "labelWidth": "10em"
+      },
+      {
+        "type": "TOGGLE",
+        "label": "Newsletter",
+        "labelPosition": "LEFT",
+        "labelWidth": "10em"
+      }
+    ]
+    ```
 
 ## Likert Rating
 
 ## Likert Matrix
+
+```
+
+```
 
 ```
 
