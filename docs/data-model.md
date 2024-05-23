@@ -442,6 +442,7 @@ The following code example demonstrates how blocks integrate into the survey JSO
 | `layoutCenterAligned`          | boolean                     | false   | If true, the block layout is centered.                                                      |
 | `layoutLikertMatrixWidth`      | string                      | '100%'  | The width of the Likert Matrix table. Only applicable to Likert input types.                |
 | `layoutLikertMatrixLabelWidth` | string                      | '25%'   | The width of the label column in a Likert Matrix. Only applicable to Likert input types.    |
+| `layoutLikertMatrixMode`       | 'AUTO', 'LIKERT', 'MATRIX'  | 'AUTO'  | Manages the visibility of the Likert Matrix Table on smaller screens                        |
 
 ---
 
