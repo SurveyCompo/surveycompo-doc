@@ -453,14 +453,44 @@ Like the `DROPDOWN` input type, the `LIKERT_RATING` input type also supports pre
 
 ## Likert Matrix
 
-```
+Likert Matrix allow you to combine multiple Likert input with the same options. This is most useful when you need to ask multiple questions that should be rated on the same scale.
 
-```
+SurveyCompo automatically groups adjacent Likert inputs with the same options into a matrix. There's no need to specify the matrix explicitly. Likert Matrix requires at least two Likert inputs with the same options to be present in the survey. If there's only one Likert input with options, it will be displayed as a standalone Likert input.
 
-```
+!!! info "Info"
 
-```
+    The Likert Matrix presents multiple questions in a tabular format and typically requires a larger display area. As a result, when viewed on mobile devices or smaller screens, the Likert Matrix automatically adapts to display as individual Likert inputs for better user experience.
 
-```
+=== "Preview"
 
-```
+    ![Input - Likert Matrix](../assets/images/input-likert-matrix.png){: .small .embedded}
+
+=== "JSON"
+
+    ```json
+    {
+      "title": "Please rate your satisfaction with the following aspects of SurveyCompo",
+      "inputs": [
+        {
+          "type": "LIKERT_SCALE",
+          "label": "User Interface (UI)",
+          "likertInputPreset": "SATISFACTION"
+        },
+        {
+          "type": "LIKERT_SCALE",
+          "label": "Customization Options",
+          "likertInputPreset": "SATISFACTION"
+        },
+        {
+          "type": "LIKERT_SCALE",
+          "label": "Customer Support",
+          "likertInputPreset": "SATISFACTION"
+        },
+        {
+          "type": "LIKERT_SCALE",
+          "label": "Pricing",
+          "likertInputPreset": "SATISFACTION"
+        }
+      ]
+    }
+    ```
