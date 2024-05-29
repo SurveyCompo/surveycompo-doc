@@ -608,14 +608,15 @@ The `Theme` model allows you to customize the appearance of your survey. You can
 | Method               | Type   | Default         | Description                                                                                                   |
 | -------------------- | ------ | --------------- | ------------------------------------------------------------------------------------------------------------- |
 | `fontFamily`         | string | "ui-sans-serif" | The text font family. Accepts CSS font-family values.                                                         |
-| `fontSize`           | string | '14px'          | The base font size. Accepts CSS font size values.                                                             |
+| `fontSize`           | string | '14px'          | The font size. Accepts CSS font size values.                                                                  |
 | `primaryColor`       | string | '#0f172a'       | The primary base color using a hexadecimal code.                                                              |
 | `backgroundColor`    | string | '#ffffff'       | The background color of the survey using a hexadecimal code.                                                  |
-| `textColor`          | string | null            | The base color of the text using a hexadecimal code.                                                          |
-| `errorColor`         | string | '#dc2626'       | The base color of error messages using a hexadecimal code.                                                    |
-| `neutralColor`       | string | '#18181b'       | The base color of neutral elements using a hexadecimal code.                                                  |
-| `buttonColor`        | string | null            | The base color of buttons using a hexadecimal code.                                                           |
-| `borderColor`        | string | null            | The base color of borders using a hexadecimal code.                                                           |
+| `textColor`          | string | null            | The text color using a hexadecimal code.                                                                      |
+| `errorColor`         | string | '#dc2626'       | The error color using a hexadecimal code.                                                                     |
+| `neutralColor`       | string | '#d4d4d8'       | The color of neutral elements using a hexadecimal code.                                                       |
+| `warningColor`       | string | '#ea580c'       | The color for warning messages using a hexadecimal code.                                                      |
+| `buttonColor`        | string | null            | The color for buttons using a hexadecimal code.                                                               |
+| `borderColor`        | string | null            | The color for borders using a hexadecimal code.                                                               |
 | `defaultRadius`      | string | '0'             | The default radius for buttons, boxes, and inputs. Accepts CSS radius values (e.g., '0.5em').                 |
 | `buttonRadius`       | string | null            | The radius for buttons. If set, it overrides the default radius. Accepts CSS radius values.                   |
 | `boxRadius`          | string | null            | The radius for box containers. If set, it overrides the default radius. Accepts CSS radius values.            |
