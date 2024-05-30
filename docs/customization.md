@@ -10,7 +10,7 @@ Before delving into the specifics, let's explore a key feature that sets SurveyC
 
 ## Style Encapsulation
 
-SurveyCompo utilizes Shadow DOM to keep its styles separate. This means that the appearance of SurveyCompo surveys is independent from the rest of the webpage, ensuring that the webpage's styles don't interfere with the survey's look. This feature is particularly useful when embedding surveys in websites with complex styles.
+SurveyCompo utilizes Shadow DOM to keep its styles separate. This means that the appearance of SurveyCompo surveys is independent from the rest of the webpage, and the webpage's styles don't interfere with the survey's look. This feature is particularly useful when embedding surveys in websites with complex styles.
 
 Style Encapsulation also allows you to customize the survey's appearance without affecting the rest of the webpage. You can modify the survey's appearance using CSS, themes, and custom HTML without worrying about the rest of the webpage's styles.
 
@@ -127,7 +127,7 @@ In this example, the CSS rules for changing the background color of checkbox inp
 
 !!! note "Note"
 
-    CSS rules specified in the survey JSON `css` key have higher priority than the CSS rules defined in the `<style>` tag. Furthermore, CSS rules in the `<style>` tag override the theme styles of the survey. This hierarchy allows you to override specific styles for individual surveys while ensuring a consistent appearance across multiple surveys.
+    CSS rules specified in the survey JSON `css` key have higher priority than the CSS rules defined in the `<style>` tag. Furthermore, CSS rules in the `<style>` tag override the theme styles of the survey. This hierarchy allows you to override specific styles for individual surveys while maintaining a consistent appearance across multiple surveys.
 
 Below are the CSS class names that you can utilize to customize the survey. These class names allow you to apply CSS rules to specific elements within the survey:
 
@@ -244,7 +244,7 @@ There are a few limitations to be aware of when using CSS with SurveyCompo:
 
 ## Space
 
-SurveyCompo is designed to be responsive and adapt to various screen sizes. Internally it uses the css 'em' unit for spacing, which is relative to the font size of the root element. This allows the survey to scale proportionally with the font size, ensuring that the survey elements maintain their relative size and spacing.
+SurveyCompo is designed to be responsive and adapt to various screen sizes. Internally it uses the css 'em' unit for spacing, which is relative to the font size of the root element. This allows the survey to scale proportionally with the font size, and the survey elements maintain their relative size and spacing.
 
 To adjust the spacing between elements, you can modify the `font-size` property of the `:host` CSS selector. This will change the spacing between elements while maintaining the relative proportions of the survey components. The default `font-size` value is `14px`, which corresponds to `1em`.
 

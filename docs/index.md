@@ -8,7 +8,7 @@ Welcome to SurveyCompo, the ultimate tool for creating dynamic and adaptable sur
 
 ## What is SurveyCompo?
 
-SurveyCompo is a purpose-built web component, it offers exceptional flexibility, customization, and programmability. Crafting a survey is effortless: simply provide SurveyCompo with JSON-based data, and it seamlessly renders your survey design.
+SurveyCompo is a purpose-built web component, it offers exceptional flexibility, customization, and programmability. Creating a survey with SurveyCompo is easy: simply provide SurveyCompo with JSON-based data, and it renders your survey design.
 
 SurveyCompo's power extends far beyond creation. Its seamless integration into your existing tech stack enables real-time data capture and interactive experiences. Style your surveys to match your brand using themes and CSS, and leverage event listeners to respond dynamically to user input.
 
@@ -118,7 +118,7 @@ With SurveyCompo, you gain full control over every aspect of your surveys. Unlea
 
       ---
 
-      Adjust its size, position, and styling to seamlessly blend with your brand and style using **CSS**. Choose a **theme** or create a unique design that perfectly suits your needs.
+      Adjust its size, position, and styling to blend with your brand and style using **CSS**. Choose a **theme** or create a unique design that suits your needs.
 
 - :fontawesome-solid-gears:{ .left-icon } **Easy Integration**
 

@@ -562,7 +562,7 @@ When a block includes a 'required' validation rule, surveyCompo automatically ap
 
     Please note that setting `textInputType` to `NUMBER` for the 'Age' input does not inherently restrict the input to numerical values. While this setting enhances the user interface with features like a number keyboard and a number stepper, it does not enforce validation. Consequently, it remains necessary to apply the `INTEGER` validation rule to ensure the input format and value range are as desired. For an in-depth exploration of input types and their corresponding validation rules, consult the [Validation](/data-model#validation) section of our documentation.
 
-This tutorial illustrates how to apply one or more validation rules to inputs or blocks. By implementing these rules, you can effectively navigate participants through the survey, ensuring they provide precise and valid responses.
+This tutorial illustrates how to apply one or more validation rules to inputs or blocks.
 
 Now, let's examine the functionality of these validation rules within the Survey Builder:
 
