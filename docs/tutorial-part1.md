@@ -40,7 +40,7 @@ Let's Get Started!
 
 The SurveyCompo Survey Builder is a powerful tool for creating and managing your surveys. Whether you're a seasoned JSON expert or prefer visual tools, our builder offers flexibility and ease of use.
 
-![Survey Builder](../assets/images/survey-builder.png){: .center .embedded}
+![Survey Builder](assets/images/survey-builder.png){: .center .embedded}
 
 **Key Features**:
 
@@ -108,7 +108,7 @@ The `startScreens` property is an array that can contain multiple screens. If th
 
 Let's add the welcome screen to our survey JSON source and preview it in the Survey Builder.
 
-![Tutorial - Welcome Screen](../assets/images/tutorial-welcome-screen.png){: .center .small}
+![Tutorial - Welcome Screen](assets/images/tutorial-welcome-screen.png){: .center .small}
 
 ## Adding the First Page
 
@@ -214,7 +214,7 @@ Note that the last input field has the `type` of `CHECKBOX_TEXT`, and it include
 
 Let's add the first page to our survey JSON source and preview it in the Survey Builder.
 
-![Tutorial - First Page](../assets/images/tutorial-first-page.png){: .center .small}
+![Tutorial - First Page](assets/images/tutorial-first-page.png){: .center .small}
 
 ## Adding the Second Page
 
@@ -277,7 +277,7 @@ The second page JSON source includes 3 blocks/questions:
 
 Let's preview the second page in the Survey Builder.
 
-![Tutorial - Second Page](../assets/images/tutorial-second-page.png){: .center .small}
+![Tutorial - Second Page](assets/images/tutorial-second-page.png){: .center .small}
 
 The `nextButtonLabel` property is set to "Submit," which is the label displayed on the button that participants use to advance to the subsequent page. If this property is left unspecified, the button defaults to the label "Next". With the addition of multiple pages to our survey, a navigation bar now appears at the bottom of each page, enabling participants to move between pages. The navigation bar displays the page number and the total number of pages in the survey. The navigation bar can be hidden using the `uiShowNavigation` survey property. For more information, see the [Survey](/data-model/#survey) documentation.
 
@@ -306,7 +306,7 @@ The final screen of the survey is the complete screen. It provides a closing mes
 
 Let's preview the complete screen in the Survey Builder.
 
-![Tutorial - Complete Screen](../assets/images/tutorial-complete-screen.png){: .center .small}
+![Tutorial - Complete Screen](assets/images/tutorial-complete-screen.png){: .center .small}
 
 ## Randomization
 
@@ -314,7 +314,7 @@ SurveyCompo supports randomization of questions and answer options. Randomizatio
 
 In this tutorial, you will add randomization to the 'How did you hear about us?' question. The inputs will be randomized to prevent order bias.
 
-```json
+```json linenums="1" hl_lines="17 22 27 32"
 {
   "name": "Product Satisfaction Survey",
   "startScreens": [
@@ -373,7 +373,7 @@ It's important to note that the randomization occurs upon survey load and remain
 
 Let's preview the randomization in the Survey Builder:
 
-![Tutorial - Second Page](../assets/images/tutorial-randomization.png){: .center .small}
+![Tutorial - Second Page](assets/images/tutorial-randomization.png){: .center .small}
 
 ## Disqualification
 
@@ -381,7 +381,7 @@ SurveyCompo supports disqualification logic to exclude participants who do not m
 
 In this tutorial, you will add disqualification logic to the survey to exclude participants under the age of 18 from completing the survey. The disqualification logic will be applied to the 'Age' input and an Abort Screen.
 
-```json linenums="1" hl_lines="13 24-31"
+```json linenums="1" hl_lines="15 30-33"
 {
   "name": "Product Satisfaction Survey",
   "startScreens": [
@@ -431,7 +431,7 @@ multiple abort screens are defined, the most specific screen is displayed based 
 
 Let's preview the disqualification logic in the Survey Builder:
 
-![Tutorial - Disqualification](../assets/images/tutorial-abort-screen.png){: .center .small}
+![Tutorial - Disqualification](assets/images/tutorial-abort-screen.png){: .center .small}
 
 ## Piping
 
@@ -458,7 +458,7 @@ The `description` property of the Abort Screen includes the `{#age}` placeholder
 
 Let's preview the piping in the Survey Builder and enter the age value of 11 to see the personalized message:
 
-![Tutorial - Piping](../assets/images/tutorial-piping.png){: .center .small}
+![Tutorial - Piping](assets/images/tutorial-piping.png){: .center .small}
 
 ## Validation
 
@@ -468,7 +468,7 @@ This tutorial guides you through the process of enhancing your survey with valid
 
 The updated JSON source includes the following validation rules:
 
-```json linenums="1" hl_lines="15-29 44-49 59-65"
+```json linenums="1" hl_lines="17-31 42-47 57-63"
 {
   "name": "Product Satisfaction Survey",
   "startScreens": [
@@ -560,13 +560,13 @@ When a block includes a 'required' validation rule, surveyCompo automatically ap
 
 !!! tip "Tip"
 
-    Please note that setting `textInputType` to `NUMBER` for the 'Age' input does not inherently restrict the input to numerical values. While this setting enhances the user interface with features like a number keyboard and a number stepper, it does not enforce validation. Consequently, it remains necessary to apply the `INTEGER` validation rule to ensure the input format and value range are as desired. For an in-depth exploration of input types and their corresponding validation rules, consult the [Validation](/data-model/#validation) section of our documentation.
+    Please note that setting `textInputType` to `NUMBER` for the 'Age' input does not inherently restrict the input to numerical values. While this setting enhances the user interface with features like a number keyboard and a number stepper, it does not enforce validation. Consequently, it remains necessary to apply the `INTEGER` validation rule to ensure the input format and value range are as desired. For an in-depth exploration of input types and their corresponding validation rules, consult the [Validation](/data-model#validation) section of our documentation.
 
 This tutorial illustrates how to apply one or more validation rules to inputs or blocks. By implementing these rules, you can effectively navigate participants through the survey, ensuring they provide precise and valid responses.
 
 Now, let's examine the functionality of these validation rules within the Survey Builder:
 
-![Tutorial - Validation](../assets/images/tutorial-validation.png){: .center .small}
+![Tutorial - Validation](assets/images/tutorial-validation.png){: .center .small}
 
 ## Conditional Logic
 
@@ -576,7 +576,7 @@ In this tutorial, we will incorporate conditional logic into the survey. This wi
 
 Below is the revised JSON source code for the second page of the survey:
 
-```json linenums="1" hl_lines="15 28-32 43-47"
+```json linenums="1" hl_lines="17 30-34 45-49"
 {
   "name": "Product Satisfaction Survey",
   "startScreens": [
@@ -650,7 +650,7 @@ To enhance user experience, you might consider segregating the conditional block
 
 Let's preview the conditional logic in the Survey Builder:
 
-![Tutorial - Conditional Logic](../assets/images/tutorial-condition.png){: .center .small}
+![Tutorial - Conditional Logic](assets/images/tutorial-condition.png){: .center .small}
 
 ## Customization
 
@@ -686,17 +686,17 @@ By default, SurveyCompo generates the color palette based on the `primaryColor` 
 
 Let's preview the customization in the Survey Builder:
 
-![Tutorial - Customization](../assets/images/tutorial-customization.png){: .center .small}
+![Tutorial - Customization](assets/images/tutorial-customization.png){: .center .small}
 
 Customization doesn't stop at colors and fonts. SurveyCompo offers a variety of customization options to tailor the survey experience to your brand and audience. You can customize the survey fonts, colors, layout, and more. For a comprehensive list of customization options, refer to the [Customization](/advanced/#customization) section in our documentation.
 
 ## HTML Text
 
-SurveyCompo supports HTML text in the survey to enhance the visual appeal and readability of your questions and descriptions. HTML text allows you to format text, add images, and embed videos in your survey. For more information on HTML text, see the [HTML Text](/advanced/#html-text) documentation.
+SurveyCompo supports HTML text in the survey to enhance the visual appeal and readability of your questions and descriptions. HTML text allows you to format text, add images, and embed videos in your survey. For more information on HTML text, see the [HTML Text](/customization/#custom-html) documentation.
 
 In this tutorial, we will add HTML text to the Page footer to provide a link to the privacy policy.
 
-```json linenums="1" hl_lines="11"
+```json linenums="1" hl_lines="17"
 {
   "name": "Product Satisfaction Survey",
   "theme": {
@@ -727,13 +727,13 @@ In this tutorial, we will add HTML text to the Page footer to provide a link to 
 
 The `htmlFooter` property allows you to add HTML text to the footer of the page. You can use HTML tags to format text, add links, and embed media. In this example, we use an anchor tag to create a hyperlink to the privacy policy.
 
-![Tutorial - HTML footer](../assets/images/tutorial-customization-footer1.png){: .center .md}
+![Tutorial - HTML footer](assets/images/tutorial-customization-footer1.png){: .center .md}
 
 However, a problem arises as the link in the footer does not resemble a typical hyperlink. Usually, hyperlinks are distinguished by a different color and often underlined for clarity.
 
 SurveyCompo does not include default styles for custom HTML elements. However, you can utilize inline styles or CSS to personalize these elements. In this instance, we'll employ CSS to enhance the appearance of the hyperlink.
 
-```json linenums="1" hl_lines="4 12"
+```json linenums="1" hl_lines="6 18"
 {
   "name": "Product Satisfaction Survey",
   "theme": {
@@ -767,9 +767,9 @@ We first assign a class name `my-link` to the hyperlink in the `htmlFooter` prop
 
 Let's preview the customized hyperlink in the Survey Builder:
 
-![Tutorial - HTML footer](../assets/images/tutorial-customization-footer2.png){: .center .small}
+![Tutorial - HTML footer](assets/images/tutorial-customization-footer2.png){: .center .small}
 
-It looks better now! HTML text applies to various elements in the survey. You can use HTML in Screens, Pages and Blocks. For more information on HTML text, see the [HTML Text](/advanced/#html-text) documentation.
+It looks better now! HTML text applies to various elements in the survey. You can use HTML in Screens, Pages and Blocks. For more information on HTML text, see the [HTML Text](/customization/#custom-html) documentation.
 
 ## Using Templates
 
@@ -777,7 +777,7 @@ We've recently appended an HTML footer to the survey's final page. But what if w
 
 In this tutorial, we will create a template for the HTML footer and apply it to all pages in the survey.
 
-```json linenums="1" hl_lines="5-8 13 18"
+```json linenums="1" hl_lines="7-11 19 26"
 {
   "name": "Product Satisfaction Survey",
   "theme": {
@@ -829,7 +829,7 @@ We're close to finalizing the survey's look and feel. However, there's one last 
 
 These identifiers are useful for referencing inputs in conditional logic, validation rules, and piping. We've already added the `id` key to the 'Age' input on the survey's first page for implementing the 'disqualifying' logic. The input's `id` will also be reported along with its values upon survey completion. Without this identifier, it would be challenging to determine which input the value corresponds to.
 
-```json linenums="1" hl_lines="13"
+```json linenums="1" hl_lines="15"
 {
   "name": "Product Satisfaction Survey",
   "startScreens": [
@@ -867,7 +867,7 @@ While input identifiers are primarily for reporting purposes, SurveyCompo doesn'
 
 Let's add some identifiers to the survey inputs in our survey:
 
-```json linenums="1" hl_lines="13 23 34 44 40 46 52 58"
+```json linenums="1" hl_lines="15 25 36 42 48 54 60"
 {
   "name": "Product Satisfaction Survey",
   "startScreens": [

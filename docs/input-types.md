@@ -25,7 +25,7 @@ The `CHECKBOX` input type is designed to capture boolean values. It is depicted 
 }
 ```
 
-![Input - Checkbox](../assets/images/input-checkbox.png){: .small .embedded}
+![Input - Checkbox](assets/images/input-checkbox.png){: .small .embedded}
 
 You can also add a `REQUIRED` validation rule for the checkbox input type. If the checkbox is required, the user must check the checkbox to proceed.
 
@@ -44,7 +44,7 @@ You can also add a `REQUIRED` validation rule for the checkbox input type. If th
 }
 ```
 
-![Input - Checkbox](../assets/images/input-checkbox-validation.png){: .small .embedded}
+![Input - Checkbox](assets/images/input-checkbox-validation.png){: .small .embedded}
 
 ## Checkbox Text
 
@@ -61,7 +61,7 @@ The `CHECKBOX_TEXT` input type is designed to capture text values. It is represe
 }
 ```
 
-![Input - Checkbox Text](../assets/images/input-checkbox-text.png){: .small .embedded}
+![Input - Checkbox Text](assets/images/input-checkbox-text.png){: .small .embedded}
 
 ## Radio
 
@@ -74,7 +74,7 @@ The `RADIO` input type is designed to capture single-choice questions. It is dep
 }
 ```
 
-![Input - Radio Text](../assets/images/input-radio.png){: .small .embedded}
+![Input - Radio Text](assets/images/input-radio.png){: .small .embedded}
 
 ## Radio Text
 
@@ -91,7 +91,7 @@ The `RADIO_TEXT` input type is designed to capture text values. It is represente
 }
 ```
 
-![Input - Radio Text](../assets/images/input-radio-text.png){: .small .embedded}
+![Input - Radio Text](assets/images/input-radio-text.png){: .small .embedded}
 
 ## Text
 
@@ -105,7 +105,7 @@ The `TEXT` input type is designed to capture short textual data. It is depicted 
 }
 ```
 
-![Input - Text](../assets/images/input-text.png){: .small .embedded}
+![Input - Text](assets/images/input-text.png){: .small .embedded}
 
 ### Text Label
 
@@ -124,7 +124,7 @@ Like other input types, you can specify a `label` field for the text input. This
 ]
 ```
 
-![Input - Text Label](../assets/images/input-text-label.png){: .small .embedded}
+![Input - Text Label](assets/images/input-text-label.png){: .small .embedded}
 
 ### Text Types
 
@@ -147,7 +147,7 @@ The following example demonstrates the `TEXT` input type with different `textInp
 
 === "Preview"
 
-    ![Input - Text Types](../assets/images/input-text-types.png){: .small .embedded}
+    ![Input - Text Types](assets/images/input-text-types.png){: .small .embedded}
 
 === "JSON"
 
@@ -198,7 +198,7 @@ The `textareaInputRows` key can be used to specify the number of rows in the tex
 }
 ```
 
-![Input - Textarea](../assets/images/input-textarea.png){: .small .embedded}
+![Input - Textarea](assets/images/input-textarea.png){: .small .embedded}
 
 ## Dropdown
 
@@ -208,7 +208,7 @@ The `dropdownInputOptions` key is used to specify the options in the dropdown li
 
 === "Preview"
 
-    ![Input - Dropdown](../assets/images/input-dropdown.png){: .small .embedded}
+    ![Input - Dropdown](assets/images/input-dropdown.png){: .small .embedded}
 
 === "JSON Option1"
 
@@ -275,7 +275,7 @@ The `numberScaleInputLabels` key assigns labels to the scale. These labels, repr
 
 === "Preview"
 
-    ![Input - Number Scale](../assets/images/input-number.png){: .small .embedded}
+    ![Input - Number Scale](assets/images/input-number.png){: .small .embedded}
 
 === "JSON"
 
@@ -302,7 +302,7 @@ The `starInputCount` key is used to specify the maximum number of stars in the r
 
 === "Preview"
 
-    ![Input - Star](../assets/images/input-star.png){: .small .embedded}
+    ![Input - Star](assets/images/input-star.png){: .small .embedded}
 
 === "JSON"
 
@@ -343,7 +343,7 @@ Keep in mind that SurveyCompo automatically resizes the image to fit within the 
 
 === "Preview"
 
-    ![Input - Image](../assets/images/input-image.png){: .small .embedded}
+    ![Input - Image](assets/images/input-image.png){: .small .embedded}
 
 === "JSON"
 
@@ -394,7 +394,7 @@ The `TOGGLE` input type is designed to capture binary data. It is depicted as a 
 
 === "Preview"
 
-    ![Input - Toggle](../assets/images/input-toggle.png){: .small .embedded}
+    ![Input - Toggle](assets/images/input-toggle.png){: .small .embedded}
 
 === "JSON"
 
@@ -435,7 +435,7 @@ Like the `DROPDOWN` input type, the `LIKERT_RATING` input type also supports pre
 
 === "Preview"
 
-    ![Input - Likert](../assets/images/input-likert.png){: .small .embedded}
+    ![Input - Likert](assets/images/input-likert.png){: .small .embedded}
 
 === "JSON"
 
@@ -463,7 +463,7 @@ The Likert Matrix, which presents multiple questions in a tabular format, typica
 
 === "Preview"
 
-    ![Input - Likert Matrix](../assets/images/input-likert-matrix.png){: .small .embedded}
+    ![Input - Likert Matrix](assets/images/input-likert-matrix.png){: .small .embedded}
 
 === "JSON"
 

@@ -26,7 +26,7 @@ The following example creates a 'Dark' theme for the survey with just 4 lines:
 
 === "Preview"
 
-    ![Customization - Theme](../assets/images/customize-theme.png){: .small .embedded}
+    ![Customization - Theme](assets/images/customize-theme.png){: .small .embedded}
 
 === "JSON"
 
@@ -46,7 +46,7 @@ The next example creates a theme with customized background:
 
 === "Preview"
 
-    ![Customization - Theme2](../assets/images/customize-theme2.png){: .small .embedded}
+    ![Customization - Theme2](assets/images/customize-theme2.png){: .small .embedded}
 
 === "JSON"
 
@@ -96,7 +96,7 @@ To apply CSS to your survey, you can utilize the `css` key in the survey's JSON 
 
 === "Preview"
 
-    ![Customization - Theme](../assets/images/customize-css.png){: .small .embedded}
+    ![Customization - CSS](assets/images/customize-css.png){: .small .embedded}
 
 ### CSS Rules from the Hosting Page
 
@@ -252,23 +252,21 @@ You can change the base font size in the Theme model and the CSS rules. The foll
 
 === "font-size: 10px"
 
-    ![Customization - Theme](../assets/images/customize-spacing10.png){: .small .embedded}
+    ![Customization - FontSize 10](assets/images/customize-spacing10.png){: .small .embedded}
 
 === "font-size: 14px (default)"
 
-    ![Customization - Theme](../assets/images/customize-spacing14.png){: .small .embedded}
+    ![Customization - FontSize 14](assets/images/customize-spacing14.png){: .small .embedded}
 
 === "font-size: 16px"
 
-    ![Customization - Theme](../assets/images/customize-spacing16.png){: .small .embedded}
+    ![Customization - FontSize 16](assets/images/customize-spacing16.png){: .small .embedded}
 
 !!! tip "Tip"
 
     When customizing with CSS rules, it's recommended to use `em` units for spacing, sizing and positioning. This ensures that the survey elements retain their relative proportions when SurveyCompo adjusts the UI to fit different screen sizes.
 
 ## Custom HTML
-
-### Customizing Screens with HTML
 
 All text elements within a screen (header, description, footer), a page (header, description, footer), and a block (title, subtitle, description, footnote) support custom HTML, enabling a wide range of customization:
 
@@ -291,10 +289,41 @@ For a detailed list of keys applicable to screens, pages, and blocks, please ref
 
     Ensure that you use correct HTML syntax and prioritize security. Be cautious not to include code from untrusted sources or user input, as it could potentially introduce security risks.
 
+The following example demonstrates how to use HTML to add a logo to the start screen:
+
+=== "JSON"
+
+    ```json
+    {
+        /* ... */
+        "css": "#mylogo { width: 10em; display: inline; color: red}",
+        "startScreens": [
+          {
+            "header": "Your Feedback on SurveyCompo",
+            "description": "Share your thoughts and shape the future of SurveyCompo!",
+            "okButtonLabel": "Start Survey",
+            "htmlFooter": "Powered by: <img id='mylogo' onclick=\"alert('SurveyCompo Rocks!')\" src='https://www.surveycompo.com/logos/title-dark.min.svg' />"
+          }
+        ]
+    }
+    ```
+
+=== "Preview"
+
+    ![Customization - HTML](assets/images/customize-html.png){: .small .embedded}
+
+!!! tip "Tip: Applying CSS to Custom HTML Elements"
+
+    You can apply CSS rules to custom HTML elements using the `css` key or `<style>` tag. For instance, assign an `id` attribute to your custom HTML element and reference it in the CSS rules to apply custom styles.
+
+!!! tip "Tip: Invoking JavaScript Functions from Custom HTML Elements"
+
+    You can invoke JavaScript functions from custom HTML elements using HTML event attributes such as `onclick`. This enables you to trigger custom actions when users interact with the survey. However, ensure that the JavaScript functions are defined on the hosting page or are accessible to the survey.
+
+!!! note "Note"
+
+    For security reasons and to prevent potential vulnerabilities, `<script>` tags in custom HTML are not evaluated.
+
 ## Block Layout
 
 ## Input layout
-
-```
-
-```

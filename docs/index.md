@@ -6,7 +6,6 @@ weight: 100
 
 Welcome to SurveyCompo, the ultimate tool for creating dynamic and adaptable surveys.
 
-
 ## What is SurveyCompo?
 
 SurveyCompo is a purpose-built web component, it offers exceptional flexibility, customization, and programmability. Crafting a survey is effortless: simply provide SurveyCompo with JSON-based data, and it seamlessly renders your survey design.
@@ -15,16 +14,13 @@ SurveyCompo's power extends far beyond creation. Its seamless integration into y
 
 With SurveyCompo, you gain full control over every aspect of your surveys. Unleash its potential to build surveys that are not just forms, but tailored data-gathering tools that meet your ever-evolving needs.
 
-
 ## Minimal example
 
-
-<div style="border: 1px solid gray; width: 320px; height: 460px; padding-bottom: 10px" class="resizable">
+<div style="border: 1px solid gray; width: 320px; height: 400px; padding-bottom: 10px" class="resizable">
 	<survey-compo
 		src="https://surveycompo.github.io/examples/examples/basic/source.json"
 	/>
 </div>
-
 
 [:material-github:{.right-icon} view source](https://github.com/SurveyCompo/examples/tree/main/examples/basic){:target="\_blank" .small-text}
 
@@ -65,95 +61,86 @@ With SurveyCompo, you gain full control over every aspect of your surveys. Unlea
 === "source.json"
 
     ``` JSON linenums="1"
-	{
-		"name": "Basic",
-		"startScreens": [
-			{
-				"header": "Welcome to Our Survey!",
-				"description": "Thank you for participating.",
-				"okButtonLabel": "Start Survey"
-			}
-		],
-		"pages": [
-			{
-				"blocks": [
-					{
-						"title": "What’s your favorite type of weather?",
-						"inputs": [
-							{
-								"type": "RADIO",
-								"label": "Sunny and warm"
-							},
-							{
-								"type": "RADIO",
-								"label": "Cozy and rainy"
-							},
-							{
-								"type": "RADIO",
-								"label": "Snowy and magical"
-							}
-						]
-					}
-				],
-				"nextButtonLabel": "Submit"
-			}
-		],
-		"completeScreens": [
-			{
-				"header": "Thank You!",
-				"description": "Your responses have been recorded.",
-				"okButtonLabel": "Close"
-			}
-		]
-	}
-  	```
+    {
+    	"name": "Basic",
+    	"startScreens": [
+    		{
+    			"header": "Welcome to Our Survey!",
+    			"description": "Thank you for participating.",
+    			"okButtonLabel": "Start Survey"
+    		}
+    	],
+    	"pages": [
+    		{
+    			"blocks": [
+    				{
+    					"title": "What’s your favorite type of weather?",
+    					"inputs": [
+    						{
+    							"type": "RADIO",
+    							"label": "Sunny and warm"
+    						},
+    						{
+    							"type": "RADIO",
+    							"label": "Cozy and rainy"
+    						},
+    						{
+    							"type": "RADIO",
+    							"label": "Snowy and magical"
+    						}
+    					]
+    				}
+    			],
+    			"nextButtonLabel": "Submit"
+    		}
+    	],
+    	"completeScreens": [
+    		{
+    			"header": "Thank You!",
+    			"description": "Your responses have been recorded.",
+    			"okButtonLabel": "Close"
+    		}
+    	]
+    }
+    ```
 
 ## Key Features
 
-
 <div class="grid cards" markdown>
 
+- :material-security:{ .left-icon } **Full Data Control**
 
--   :material-security:{ .left-icon } __Full Data Control__
+      ---
 
-    ---
+      With the **self-hosting option**, you maintain full control and ownership of your sensitive survey data. Ensure compliance with privacy regulations and meet your specific security needs.
 
-    With the **self-hosting option**, you maintain full control and ownership of your sensitive survey data. Ensure compliance with privacy regulations and meet your specific security needs.
+- :fontawesome-solid-sliders:{ .left-icon } **Highly Customizable**
 
+      ---
 
--   :fontawesome-solid-sliders:{ .left-icon } __Highly Customizable__
+      Adjust its size, position, and styling to seamlessly blend with your brand and style using **CSS**. Choose a **theme** or create a unique design that perfectly suits your needs.
 
-    ---
+- :fontawesome-solid-gears:{ .left-icon } **Easy Integration**
 
-    Adjust its size, position, and styling to seamlessly blend with your brand and style using **CSS**. Choose a **theme** or create a unique design that perfectly suits your needs.
+      ---
 
+      Leverage **event listeners** for seamless data capture and dynamic interactions. SurveyCompo seamlessly integrates with your existing tech stack, whether it’s **Angular**, **React**, **Vue**, **jQuery**, or **plain JavaScript**.
 
--   :fontawesome-solid-gears:{ .left-icon } __Easy Integration__
+- :fontawesome-solid-sliders:{ .left-icon } **Exceptional Flexibility**
 
-    ---
+      ---
 
-    Leverage **event listeners** for seamless data capture and dynamic interactions. SurveyCompo seamlessly integrates with your existing tech stack, whether it’s **Angular**, **React**, **Vue**, **jQuery**, or **plain JavaScript**.
+      Craft **traditional** surveys or opt for engaging **conversational** formats. With SurveyCompo‘s intuitive **block-based** layout, you have unmatched flexibility and control over the structure and flow of your questions.
 
+- :fontawesome-solid-sliders:{ .left-icon } **Powerful Survey Tools**
 
--   :fontawesome-solid-sliders:{ .left-icon } __Exceptional Flexibility__
+      ---
 
-    ---
+      SurveyCompo puts a comprehensive toolkit at your fingertips. Craft dynamic, intelligent surveys using features like input **validation**, **skip logic**, **branching**, **randomization**, **piping**, and **custom variables**.
 
-    Craft **traditional** surveys or opt for engaging **conversational** formats. With SurveyCompo‘s intuitive **block-based** layout, you have unmatched flexibility and control over the structure and flow of your questions.
+- :material-code-block-tags:{ .left-icon } **Programmable**
 
--   :fontawesome-solid-sliders:{ .left-icon } __Powerful Survey Tools__
-
-    ---
-
-    SurveyCompo puts a comprehensive toolkit at your fingertips. Craft dynamic, intelligent surveys using features like input **validation**, **skip logic**, **branching**, **randomization**, **piping**, and **custom variables**.
-
-
--   :material-code-block-tags:{ .left-icon } __Programmable__
-
-    ---
-
-    SurveyCompo‘s JSON-based design makes your surveys truly adaptable. It allows you to **manage versions**, load content **dynamically**, conduct **A/B testing**, and unlock advanced strategies like Survey **Segmentation** and Audient **Retargeting**.
-
+      ---
+      SurveyCompo‘s JSON-based design makes your surveys truly adaptable. It allows you to **manage versions**, load content **dynamically**, conduct **A/B testing**, and unlock advanced strategies like Survey **Segmentation** and Audient **Retargeting**.
 
 </div>
-

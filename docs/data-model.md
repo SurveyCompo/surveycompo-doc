@@ -38,7 +38,7 @@ _End Screen (Optional)_
 
 ### The User Flow
 
-![user-flow](../assets/images/user-flow.png){: .center}
+![user-flow](assets/images/user-flow.png){: .center}
 
 Imagine a user journey through the survey:
 
@@ -119,7 +119,7 @@ Screens are the visual gateways of your SurveyCompo surveys. They introduce resp
 
 A screen can include the following optional elements:
 
-![screen-anatomy](../assets/images/anatomy-screen.png){: .center .md}
+![screen-anatomy](assets/images/anatomy-screen.png){: .center .md}
 
 - **Header**: A prominent area for the survey title, section headings, or instructions.
 
@@ -215,7 +215,7 @@ Pages are the backbone of your SurveyCompo surveys. They contain your survey que
 
 A page can include the following optional elements:
 
-![page-anatomy](../assets/images/anatomy-page.png){: .center .md}
+![page-anatomy](assets/images/anatomy-page.png){: .center .md}
 
 - **Header**: A dedicated area at the top for titles or instructions.
 
@@ -325,7 +325,7 @@ A ‘Block’ in SurveyCompo is a section of content on a survey page - it’s t
 
 Blocks can contain the following optional elements:
 
-![block-anatomy](../assets/images/anatomy-block.png){: .center .md}
+![block-anatomy](assets/images/anatomy-block.png){: .center .md}
 
 - **Index**: A numerical indicator to help organize and order questions.
 - **Title**: The primary text of your survey question.

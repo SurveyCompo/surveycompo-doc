@@ -12,3 +12,4 @@ weight: 600
 
 ## Templates
 
+## events
