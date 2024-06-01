@@ -339,7 +339,7 @@ To enable the selection of multiple `IMAGE` inputs within the same block, set th
 
 The `imageInputPadding` key allows you to add additional padding around the image for aesthetic or clarity purposes, while the `imageInputNoBorder` key removes the box border surrounding the image. This is particularly useful when you prefer to display the image without any border.
 
-Keep in mind that SurveyCompo automatically resizes the image to fit within the block. You can utilize the block layout settings to fine-tune the size and spacing of the images.
+To adjust the image size and spacing, use the block layout settings. The `layoutColumnWidth` key sets the width of the column containing the image, while the `layoutColumnGap` key defines the spacing between columns.
 
 === "Preview"
 
@@ -350,7 +350,6 @@ Keep in mind that SurveyCompo automatically resizes the image to fit within the 
     ```json
     {
       "title": "Which of these images best represents your experience with SurveyCompo?",
-      "layoutColumnCount": 5,
       "layoutColumnWidth": "80px",
       "layoutColumnGap": "1em",
       "inputs": [

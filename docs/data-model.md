@@ -82,24 +82,25 @@ SurveyCompo uses **JSON** (JavaScript Object Notation) to define your survey's s
 
 ### Survey Data Keys
 
-| Method              | Type                          | Default        | Description                                                                                                                      |
-| ------------------- | ----------------------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `name`              | string                        | n/a (Required) | The name of the survey.                                                                                                          |
-| `customRef`         | string                        | null           | A custom reference ID for the survey.                                                                                            |
-| `variables`         | object                        | {}             | A map of external key-value pairs, such as user name, product name, etc. Variables can be used with piping and conditional logic |
-| `pageTemplates`     | [Page[]](#page-data-keys)     | []             | An array of Page templates, used to share common key values across multiple pages.                                               |
-| `blockTemplates`    | [Block[]](#block-data-keys)   | []             | An array of Block templates, used to share common key values across multiple blocks.                                             |
-| `pages`             | [Page[]](#page-data-keys)     | []             | Array of survey pages.                                                                                                           |
-| `startScreens`      | [Screen[]](#screen-data-keys) | []             | An array of Screen models, one of which will be displayed at the start of the survey.                                            |
-| `abortScreens`      | [Screen[]](#screen-data-keys) | []             | An array of Screen models, one of which will be displayed when the participant is disqualified from the survey.                  |
-| `completeScreens`   | [Screen[]](#screen-data-keys) | []             | An array of Screen models, one of which will be displayed upon the survey's completion.                                          |
-| `theme`             | [Theme](#theme)               | null           | The Theme model for customizing the survey's appearance.                                                                         |
-| `css`               | string                        | null           | Global custom CSS applicable to custom HTML elements.                                                                            |
-| `uiShowNavigation`  | boolean                       | true           | Determines if the navigation buttons should be displayed.                                                                        |
-| `uiShowProgress`    | boolean                       | true           | Determines if the page progress indicator should be displayed.                                                                   |
-| `uiShowCloseButton` | boolean                       | false          | Determines if a close button should be displayed at the top-right corner.                                                        |
-| `uiUseAnimation`    | boolean                       | true           | Determines if a sliding animation should be used for page navigation.                                                            |
-| `timeoutSeconds`    | number                        | 1800           | The duration of inactivity, in seconds, before the survey session times out and resets.                                          |
+| Method                  | Type                          | Default        | Description                                                                                                                                               |
+| ----------------------- | ----------------------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`                  | string                        | n/a (Required) | The name of the survey.                                                                                                                                   |
+| `customRef`             | string                        | null           | A custom reference ID for the survey.                                                                                                                     |
+| `variables`             | object                        | {}             | A map of external key-value pairs, such as user name, product name, etc. Variables can be used with piping and conditional logic                          |
+| `pageTemplates`         | [Page[]](#page-data-keys)     | []             | An array of Page templates, used to share common key values across multiple pages.                                                                        |
+| `blockTemplates`        | [Block[]](#block-data-keys)   | []             | An array of Block templates, used to share common key values across multiple blocks.                                                                      |
+| `pages`                 | [Page[]](#page-data-keys)     | []             | Array of survey pages.                                                                                                                                    |
+| `startScreens`          | [Screen[]](#screen-data-keys) | []             | An array of Screen models, one of which will be displayed at the start of the survey.                                                                     |
+| `abortScreens`          | [Screen[]](#screen-data-keys) | []             | An array of Screen models, one of which will be displayed when the participant is disqualified from the survey.                                           |
+| `completeScreens`       | [Screen[]](#screen-data-keys) | []             | An array of Screen models, one of which will be displayed upon the survey's completion.                                                                   |
+| `theme`                 | [Theme](#theme)               | null           | The Theme model for customizing the survey's appearance.                                                                                                  |
+| `css`                   | string                        | null           | Global custom CSS applicable to custom HTML elements.                                                                                                     |
+| `uiShowNavigation`      | boolean                       | true           | Determines if the navigation buttons should be displayed.                                                                                                 |
+| `uiShowProgress`        | boolean                       | true           | Determines if the page progress indicator should be displayed.                                                                                            |
+| `uiShowCloseButton`     | boolean                       | false          | Determines if a close button should be displayed at the top-right corner.                                                                                 |
+| `uiUseAnimation`        | boolean                       | true           | Determines if a sliding animation should be used for page navigation.                                                                                     |
+| `uiUseFullWidthButtons` | boolean                       | undefined      | Determines if the page and screen display buttons that span the full width. By default, buttons are set to occupy the full width only on smaller screens. |
+| `timeoutSeconds`        | number                        | 1800           | The duration of inactivity, in seconds, before the survey session times out and resets.                                                                   |
 
 !!! info "Info"
 
@@ -416,33 +417,34 @@ The following code example demonstrates how blocks integrate into the survey JSO
 
 ### Block Data Keys
 
-| Method                         | Type                        | Default | Description                                                                                 |
-| ------------------------------ | --------------------------- | ------- | ------------------------------------------------------------------------------------------- |
-| `name`                         | string                      | null    | The name of the block.                                                                      |
-| `customRef`                    | string                      | null    | A custom reference to the block.                                                            |
-| `templateName`                 | string                      | null    | The block template name. If set, the current block inherits keys from the matched template. |
-| `title`                        | string                      | null    | The title of the block.                                                                     |
-| `htmlTitle`                    | string                      | null    | The block's title in HTML format.                                                           |
-| `subtitle`                     | string                      | null    | The subtitle of the block.                                                                  |
-| `htmlSubtitle`                 | string                      | null    | The block's subtitle in HTML format.                                                        |
-| `description`                  | string                      | null    | A text description for the block.                                                           |
-| `htmlDescription`              | string                      | null    | The block's description in HTML format.                                                     |
-| `footnote`                     | string                      | null    | A footnote to the block.                                                                    |
-| `htmlFootnote`                 | string                      | null    | The block's footnote in HTML format.                                                        |
-| `inputs`                       | [Input[]](#input-data-keys) | []      | An array of inputs within the block.                                                        |
-| `showIndexNumber`              | boolean                     | true    | If true, index numbers for inputs in the block are displayed.                               |
-| `validations`                  | [Validation[]](#validation) | []      | An array of validation rules for the block.                                                 |
-| `visibleIf`                    | [Condition](#condition)     | null    | The condition for block visibility. The block is displayed only if the condition is met.    |
-| `requiresVisibleInputs`        | boolean                     | false   | If true, the block is displayed only if there are visible inputs in the block.              |
-| `randomWithinGroup`            | string                      | null    | If set, the display order of blocks with the same group name is randomized.                 |
-| `layoutColumnCount`            | number                      | 1       | The column count of the block layout.                                                       |
-| `layoutColumnWidth`            | string                      | '100%'  | The column width of the block layout. Accepts CSS width values (e.g., 200px, 50%).          |
-| `layoutColumnGap`              | string                      | '0'     | The column gap of the block layout. Accepts CSS width values (e.g., 5px, 1em).              |
-| `layoutRowGap`                 | string                      | '1em'   | The row gap of the block layout. Accepts CSS width values (e.g., 5px, 1em).                 |
-| `layoutCenterAligned`          | boolean                     | false   | If true, the block layout is centered.                                                      |
-| `layoutLikertMatrixWidth`      | string                      | '100%'  | The width of the Likert Matrix table. Only applicable to Likert input types.                |
-| `layoutLikertMatrixLabelWidth` | string                      | '25%'   | The width of the label column in a Likert Matrix. Only applicable to Likert input types.    |
-| `layoutLikertMatrixMode`       | 'AUTO', 'LIKERT', 'MATRIX'  | 'AUTO'  | Manages the visibility of the Likert Matrix Table on smaller screens                        |
+| Method                         | Type                        | Default | Description                                                                                                                                          |
+| ------------------------------ | --------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`                         | string                      | null    | The name of the block.                                                                                                                               |
+| `customRef`                    | string                      | null    | A custom reference to the block.                                                                                                                     |
+| `templateName`                 | string                      | null    | The block template name. If set, the current block inherits keys from the matched template.                                                          |
+| `title`                        | string                      | null    | The title of the block.                                                                                                                              |
+| `htmlTitle`                    | string                      | null    | The block's title in HTML format.                                                                                                                    |
+| `subtitle`                     | string                      | null    | The subtitle of the block.                                                                                                                           |
+| `htmlSubtitle`                 | string                      | null    | The block's subtitle in HTML format.                                                                                                                 |
+| `description`                  | string                      | null    | A text description for the block.                                                                                                                    |
+| `htmlDescription`              | string                      | null    | The block's description in HTML format.                                                                                                              |
+| `footnote`                     | string                      | null    | A footnote to the block.                                                                                                                             |
+| `htmlFootnote`                 | string                      | null    | The block's footnote in HTML format.                                                                                                                 |
+| `inputs`                       | [Input[]](#input-data-keys) | []      | An array of inputs within the block.                                                                                                                 |
+| `showIndexNumber`              | boolean                     | true    | If true, index numbers for inputs in the block are displayed.                                                                                        |
+| `validations`                  | [Validation[]](#validation) | []      | An array of validation rules for the block.                                                                                                          |
+| `visibleIf`                    | [Condition](#condition)     | null    | The condition for block visibility. The block is displayed only if the condition is met.                                                             |
+| `requiresVisibleInputs`        | boolean                     | false   | If true, the block is displayed only if there are visible inputs in the block.                                                                       |
+| `randomWithinGroup`            | string                      | null    | If set, the display order of blocks with the same group name is randomized.                                                                          |
+| `layoutColumnCount`            | number                      | 1       | The column count of the block layout.                                                                                                                |
+| `layoutColumnWidth`            | string                      | '100%'  | The column width of the block layout. Accepts CSS width values (e.g., 200px, 50%).                                                                   |
+| `layoutColumnGap`              | string                      | '0'     | The column gap of the block layout. Accepts CSS width values (e.g., 5px, 1em).                                                                       |
+| `layoutRowGap`                 | string                      | '1em'   | The row gap of the block layout. Accepts CSS width values (e.g., 5px, 1em).                                                                          |
+| `layoutFlow`                   | 'COLUMN', 'ROW'             | 'ROW'   | Determines the direction in which the survey elements are arranged. This could be either vertically (top to bottom) or horizontally (left to right). |
+| `layoutCenterAligned`          | boolean                     | false   | If true, the block layout is centered.                                                                                                               |
+| `layoutLikertMatrixWidth`      | string                      | '100%'  | The width of the Likert Matrix table. Only applicable to Likert input types.                                                                         |
+| `layoutLikertMatrixLabelWidth` | string                      | '25%'   | The width of the label column in a Likert Matrix. Only applicable to Likert input types.                                                             |
+| `layoutLikertMatrixMode`       | 'AUTO', 'LIKERT', 'MATRIX'  | 'AUTO'  | Manages the visibility of the Likert Matrix Table on smaller screens                                                                                 |
 
 ---
 

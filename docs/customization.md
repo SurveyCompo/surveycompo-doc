@@ -326,4 +326,40 @@ The following example demonstrates how to use HTML to add a logo to the start sc
 
 ## Block Layout
 
+SurveyCompo allows you to customize the layout of blocks within a survey. You can adjust the layout of blocks to create a visually appealing and user-friendly survey. The layout of blocks can be customized using the `layout*` keys in the [block's JSON model](/data-model/#block-data-keys).
+
+Inputs that are of the same type are grouped together and shown in a grid layout. By default, these inputs are lined up in a row, starting from the left and moving to the right. If there isn't enough space in a row for all inputs, they will continue on the next row.
+
+![Customization - Block Layout 1](assets/images/customize-block-layout1.png){: .md .center .embedded}
+
+However, it may appear as if the inputs are displayed in a single column. This is because all inputs have a default width of '100%'.
+
+![Customization - Block Layout 2](assets/images/customize-block-layout2.png){: .md .center .embedded}
+
+This default layout works well for most survey questions. However, if you have a block with numerous small inputs and want to make efficient use of space, you can customize the block layout to display inputs in multiple columns.
+
+### **`layoutColumnCount`**
+
+By default, `layoutColumnCount` is set to `0`, which means the layout engine will try to fit as many items (columns) as possible in a row. If you set `layoutColumnCount` to a value greater than 0, the layout engine will arrange the inputs into the specified number of columns. If there isn't enough horizontal space, a horizontal scroll bar will appear. Therefore, using a fixed number of columns is best suited for blocks with a small number of short inputs and is not recommended if you want a responsive design.
+
+### **`layoutColumnWidth`**
+
+Setting `layoutColumnCount` to `0` allows the layout engine to dynamically adjust the number of columns. If you prioritize responsiveness, you can keep `layoutColumnCount` at 0 and use the `layoutColumnWidth` key to define the width of each column. This lets the layout engine adapt the number of columns based on the available space and the specified column width.
+
+If you want to display inputs in a given number of columns, you can also set the `layoutColumnWidth` to a percentage value that allows multiple columns to fit within the 100% width of the block. for example, if you want to display inputs in 2 columns, you can set the `layoutColumnWidth` to `50%`. and if you want to display inputs in 3 columns, you can set the `layoutColumnWidth` to `33%`. The layout engine will then automatically adjust the number of columns based on the available space, taking into account the gaps between columns.
+
+If you set a percentage value for `layoutColumnWidth` that is larger than 50%, the layout engine will display the inputs in a single column with 100% width. This is the layout engine's way of optimizing the layout for the best user experience. If you want inputs to be displayed in a single column without occupying the full width, you can set the `layoutColumnCount` to `1`.
+
+Lastly, if you set a value for `layoutColumnWidth` that exceeds the available space, for example, 110%, a horizontal scroll bar will appear. This is because the layout engine tries to accommodate the specified column width, even if it exceeds the available space.
+
+### **`layoutFlow`**
+
+The `layoutFlow` key controls the direction in which the inputs are displayed within a multi-column layout. By default, `layoutFlow` is set to `row`, which means the inputs are arranged in a row from left to right. If you change `layoutFlow` to `column`, the inputs will be arranged in a column from top to bottom.
+
+![Customization - Block Layout 3](assets/images/customize-block-layout3.png){: .md .center .embedded}
+
+However, if you set `layoutColumnCount` to `0` and `layoutFlow` to `COLUMN`, the layout engine will display the inputs in a single column, regardless of the available space. This is because the layout engine is instructed to place each input below the previous one.
+
+Therefore, the `COLUMN` layout flow is only useful when `layoutColumnCount` is given an explicit value.
+
 ## Input layout
