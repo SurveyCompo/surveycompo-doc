@@ -4,7 +4,7 @@ weight: 500
 
 # Customizations
 
-As a web component, SurveyCompo provides a plethora of customization options, enabling it to integrate flawlessly into your website or application. You can modify its size, position, and styling to align with your brand and style using CSS. Additionally, you can customize the survey's appearance by changing its theme, layout, and HTML structure.
+As a web component, SurveyCompo provides a plethora of customization options, enabling it to integrate flawlessly into your website or application. This section covers the various customization options available in SurveyCompo, including themes, CSS, spacing, custom HTML, and block layout. You'll learn how to leverage these customization options to create visually appealing and user-friendly surveys that resonate with your audience. You can find the source code for the example used in this section in the [:material-github:{.right-icon}Example Repository](https://surveycompo.github.io/examples/){:target="\_blank"}
 
 Before delving into the specifics, let's explore a key feature that sets SurveyCompo apart in terms of style customization: Style Encapsulation.
 
