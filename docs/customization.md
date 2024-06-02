@@ -369,3 +369,56 @@ However, if you set `layoutColumnCount` to `0` and `layoutFlow` to `COLUMN`, the
 Therefore, the `COLUMN` layout flow is only useful when `layoutColumnCount` is given an explicit value.
 
 ## Input layout
+
+Input layout configuration is more straightforward compared to block layout. Two keys primarily control the layout of an input: `labelPosition` and `labelWidth`.
+
+`labelPosition` determines the placement of the label relative to the input control. SurveyCompo assigns a sensible default value based on the input type. For most input types, the label is positioned at the `TOP` of the input control. However, for `IMAGE` controls, the default label position is `BOTTOM`.
+
+`labelWidth` controls the width of the label. By default, it's set to `100%`, meaning the label will occupy the full width of the input control. You can adjust this to a fixed value (like `200px`) or a percentage value (like `50%`). The `labelWidth` key is crucial for aligning inputs within a block.
+
+The following example illustrates how `labelWidth` affects the alignment of inputs within a block:
+
+=== "Without Using `labelWidth`"
+
+    ![Customization - Input Layout](assets/images/customize-input-layout2.png){: .small .embedded}
+
+=== "With `labelWidth` Set to `10em`"
+
+    ![Customization - Input Layout](assets/images/customize-input-layout1.png){: .small .embedded}
+
+=== "JSON"
+
+    ```json
+    {
+        /* ... */
+        "blocks": [
+          {
+            "title": "Please rate the following aspects of SurveyCompo.",
+            "inputs": [
+              {
+                "type": "STAR_SCALE",
+                "label": "Ease of Use:",
+                "labelPosition": "LEFT",
+                "labelWidth": "10em"
+              },
+              {
+                "type": "STAR_SCALE",
+                "label": "Value for money:",
+                "labelPosition": "LEFT",
+                "labelWidth": "10em"
+              },
+              {
+                "type": "STAR_SCALE",
+                "label": "Customer support:",
+                "labelPosition": "LEFT",
+                "labelWidth": "10em"
+              }
+            ]
+          }
+        ]
+    }
+    ```
+
+!!! tip "Tip"
+
+    The Likert Matrix involves multiple inputs within a block. To adjust the width of the label for each scale in the Likert Matrix, use the block key `layoutLikertMatrixLabelWidth`.
