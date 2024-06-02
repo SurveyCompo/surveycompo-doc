@@ -438,6 +438,7 @@ The following code example demonstrates how blocks integrate into the survey JSO
 | `randomWithinGroup`            | string                      | null    | If set, the display order of blocks with the same group name is randomized.                                                                          |
 | `layoutColumnCount`            | number                      | 1       | The column count of the block layout.                                                                                                                |
 | `layoutColumnWidth`            | string                      | '100%'  | The column width of the block layout. Accepts CSS width values (e.g., 200px, 50%).                                                                   |
+| `layoutColumnAutoFit`          | boolean                     | true    | When set to true, the block layout will adjust the columns to occupy the full width of the available space..                                         |
 | `layoutColumnGap`              | string                      | '0'     | The column gap of the block layout. Accepts CSS width values (e.g., 5px, 1em).                                                                       |
 | `layoutRowGap`                 | string                      | '1em'   | The row gap of the block layout. Accepts CSS width values (e.g., 5px, 1em).                                                                          |
 | `layoutFlow`                   | 'COLUMN', 'ROW'             | 'ROW'   | Determines the direction in which the survey elements are arranged. This could be either vertically (top to bottom) or horizontally (left to right). |
@@ -664,3 +665,7 @@ Conditional logic is a powerful tool for creating dynamic surveys that adapt to 
 | `DropdownPresetEnum` | Dropdown Option Presets   | YEARS, MONTHS, MONTHS_SHORT, WEEK_DAYS, WEEK_DAYS_SHORT, MONTH_DAYS, COUNTRIES                                                             |
 | `TextInputTypeEnum`  | Text Input Value          | EMAIL, NUMBER, DATE, DATETIME, TIME, TEXT                                                                                                  |
 | `ValidationTypeEnum` | Types of Validation Rules | REQUIRED, NUMERIC, INTEGER, MIN_LENGTH, MAX_LENGTH, MIN_VALUE, MAX_VALUE, MIN_SELECTION, MAX_SELECTION, EMAIL, URL, DOMAIN, EQUALS, REGEX. |
+
+!!! tip "Tip"
+
+    As you can see, most of the enum values are in uppercase. Actually these values are case-insensitive in general. However, it is recommended to use them in uppercase for consistency.

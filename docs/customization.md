@@ -336,7 +336,7 @@ However, it may appear as if the inputs are displayed in a single column. This i
 
 ![Customization - Block Layout 2](assets/images/customize-block-layout2.png){: .md .center .embedded}
 
-This default layout works well for most survey questions. However, if you have a block with numerous small inputs and want to make efficient use of space, you can customize the block layout to display inputs in multiple columns.
+This default layout works well for most survey questions. You also can customize the block layout to display inputs in multiple columns.
 
 ### **`layoutColumnCount`**
 
@@ -348,13 +348,19 @@ Setting `layoutColumnCount` to `0` allows the layout engine to dynamically adjus
 
 If you want to display inputs in a given number of columns, you can also set the `layoutColumnWidth` to a percentage value that allows multiple columns to fit within the 100% width of the block. for example, if you want to display inputs in 2 columns, you can set the `layoutColumnWidth` to `50%`. and if you want to display inputs in 3 columns, you can set the `layoutColumnWidth` to `33%`. The layout engine will then automatically adjust the number of columns based on the available space, taking into account the gaps between columns.
 
-If you set a percentage value for `layoutColumnWidth` that is larger than 50%, the layout engine will display the inputs in a single column with 100% width. This is the layout engine's way of optimizing the layout for the best user experience. If you want inputs to be displayed in a single column without occupying the full width, you can set the `layoutColumnCount` to `1`.
+If you set a percentage value for `layoutColumnWidth` that is larger than 50%, the layout engine will display the inputs in a single column.
 
 Lastly, if you set a value for `layoutColumnWidth` that exceeds the available space, for example, 110%, a horizontal scroll bar will appear. This is because the layout engine tries to accommodate the specified column width, even if it exceeds the available space.
 
+### **`layoutColumnAutoFit`**
+
+When `layoutColumnCount` is set to `0`, the layout engine has the flexibility to adjust the column widths. By default, it will automatically optimize the column widths to fill the entire horizontal space. For instance, if you set `layoutColumnWidth` to `60%`, the layout engine will display inputs in a single column with full width (100%) instead of the specified 60% width. To prevent this automatic adjustment, set `layoutColumnAutoFit` to `false`.
+
+Please note that `layoutColumnAutoFit` is only effective when `layoutColumnCount` is set to `0`. If you've specified a certain number of columns using `layoutColumnCount`, the layout engine will adhere to the specified column width, regardless of the `layoutColumnAutoFit` setting.
+
 ### **`layoutFlow`**
 
-The `layoutFlow` key controls the direction in which the inputs are displayed within a multi-column layout. By default, `layoutFlow` is set to `row`, which means the inputs are arranged in a row from left to right. If you change `layoutFlow` to `column`, the inputs will be arranged in a column from top to bottom.
+The `layoutFlow` key controls the direction in which the inputs are displayed within a multi-column layout. By default, `layoutFlow` is set to `ROW`, which means the inputs are arranged in a row from left to right. If you change `layoutFlow` to `COLUMN`, the inputs will be arranged in a column from top to bottom.
 
 ![Customization - Block Layout 3](assets/images/customize-block-layout3.png){: .md .center .embedded}
 
