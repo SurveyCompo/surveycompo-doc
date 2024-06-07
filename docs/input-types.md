@@ -431,6 +431,7 @@ Like the `DROPDOWN` input type, the `LIKERT_RATING` input type also supports pre
 - `AWARENESS` - A 5-point Likert scale for awareness levels. e.g. `Very unaware`, `Unaware`, `Neither aware nor unaware`, `aware`, `Very aware`.
 - `LIKELIHOOD` - A 5-point Likert scale for likelihood levels. e.g. `Very Unlikely`, `Unlikely`, `Neutral`, `Likely`, `Very Likely`.
 - `CONCERN` - A 5-point Likert scale for concern levels. e.g. `Very unconcerned`, `Unconcerned`, `Neither aware nor Neutral`, `Concerned`, `Very concerned`.
+- `DIFFICULTY` - A 5-point Likert scale for difficulty levels. e.g. `Very easy`, `Easy`, `Neutral`, `Difficult`, `Very difficult`.
 
 === "Preview"
 
