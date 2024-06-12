@@ -124,6 +124,10 @@ Let's bring it all together with this example:
 
 [:material-github:{.right-icon} view source](https://github.com/SurveyCompo/examples/tree/main/examples/piping){:target="\_blank" .small-text}
 
+!!! tip "Tip"
+
+    You can technically use piping wherever you prefer, even piping the response to the current question into the question title itself. However, remember that the piped input value will be empty until the response is captured. For a better user experience, it's recommended to use piping in subsequent pages.
+
 ## Condition
 
 ## Validation
