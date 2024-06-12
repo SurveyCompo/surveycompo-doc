@@ -819,7 +819,7 @@ In this tutorial, we will create a template for the HTML footer and apply it to 
 }
 ```
 
-We've successfully created a page template named `pageWithFooter` that includes an HTML footer. This template has been applied to both survey pages. Remember, if necessary, you can override the properties of the template on any specific page.
+We've successfully created a page template named `pageWithFooter` that includes an HTML footer. This template has been applied to both survey pages. You can override the properties of the template on any specific page.
 
 When previewed in the survey builder, the same footer will be visible on both pages.
 
@@ -862,8 +862,6 @@ SurveyCompo supports these optional input identifiers:
 - `id`: An optional identifier for the input. The `id` key is useful for referencing inputs in conditional logic, validation rules, and piping.
 - `name`: A name for the input, primarily used for human reference. If `id` is not provided, the `name` will be used to generate a value for `id`
 - `customRef`: An optional custom reference for the input. The `customRef` key is useful for referencing inputs in external systems.
-
-While input identifiers are primarily for reporting purposes, SurveyCompo doesn't require them to be unique. However, it's crucial for the `id` key to be unique when used for conditional logic, validation rules, and piping.
 
 Let's add some identifiers to the survey inputs in our survey:
 
