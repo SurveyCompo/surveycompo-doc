@@ -263,6 +263,25 @@ Alternatively, the `dropdownInputPreset` key can be used to specify a preset lis
 }
 ```
 
+There a also a special preset in the form of `RANGE:START:END:STEP`. This preset generates a range of whole numbers from `START` (inclusive) to `END` (inclusive) with an optional `STEP` value. If `STEP` is not specified, the default value is 1.
+
+```json
+{
+  "title": "How likely are you to recommend SurveyCompo to a friend or colleague?",
+  "inputs": [
+    {
+      "type": "DROPDOWN",
+      "hint": "-- Please select --",
+      "dropdownInputPreset": "RANGE:0:10"
+    }
+  ]
+}
+```
+
+!!! tip "Tip"
+
+    The `dropdownInputPresetReverse` key allows you to reverse the order of preset values. By default, this key is set to `false`.
+
 ## Number Scale
 
 The `NUMBER_SCALE` input type is designed to capture numerical data on a scale. It is depicted as a scale with a range of numbers that users can select. The `NUMBER_SCALE` input type is commonly used for capturing numerical data on a scale, such as satisfaction ratings, agreement levels, and likelihood scores.
@@ -450,6 +469,10 @@ Like the `DROPDOWN` input type, the `LIKERT_RATING` input type also supports pre
       ]
     }
     ```
+
+!!! tip "Tip"
+
+    The `likertInputPresetReverse` key allows you to reverse the order of preset values. By default, this key is set to `false`.
 
 ## Likert Matrix
 
