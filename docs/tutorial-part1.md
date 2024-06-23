@@ -644,7 +644,7 @@ We first assign an 'id' (`satisfaction`) to the "how satisfied are you" input. W
 
 SurveyCompo uses Condition Expression to defined the visible condition. In this case, we use the `$or` operator to display the 'What do you like most about our product?' block if the participant selects 'Very satisfied' or 'Satisfied' on the 'Overall satisfaction' question. Conversely, we display the 'What could be improved about our product?' block if the participant selects 'Very dissatisfied' or 'Dissatisfied'. If the participant selects 'Neither dissatisfied nor satisfied', the follow-up questions are hidden.
 
-The Condition Expression accommodates a wide range of operators, such as `$and`, `$or`, `$not`, `>=`, `<=`, `==`, `!=`, `>`, and `<`. For a comprehensive list of operators and their application, refer to the [Conditional Logic](/advanced/#condition) section in our documentation.
+The Condition Expression supports a wide range of operators, such as `$and`, `$or`, `$not`, `>=`, `<=`, `==`, `!=`, `>`, and `<`. For a comprehensive list of operators and their application, refer to the [Conditional Logic](/advanced/#condition) section in our documentation.
 
 To enhance user experience, you might consider segregating the conditional blocks onto a separate page. However, for the purpose of this tutorial, we will retain them on the same page to illustrate how conditional logic can dynamically display or conceal blocks based on participant responses.
 
@@ -652,9 +652,7 @@ Let's preview the conditional logic in the Survey Builder:
 
 ![Tutorial - Conditional Logic](assets/images/tutorial-condition.png){: .center .small}
 
-## Customization
-
-SurveyCompo offers a variety of customization options to tailor the survey experience to your brand and audience. You can customize the survey fonts, colors, layout and more.
+## Customization with Theme
 
 In this tutorial, we will customize the survey theme to use a custom color palette and default radius for buttons, boxes and inputs. We will also change the font family to Arial.
 
@@ -688,7 +686,7 @@ Let's preview the customization in the Survey Builder:
 
 ![Tutorial - Customization](assets/images/tutorial-customization.png){: .center .small}
 
-Customization doesn't stop at colors and fonts. SurveyCompo offers a variety of customization options to tailor the survey experience to your brand and audience. You can customize the survey fonts, colors, layout, and more. For a comprehensive list of customization options, refer to the [Customization](/advanced/#customization) section in our documentation.
+Customization with SurveyCompo goes beyond just themes. SurveyCompo offers a variety of customization options to ensure your surveys align perfectly with your brand and engage your audience effectively.You can tailor the survey's look and feel using custom CSS, HTML text and different layout options. For detailed information on all available customization options, please refer to the [Customization](/advanced/#customization) section in our documentation.
 
 ## HTML Text
 
@@ -796,14 +794,14 @@ In this tutorial, we will create a template for the HTML footer and apply it to 
   "pages": [
     {
       "header": "Product Satisfaction",
-      "template": "pageWithFooter",
+      "templateName": "pageWithFooter",
       "blocks": [
         /* ... */
       ]
     },
     {
       "header": "Product Satisfaction",
-      "template": "pageWithFooter",
+      "templateName": "pageWithFooter",
       "nextButtonLabel": "Submit",
       "blocks": [
         /* ... */
