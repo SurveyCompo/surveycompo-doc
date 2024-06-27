@@ -35,10 +35,10 @@ With SurveyCompo, you gain full control over every aspect of your surveys. Unlea
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic</title>
     <link rel="stylesheet" href="../common.css">
+    <script async src="https://tag.surveycompo.com/v1.js"></script>
     </head>
 
     <body>
-    <script async src="https://tag.surveycompo.com/v1.js"></script>
     <survey-compo src="./source.json" />
     </body>
 

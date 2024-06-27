@@ -108,7 +108,7 @@ To reference a CSS style tag, add a `<style>` tag to the hosting page's HTML wit
 <html>
   <head>
     <script src="https://tag.surveycompo.com/v1.js"></script>
-    <style id="surveycompo">
+    <style id="surveycompo" media="not all">
       .sc-checkbox,
       .sc-checkbox-text {
         background-color: white;
@@ -124,6 +124,10 @@ To reference a CSS style tag, add a `<style>` tag to the hosting page's HTML wit
 ```
 
 In this example, the CSS rules for changing the background color of checkbox inputs are placed inside the `<style>` tag with an **`id`** value of **`surveycompo`**. SurveyCompo will automatically apply these CSS rules to the survey when it is rendered.
+
+!!! tip "Tip"
+
+    Adding `media="not all"` to the style tag ensures that the CSS rules are not applied to the hosting page. This way, the CSS rules are only applied to the survey and do not interfere with the rest of the webpage.
 
 !!! note "Note"
 
