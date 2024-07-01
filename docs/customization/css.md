@@ -15,17 +15,23 @@ To apply CSS to your survey, you can utilize the `css` key in the survey's JSON 
     ```json
     {
       /* ... */
-      "css": ".sc-checkbox, .sc-checkbox-text { background-color: white; }",
+       "css": ".sc-survey { background-image: url('https://surveycompo.github.io/examples/images/background.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;}",
     }
     ```
 
 === "Preview"
 
-    ![Customization - CSS](../assets/images/customize-css.png){: .small .embedded}
+    <div style="border: 1px solid gray; width: 320px; height: 400px; margin-bottom: 10px" class="resizable">
+      <survey-compo
+        src="https://surveycompo.github.io/examples/examples/style/source.json"
+      />
+    </div>
+
+[:material-github:{.right-icon} view source](https://github.com/SurveyCompo/examples/tree/main/examples/style){:target="\_blank" .small-text}
 
 ### CSS Rules from the Hosting Page
 
-While embedding CSS rules directly into the survey JSON data is possible, it might not be the best approach for complex or lengthy CSS rules. To address this, SurveyCompo allows you to reference a CSS style tag from the hosting page. This way, you can keep your CSS rules separate from the survey data, making them easier to manage and maintain.
+While embedding CSS rules directly into the survey JSON data is possible, it is not a good approach for complex or lengthy CSS rules. To address this, SurveyCompo allows you to reference a CSS style tag from the hosting page. This way, you can keep your CSS rules separate from the survey data, making them easier to manage and maintain.
 
 To reference a CSS style tag, add a `<style>` tag to the hosting page's HTML with an `id` value of `surveycompo`. It's recommended to place this `<style>` tag in the `<head>` section of the HTML document. Here's an example of how you can reference a CSS style tag from the hosting page:
 
