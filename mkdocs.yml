@@ -4,8 +4,9 @@ theme:
   name: material
   features:
     # - navigation.tabs
-    - navigation.sections
-    - navigation.tracking
+    # - navigation.sections
+    # - navigation.expand
+    - navigation.indexes
     - navigation.footer
     - navigation.top
     - toc.integrate
@@ -81,6 +82,12 @@ markdown_extensions:
 plugins:
   - mkdocs-nav-weight
   - search
+
+# nav:
+#   - "index.md"
+#   - "Tutorial":
+#       - "tutorial/tutorial-part1.md"
+#       - "tutorial-part2.md"
 
 copyright: |
   &copy; 2024 <a href="https://www.surveycompo.com"  target="_blank" rel="noopener">SurveyCompo</a>
