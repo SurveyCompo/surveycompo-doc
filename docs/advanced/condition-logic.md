@@ -1,5 +1,6 @@
 ---
 weight: 400
+title: Condition Logic
 ---
 
 Conditional logic, also known as branching logic and skipping logic, involves setting rules that determine whether a question or section of the survey should be shown based on multiple conditions or previous answers. It is used to create a more personalized survey experience for respondents by displaying only the questions that are relevant to them.
@@ -40,9 +41,9 @@ SurveyCompo uses Condition Expressions to define conditional logic. `#age > 18` 
 
 In the above example, the page with the question "What is your favorite color?" will only be displayed if the respondent's age is greater than 18. The `visibleIf` key is applicable to Screen, Page, Block, and Input models. You can apply conditional logic to these elements.
 
-### Condition Expression
+### Simple Condition Expression
 
-A Condition Expression is a string designed to evaluate to a boolean value, following the syntax `[variable or input reference] [comparison operator] [value]`. For instance, `#age > 18` illustrates how to use this expression:
+A simple Condition Expression is a string designed to evaluate to a boolean value, following the syntax `[variable or input reference] [comparison operator] [value]`. For instance, `#age > 18` illustrates how to use this expression:
 
 - Prefix a variable name with `$` to reference a variable, or use `#` to reference a previous input's value.
 - Use comparison operators such as `==`, `!=`, `>`, `<`, `>=`, or `<=` for evaluating conditions.

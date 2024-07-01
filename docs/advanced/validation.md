@@ -87,7 +87,7 @@ The `EQUALS` validation rule is used to compare the value of the input field wit
 
 Block validation is a feature that allows you to validate multiple inputs within a block. This feature is useful when you want to ensure that a group of inputs is filled out correctly before proceeding to the next block or page. You can define block validation rules in the Block model using the `validations` key.
 
-The `validations` key holds an array comprising validation rules applicable to the block. Below are the available validation rules:
+The `validations` key holds an array comprising [validation models](/data-models/other-models/#validation) applicable to the block. Below are the available validation rules:
 
 | Type            | Description                                                |
 | --------------- | ---------------------------------------------------------- |
@@ -180,6 +180,12 @@ The `validations` key holds an array comprising validation rules applicable to t
   ]
 }
 ```
+
+### Conditional Validation
+
+The [Validation model](/data-models/other-models/#validation) supports the `applicableIf` key. This key enables you to specify a condition under which a validation rule becomes applicable. If this condition is met, the rule is applied. This feature is useful when you want to apply validation rules based on specific conditions.
+
+The `applicableIf` key works exactly like the `visibleIf` key; it accepts [Condition Expressions](/advanced/condition-logic/) as values.
 
 ### Validation Example
 
