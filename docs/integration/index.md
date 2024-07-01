@@ -2,8 +2,6 @@
 weight: 700
 ---
 
-# Integration
-
 ## Events
 
 ## API

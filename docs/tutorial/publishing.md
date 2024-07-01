@@ -1,13 +1,13 @@
 ---
 weight: 200
-title: Publishing A Survey
+title: Sharing A Survey
 ---
 
 In our previous tutorial, we built a simple Product Satisfaction survey. This tutorial will cover how to publish and share the survey, collect responses, and analyze the data.
 
-Once your survey is complete, you can publish it to finalize the survey JSON model. Publishing a survey makes it available to your audience for responses. If you make changes after publishing, you'll need to publish it again to update your audience.
+Once your survey is complete, you can publish it to finalize the survey JSON model. If you make changes after publishing, you might want to republish the survey to make the changes available to your audience.
 
-SurveyCompo provides a one-click button for publishing. During this process, SurveyCompo consolidates all pending edits since the last publish, generates a new version of the survey JSON model, and assigns a unique survey ID and a signature hash to ensure the integrity of the model.
+SurveyCompo provides a one-click button for publishing. During this process, SurveyCompo consolidates all pending edits since the last publish, generates a new version of the survey JSON model with a unique survey ID and a signature hash. The survey ID uniquely identifies the survey, and the signature hash ensures the integrity of the JSON data.
 
 For users with a paid subscription plan, there's an option to remove SurveyCompo branding from the survey, which can be enabled during publishing.
 
