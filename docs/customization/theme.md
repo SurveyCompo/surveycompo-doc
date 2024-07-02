@@ -1,7 +1,3 @@
----
-weight: 200
----
-
 SurveyCompo provides a configurable [theme model](/data-models/other-models/){:target="\_blank"} that makes it easy for you to customize the look of your survey. This model includes a variety of color options, radius settings, and font settings that you can apply to your survey.
 
 As demonstrated in previous examples, SurveyCompo defaults to a light and minimalist theme. If you wish to alter the theme of your survey, you can do so by using the `theme` key in the survey's JSON model.

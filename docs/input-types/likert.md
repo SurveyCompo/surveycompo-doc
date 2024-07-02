@@ -1,7 +1,3 @@
----
-weight: 1200
----
-
 The `LIKERT_RATING` input type is designed to capture responses on a Likert scale, a widely used psychometric scale in surveys and questionnaires to gauge the level of agreement or disagreement with a statement. The `LIKERT_RATING` input is depicted as a set of radio inputs that users can select.
 
 The `likertInputOptions` key is used to define the options in the Likert scale. These options can be represented as an array of strings or an object with key-value pairs. If `likertInputOptions` is an array of strings, the value of the selected option matches the displayed text. However, if `likertInputOptions` is an object with key-value pairs, the value that gets recorded when an option is selected is the key associated with that option, not the displayed text.

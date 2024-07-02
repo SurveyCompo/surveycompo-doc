@@ -1,5 +1,4 @@
 ---
-weight: 1300
 title: LikertMatrix
 ---
 

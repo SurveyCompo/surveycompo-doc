@@ -1,7 +1,3 @@
----
-weight: 1000
----
-
 The `IMAGE` input type is designed for displaying and selecting images within surveys.
 
 By default, the `IMAGE` input behaves similarly to a `RADIO` input, except for the visual representation. Users can select or deselect the image. When an `IMAGE` input is selected, a checkmark icon appears at the top right corner of the image. The position of this checkmark icon can be adjusted by setting the `imageInputCheckmarkPosition` key to `BOTTOM`.

@@ -1,7 +1,3 @@
----
-weight: 300
----
-
 Piping is a technique that shows the value of a variable or a previously inputted value in a survey. This technique is commonly used to personalize the survey by addressing the respondent by their name or to display any other information that is relevant to the respondent.
 
 ### Piping with Variables and Prior Input Values

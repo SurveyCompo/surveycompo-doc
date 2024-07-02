@@ -1,7 +1,3 @@
----
-weight: 500
----
-
 The `TEXT` input type is designed to capture short textual data. It is depicted as a text input field that users can type in. The `TEXT` input type is commonly used for capturing short textual data such as names, email addresses, and phone numbers.
 
 ```json

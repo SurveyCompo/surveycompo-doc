@@ -1,7 +1,3 @@
----
-weight: 600
----
-
 ## Block Layout
 
 SurveyCompo allows you to customize the layout of blocks within a survey. You can adjust the layout of blocks to create a visually appealing and user-friendly survey. The layout of blocks can be customized using the `layout*` keys in the [block's JSON model](/data-model/#block-data-keys).

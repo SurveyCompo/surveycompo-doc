@@ -1,7 +1,3 @@
----
-weight: 200
----
-
 Screens are the visual gateways of your SurveyCompo surveys. They introduce respondents to the survey, provide closure upon completion, and inform users of eligibility or termination. Let's explore their key functions:
 
 - **Start Screens**: These screens welcome users, present essential information, and invite them to participate in your survey.

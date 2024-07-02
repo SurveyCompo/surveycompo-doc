@@ -1,5 +1,4 @@
 ---
-weight: 700
 title: Publish and Share
 ---
 
@@ -7,7 +6,7 @@ title: Publish and Share
 
 Congratulations! You have created a survey and are ready to publish and share it with your target audience.
 
-Publishing a survey involves finalizing your edits to the survey JSON model and creating a version of the JSON file ready for respondents. During this process, SurveyCompo assigns a unique survey ID and a signature hash to the published JSON model. The survey ID uniquely identifies the survey, and the signature hash ensures the integrity of the JSON data.
+Publishing a survey involves finalizing your edits to the survey JSON model and creating a version of the JSON file ready to feed in to the SurveyCompo web component for presentation. During this process, SurveyCompo assigns a unique survey ID and a signature hash to the published JSON model. The survey ID uniquely identifies the survey, and the signature hash ensures the integrity of the JSON data.
 
 If you make any changes to a survey after publishing it, you will need to publish the survey again to make the changes available to your audience.
 

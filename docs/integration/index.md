@@ -1,7 +1,3 @@
----
-weight: 700
----
-
 ## Events
 
 ## API

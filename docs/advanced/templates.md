@@ -1,14 +1,10 @@
----
-weight: 600
----
-
 Templates in SurveyCompo let you reuse survey components across various Pages or Blocks, which helps keep everything consistent. If you notice you're repeating the same settings or keys on different pages or blocks, you can create a template for those keys. Then, you can reuse the template wherever needed. Any changes you make to the template will automatically update all the pages or blocks using it.
 
 To define a template in SurveyCompo, use the `pageTemplates` and `blockTemplates` keys in the survey model. The `pageTemplates` key holds an array of page models that can be used as templates, while the `blockTemplates` key holds an array of block models for the same purpose. Each template is given a unique name using the `templateName` key.
 
 The following example defines an page template with a footer and applied to multiple pages:
 
-```json
+```json linenums="1" hl_lines="5 11 33"
 {
   "name": "My Survey",
   "pageTemplates": [
@@ -19,7 +15,6 @@ The following example defines an page template with a footer and applied to mult
   ],
   "pages": [
     {
-      "header": "About You",
       "templateName": "pageWithFooter",
       "blocks": [
         {

@@ -1,7 +1,3 @@
----
-weight: 100
----
-
 SurveyCompo offers a powerful and versatile way to design surveys using a flexible data model written in JSON. This section introduces you to the key building blocks of a SurveyCompo survey.
 
 ### Survey Structure

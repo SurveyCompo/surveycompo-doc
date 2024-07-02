@@ -1,7 +1,3 @@
----
-weight: 300
----
-
 Pages are the backbone of your SurveyCompo surveys. They contain your survey questions, guide user progress, and offer versatile customization options. Let's explore their structure and features.
 
 ### Page Structure

@@ -1,5 +1,4 @@
 ---
-weight: 900
 title: NumberScale
 ---
 

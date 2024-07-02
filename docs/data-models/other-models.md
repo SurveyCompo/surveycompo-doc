@@ -1,7 +1,3 @@
----
-weight: 600
----
-
 ### Theme
 
 The `Theme` model allows you to customize the appearance of your survey. You can define colors, fonts, and other visual elements to match your brand or create a specific look and feel for your survey.

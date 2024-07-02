@@ -6,7 +6,7 @@ theme:
     # - navigation.tabs
     # - navigation.sections
     # - navigation.expand
-    - navigation.indexes
+    # - navigation.indexes
     - navigation.footer
     - navigation.top
     - toc.integrate
@@ -80,14 +80,57 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 plugins:
-  - mkdocs-nav-weight
+  # - mkdocs-nav-weight # We don't need this since we have 'nav' instead.
   - search
 
-# nav:
-#   - "index.md"
-#   - "Tutorial":
-#       - "tutorial/tutorial-part1.md"
-#       - "tutorial-part2.md"
+nav:
+  - "index.md"
+  - "Tutorial":
+      - "tutorial/building.md"
+      - "tutorial/publishing.md"
+  - "Data Models":
+      - "data-models/survey.md"
+      - "data-models/screen.md"
+      - "data-models/page.md"
+      - "data-models/block.md"
+      - "data-models/input.md"
+      - "data-models/other-models.md"
+  - "Input Types":
+      - "input-types/overview.md"
+      - "input-types/checkbox.md"
+      - "input-types/checkbox-text.md"
+      - "input-types/radio.md"
+      - "input-types/radio-text.md"
+      - "input-types/text.md"
+      - "input-types/textarea.md"
+      - "input-types/dropdown.md"
+      - "input-types/number-scale.md"
+      - "input-types/star-scale.md"
+      - "input-types/image.md"
+      - "input-types/toggle.md"
+      - "input-types/likert.md"
+      - "input-types/likert-matrix.md"
+  - "Customization":
+      - "customization/overview.md"
+      - "customization/toplevel.md"
+      - "customization/theme.md"
+      - "customization/css.md"
+      - "customization/custom-html.md"
+      - "customization/layout.md"
+  - "Advanced Features":
+      - "advanced/randomization.md"
+      - "advanced/variables.md"
+      - "advanced/piping.md"
+      - "advanced/condition-logic.md"
+      - "advanced/validation.md"
+      - "advanced/templates.md"
+  - "publish.md"
+  - "Integration":
+      - "integration/event-and-api.md"
+      - "integration/react.md"
+      - "integration/angular.md"
+      - "integration/vue.md"
+  - "miscellaneous.md"
 
 copyright: |
   &copy; 2024 <a href="https://www.surveycompo.com"  target="_blank" rel="noopener">SurveyCompo</a>

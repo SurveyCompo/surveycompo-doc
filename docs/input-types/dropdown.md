@@ -1,7 +1,3 @@
----
-weight: 800
----
-
 The `DROPDOWN` input type is designed to capture single-choice questions. It is depicted as a dropdown list that users can select. The `DROPDOWN` input type is commonly used for single-choice questions where users can only select one option.
 
 The `dropdownInputOptions` key is used to specify the options in the dropdown list. The options are represented as an array of strings or an object with key-value pairs. If the dropdown list is an array of strings, the value of the selected option is the same as the displayed text. If the dropdown list is an object with key-value pairs, the value of the selected option is the key of the selected option.

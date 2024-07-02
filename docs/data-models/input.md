@@ -1,7 +1,3 @@
----
-weight: 500
----
-
 Inputs are the heart of data collection within your SurveyCompo surveys. They provide the interactive elements where users submit their answers, opinions, and feedback. SurveyCompo offers a wide range of input types to accommodate diverse survey needs.
 
 ### Key Concepts

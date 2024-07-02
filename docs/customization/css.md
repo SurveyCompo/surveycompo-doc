@@ -1,7 +1,3 @@
----
-weight: 300
----
-
 While themes provide a simple way to modify your survey's appearance, you might require more granular customizations.
 
 SurveyCompo allows you to refine your survey's look using CSS. This enables you to adjust the size, position, and style of survey elements to align with your brand's aesthetic. With CSS, you can make more precise changes to the survey's appearance, such as tweaking the font, color, and layout.

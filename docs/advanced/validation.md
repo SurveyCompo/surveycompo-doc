@@ -1,7 +1,3 @@
----
-weight: 500
----
-
 Validation is a crucial aspect of survey design. It ensures that the data collected is accurate and reliable. SurveyCompo provides a range of validation options to ensure that respondents provide the correct type of input.
 
 ### Input Validation

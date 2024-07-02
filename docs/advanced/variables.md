@@ -1,7 +1,3 @@
----
-weight: 200
----
-
 Variables are placeholders for values that can be used in the survey. They can be used to display information, or define conditional logic to control the flow of the survey.
 
 For instance, if you wish to personalize your survey by including the respondent's name, a variable can be used. This variable will hold the name and display it throughout the survey. This feature is referred as 'piping'.

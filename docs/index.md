@@ -1,7 +1,3 @@
----
-weight: 100
----
-
 # Introduction
 
 Welcome to SurveyCompo, the ultimate tool for creating dynamic and adaptable surveys.
