@@ -4,6 +4,10 @@ window.addEventListener("surveychange", (e) => {
   }
 });
 
+window.addCloseButton = (data) => {
+  return Object.assign(data, { uiShowCloseButton: true });
+};
+
 // stop mkdocs search shortcut
 document.addEventListener("keydown", (ev) => {
   // prevent search shortcut with key: S and F
