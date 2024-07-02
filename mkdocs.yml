@@ -82,7 +82,10 @@ markdown_extensions:
 plugins:
   # - mkdocs-nav-weight # We don't need this since we have 'nav' instead.
   - search
-  - optimize
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
 
 nav:
   - "index.md"
