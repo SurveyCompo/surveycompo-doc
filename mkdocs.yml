@@ -1,5 +1,5 @@
-site_name: SurveyCompo
-site_url: https://www.surveycompo.com
+site_name: SurveyCompo Docs
+site_url: https://doc.surveycompo.com
 theme:
   name: material
   features:
@@ -82,6 +82,7 @@ markdown_extensions:
 plugins:
   # - mkdocs-nav-weight # We don't need this since we have 'nav' instead.
   - search
+  - optimize
 
 nav:
   - "index.md"
