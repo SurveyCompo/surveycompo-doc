@@ -66,7 +66,7 @@ A minimal survey JSON source looks like this:
 }
 ```
 
-The survey JSON source is a structured document that defines the survey's questions, answers, and logic. This JSON source serves as the foundation for your survey and is used to construct the survey within the Survey Builder. The name field is mandatory in the survey JSON source and is the only required property. It appears in the SurveyCompo Portal and helps you identify your survey.
+The survey JSON source is a structured document that defines the survey's questions, answers, and logic. This JSON source serves as the foundation for your survey and is used to construct the survey within the Survey Builder. The `name` field is mandatory in the survey JSON source and is the only required key. It appears in the SurveyCompo Portal and helps you identify your survey.
 
 Let's proceed by adding the start screen.
 
@@ -95,11 +95,11 @@ The JSON source for the welcome screen includes the following keys:
 - `description`: The message or description shown on the welcome screen.
 - `okButtonLabel`: The text on the button that participants click to start the survey.
 
-The `startScreens` property is an array that can contain multiple screens. If there are multiple screens, one of them is randomly selected as the start screen when the survey loads. However, in this case, we only have one screen.
+The `startScreens` key is an array that can contain multiple screens. If there are multiple screens, one of them is randomly selected as the start screen when the survey loads. However, in this case, we only have one screen.
 
-!!! info "Information"
+!!! info "Info"
 
-    For a comprehensive list of screen properties, refer to the [Screen](/data-model/#screen) documentation.
+    For a comprehensive list of screen properties, refer to the [Screen](/data-models/screen/) documentation.
 
 Let's integrate the welcome screen into our survey JSON source and preview it in the Survey Builder.
 
@@ -111,7 +111,7 @@ The first page of the survey will request participants to input their age. We wi
 
 Here's the JSON source for the first page:
 
-```json
+```json linenums="1" hl_lines="7-55"
 {
   "name": "Product Satisfaction Survey",
   "startScreens": [
@@ -181,18 +181,18 @@ Each block includes:
 - `title`: The title of the block, which serves as the question text.
 - `inputs`: An array of input fields within the block.
 
-For the 'Age' question input:
+For the '**Age**' question input:
 
 - `type`: Specifies it as a text input field.
 - `textInputType`: Indicates it as a number input.
 
-For the 'Method of Contact' question input:
+For the '**Method of Contact**' question input:
 
 - `type`: Specifies it as a dropdown input field.
 - `hint`: Provides hint text displayed within the dropdown.
 - `dropdownInputOptions`: An array offering options for the dropdown.
 
-For the 'How did you hear about us?' question input:
+For the '**How did you hear about us?**' question input:
 
 - `type`: Specifies it as a checkbox input field.
 - `label`: Displays the label or question text associated with the input field.
@@ -205,11 +205,11 @@ Note that the last input field uses `type` as `CHECKBOX_TEXT`, including a text 
 
 !!! info "Info"
 
-    The `type` key specifies the type of input field displayed within the survey. SurveyCompo supports various input types such as text, radio buttons, checkboxes, dropdowns, and more. For a complete list of input properties, refer to the [Input](/data-model/#input-types) documentation.
+    The `type` key specifies the type of input field displayed within the survey. SurveyCompo supports various input types such as text, radio buttons, checkboxes, dropdowns, and more. For a complete list of input properties, refer to the [Input](/input-types/overview) documentation.
 
 Let's add the first page into our survey JSON source and preview it in the Survey Builder.
 
-![Tutorial - First Page](../assets/images/tutorial-first-page.png){: .center .small}
+![Tutorial - First Page](../assets/images/tutorial-first-page.png){: .center .small }
 
 ## Adding the Second Page
 
@@ -217,7 +217,7 @@ The second page of the survey will prompt participants to rate their overall sat
 
 Here's the JSON source for the second page:
 
-```json
+```json linenums="1" hl_lines="8-40"
 {
   "name": "Product Satisfaction Survey",
   "startScreens": [
@@ -268,15 +268,15 @@ The second page of the survey includes 3 blocks/questions:
 
 - The following two questions prompt participants to provide open-ended feedback on what they like most and what could be improved about our product.These questions use a `TEXTAREA` input field.
 
-!!! tip "Tip"
+!!! info "Info"
 
-    The `LIKERT_SCALE` input acts similarly to a collection of `RADIO` inputs, making it an effective tool for gathering feedback on a scale. SurveyCompo offers several Likert scale presets such as `SATISFACTION`, `LIKELIHOOD`, and `AGREEMENT` to simplify the process of creating surveys. For a comprehensive list of available Likert scale presets, refer to the [Input](/data-model/#input) documentation.
+    The `LIKERT_SCALE` input acts similarly to a collection of `RADIO` inputs, making it an effective tool for gathering feedback on a scale. SurveyCompo offers several Likert scale presets such as `SATISFACTION`, `LIKELIHOOD`, and `AGREEMENT` to simplify the process of creating surveys. For a comprehensive list of available Likert scale presets, refer to the [Likert Scale](/input-types/likert/) documentation.
 
 Let's preview the second page in the Survey Builder.
 
 ![Tutorial - Second Page](../assets/images/tutorial-second-page.png){: .center .small}
 
-The `nextButtonLabel` property is set as "Submit," serving as the label on the button participants use to proceed to the next page. If left unspecified, the default label is "Next". As multiple pages are added to our survey, a navigation bar now appears at the bottom of each page. This bar allows participants to navigate between pages and displays the current page number alongside the total number of pages in the survey. To hide the navigation bar, you can use the `uiShowNavigation` survey property. For more details, refer to the [Survey](/data-model/#survey) documentation.
+The `nextButtonLabel` key is set as "Submit," serving as the label on the button participants use to proceed to the next page. If left unspecified, the default label is "Next". As multiple pages are added to the survey, a navigation bar appears at the bottom of each page. This bar allows participants to navigate between pages and displays the current page number alongside the total number of pages in the survey. To hide the navigation bar, use the `uiShowNavigation` survey key. For more details, refer to the [Survey Data Key](/data-models/survey/#survey-data-keys) documentation.
 
 ## Adding the Completion Screen
 
@@ -284,7 +284,7 @@ The final screen of the survey is the completion screen. It offers a closing mes
 
 Here's the JSON source for the completion screen:
 
-```json
+```json linenums="1" hl_lines="10-14"
 {
   "name": "Product Satisfaction Survey",
   "startScreens": [
@@ -309,7 +309,7 @@ Let's preview the complete screen in the Survey Builder.
 
 ## Randomization
 
-SurveyCompo offers support for randomizing questions and answer options, a powerful feature that helps mitigate bias and provides each participant with a unique survey experience. You can apply randomization to pages, blocks, and inputs. For detailed information on implementing randomization, refer to the [Randomization](/advanced/#randomization) documentation.
+SurveyCompo offers support for randomizing questions and answer options, a powerful feature that helps mitigate bias and provides each participant with a unique survey experience. You can apply randomization to pages, blocks, and inputs. For detailed information on implementing randomization, refer to the [Randomization](/advanced/randomization) documentation.
 
 In this tutorial, we will add randomization for the 'How did you hear about us?' question. The inputs will be randomized to avoid any order bias.
 
@@ -376,7 +376,7 @@ Let's preview the randomization in the Survey Builder:
 
 ## Disqualification
 
-SurveyCompo supports disqualification logic to exclude participants who do not meet specific criteria. This feature ensures that only eligible participants complete your survey. You can disqualify participants based on their inputs and variables. For detailed guidance on implementing disqualification logic, refer to the [Disqualification](/advanced/#disqualification) documentation.
+SurveyCompo supports disqualification logic to exclude participants who do not meet specific criteria. This feature ensures that only eligible participants complete your survey. You can disqualify participants based on their inputs and variables. For detailed guidance on implementing disqualification logic, refer to the [Disqualification](/advanced/disqualification) documentation.
 
 In this tutorial, we will integrate disqualification logic into the survey to exclude participants under the age of 18 from completing it. The disqualification logic will be applied to the 'Age' input and an Abort Screen.
 
@@ -419,13 +419,13 @@ In this tutorial, we will integrate disqualification logic into the survey to ex
 }
 ```
 
-The 'Age' input is assigned an `id` property to uniquely identify it within the survey. This `id` is crucial for referencing the input in disqualification logic. The disqualification condition is defined using the `visibleIf` property in the Abort Screen. In this case, participants are disqualified if the value of the 'Age' input is less than 18.
+The 'Age' input is assigned an `id` key to uniquely identify it within the survey. This `id` is crucial for referencing the input in disqualification logic. The disqualification condition is defined using the `visibleIf` key in the Abort Screen. In this case, participants are disqualified if the value of the 'Age' input is less than 18.
 
 SurveyCompo supports multiple abort screens, allowing you to create customized disqualification messages for different scenarios. The appropriate abort screen is displayed when the disqualification condition is met, ensuring participants understand why they are excluded from completing the survey.
 
-!!! tip "Tip"
+!!! info "Info"
 
-    Utilize the `visibleIf` key to implement powerful conditional logic in your survey. By referencing input values and external variables, you can dynamically control the visibility of pages, screens, blocks, and inputs based on participant responses. For detailed guidance on using conditional logic, refer to the [Conditional Logic](/advanced/#conditional-logic) documentation.
+    The `visibleIf` key is used to implement powerful conditional logic in your survey. By referencing input values and external variables, you can dynamically control the visibility of pages, screens, blocks, and inputs based on participant responses. For detailed guidance on using conditional logic, refer to the [Conditional Logic](/advanced/conditional-logic) documentation.
 
 Let's preview the disqualification logic in the Survey Builder:
 
@@ -433,11 +433,11 @@ Let's preview the disqualification logic in the Survey Builder:
 
 ## Piping
 
-SurveyCompo supports piping to personalize survey questions and responses based on participant inputs. This feature enables the creation of dynamic surveys that adapt to individual participants by allowing the insertion of input values and external variables into survey content. For detailed guidance on implementing piping, refer to the [Piping](/advanced/#piping) documentation.
+SurveyCompo supports piping to personalize survey questions and responses based on participant inputs. This feature enables the creation of dynamic surveys that adapt to individual participants by allowing the insertion of input values and external variables into survey content. For detailed guidance on implementing piping, refer to the [Piping](/advanced/piping/) documentation.
 
 In this tutorial, we will incorporate piping into the survey to personalize the 'Disqualified Screen' with the participant's age.
 
-```json linenums="1" hl_lines="13-18"
+```json linenums="1" hl_lines="7"
 {
   "name": "Product Satisfaction Survey",
   /*  ... */
@@ -452,7 +452,7 @@ In this tutorial, we will incorporate piping into the survey to personalize the 
 }
 ```
 
-The `description` property of the Abort Screen includes the `{#age}` placeholder, which dynamically references the value of the 'Age' input using its unique identifier, `age`. When a participant is disqualified, this placeholder is replaced with the participant's actual age. Piping functionality enhances survey personalization by delivering relevant information based on participant responses.
+The `description` key of the Abort Screen includes the `{#age}` placeholder, which dynamically references the value of the 'Age' input using its unique identifier, `age`. When a participant is disqualified, this placeholder is replaced with the participant's actual age. Piping functionality enhances survey personalization by delivering relevant information based on participant responses.
 
 Let's preview the piping feature in the Survey Builder and input an age value of 11 to observe the personalized message:
 
@@ -460,7 +460,7 @@ Let's preview the piping feature in the Survey Builder and input an age value of
 
 ## Validation
 
-SurveyCompo supports input validation to enhance data accuracy and minimize errors in your survey responses. This feature ensures that participants provide valid and complete information based on specified criteria such as input type, format, and value. For detailed guidance on implementing validation, refer to the [Validation](/advanced/#validation) documentation.
+SurveyCompo supports input validation to enhance data accuracy and minimize errors in your survey responses. This feature ensures that participants provide valid and complete information based on specified criteria such as input type, format, and value. For detailed guidance on implementing validation, refer to the [Validation](/advanced/validation) documentation.
 
 This tutorial will walk you through the process of implementing validation rules to improve your survey. You'll configure the 'Age' input to accept only numerical entries within the 0-100 range. Additionally, you'll set the 'Method of Contact' question as mandatory and require participants to select at least two options for the 'How did you hear about us?' question.
 
@@ -556,11 +556,9 @@ In the 'How did you hear about us?' block, a `MIN_SELECTION` validation rule enf
 
 When a block includes a 'required' validation rule, SurveyCompo automatically appends an asterisk ('\*') after the block index number to indicate its mandatory status.
 
-!!! tip "Tip"
+!!! note "Note"
 
-    Note that setting `textInputType` to `NUMBER` for the 'Age' input in SurveyCompo enhances the user interface with features like a number keyboard and stepper. However, this setting alone does not enforce numerical validation. Therefore, it's crucial to apply the `INTEGER` validation rule to ensure the correct input format and value range. For comprehensive details on input types and their associated validation rules, refer to the [Validation](/data-model#validation) section of our documentation.
-
-This tutorial demonstrates how to effectively apply validation rules to inputs and blocks within SurveyCompo.
+    Note that setting `textInputType` to `NUMBER` for the 'Age' input in SurveyCompo enhances the user interface with features like a number keyboard and stepper. However, this setting alone does not enforce numerical validation. Therefore, it's crucial to apply the `INTEGER` validation rule to ensure the correct input format and value range. For comprehensive details on input types and their associated validation rules, refer to the [Validation](/advanced/validation) section of our documentation.
 
 Let's explore the functionality of these validation rules in action within the Survey Builder:
 
@@ -568,7 +566,7 @@ Let's explore the functionality of these validation rules in action within the S
 
 ## Conditional Logic
 
-SurveyCompo supports conditional logic to dynamically show or hide specific pages, blocks, and inputs based on participant responses or external variables. This feature allows for a personalized survey experience, ensuring participants receive relevant questions based on their previous answers. For detailed guidance on implementing conditional logic, refer to the [Conditional Logic](/advanced/#condition) documentation.
+SurveyCompo supports conditional logic to dynamically show or hide specific pages, blocks, and inputs based on participant responses or external variables. This feature allows for a personalized survey experience, ensuring participants receive relevant questions based on their previous answers. For detailed guidance on implementing conditional logic, refer to the [Conditional Logic](/advanced/conditional-logic) documentation.
 
 In this tutorial, we will integrate conditional logic into the survey. Based on the participant's response to the 'Overall satisfaction' question, we will tailor the survey flow:
 
@@ -645,7 +643,7 @@ We assign an 'id' (`satisfaction`) to the "how satisfied are you" input. This 'i
 
 SurveyCompo uses Condition Expressions to define visibility conditions. In this case, we use the `$or` operator to display the 'What do you like most about our product?' block if the participant selects 'Very satisfied' or 'Satisfied' on the 'Overall satisfaction' question. Conversely, selecting 'Very dissatisfied' or 'Dissatisfied' will display the 'What could be improved about our product?' block. If the participant selects 'Neither dissatisfied nor satisfied', follow-up questions are hidden.
 
-Condition Expressions support a variety of operators such as `$and`, `$or`, `$not`, `>=`, `<=`, `==`, `!=`, `>`, and `<`. For a comprehensive list of operators and their usage, refer to the [Conditional Logic](/advanced/#condition) section in our documentation.
+Condition Expressions support a variety of operators such as `$and`, `$or`, `$not`, `>=`, `<=`, `==`, `!=`, `>`, and `<`. For a comprehensive list of operators and their usage, refer to the [Conditional Logic](/advanced/conditional-logic) documentation.
 
 For optimal user experience, consider organizing conditional blocks onto separate pages. However, for the purpose of this tutorial, we will keep them on the same page to demonstrate how conditional logic dynamically manages block visibility based on participant responses.
 
@@ -687,11 +685,11 @@ Preview the customization in the Survey Builder:
 
 ![Tutorial - Customization](../assets/images/tutorial-customization.png){: .center .small}
 
-SurveyCompo offers extensive customization beyond themes. You can customize surveys using custom CSS, HTML text, and different layout options to ensure they reflect your brand and engage your audience effectively. For comprehensive details on customization options, refer to the [Customization](/advanced/#customization) section in our documentation.
+SurveyCompo offers extensive customization beyond themes. You can customize surveys using custom CSS, HTML text, and different layout options to ensure they reflect your brand and engage your audience effectively. For comprehensive details on customization options, refer to the [Customization](/advanced/customization) section in our documentation.
 
 ## HTML Text
 
-SurveyCompo supports HTML text within the survey to enhance the visual appeal and readability of your questions and descriptions. HTML text allows for formatting, adding images, and embedding videos. For details on using HTML text, refer to the [HTML Text](/customization/#custom-html) documentation.
+SurveyCompo supports HTML text within the survey to enhance the visual appeal and readability of your questions and descriptions. HTML text allows for formatting, adding images, and embedding videos. For details on using HTML text, refer to the [HTML Text](/customization/custom-html) documentation.
 
 In this tutorial, we'll incorporate HTML text into the Page footer to include a link to the privacy policy.
 
@@ -768,11 +766,11 @@ Preview the customized hyperlink in the Survey Builder:
 
 ![Tutorial - HTML footer](../assets/images/tutorial-customization-footer2.png){: .center .small}
 
-The use of HTML text extends to various elements within the survey, including Screens, Pages, and Blocks. For more details on incorporating HTML text, refer to the [HTML Text](/customization/#custom-html) documentation.
+The use of HTML text extends to various elements within the survey, including Screens, Pages, and Blocks. For more details on incorporating HTML text, refer to the [HTML Text](/customization/custom-html) documentation.
 
 ## Using Templates
 
-We've recently added an HTML footer to the final page of our survey. However, if we want this footer to appear on every page, manually duplicating the HTML across each page can be cumbersome and prone to errors. Luckily, SurveyCompo offers a solution: templates. Templates are reusable components designed for defining common elements like headers, footers, and styles, which can be applied consistently throughout your survey. For detailed guidance on using templates, refer to the [Templates](/advanced/#templates) documentation.
+We've recently added an HTML footer to the final page of our survey. However, if we want this footer to appear on every page, manually duplicating the HTML across each page can be cumbersome and prone to errors. Luckily, SurveyCompo offers a solution: templates. Templates are reusable components designed for defining common elements like headers, footers, and styles, which can be applied consistently throughout your survey. For detailed guidance on using templates, refer to the [Templates](/advanced/templates) documentation.
 
 In this tutorial, we'll create a template specifically for the HTML footer and apply it universally across all pages in the survey.
 
@@ -824,7 +822,7 @@ When previewed in the survey builder, the HTML footer will be consistently visib
 
 ## Adding Input Identifiers
 
-As we finalize the survey's appearance, it's crucial to ensure its functionality. When collecting survey responses, SurveyCompo records respondents' inputs and selections for each survey item. For example, if a respondent enters '18' for the age input, we expect data like "input: 'age', value: 18". Therefore, assigning identifiers to each input in the survey is essential.
+As we finalize the survey's appearance, it's crucial to ensure its functionality. When collecting survey responses, SurveyCompo records respondents' inputs and selections for each survey item. For example, if a respondent enters '18' for the age input, we expect data like `{input: 'age', value: 18}`. Therefore, assigning identifiers to each input in the survey is essential.
 
 These identifiers are also used for referencing inputs in conditional logic, validation rules, and data piping. We've already introduced the `id` key to the 'Age' input on the survey's first page to implement disqualifying logic. The `id` ensures that the input's values are accurately reported upon survey completion. Without this identifier, determining which input corresponds to which value would be challenging.
 
@@ -942,7 +940,8 @@ Let's proceed by adding identifiers to the inputs in our survey:
 }
 ```
 
-Identifiers can also be assigned to blocks and pages. These identifiers will then be accessible within SurveyCompo events. For a more detailed understanding of survey events, refer to the [Events](/advanced/#events) section in our documentation.
+Identifiers can also be assigned to blocks and pages. These identifiers will then be accessible within SurveyCompo events. Events are triggered when participants interact with the survey, providing valuable insights into their behavior and responses. This is also how survey data is collected and analyzed.
+For a more detailed understanding of survey events, refer to the [Events](/integration/event-and-api/) section in our documentation.
 
 ## What's Next?
 

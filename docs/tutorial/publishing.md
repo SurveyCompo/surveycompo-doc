@@ -18,7 +18,7 @@ The published survey JSON model is all you need to host the survey on your websi
 
 ![Tutorial - Self-hosting](../assets/images/tutorial-selfhosting.png){: .center .md}
 
-If you host the survey yourself, you are responsible for managing data collection and storage. SurveyCompo does not collect or store any survey data in this scenario. For more details on collecting responses using survey Events, refer to the [Survey Events](/advanced/#events) section in our documentation.
+If you host the survey yourself, you are responsible for managing data collection and storage. SurveyCompo does not collect or store any survey data in this scenario. For more details on collecting survey data, refer to the [Survey Events](/integration/event-and-api/) and [Data Collection](/integration/data-collection) documentation.
 
 Hosting both the survey model and JavaScript library on your website, and managing data collection, gives you total control over the survey data. This control helps you comply with privacy regulations and meet specific security needs.
 

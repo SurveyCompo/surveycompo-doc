@@ -1,6 +1,6 @@
 ## Block Layout
 
-SurveyCompo allows you to customize the layout of blocks within a survey. You can adjust the layout of blocks to create a visually appealing and user-friendly survey. The layout of blocks can be customized using the `layout*` keys in the [block's JSON model](/data-model/#block-data-keys).
+SurveyCompo allows you to customize the layout of blocks within a survey. You can adjust the layout of blocks to create a visually appealing and user-friendly survey. The layout of blocks can be customized using the `layout*` keys in the [block's JSON model](/data-models/block/#block-data-keys).
 
 Inputs that are of the same type are grouped together and shown in a grid layout. By default, these inputs are lined up in a row, starting from the left and moving to the right. If there isn't enough space in a row for all inputs, they will continue on the next row.
 

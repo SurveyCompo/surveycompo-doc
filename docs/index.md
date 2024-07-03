@@ -1,14 +1,14 @@
 # Introduction
 
-Welcome to SurveyCompo, the ultimate tool for creating dynamic and adaptable surveys.
+Welcome to SurveyCompo, your tool for creating dynamic and adaptable surveys.
 
 ## What is SurveyCompo?
 
-SurveyCompo is a purpose-built web component, it offers exceptional flexibility, customization, and programmability. Creating a survey with SurveyCompo is easy: simply provide SurveyCompo with JSON-based data, and it renders your survey design.
+SurveyCompo is a purpose-built web component offering exceptional flexibility, customization, and programmability. Creating a survey with SurveyCompo is straightforward: provide JSON-based data, and it renders your survey design.
 
-SurveyCompo's power extends far beyond creation. Its seamless integration into your existing tech stack enables real-time data capture and interactive experiences. Style your surveys to match your brand using themes and CSS, and leverage event listeners to respond dynamically to user input.
+SurveyCompo's capabilities extend beyond creation. Its integration into your existing tech stack enables real-time data capture and interactive experiences. Style your surveys to match your brand using themes and CSS, and use event listeners to respond dynamically to user input.
 
-With SurveyCompo, you gain full control over every aspect of your surveys. Unleash its potential to build surveys that are not just forms, but tailored data-gathering tools that meet your ever-evolving needs.
+With SurveyCompo, you have full control over every aspect of your surveys. Build tailored data-gathering tools that meet your evolving needs.
 
 ## Minimal example
 
@@ -126,17 +126,18 @@ With SurveyCompo, you gain full control over every aspect of your surveys. Unlea
 
       ---
 
-      Craft **traditional** surveys or opt for engaging **conversational** formats. With SurveyCompo‘s intuitive **block-based** layout, you have unmatched flexibility and control over the structure and flow of your questions.
+      Create **traditional** surveys or opt for engaging **conversational** formats. With SurveyCompo’s intuitive **block-based** layout, you have unmatched flexibility and control over the structure and flow of your questions.
 
 - :fontawesome-solid-sliders:{ .left-icon } **Powerful Survey Tools**
 
       ---
 
-      SurveyCompo puts a comprehensive toolkit at your fingertips. Craft dynamic, intelligent surveys using features like input **validation**, **skip logic**, **branching**, **randomization**, **piping**, and **custom variables**.
+      SurveyCompo provides a comprehensive toolkit. Create dynamic, intelligent surveys using features like input **validation**, **skip logic**, **branching**, **randomization**, **piping**, and **custom variables**.
 
 - :material-code-block-tags:{ .left-icon } **Programmable**
 
       ---
-      SurveyCompo‘s JSON-based design makes your surveys truly adaptable. It allows you to **manage versions**, load content **dynamically**, conduct **A/B testing**, and unlock advanced strategies like Survey **Segmentation** and Audient **Retargeting**.
+
+      SurveyCompo’s JSON-based design makes your surveys truly adaptable. It allows you to **manage versions**, load content **dynamically**, conduct **A/B testing**, and implement advanced strategies like Survey **Segmentation** and Audience **Retargeting**.
 
 </div>

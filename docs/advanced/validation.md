@@ -181,7 +181,7 @@ The `validations` key holds an array comprising [validation models](/data-models
 
 The [Validation model](/data-models/other-models/#validation) supports the `applicableIf` key. This key enables you to specify a condition under which a validation rule becomes applicable. If this condition is met, the rule is applied. This feature is useful when you want to apply validation rules based on specific conditions.
 
-The `applicableIf` key works exactly like the `visibleIf` key; it accepts [Condition Expressions](/advanced/condition-logic/) as values.
+The `applicableIf` key works exactly like the `visibleIf` key; it accepts [Condition Expressions](/advanced/conditional-logic/) as values.
 
 ### Validation Example
 

@@ -1,5 +1,5 @@
 ---
-title: Condition Logic
+title: Conditional Logic
 ---
 
 Conditional logic, also known as branching logic and skipping logic, involves setting rules that determine whether a question or section of the survey should be shown based on multiple conditions or previous answers. It is used to create a more personalized survey experience for respondents by displaying only the questions that are relevant to them.

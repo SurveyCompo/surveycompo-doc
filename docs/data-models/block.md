@@ -29,17 +29,19 @@ All text elements within a block (title, subtitle, description, footnote) suppor
 - **Embed Media**: Integrate images, videos, or audio clips to enhance your questions.
 - **Interactive Elements**: Add buttons, links, or other interactive components directly within a block.
 
+Refer to the [Custom HTML](/customization/custom-html/) documentation for more information.
+
+!!! warning "Warning"
+
+    Use valid HTML syntax and prioritize security. Avoid incorporating code from unknown sources or user input, as it could introduce vulnerabilities.
+
 ### Branching/Skipping Logic
 
-The `visibleIf` setting lets you control a block's display based on specific survey responses. This is essential for creating dynamic surveys with branching paths that adapt to user input.
-
-!!! note "Note"
-
-    Details about conditional logic will be covered in subsequent sections.
+The `visibleIf` setting lets you control a block's display based on specific survey responses. This is essential for creating dynamic surveys with branching paths that adapt to user input. For detailed information on conditional logic, refer to the [Conditional Logic](/advanced/conditional-logic) documentation.
 
 ### Question Randomization
 
-Prevent response bias by shuffling the order in which blocks appear on a page. SurveyCompo allows you to randomize all blocks or select specific ones for randomization.
+Prevent response bias by shuffling the order in which blocks appear on a page. SurveyCompo allows you to randomize all blocks or select specific ones for randomization. For detailed information on randomization, refer to the [Randomization](/advanced/randomization) documentation.
 
 ### Responsive Grid Layout
 
@@ -48,9 +50,7 @@ Blocks feature a powerful grid layout engine to arrange input elements:
 - Column Layout: Organize inputs into multiple columns for efficient use of space.
 - Input Direction: Control whether inputs are stacked vertically or displayed side-by-side.
 
-!!! note "Note"
-
-    Block layout customization will be covered in subsequent sections.
+For detailed information on layout options, refer to the [Layout](/customization/layout) documentation.
 
 ### Block JSON Example
 
@@ -95,34 +95,34 @@ The following code example demonstrates how blocks integrate into the survey JSO
 
 ### Block Data Keys
 
-| Method                         | Type                        | Default | Description                                                                                                                                          |
-| ------------------------------ | --------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`                         | string                      | null    | The name of the block.                                                                                                                               |
-| `customRef`                    | string                      | null    | A custom reference to the block.                                                                                                                     |
-| `templateName`                 | string                      | null    | The block template name. If set, the current block inherits keys from the matched template.                                                          |
-| `title`                        | string                      | null    | The title of the block.                                                                                                                              |
-| `htmlTitle`                    | string                      | null    | The block's title in HTML format.                                                                                                                    |
-| `subtitle`                     | string                      | null    | The subtitle of the block.                                                                                                                           |
-| `htmlSubtitle`                 | string                      | null    | The block's subtitle in HTML format.                                                                                                                 |
-| `description`                  | string                      | null    | A text description for the block.                                                                                                                    |
-| `htmlDescription`              | string                      | null    | The block's description in HTML format.                                                                                                              |
-| `footnote`                     | string                      | null    | A footnote to the block.                                                                                                                             |
-| `htmlFootnote`                 | string                      | null    | The block's footnote in HTML format.                                                                                                                 |
-| `inputs`                       | [Input[]](#input-data-keys) | []      | An array of inputs within the block.                                                                                                                 |
-| `showIndexNumber`              | boolean                     | true    | If true, index numbers for inputs in the block are displayed.                                                                                        |
-| `validations`                  | [Validation[]](#validation) | []      | An array of validation rules for the block.                                                                                                          |
-| `visibleIf`                    | [Condition](#condition)     | null    | The condition for block visibility. The block is displayed only if the condition is met.                                                             |
-| `requiresVisibleInputs`        | boolean                     | false   | If true, the block is displayed only if there are visible inputs in the block.                                                                       |
-| `randomWithinGroup`            | string                      | null    | If set, the display order of blocks with the same group name is randomized.                                                                          |
-| `layoutColumnCount`            | number                      | 1       | The column count of the block layout.                                                                                                                |
-| `layoutColumnWidth`            | string                      | '100%'  | The column width of the block layout. Accepts CSS width values (e.g., 200px, 50%).                                                                   |
-| `layoutColumnAutoFit`          | boolean                     | true    | When set to true, the block layout will adjust the columns to occupy the full width of the available space..                                         |
-| `layoutColumnGap`              | string                      | '0'     | The column gap of the block layout. Accepts CSS width values (e.g., 5px, 1em).                                                                       |
-| `layoutRowGap`                 | string                      | '1em'   | The row gap of the block layout. Accepts CSS width values (e.g., 5px, 1em).                                                                          |
-| `layoutFlow`                   | 'COLUMN', 'ROW'             | 'ROW'   | Determines the direction in which the survey elements are arranged. This could be either vertically (top to bottom) or horizontally (left to right). |
-| `layoutCenterAligned`          | boolean                     | false   | If true, the block layout is centered.                                                                                                               |
-| `layoutLikertMatrixWidth`      | string                      | '100%'  | The width of the Likert Matrix table. Only applicable to Likert input types.                                                                         |
-| `layoutLikertMatrixLabelWidth` | string                      | '25%'   | The width of the label column in a Likert Matrix. Only applicable to Likert input types.                                                             |
-| `layoutLikertMatrixMode`       | 'AUTO', 'LIKERT', 'MATRIX'  | 'AUTO'  | Manages the visibility of the Likert Matrix Table on smaller screens                                                                                 |
+| Method                         | Type                                                                             | Default | Description                                                                                                                                          |
+| ------------------------------ | -------------------------------------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`                         | string                                                                           | null    | The name of the block.                                                                                                                               |
+| `customRef`                    | string                                                                           | null    | A custom reference to the block.                                                                                                                     |
+| `templateName`                 | string                                                                           | null    | The block template name. If set, the current block inherits keys from the matched template.                                                          |
+| `title`                        | string                                                                           | null    | The title of the block.                                                                                                                              |
+| `htmlTitle`                    | string                                                                           | null    | The block's title in HTML format.                                                                                                                    |
+| `subtitle`                     | string                                                                           | null    | The subtitle of the block.                                                                                                                           |
+| `htmlSubtitle`                 | string                                                                           | null    | The block's subtitle in HTML format.                                                                                                                 |
+| `description`                  | string                                                                           | null    | A text description for the block.                                                                                                                    |
+| `htmlDescription`              | string                                                                           | null    | The block's description in HTML format.                                                                                                              |
+| `footnote`                     | string                                                                           | null    | A footnote to the block.                                                                                                                             |
+| `htmlFootnote`                 | string                                                                           | null    | The block's footnote in HTML format.                                                                                                                 |
+| `inputs`                       | [Input[]](/data-models/input/#input-data-keys)                                   | []      | An array of inputs within the block.                                                                                                                 |
+| `showIndexNumber`              | boolean                                                                          | true    | If true, index numbers for inputs in the block are displayed.                                                                                        |
+| `validations`                  | [Validation[]](/data-models/other-models/#validation)                            | []      | An array of validation rules for the block.                                                                                                          |
+| `visibleIf`                    | [Condition Expression](/advanced/conditional-logic/#simple-condition-expression) | null    | The condition for block visibility. The block is displayed only if the condition is met.                                                             |
+| `requiresVisibleInputs`        | boolean                                                                          | false   | If true, the block is displayed only if there are visible inputs in the block.                                                                       |
+| `randomWithinGroup`            | string                                                                           | null    | If set, the display order of blocks with the same group name is randomized.                                                                          |
+| `layoutColumnCount`            | number                                                                           | 1       | The column count of the block layout.                                                                                                                |
+| `layoutColumnWidth`            | string                                                                           | '100%'  | The column width of the block layout. Accepts CSS width values (e.g., 200px, 50%).                                                                   |
+| `layoutColumnAutoFit`          | boolean                                                                          | true    | When set to true, the block layout will adjust the columns to occupy the full width of the available space..                                         |
+| `layoutColumnGap`              | string                                                                           | '0'     | The column gap of the block layout. Accepts CSS width values (e.g., 5px, 1em).                                                                       |
+| `layoutRowGap`                 | string                                                                           | '1em'   | The row gap of the block layout. Accepts CSS width values (e.g., 5px, 1em).                                                                          |
+| `layoutFlow`                   | 'COLUMN', 'ROW'                                                                  | 'ROW'   | Determines the direction in which the survey elements are arranged. This could be either vertically (top to bottom) or horizontally (left to right). |
+| `layoutCenterAligned`          | boolean                                                                          | false   | If true, the block layout is centered.                                                                                                               |
+| `layoutLikertMatrixWidth`      | string                                                                           | '100%'  | The width of the Likert Matrix table. Only applicable to Likert input types.                                                                         |
+| `layoutLikertMatrixLabelWidth` | string                                                                           | '25%'   | The width of the label column in a Likert Matrix. Only applicable to Likert input types.                                                             |
+| `layoutLikertMatrixMode`       | 'AUTO', 'LIKERT', 'MATRIX'                                                       | 'AUTO'  | Manages the visibility of the Likert Matrix Table on smaller screens                                                                                 |
 
 ---

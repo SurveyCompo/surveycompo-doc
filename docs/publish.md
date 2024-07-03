@@ -50,4 +50,4 @@ SurveyCompo provides downloads for the survey JSON file and the SurveyCompo web 
 ![Publish and Share](../assets/images/tutorial-selfhosting.png){: .center .md}
 
 For collecting survey responses and performance data, you can use SurveyCompo Events.
-For more details on collecting responses using survey Events, refer to the [Survey Events](/integration/#events) section in our documentation.
+For more details on collecting survey data, refer to the [Survey Events](/integration/event-and-api/) and [Data Collection](/integration/data-collection) documentation.

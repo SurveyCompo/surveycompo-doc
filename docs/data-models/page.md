@@ -37,17 +37,19 @@ SurveyCompo uses specific 'html' keys for custom content:
 - `htmlDescription`
 - `htmlFooter`
 
+Refer to the [Custom HTML](/customization/custom-html/) documentation for more information.
+
+!!! warning "Warning"
+
+    Use valid HTML syntax and prioritize security. Avoid incorporating code from unknown sources or user input, as it could introduce vulnerabilities.
+
 ### Branching/Skipping Logic
 
-Use the `visibleIf` setting to conditionally show or hide pages based on survey responses. This is key for creating adaptive surveys that tailor the experience to the user's input.
-
-!!! note "Note"
-
-    Details on conditional logic will be covered in subsequent sections.
+Use the `visibleIf` setting to conditionally show or hide pages based on survey responses. This is key for creating adaptive surveys that tailor the experience to the user's input. For detailed information on conditional logic, refer to the [Conditional Logic](/advanced/conditional-logic) documentation.
 
 ### Page Randomization
 
-Prevent response bias by shuffling the order of pages. SurveyCompo's `randomizedWithinGroup` setting allows for randomization of all or selected pages. (More on randomization in the following section.)
+Prevent response bias by shuffling the order of pages. SurveyCompo's `randomizedWithinGroup` setting allows for randomization of all or selected pages. When multiple pages share the same group name, they are randomized together. For detailed information on randomization, refer to the [Randomization](/advanced/randomization) documentation.
 
 ### Page JSON Example
 
@@ -82,26 +84,26 @@ The following code example demonstrates how a page integrates into the survey JS
 
 ### Page Data Keys
 
-| Method                  | Type                        | Default | Description                                                                            |
-| ----------------------- | --------------------------- | ------- | -------------------------------------------------------------------------------------- |
-| `name`                  | string                      | null    | The name of the page.                                                                  |
-| `customRef`             | string                      | null    | A custom reference ID for the page.                                                    |
-| `templateName`          | string                      | null    | The page template name. The current page inherits keys from the matched template.      |
-| `header`                | string                      | null    | The page header text.                                                                  |
-| `htmlHeader`            | string                      | null    | The page header in HTML format.                                                        |
-| `description`           | string                      | null    | A text description for the page.                                                       |
-| `htmlDescription`       | string                      | null    | The page description in HTML format.                                                   |
-| `footer`                | string                      | null    | The page footer text.                                                                  |
-| `htmlFooter`            | string                      | null    | The page footer in HTML format.                                                        |
-| `blocks`                | [Block[]](#block-data-keys) | []      | An array of blocks on the page.                                                        |
-| `nextButtonLabel`       | string                      | 'OK'    | The label on the page's next button.                                                   |
-| `nextButtonURL`         | string                      | null    | The URL to redirect to when the next button is clicked.                                |
-| `nextButtonHidden`      | boolean                     | false   | If true, the next button is hidden.                                                    |
-| `autoAdvancePage`       | boolean                     | false   | If true, the page automatically advances to the next when applicable.                  |
-| `hCentered`             | boolean                     | false   | If true, the page content is centered horizontally.                                    |
-| `vCentered`             | boolean                     | true    | If true, the page content is centered vertically.                                      |
-| `visibleIf`             | [Condition](#condition)     | false   | The condition for page visibility. The page is displayed only if the condition is met. |
-| `requiresVisibleBlocks` | boolean                     | false   | If true, the page is displayed only if there are visible blocks on the page.           |
-| `randomWithinGroup`     | string                      | false   | If set, the display order of pages with the same group name is randomized.             |
+| Method                  | Type                                                                             | Default | Description                                                                            |
+| ----------------------- | -------------------------------------------------------------------------------- | ------- | -------------------------------------------------------------------------------------- |
+| `name`                  | string                                                                           | null    | The name of the page.                                                                  |
+| `customRef`             | string                                                                           | null    | A custom reference ID for the page.                                                    |
+| `templateName`          | string                                                                           | null    | The page template name. The current page inherits keys from the matched template.      |
+| `header`                | string                                                                           | null    | The page header text.                                                                  |
+| `htmlHeader`            | string                                                                           | null    | The page header in HTML format.                                                        |
+| `description`           | string                                                                           | null    | A text description for the page.                                                       |
+| `htmlDescription`       | string                                                                           | null    | The page description in HTML format.                                                   |
+| `footer`                | string                                                                           | null    | The page footer text.                                                                  |
+| `htmlFooter`            | string                                                                           | null    | The page footer in HTML format.                                                        |
+| `blocks`                | [Block[]](/data-models/block/#block-data-keys)                                   | []      | An array of blocks on the page.                                                        |
+| `nextButtonLabel`       | string                                                                           | 'OK'    | The label on the page's next button.                                                   |
+| `nextButtonURL`         | string                                                                           | null    | The URL to redirect to when the next button is clicked.                                |
+| `nextButtonHidden`      | boolean                                                                          | false   | If true, the next button is hidden.                                                    |
+| `autoAdvancePage`       | boolean                                                                          | false   | If true, the page automatically advances to the next when applicable.                  |
+| `hCentered`             | boolean                                                                          | false   | If true, the page content is centered horizontally.                                    |
+| `vCentered`             | boolean                                                                          | true    | If true, the page content is centered vertically.                                      |
+| `visibleIf`             | [Condition Expression](/advanced/conditional-logic/#simple-condition-expression) | false   | The condition for page visibility. The page is displayed only if the condition is met. |
+| `requiresVisibleBlocks` | boolean                                                                          | false   | If true, the page is displayed only if there are visible blocks on the page.           |
+| `randomWithinGroup`     | string                                                                           | false   | If set, the display order of pages with the same group name is randomized.             |
 
 ---

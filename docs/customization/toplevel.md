@@ -48,13 +48,13 @@ You can set the size and position of the SurveyCompo component using standard CS
 
 ### Font Size
 
-You can set the font size of the survey using the `font-size` CSS rule. It worth noting that font-size has more than just setting the default size of the fonts in the survey. It also affects the spacing between elements and the overall layout of the survey.
+You can set the font size of the survey using the `font-size` CSS rule. It worth noting that `font-size` does more than just setting the default size of the fonts in the survey. It also affects the spacing between elements and the overall layout of the survey.
 
 SurveyCompo is designed to be responsive and adapt to various screen sizes. Internally it uses the css 'em' unit for spacing, which is relative to the font size of the root element. This allows the survey to scale proportionally with the font size, and the survey elements maintain their relative size and spacing.
 
-To adjust the spacing between elements, you can modify the font-size property of the :host CSS selector. This will change the spacing between elements while maintaining the relative proportions of the survey components. The default font-size value is 14px, which corresponds to 1em.
+To adjust the spacing between elements, you can modify the `font-size` rule of the :host CSS selector. This will change the spacing between elements while maintaining the relative proportions of the survey components. The default font-size value is 14px, which corresponds to 1em.
 
-You can change the base font size in the Theme model and the CSS rules. The following examples demonstrate how changing the font-size property affects the spacing between elements:
+You can change the base font size in the Theme model and the CSS rules. The following examples demonstrate how changing the `font-size` property affects the spacing between elements:
 
 You can set the font size of the survey using the `font-size` CSS rule. It is worth noting that `font-size` does more than just setting the default size of the fonts in the survey. It also affects the spacing between elements and the overall layout of the survey.
 

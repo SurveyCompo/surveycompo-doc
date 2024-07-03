@@ -29,12 +29,12 @@ The `Theme` model allows you to customize the appearance of your survey. You can
 
 The `Validation` model defines rules to ensure that user input meets specific criteria. You can set requirements for input fields, such as minimum and maximum values, selection limits, and valid formats (e.g., email addresses).
 
-| Method         | Type                                   | Default                                    | Description                                                                                                                                             |
-| -------------- | -------------------------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`         | [ValidationTypeEnum](#enum-data-types) | n/a (Required)                             | Specifies the type of the validation rule. e.g. EMAIL                                                                                                   |
-| `value`        | string, number, boolean                | null                                       | Represents the value that is relevant to the selected validation rule. For example, for a "MIN_LENGTH" rule, this would be the minimum length required. |
-| `message`      | string                                 | (Default message based on validation type) | Defines the message that will be displayed when the validation rule is not met.                                                                         |
-| `applicableIf` | [Condition](#condition)                | null                                       | Specifies a condition for the validation rule. If set, the rule will only be applied if the condition is met.                                           |
+| Method         | Type                                                                             | Default                                    | Description                                                                                                                                             |
+| -------------- | -------------------------------------------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`         | [ValidationTypeEnum](#enum-data-types)                                           | n/a (Required)                             | Specifies the type of the validation rule. e.g. EMAIL                                                                                                   |
+| `value`        | string, number, boolean                                                          | null                                       | Represents the value that is relevant to the selected validation rule. For example, for a "MIN_LENGTH" rule, this would be the minimum length required. |
+| `message`      | string                                                                           | (Default message based on validation type) | Defines the message that will be displayed when the validation rule is not met.                                                                         |
+| `applicableIf` | [Condition Expression](/advanced/conditional-logic/#simple-condition-expression) | null                                       | Specifies a condition for the validation rule. If set, the rule will only be applied if the condition is met.                                           |
 
 ### Condition
 

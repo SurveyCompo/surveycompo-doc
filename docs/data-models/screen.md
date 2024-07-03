@@ -32,17 +32,15 @@ SurveyCompo uses specific 'html' keys for custom content:
 - `htmlDescription`
 - `htmlFooter`
 
+Refer to the [Custom HTML](/customization/custom-html/) documentation for more information.
+
 !!! warning "Warning"
 
     Use valid HTML syntax and prioritize security. Avoid incorporating code from unknown sources or user input, as it could introduce vulnerabilities.
 
 ### Multiple Screens and Visibility Conditional Logic
 
-SurveyCompo supports multiple start and end screens for flexible survey design. Use the `visibleIf` setting to conditionally show screens based on survey responses or variables.
-
-!!! note "Note"
-
-    Details on conditional logic will be covered in subsequent sections.
+SurveyCompo supports multiple start and end screens for flexible survey design. Use the `visibleIf` setting to conditionally show screens based on survey responses or variables. Refer to the [Conditional Logic](/advanced/conditional-logic) documentation for more details.
 
 ### Screen JSON Example
 
@@ -76,22 +74,22 @@ The following code example demonstrates how a screen integrates into the survey 
 
 ### Screen Data Keys
 
-| Method              | Type                    | Default | Description                                                                                    |
-| ------------------- | ----------------------- | ------- | ---------------------------------------------------------------------------------------------- |
-| `name`              | string                  | null    | The name of the screen.                                                                        |
-| `customRef`         | string                  | null    | A custom reference ID for the screen.                                                          |
-| `header`            | string                  | null    | The text for the screen's header.                                                              |
-| `htmlHeader`        | string                  | null    | The screen's header in HTML format.                                                            |
-| `description`       | string                  | null    | The text for the screen's description.                                                         |
-| `htmlDescription`   | string                  | null    | The screen's description in HTML format.                                                       |
-| `footer`            | string                  | null    | The text for the screen's footer.                                                              |
-| `htmlFooter`        | string                  | null    | The screen's footer in HTML format.                                                            |
-| `okButtonLabel`     | string                  | null    | The label for the screen's OK button. If not set, the OK button will not be displayed.         |
-| `okButtonURL`       | string                  | null    | The URL to redirect to when the OK button is clicked.                                          |
-| `cancelButtonLabel` | string                  | null    | The label for the screen's Cancel button. If not set, the Cancel button will not be displayed. |
-| `cancelButtonURL`   | string                  | null    | The URL to redirect to when the Cancel button is clicked.                                      |
-| `hCentered`         | boolean                 | true    | If true, the screen content is centered horizontally.                                          |
-| `vCentered`         | boolean                 | true    | If true, the screen content is centered vertically.                                            |
-| `visibleIf`         | [Condition](#condition) | true    | The condition for screen visibility. The screen is visible only if the condition is met.       |
+| Method              | Type                                                                             | Default | Description                                                                                    |
+| ------------------- | -------------------------------------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------- |
+| `name`              | string                                                                           | null    | The name of the screen.                                                                        |
+| `customRef`         | string                                                                           | null    | A custom reference ID for the screen.                                                          |
+| `header`            | string                                                                           | null    | The text for the screen's header.                                                              |
+| `htmlHeader`        | string                                                                           | null    | The screen's header in HTML format.                                                            |
+| `description`       | string                                                                           | null    | The text for the screen's description.                                                         |
+| `htmlDescription`   | string                                                                           | null    | The screen's description in HTML format.                                                       |
+| `footer`            | string                                                                           | null    | The text for the screen's footer.                                                              |
+| `htmlFooter`        | string                                                                           | null    | The screen's footer in HTML format.                                                            |
+| `okButtonLabel`     | string                                                                           | null    | The label for the screen's OK button. If not set, the OK button will not be displayed.         |
+| `okButtonURL`       | string                                                                           | null    | The URL to redirect to when the OK button is clicked.                                          |
+| `cancelButtonLabel` | string                                                                           | null    | The label for the screen's Cancel button. If not set, the Cancel button will not be displayed. |
+| `cancelButtonURL`   | string                                                                           | null    | The URL to redirect to when the Cancel button is clicked.                                      |
+| `hCentered`         | boolean                                                                          | true    | If true, the screen content is centered horizontally.                                          |
+| `vCentered`         | boolean                                                                          | true    | If true, the screen content is centered vertically.                                            |
+| `visibleIf`         | [Condition Expression](/advanced/conditional-logic/#simple-condition-expression) | true    | The condition for screen visibility. The screen is visible only if the condition is met.       |
 
 ---
