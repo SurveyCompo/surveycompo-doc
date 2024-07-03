@@ -112,32 +112,32 @@ The event `context` object contains the following properties:
 | `survey`     | An object containing the `id` and `name` of the current survey, providing context about which survey is being referenced.   |
 | `inputs`     | An array of objects representing the responses given by the respondent, including the id, name, and value of each response. |
 
-## Survey Names
+## Event Names
 
 The `surveychange` event `name` property is a string that represents the event name. The following are the possible event names:
 
 | Event Name        | Description                                                                                              |
 | ----------------- | -------------------------------------------------------------------------------------------------------- |
 | `INITIALIZE`      | Triggered when the survey initializes, preparing it for the respondent.                                  |
+| `START`           | Marks the beginning of the survey, presenting the first page to the respondent.                          |
 | `START_OK`        | Occurs when the respondent clicks the OK button on the start screen.                                     |
 | `START_CANCEL`    | Occurs when the respondent clicks the CANCEL button on the start screen.                                 |
-| `START`           | Marks the beginning of the survey, presenting the first page to the respondent.                          |
 | `INPUT_CHANGE`    | Fired whenever a respondent changes an input value within the survey.                                    |
-| `ERROR`           | Indicates an error has occurred at any point during the survey process.                                  |
-| `PAGE_GO`         | Directs the respondent to a new page by ID, an action exclusively triggered via the API.                 |
 | `NEXT_PAGE_GO`    | Advances the respondent to the next page in the survey sequence.                                         |
 | `PREV_PAGE_GO`    | Takes the respondent back to the previous page in the survey sequence.                                   |
+| `PAGE_GO`         | Directs the respondent to a new page by ID, an action exclusively triggered via the API.                 |
 | `COMPLETE`        | Signifies the survey's completion, after the respondent finishes the last page.                          |
+| `COMPLETE_OK`     | Occurs when the respondent clicks the OK button on the completion screen.                                |
+| `COMPLETE_CANCEL` | Occurs when the respondent clicks the CANCEL button on the completion screen.                            |
 | `FINALIZE`        | Occurs when the survey is finalized, typically after clicking a button on the completion screen.         |
 | `SURVEY_RESET`    | Resets the survey, starting a new session, an action exclusively triggered via the API.                  |
 | `SURVEY_CLOSE`    | Fired when the survey's close button is clicked.                                                         |
-| `COMPLETE_OK`     | Occurs when the respondent clicks the OK button on the completion screen.                                |
-| `COMPLETE_CANCEL` | Occurs when the respondent clicks the CANCEL button on the completion screen.                            |
 | `ABORT`           | Indicates the survey has been aborted, redirecting the respondent to a disqualification or abort screen. |
 | `ABORT_OK`        | Occurs when the respondent clicks the OK button on an abort screen.                                      |
 | `ABORT_CANCEL`    | Occurs when the respondent clicks the CANCEL button on an abort screen.                                  |
+| `ERROR`           | Indicates an error has occurred at any point during the survey process.                                  |
 
-## Survey API
+## API Interface
 
 When using the `onChange` callback attribute, we mentioned the `api` interface, which provides methods to interact with the survey component. The available methods include:
 
