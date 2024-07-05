@@ -22,20 +22,19 @@ With SurveyCompo, you have full control over every aspect of your surveys. Build
 
 === "index.html"
 
-    ``` html linenums="1"
+    ``` html linenums="1" hl_lines="8 12"
     <!DOCTYPE html>
     <html lang="en">
-
     <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic</title>
-    <link rel="stylesheet" href="../common.css">
-    <script async src="https://tag.surveycompo.com/v1.js"></script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Basic</title>
+      <link rel="stylesheet" href="../common.css">
+      <script async src="https://tag.surveycompo.com/v1.js"></script>
     </head>
 
     <body>
-    <survey-compo src="./source.json" />
+      <survey-compo src="./source.json" />
     </body>
 
     </html>

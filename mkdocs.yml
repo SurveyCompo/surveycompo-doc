@@ -131,6 +131,7 @@ nav:
       - "advanced/templates.md"
   - "publish.md"
   - "Integration":
+      - "integration/component.md"
       - "integration/event-and-api.md"
       - "integration/data-collection.md"
       - "integration/react.md"
