@@ -56,6 +56,9 @@ extra_javascript:
 extra:
   homepage: https://www.surveycompo.com
   generator: false # hide Make by Mkdocs
+  analytics:
+    provider: google
+    property: G-M9G5HS23NK
 
 markdown_extensions:
   - pymdownx.highlight:
