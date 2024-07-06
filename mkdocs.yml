@@ -137,7 +137,9 @@ nav:
       - "integration/react.md"
       - "integration/angular.md"
       - "integration/vue.md"
-  - "miscellaneous.md"
+  - "Miscellaneous":
+      - "miscellaneous/browser-supports.md"
+      - "miscellaneous/feedback-and-issues.md"
 
 copyright: |
   &copy; 2024 <a href="https://www.surveycompo.com"  target="_blank" rel="noopener">SurveyCompo</a>
