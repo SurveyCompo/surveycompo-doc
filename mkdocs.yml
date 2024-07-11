@@ -132,6 +132,7 @@ nav:
       - "advanced/disqualification.md"
       - "advanced/validation.md"
       - "advanced/templates.md"
+      - "advanced/prefill.md"
   - "publish.md"
   - "Integration":
       - "integration/component.md"
