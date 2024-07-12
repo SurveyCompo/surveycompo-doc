@@ -16,7 +16,7 @@ For users with a paid subscription plan, there's an option to remove SurveyCompo
 
 !!! note "Note"
 
-    Publishing a survey is not mandatory if you decide to host and collect survey data yourself and do not wish to remove the SurveyCompo branding. You can host and serve the JSON file from your own server. In this case, you are responsible for managing data collection and storage. SurveyCompo does not collect or store any survey data in this scenario.
+    Publishing a survey is not mandatory if you decide to host and collect survey data yourself and do not wish to remove the SurveyCompo branding. You can host and serve the JSON file from your own server. In this case, you are responsible for managing data collection and storage.
 
 ## Sharing Surveys
 
@@ -30,9 +30,9 @@ There are three major aspects involved in making this work:
 
 Depending on how much control you want over the survey data and how you want to present the survey to your audience, there are a few options to share a survey:
 
-### Let SurveyCompo Handle Everything
+### Let SurveyCompo Manage Surveys for You
 
-Allow SurveyCompo to host the survey for you. SurveyCompo provides a unique page for each survey, ready to be shared and collect responses. This is the easiest way to share a survey. You can share the survey page link with your audience and start collecting responses.
+Allow SurveyCompo to host the survey and collect responses for you. SurveyCompo provides a unique page for each survey, ready to be shared and collect responses. This is the easiest way to share a survey. You can share the survey page link with your audience and start collecting responses.
 
 ![Tutorial - Hosted Survey](../assets/images/tutorial-hosted.png){: .center .md}
 
