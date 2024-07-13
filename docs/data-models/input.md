@@ -18,9 +18,62 @@ Inputs are the heart of data collection within your SurveyCompo surveys. They pr
 
 ### Input IDs
 
-In SurveyCompo, survey response data is gathered by individual inputs, not at the block level. This data is then associated with the respective input `id`. So, to collect response data, it's crucial to assign an `id` to each input that's intended to gather user responses.
+In SurveyCompo, survey response data is collected as key-value pairs. The key is the `id` assigned to each input, and the value is the user's response to that input. Therefore, it is essential to assign an `id` to each input that is intended to capture user responses.
 
-If several inputs have the same `id`, only the value from the last interacted input will be recorded. This is useful when you want to group several inputs together but only need a single value from them. Here's an example:
+
+Here's an example:
+
+```json linenums="1" hl_lines="14 19 24"
+{
+  "name": "Product Satisfaction Survey",
+  "startScreens": [
+    /* ... */
+  ],
+  "pages": [
+    {
+      "blocks": [
+        {
+          "title": "What is your current employment status?",
+          "inputs": [
+            {
+              "type": "RADIO",
+              "id": "employment:employed",
+              "label": "Employed"
+            },
+            {
+              "type": "RADIO",
+              "id": "employment:retired",
+              "label": "Retired"
+            },
+            {
+              "type": "RADIO",
+              "id": "employment:other",
+              "label": "Other"
+            }
+          ]
+        }
+        /* ... other blocks ... */
+      ]
+    }
+    /* ... other pages ... */
+  ]
+}
+```
+
+In the example above, each radio input has a unique `id` that includes a prefix (`employment:`) followed by a specific identifier (`employed`, `retired`, `other`). This naming convention groups related inputs and differentiates them when collecting responses. However, you can use any naming convention that suits your needs.
+
+Since the inputs are radio buttons, the values collected will be boolean (`true`/`false`). For example, if the respondent selects the "Employed" option, the value collected will be `true` for the input id `employment:employed`. You can then use this value in conditional logic or piping. For instance, to ask a question only applicable to employed respondents, you can use the following condition:
+
+
+```json
+{
+  /* ... */
+  "visibleIf": "#employment:employed"
+}
+```
+
+What if you want to group several inputs together but only need a single value from one of them? In this case, you can assign the same `id` to multiple inputs. Here's an example:
+
 
 ```json linenums="1" hl_lines="14 20 26"
 {
@@ -62,7 +115,37 @@ If several inputs have the same `id`, only the value from the last interacted in
 }
 ```
 
-In this example, the identifier `employment` is assigned to three radio inputs. However, only the value from the radio button that the respondent last interacted with (i.e., the selected option) will be recorded. The checkedValue key is used to define the value that will be recorded when an input is selected. Without this, the input's recorded value would simply be a boolean (true/false), which may not be meaningful in this context.
+In this example, the identifier `employment` is assigned to three radio inputs. However, only the value from the radio button that the respondent last interacted with (i.e., the selected option) will be recorded. The `checkedValue` key is used to define the value that will be recorded when an input is selected. Without this, the input's recorded value would simply be a boolean (`true`/`false`), which may not be meaningful in this context.
+
+If the 'Employ' radio button is selected, the value recorded will be `employed`. You can also use this value in conditional logic or piping. For example, to ask a question only applicable to employed respondents, you can use the following condition:
+
+```json
+{
+  "visibleIf": "#employment == employed"
+}
+```
+
+Based on your data reporting requirements and survey structure, you can choose the approach that best suits your needs. Grouping related inputs under a common `id` can be useful when you need to capture a single value from multiple inputs. This works well for most single choice questions and can simplify data analysis. However, allowing each input to have a unique `id` can provide more granular data and flexibility in data analysis.
+
+
+### Input ID Best Practices
+
+Here are some best practices to consider when assigning IDs to inputs:
+
+- **Use Descriptive IDs**: Assign IDs that are descriptive and easy to understand. This makes it easier to identify inputs when analyzing survey data.
+
+- **Use Prefixes**: Use prefixes to group related inputs. This helps organize inputs and differentiate them when collecting responses.
+
+- **Avoid Special Characters**: Avoid using special characters in IDs. Stick to alphanumeric characters and underscores.
+
+- **Use CamelCase**: If you prefer to use multiple words in an ID, consider using camelCase or underscores to separate words.
+
+- **Be Consistent**: Maintain a consistent naming convention across your survey to ensure clarity and consistency in your data collection.
+
+- **Avoid Spaces**: IDs cannot contain spaces. If you need to separate words, use camelCase or underscores.
+
+- **Use Meaningful Names**: Choose IDs that reflect the purpose of the input. This makes it easier to interpret survey data and perform analysis.
+
 
 ### Input Types
 
