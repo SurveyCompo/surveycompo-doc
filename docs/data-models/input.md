@@ -136,7 +136,7 @@ Here are some best practices to consider when assigning IDs to inputs:
 
 - **Use Prefixes**: Use prefixes to group related inputs. This helps organize inputs and differentiate them when collecting responses.
 
-- **Avoid Special Characters**: Avoid using special characters in IDs. Stick to alphanumeric characters and underscores.
+- **Avoid Special Characters**: Avoid using special characters in IDs. Stick to alphanumeric characters, underscores and colon (:).
 
 - **Use CamelCase**: If you prefer to use multiple words in an ID, consider using camelCase or underscores to separate words.
 
@@ -145,6 +145,11 @@ Here are some best practices to consider when assigning IDs to inputs:
 - **Avoid Spaces**: IDs cannot contain spaces. If you need to separate words, use camelCase or underscores.
 
 - **Use Meaningful Names**: Choose IDs that reflect the purpose of the input. This makes it easier to interpret survey data and perform analysis.
+
+
+!!! tip "Tip"
+
+    If you want to use input IDs in piping expressions, ensure that the IDs contain only alphanumeric characters, underscores, and colons. Avoid using spaces or special characters in IDs to prevent errors in piping expressions.
 
 
 ### Input Types
