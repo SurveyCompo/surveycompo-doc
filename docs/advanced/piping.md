@@ -60,7 +60,7 @@ You can use multiple modifiers in a single piping expression. The modifiers are 
 
 Let's bring it all together with this example:
 
-<div style="border: 1px solid gray; width: 320px; height: 400px; margin-bottom: 10px" class="resizable">
+<div class="survey-demo">
 	<survey-compo
 		src="https://surveycompo.github.io/examples/examples/piping/source.json"
 	/>

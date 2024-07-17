@@ -12,7 +12,7 @@ With SurveyCompo, you have full control over every aspect of your surveys. Build
 
 ## Minimal example
 
-<div style="border: 1px solid gray; width: 320px; height: 400px; margin-bottom: 10px" class="resizable">
+<div class="survey-demo">
 	<survey-compo
 		src="https://surveycompo.github.io/examples/examples/basic/source.json"
 	/>

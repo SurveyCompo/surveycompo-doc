@@ -17,7 +17,7 @@ To apply CSS to your survey, you can utilize the `css` key in the survey's JSON 
 
 === "Preview"
 
-    <div style="border: 1px solid gray; width: 320px; height: 400px; margin-bottom: 10px" class="resizable">
+    <div class="survey-demo">
       <survey-compo
         src="https://surveycompo.github.io/examples/examples/style/source.json"
       />

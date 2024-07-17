@@ -204,7 +204,7 @@ You can also obtain the `api` interface from the survey component instance. Here
 
 === "Preview"
 
-    <div style="border: 1px solid gray; width: 320px; height: 400px; margin-bottom: 10px" class="resizable">
+    <div class="survey-demo">
       <survey-compo
         onload="addCloseButton"
         src="https://surveycompo.github.io/examples/examples/basic/source.json"

@@ -4,7 +4,7 @@ SurveyCompo allows for randomization at various levels. You can shuffle the sequ
 
 The `randomWithinGroup` key is a powerful tool for adding randomization to your survey. By giving the same `randomWithinGroup` string value to certain items, you can randomize their order while keeping the sequence of other items intact. Let's illustrate this with an example <span style="font-weight: lighter; font-size: smaller">(Hint: Click the 'Close' button to observe the effects of randomization.)</span>
 
-<div style="border: 1px solid gray; width: 320px; height: 400px; margin-bottom: 10px" class="resizable">
+<div class="survey-demo">
 	<survey-compo
 		src="https://surveycompo.github.io/examples/examples/randomization/source.json"
 	/>

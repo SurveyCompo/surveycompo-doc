@@ -187,7 +187,7 @@ The `applicableIf` key works exactly like the `visibleIf` key; it accepts [Condi
 
 Let's look at the following example that demonstrates the use of input and block validation:
 
-<div style="border: 1px solid gray; width: 320px; height: 400px; margin-bottom: 10px" class="resizable">
+<div class="survey-demo">
 	<survey-compo
 		src="https://surveycompo.github.io/examples/examples/validation/source.json"
 	/>
