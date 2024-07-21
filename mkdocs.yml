@@ -138,6 +138,7 @@ nav:
       - "integration/component.md"
       - "integration/event-and-api.md"
       - "integration/data-collection.md"
+      - "integration/webhooks.md"
       - "integration/react.md"
       - "integration/angular.md"
       - "integration/vue.md"
