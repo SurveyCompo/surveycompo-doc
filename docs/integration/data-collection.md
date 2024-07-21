@@ -68,7 +68,7 @@ SurveyCompo uses the `navigator.sendBeacon()` method to send event data to a ser
 
 SurveyCompo provides a built-in feature to capture all survey events for data collection and analysis. This feature is useful when you want to collect survey responses and performance metrics without setting up your own data collection server.
 
-You can enable the `sendevents` attribute (without specifying a URL) to send all survey events to SurveyCompo. The following example demonstrates sending all survey events to SurveyCompo. This is how the SurveyCompo hosted survey page is configured.
+You can enable the `sendevents` attribute to send all survey events to SurveyCompo. The following example demonstrates sending all survey events to SurveyCompo. This is how the SurveyCompo hosted survey page is configured.
 
 ```html
 <html>
@@ -79,7 +79,7 @@ You can enable the `sendevents` attribute (without specifying a URL) to send all
   <body>
     <survey-compo
       src="https://example.host.com/survey-source.json"
-      sendevents
+      sendevents="surveycompo"
     />
   </body>
 </html>

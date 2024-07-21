@@ -33,11 +33,15 @@ By default, SurveyCompo hosts the JavaScript library, and you can also choose to
 ```html
 <survey-compo
   src="https://app.surveycompo.com/src/OJqcevPh0qoDNcO0mRau.json"
-  sendevents
+  sendevents="surveycompo"
 />
 ```
 
 The `sendevents` option instructs SurveyCompo to transmit survey events to its data server. This is useful if you want SurveyCompo to host the JSON model and collect responses while embedding the survey on your webpage.
+
+!!! tips "Tip"
+
+    The `sendevents` attribute determines the destination for survey events. To route events to SurveyCompo servers, assign `surveycompo` or an empty string `""` as its value. It's important to note that the `sendevents` attribute must always be assigned a value, even if it is an empty string.
 
 ### Hosted Survey Page
 

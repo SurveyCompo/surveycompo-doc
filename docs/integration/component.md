@@ -36,4 +36,4 @@ The `survey-compo` element accepts the following attributes:
 | `src`        | The URL of the survey JSON file or a JSON string itself.                                                                                          | `https://example.host.com/survey-source.json`       |
 | `cache`      | Defines the caching strategy or location. Using `localstorage` enables persisting the current survey session data after a page refresh.           | `localstorage` or `memory`, default: `localstorage` |
 | `onchange`   | The JavaScript function to be called on a survey change event. This should be a string referring to a function name in the `window` scope.        | `console.log`                                       |
-| `sendEvents` | The URL where survey event data is sent for collection. If this value is an empty string or not set, events are sent to SurveyCompo for analysis. | `https://your-data-collection-service.com/events`   |
+| `sendEvents` | The URL where survey event data is sent for collection. If this value is an empty string or `surveycompo`, events are sent to SurveyCompo for analysis. | `https://your-data-collection-service.com/events`   |
