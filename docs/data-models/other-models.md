@@ -2,28 +2,28 @@
 
 The `Theme` model allows you to customize the appearance of your survey. You can define colors, fonts, and other visual elements to match your brand or create a specific look and feel for your survey.
 
-| Method               | Type   | Default         | Description                                                                                                   |
-| -------------------- | ------ | --------------- | ------------------------------------------------------------------------------------------------------------- |
-| `fontFamily`         | string | "ui-sans-serif" | The text font family. Accepts CSS font-family values.                                                         |
-| `fontSize`           | string | '14px'          | The font size. Accepts CSS font size values.                                                                  |
-| `primaryColor`       | string | '#0f172a'       | The primary base color using a hexadecimal code.                                                              |
-| `backgroundColor`    | string | '#ffffff'       | The background color of the survey using a hexadecimal code.                                                  |
-| `baseColor`          | string | '#ffffff'       | The base color for input containers, e.g. textarea background, checkbox container background color.           |
-| `textColor`          | string | null            | The text color using a hexadecimal code.                                                                      |
-| `errorColor`         | string | '#dc2626'       | The error color using a hexadecimal code.                                                                     |
-| `neutralColor`       | string | '#d4d4d8'       | The color of neutral elements using a hexadecimal code.                                                       |
-| `warningColor`       | string | '#ea580c'       | The color for warning messages using a hexadecimal code.                                                      |
-| `buttonColor`        | string | null            | The color for buttons using a hexadecimal code.                                                               |
-| `borderColor`        | string | null            | The color for borders using a hexadecimal code.                                                               |
-| `defaultRadius`      | string | '0'             | The default radius for buttons, boxes, and inputs. Accepts CSS radius values (e.g., '0.5em').                 |
-| `buttonRadius`       | string | null            | The radius for buttons. If set, it overrides the default radius. Accepts CSS radius values.                   |
-| `boxRadius`          | string | null            | The radius for box containers. If set, it overrides the default radius. Accepts CSS radius values.            |
-| `inputRadius`        | string | null            | The radius for input elements. If set, it overrides the default radius. Accepts CSS radius values.            |
-| `textareaRadius`     | string | null            | The radius for textareas. If set, it overrides the default radius. Accepts CSS radius values.                 |
-| `defaultBorderWidth` | string | '1px'           | The default border width for buttons, boxes, and inputs. Accepts CSS width values (e.g., '1px').              |
-| `buttonBorderWidth`  | string | null            | The border width for buttons. If set, it overrides the default border width. Accepts CSS width values.        |
-| `boxBorderWidth`     | string | null            | The border width for boxes. If set, it overrides the default border width. Accepts CSS width values.          |
-| `inputBorderWidth`   | string | null            | The border width for input elements. If set, it overrides the default border width. Accepts CSS width values. |
+| Method               | Type   | Default      | Description                                                                                                   |
+| -------------------- | ------ | ------------ | ------------------------------------------------------------------------------------------------------------- |
+| `fontFamily`         | string | "sans-serif" | The text font family. Accepts CSS font-family values.                                                         |
+| `fontSize`           | string | 'inherit'    | The font size. Accepts CSS font size values.                                                                  |
+| `primaryColor`       | string | '#0f172a'    | The primary base color using a hexadecimal code.                                                              |
+| `backgroundColor`    | string | '#ffffff'    | The background color of the survey using a hexadecimal code.                                                  |
+| `baseColor`          | string | '#ffffff'    | The base color for input containers, e.g. textarea background, checkbox container background color.           |
+| `textColor`          | string | null         | The text color using a hexadecimal code.                                                                      |
+| `errorColor`         | string | '#dc2626'    | The error color using a hexadecimal code.                                                                     |
+| `neutralColor`       | string | '#d4d4d8'    | The color of neutral elements using a hexadecimal code.                                                       |
+| `warningColor`       | string | '#ea580c'    | The color for warning messages using a hexadecimal code.                                                      |
+| `buttonColor`        | string | null         | The color for buttons using a hexadecimal code.                                                               |
+| `borderColor`        | string | null         | The color for borders using a hexadecimal code.                                                               |
+| `defaultRadius`      | string | '0'          | The default radius for buttons, boxes, and inputs. Accepts CSS radius values (e.g., '0.5em').                 |
+| `buttonRadius`       | string | null         | The radius for buttons. If set, it overrides the default radius. Accepts CSS radius values.                   |
+| `boxRadius`          | string | null         | The radius for box containers. If set, it overrides the default radius. Accepts CSS radius values.            |
+| `inputRadius`        | string | null         | The radius for input elements. If set, it overrides the default radius. Accepts CSS radius values.            |
+| `textareaRadius`     | string | null         | The radius for textareas. If set, it overrides the default radius. Accepts CSS radius values.                 |
+| `defaultBorderWidth` | string | '1px'        | The default border width for buttons, boxes, and inputs. Accepts CSS width values (e.g., '1px').              |
+| `buttonBorderWidth`  | string | null         | The border width for buttons. If set, it overrides the default border width. Accepts CSS width values.        |
+| `boxBorderWidth`     | string | null         | The border width for boxes. If set, it overrides the default border width. Accepts CSS width values.          |
+| `inputBorderWidth`   | string | null         | The border width for input elements. If set, it overrides the default border width. Accepts CSS width values. |
 
 ### Validation
 

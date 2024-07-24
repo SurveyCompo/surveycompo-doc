@@ -48,19 +48,14 @@ You can set the size and position of the SurveyCompo component using standard CS
 
 ### Font Size
 
-You can set the font size of the survey using the `font-size` CSS rule. It worth noting that `font-size` does more than just setting the default size of the fonts in the survey. It also affects the spacing between elements and the overall layout of the survey.
+You can customize the font size of your surveys. It's important to note that `font-size` does more than just setting the default size of the fonts in the survey.
 
-SurveyCompo is designed to be responsive and adapt to various screen sizes. Internally it uses the css 'em' unit for spacing, which is relative to the font size of the root element. This allows the survey to scale proportionally with the font size, and the survey elements maintain their relative size and spacing.
+SurveyCompo is designed to be responsive and adapt to various screen sizes. Internally, it uses the CSS `em` unit for spacing, which is relative to the font size of the root element. This allows the survey to scale proportionally with the font size, ensuring that the survey elements maintain their relative size and spacing. Modifying the font size will change the spacing between elements while maintaining the relative proportions of the survey components.
 
-To adjust the spacing between elements, you can modify the `font-size` rule of the :host CSS selector. This will change the spacing between elements while maintaining the relative proportions of the survey components. The default font-size value is 14px, which corresponds to 1em.
-
-You can change the base font size in the Theme model and the CSS rules. The following examples demonstrate how changing the `font-size` property affects the spacing between elements:
-
-You can set the font size of the survey using the `font-size` CSS rule. It is worth noting that `font-size` does more than just setting the default size of the fonts in the survey. It also affects the spacing between elements and the overall layout of the survey.
-
-SurveyCompo is designed to be responsive and adapt to various screen sizes. Internally, it uses the CSS 'em' unit for spacing, which is relative to the font size of the root element. This allows the survey to scale proportionally with the font size, ensuring that survey elements maintain their relative size and spacing. The default `font-size` in most browsers is 16px, which corresponds to 1em.
+The survey font size is controlled by the `fontSize` key in the Theme model. By default, this `fontSize` key has a value of `inherit`, meaning it will inherit the font size from the container element on the hosting page. This also allows you to apply your preferred font size to the survey using CSS rules or inline styles.
 
 The following examples demonstrate how changing the `font-size` property affects the spacing between elements:
+
 
 === "font-size: 10px"
 
@@ -74,11 +69,15 @@ The following examples demonstrate how changing the `font-size` property affects
 
     ![Customization - FontSize 16](../assets/images/customize-spacing16.png){: .small .embedded}
 
+
 ### Font Family
 
-By default, SurveyCompo surveys use a cross-browser **sans-serif** font family. This default works for most use cases and is good for maintaining visual consistency regardless of where the survey is embedded. However, you can change the `fontFamily` either using a Theme object or a CSS stylesheet. We will cover Theme and CSS stylesheet in the following sections.
+By default, SurveyCompo surveys use a cross-browser **sans-serif** font family. This default works for most use cases and maintains visual consistency regardless of where the survey is embedded.
 
-To allow the survey to inherit the `font-family` style from the hosting page, or to set the `font-family` as a top-level style, you first need to disable the default font family by setting the `uiUseDefaultFont` key of the survey model to `false`.
+The default font family is set via the `fontFamily` key of the Theme model. The default value is `sans-serif`. You can change this value to your preferred font family.
+
+Alternatively, you can set the `fontFamily` key to `inherit` to allow the survey to use the font family from the hosting page. This is useful when you want the survey to match the font style of the hosting page or if you want to apply your preferred font family to the survey using CSS rules.
+
 
 === "HTML"
 
@@ -89,7 +88,7 @@ To allow the survey to inherit the `font-family` style from the hosting page, or
     </head>
     <body>
         <survey-compo src="./source.json"
-                      style="font-family: monospace" />
+                      style="font-family: monospace; font-size: 14px" />
     </body>
     </html>
     ```
@@ -99,7 +98,10 @@ To allow the survey to inherit the `font-family` style from the hosting page, or
     ```json linenums="1" hl_lines="3"
     {
         "name": "My Survey",
-        "uiUseDefaultFont": false,
+        "theme":
+            {
+                "fontFamily": "inherit"
+            },
         "pages": [
             /* ... */
         ]
