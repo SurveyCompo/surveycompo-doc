@@ -37,8 +37,9 @@ Imagine a user journey through the survey:
 1. **Invitation**: The optional Start Screen introduces the survey.
 1. **Questions and Answers**: Users navigate through Survey Pages, providing responses in Blocks.
 1. **Outcome**:
-   - **Success**: Upon completion, they see the Completion Screen.
-   - **Disqualification**: If ineligible, they are directed to the Abort Screen.
+
+      - **Success**: Upon completion, they see the Completion Screen.
+      - **Disqualification**: If ineligible, they are directed to the Abort Screen.
 
 ### Survey JSON Example
 
