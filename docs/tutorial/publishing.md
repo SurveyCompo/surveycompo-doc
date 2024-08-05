@@ -53,7 +53,7 @@ This option is ideal if you don't have a website or prefer not to host the surve
 
 Here is the hosted page for the survey we created in the previous tutorial:
 
-[https://app.surveycompo.com/page/OJqcevPh0qoDNcO0mRau.html](https://app.surveycompo.com/page/OJqcevPh0qoDNcO0mRau.html){:target="\_blank"}
+[https://app.surveycompo.com/page/ynU7y4b62qEVyVxcspE8.html](https://app.surveycompo.com/page/ynU7y4b62qEVyVxcspE8.html){:target="\_blank"}
 
 ## Survey Data
 
