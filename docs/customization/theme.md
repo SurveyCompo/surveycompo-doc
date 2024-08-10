@@ -46,7 +46,7 @@ The next example creates a theme with customized background:
     ```
 
 
-## The Theme Modal
+## The Theme Model
 
 Here are some common properties you can use to customize the theme:
 
