@@ -45,7 +45,10 @@ The next example creates a theme with customized background:
     }
     ```
 
-Here are some common steps to customize your theme:
+
+## The Theme Modal
+
+Here are some common properties you can use to customize the theme:
 
 - `primaryColor`: Define the primary color for buttons and inputs.
 - `backgroundColor`: Set the background color of the survey.
@@ -57,3 +60,12 @@ Here are some common steps to customize your theme:
 - Lastly, tweak specific settings that override the default ones for certain elements, like `textareaRadius` for textareas.
 
 All theme model properties are optional. You have the flexibility to customize the theme as you see fit. SurveyCompo will automatically adjust other default values based on the ones you provide. For instance, if you specify a `backgroundColor` without a `textColor`, SurveyCompo will automatically adjust the text color to ensure readability. For detailed information on the JSON keys and values used in a theme model, refer to the [Themes](/data-models/other-models/){:target="\_blank"} section in the documentation.
+
+
+## The Theme Editor
+
+SurveyCompo also provides a Theme Editor tool that allows you to visually customize the theme of your survey. This tool provides a user-friendly interface that lets you adjust the colors, radius, and font settings of your survey. Once you've customized the theme to your liking, you can apply it to your survey.
+
+To access the Theme Editor, click on the 'Theme Editor' icon button in the top-right corner of the survey builder. The Theme Maker will open in a new window, allowing you to customize the theme of your survey. Once you've made your changes, click the 'Apply' button to apply the theme to your survey.
+
+![Customization - Theme Editor](../assets/images/customize-theme-editor.png){: .small .embedded}

@@ -44,6 +44,7 @@ The SurveyCompo Survey Builder is a robust tool for creating and managing survey
 - **Advanced JSON Editing**: Write and edit survey definitions directly in JSON with a rich editor that includes auto-formatting, code hints, and validation.
 - **Real-time Preview**: See your survey evolve in real-time as you make changes to the JSON code.
 - **Survey Templates**: Kickstart your survey creation with our library of pre-made survey templates tailored for common scenarios.
+- **Theme Editor**: Create custom themes to personalize the look and feel of your survey with custom colors, fonts, and styles.
 - **Import/Export**: Seamlessly import existing JSON survey files or export your creation for offline usage.
 
 As a registered user of SurveyCompo, you can access the Survey Builder easily at [https://app.surveycompo.com/surveys](https://app.surveycompo.com/surveys).
