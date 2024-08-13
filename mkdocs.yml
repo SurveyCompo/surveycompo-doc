@@ -89,6 +89,11 @@ plugins:
       minify_html: true
       minify_js: true
       minify_css: true
+  - blog:
+      archive: false
+      categories: false
+      blog_toc: false
+      post_excerpt: required
 
 nav:
   - "index.md"
@@ -145,6 +150,8 @@ nav:
   - "Miscellaneous":
       - "miscellaneous/browser-supports.md"
       - "miscellaneous/feedback-and-issues.md"
+
+  - "blog/index.md"
 
 copyright: |
   &copy; 2024 <a href="https://www.surveycompo.com"  target="_blank" rel="noopener">SurveyCompo</a>
