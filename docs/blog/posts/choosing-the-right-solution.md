@@ -1,5 +1,6 @@
 ---
 title: Navigating the Survey Tool Landscape - Choosing the Right Solution for Your Needs
+slug: choosing-the-right-solution-for-your-survey-needs
 date: 2024-08-06
 ---
 

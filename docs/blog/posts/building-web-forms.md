@@ -1,12 +1,13 @@
 ---
-title: Collecting User Input Made Easy
+title: Building Web Forms Without the Hassle&colon; A Guide to SurveyCompo
+slug: building-web-forms-without-the-hassle-a-guide-to-surveycompo
 date: 2024-08-13
 ---
 
 Imagine you're a startup founder with a great idea, but you need to gauge interest from potential users. Or maybe you're a small business owner looking to create a simple contact form for customer support requests. You don't have a full CRM system yet, and you don't need one. What you need is a straightforward form that captures essential user input, notifies you upon submission, and stores the data for later use. Sound familiar?
 
 
-![Collecting User Input](../../assets/images/blog-collecting-0.png){: .center .md }
+![Collecting User Input](../../assets/images/blog-collecting-0.png){: .center  }
 
 <!-- more -->
 
