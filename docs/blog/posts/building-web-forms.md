@@ -1,5 +1,5 @@
 ---
-title: Building Web Forms Without the Hassle&colon; A Guide to SurveyCompo
+title: Building Web Forms Without the Hassle – A Guide to SurveyCompo
 slug: building-web-forms-without-the-hassle-a-guide-to-surveycompo
 date: 2024-08-13
 ---
