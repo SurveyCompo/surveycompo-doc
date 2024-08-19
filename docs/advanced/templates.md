@@ -10,7 +10,7 @@ The following example defines an page template with a footer and applied to mult
   "pageTemplates": [
     {
       "templateName": "pageWithFooter",
-      "htmlFooter": "<p>By submitting this survey, you agree to our <a href='https://www.surveycompo.com/privacy-policy' class='my-link'>Privacy Policy</a></p>"
+      "htmlFooter": "<p>By submitting this survey, you agree to our <a href='https://www.surveycompo.com/privacy' class='my-link'>Privacy Policy</a></p>"
     }
   ],
   "pages": [

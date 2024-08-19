@@ -711,7 +711,7 @@ In this tutorial, we'll incorporate HTML text into the Page footer to include a 
       "blocks": [
         /* ... */
       ],
-      "htmlFooter": "<p>By submitting this survey, you agree to our <a href='https://www.surveycompo.com/privacy-policy'>Privacy Policy</a></p>"
+      "htmlFooter": "<p>By submitting this survey, you agree to our <a href='https://www.surveycompo.com/privacy'>Privacy Policy</a></p>"
     }
   ],
   "completeScreens": [
@@ -749,7 +749,7 @@ SurveyCompo does not apply default styles to custom HTML elements. To enhance th
       "blocks": [
         /* ... */
       ],
-      "htmlFooter": "<p>By submitting this survey, you agree to our <a href='https://www.surveycompo.com/privacy-policy' class='my-link'>Privacy Policy</a></p>"
+      "htmlFooter": "<p>By submitting this survey, you agree to our <a href='https://www.surveycompo.com/privacy' class='my-link'>Privacy Policy</a></p>"
     }
   ],
   "completeScreens": [
@@ -785,7 +785,7 @@ In this tutorial, we'll create a template specifically for the HTML footer and a
   "pageTemplates": [
     {
       "templateName": "pageWithFooter",
-      "htmlFooter": "<p>By submitting this survey, you agree to our <a href='https://www.surveycompo.com/privacy-policy' class='my-link'>Privacy Policy</a></p>"
+      "htmlFooter": "<p>By submitting this survey, you agree to our <a href='https://www.surveycompo.com/privacy' class='my-link'>Privacy Policy</a></p>"
     }
   ],
   "startScreens": [
