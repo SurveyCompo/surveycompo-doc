@@ -50,7 +50,7 @@ A simple Condition Expression is a string designed to evaluate to a boolean valu
 
 The 'value' part of the Condition Expression does not need to be quoted. For example, `$name == John Smith`. To compare with a boolean value, use 'true' or 'false' for comparison, for example, `$male == true` and `$male == false`. SurveyCompo offers a shortcut syntax for boolean values: `#male` is equivalent to `#male == true`.
 
-When evaluating equality (i.e.,`==` and `!=`), comparisons are performed as string comparisons. This means that both operands in the comparison are converted to the `String` type before comparison. For instance, the Condition Expression `#age == true` (or `#age`) would evaluate to false, as the numeric value (e.g., "18") is compared against the string representation of a boolean value ("true").
+When evaluating equality (i.e.,`==` and `!=`), comparisons are performed as string comparisons. This means that both operands in the comparison are converted to the `String` type before comparison. For instance, the Condition Expression `#age == true`  would evaluate to false, as the numeric value (e.g., "18") is compared against the string representation of a boolean value ("true").
 
 In cases involving other types of comparisons, if the 'value' specified is numeric, the comparison is executed numerically. For instance, the expression `#age > 18` returns true if the 'age' input's value exceeds 18. Conversely, if the 'value' is a string, the comparison is conducted as a string comparison. Thus, `$name > H` would be true if the 'name' variable's value alphabetically follows "H", such as in the case of "John".
 

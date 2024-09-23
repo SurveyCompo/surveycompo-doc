@@ -38,8 +38,8 @@ Imagine a user journey through the survey:
 1. **Questions and Answers**: Users navigate through Survey Pages, providing responses in Blocks.
 1. **Outcome**:
 
-      - **Success**: Upon completion, they see the Completion Screen.
-      - **Disqualification**: If ineligible, they are directed to the Abort Screen.
+   - **Success**: Upon completion, they see the Completion Screen.
+   - **Disqualification**: If ineligible, they are directed to the Abort Screen.
 
 ### Survey JSON Example
 
@@ -78,6 +78,7 @@ SurveyCompo uses **JSON** (JavaScript Object Notation) to define your survey's s
 | Method                  | Type                                              | Default        | Description                                                                                                                                               |
 | ----------------------- | ------------------------------------------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `name`                  | string                                            | n/a (Required) | The name of the survey.                                                                                                                                   |
+| `description`           | string                                            | null           | Option description of the survey.                                                                                                                         |
 | `customRef`             | string                                            | null           | A custom reference ID for the survey.                                                                                                                     |
 | `variables`             | object                                            | {}             | A map of external key-value pairs, such as user name, product name, etc. Variables can be used with piping and conditional logic                          |
 | `inputValues`           | object                                            | {}             | A map of key-value pairs to pre-fill input fields. The key is the input ID (optionally prefixed with '#') and the value is the pre-filled value.          |
