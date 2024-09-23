@@ -66,6 +66,6 @@ All theme model properties are optional. You have the flexibility to customize t
 
 SurveyCompo also provides a Theme Editor tool that allows you to visually customize the theme of your survey. This tool provides a user-friendly interface that lets you adjust the colors, radius, and font settings of your survey. Once you've customized the theme to your liking, you can apply it to your survey.
 
-To access the Theme Editor, click on the 'Theme Editor' icon button in the top-right corner of the survey builder. The Theme Maker will open in a new window, allowing you to customize the theme of your survey. Once you've made your changes, click the 'Apply' button to apply the theme to your survey.
+To access the Theme Editor, click on the 'Theme Editor' icon button in the top-right corner of the survey JSON Editor or click on the theme icon next to the Survey node in the Visual Editor. The Theme Maker will open in a new window, allowing you to customize the theme of your survey. Once you've made your changes, click the 'Apply' button to apply the theme to your survey.
 
 ![Customization - Theme Editor](../assets/images/customize-theme-editor.png){: .small .embedded}

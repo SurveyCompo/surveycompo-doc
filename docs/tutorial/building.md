@@ -41,6 +41,7 @@ The SurveyCompo Survey Builder is a robust tool for creating and managing survey
 
 **Key Features**:
 
+- **Intuitive Visual Editor**: Create surveys with a user-friendly drag-and-drop interface that requires no coding skills.
 - **Advanced JSON Editing**: Write and edit survey definitions directly in JSON with a rich editor that includes auto-formatting, code hints, and validation.
 - **Real-time Preview**: See your survey evolve in real-time as you make changes to the JSON code.
 - **Survey Templates**: Kickstart your survey creation with our library of pre-made survey templates tailored for common scenarios.
