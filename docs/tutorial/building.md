@@ -52,10 +52,6 @@ As a registered user of SurveyCompo, you can access the Survey Builder easily at
 
 The upcoming sections of this tutorial will explore the JSON data model employed for defining surveys within SurveyCompo. We will focus less on the detailed visual interface of the Survey Builder. While the Survey Builder offers robust capabilities for survey creation, understanding the JSON data model provides direct control and enhances flexibility in survey design.
 
-!!! tip "Did you know?"
-
-    You are not required to register for a SurveyCompo account or use the Survey Builder to create surveys. Alternatively, you can generate a survey JSON source file using your preferred text editor. While the Survey Builder is a convenient tool for survey creation and management, it is not the sole method of creating surveys with SurveyCompo.
-
 ## Creating a New Survey
 
 To create a new survey, click the `New Survey` button on the SurveyCompo [Portal](https://app.surveycompo.com). From there, you can either start a survey from scratch or choose from a list of pre-designed templates. For this tutorial, we will begin by creating a new survey from scratch.

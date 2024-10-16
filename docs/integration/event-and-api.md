@@ -95,22 +95,26 @@ The `surveychange` event is a [CustomEvent](https://developer.mozilla.org/en-US/
 
 The event `context` object contains the following properties:
 
-| Property     | Description                                                                                                                 |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------- |
-| `pageCount`  | Total number of pages in the survey that are visible to the respondent.                                                     |
-| `pageIndex`  | Index of the current page within the survey, starting from `0`.                                                             |
-| `pageErrors` | An array containing error messages specific to the current page.                                                            |
-| `progress`   | Percentage progress increment contributed by the event. Note this is **NOT** the percentage of survey has been completed.   |
-| `errorTs`    | Timestamp marking the occurrence of a visible error on the current page, formatted as a Unix timestamp.                     |
-| `initTs`     | Timestamp for when the survey was initialized, formatted as a Unix timestamp.                                               |
-| `startTs`    | Timestamp for when the survey was started by the respondent, formatted as a Unix timestamp.                                 |
-| `completeTs` | Timestamp for when the survey was completed by the respondent, formatted as a Unix timestamp.                               |
-| `finalTs`    | Timestamp for when the survey was finalized, indicating the end of the survey process, formatted as a Unix timestamp.       |
-| `abortTs`    | Timestamp for when the survey was aborted by the respondent, formatted as a Unix timestamp.                                 |
-| `sessionId`  | A unique identifier for the current survey session, useful for tracking and analytics purposes.                             |
-| `variables`  | A dictionary of variables that have been passed to the current survey session, allowing for customized survey experiences.  |
-| `survey`     | An object containing the `id` and `name` of the current survey, providing context about which survey is being referenced.   |
-| `inputs`     | An array of objects representing the responses given by the respondent, including the id, name, and value of each response. |
+| Property     | Description                                                                                                                                        |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `pageCount`  | Total number of pages in the survey that are visible to the respondent.                                                                            |
+| `pageIndex`  | Index of the current page within the survey, starting from `0`.                                                                                    |
+| `pageErrors` | An array containing error messages specific to the current page.                                                                                   |
+| `progress`   | Percentage progress increment contributed by the event. Note this is **NOT** the percentage of survey has been completed.                          |
+| `errorTs`    | Timestamp marking the occurrence of a visible error on the current page, formatted as a Unix timestamp.                                            |
+| `initTs`     | Timestamp for when the survey was initialized, formatted as a Unix timestamp.                                                                      |
+| `startTs`    | Timestamp for when the survey was started by the respondent, formatted as a Unix timestamp.                                                        |
+| `completeTs` | Timestamp for when the survey was completed by the respondent, formatted as a Unix timestamp.                                                      |
+| `finalTs`    | Timestamp for when the survey was finalized, indicating the end of the survey process, formatted as a Unix timestamp.                              |
+| `abortTs`    | Timestamp for when the survey was aborted by the respondent, formatted as a Unix timestamp.                                                        |
+| `sessionId`  | A unique identifier for the current survey session, useful for tracking and analytics purposes.                                                    |
+| `variables`  | A dictionary of variables that have been passed to the current survey session, allowing for customized survey experiences.                         |
+| `survey`     | An object containing the `id` and `name` of the current survey, providing context about which survey is being referenced.                          |
+| `inputs`     | An array of objects representing the responses given by the respondent, including the id, name, and value of each response. Premium Plan required. |
+
+!!! note "Note"
+
+    Access to the `inputs` field in the event context requires a Premium Plan. For details, visit the [Pricing page](https://www.surveycompo.com/pricing).
 
 ## Event Names
 

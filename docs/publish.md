@@ -6,48 +6,49 @@ title: Publish and Share
 
 Congratulations! You have created a survey and are ready to publish and share it with your target audience.
 
-Publishing a survey involves finalizing your edits to the survey JSON model and creating a version of the JSON file ready to feed in to the SurveyCompo web component for presentation. During this process, SurveyCompo assigns a unique survey ID and a signature hash to the published JSON model. The survey ID uniquely identifies the survey, and the signature hash ensures the integrity of the JSON data.
+SurveyCompo provides a one-click button for publishing surveys. During this process, SurveyCompo consolidates all pending edits since the last publish, generates a new version of the survey JSON model with a unique survey ID and a signature hash.
 
 If you make any changes to a survey after publishing it, you will need to publish the survey again to make the changes available to your audience.
 
-For users with a paid subscription plan, there's an option to remove SurveyCompo branding from the survey, which can be enabled during publishing.
+Published surveys are publicly accessible and can be shared with your audience. If you need to pause a survey or keep it private for self-hosting and data collection, you can disable public access.
 
-![Tutorial - Publishing](../assets/images/tutorial-publish.png){: .center .embedded}
-
-!!! note "Note"
-
-    Publishing a survey is not mandatory if you decide to host and collect survey data yourself and do not wish to remove the SurveyCompo branding. You can host and serve the JSON file from your own server. In this case, you are responsible for managing data collection and storage.
+![Tutorial - Publishing](../assets/images/tutorial-publish.png){: .center .embedded .md}
 
 ## Sharing Surveys
 
 Sharing a survey involves making it available to your audience so they can respond.
+SurveyCompo provides the following options for sharing a survey.
 
-There are three major aspects involved in making this work:
+1. Share a survey with a unique URL
+1. Embed the survey on your web page
 
-1. The survey JSON file;
-1. The JavaScript library file that defines the SurveyCompo Web Component;
-1. A data collection service that gathers and stores the survey responses collected by the SurveyCompo Web Component.
+![Tutorial - Hosted Survey](../assets/images/tutorial-embed.png){: .center .md}
 
-Depending on how much control you want over the survey data and how you want to present the survey to your audience, there are a few options to share a survey:
+### Share a survey with a unique URL
 
-### Let SurveyCompo Manage Surveys for You
+SurveyCompo provides a dedicated, unique page for each survey by default, making it easy to share and start collecting responses immediately. Simply share the survey link with your audience—through email, for instance, and responses will begin populating in real time. You can also customize the survey page by setting the background color, adding a page header or footer, and adjusting other display options to match your brand's style.
 
-Allow SurveyCompo to host the survey and collect responses for you. SurveyCompo provides a unique page for each survey, ready to be shared and collect responses. This is the easiest way to share a survey. You can share the survey page link with your audience and start collecting responses.
+### Embed the survey on your web page
 
-![Tutorial - Hosted Survey](../assets/images/tutorial-hosted.png){: .center .md}
+To embed the survey on your HTML page, simply copy and paste the embed code provided by SurveyCompo. This lets you display the survey within any section or block on your page. You can style the survey with CSS to align with your design, adjusting colors, fonts, and layout. Additionally, you can control its visibility with JavaScript, showing or hiding it in a modal, popup, or slide-in panel as needed.
 
-### Manage Some Tasks Yourself
+## Hosting surveys yourself
 
-You might want more control over the survey data and how the survey is presented to your audience by choosing to do one or more of the following:
+SurveyCompo offers an option to host surveys and collect responses on your own server.
 
-- Host the survey JSON file on your own server;
-- Host the SurveyCompo web component JavaScript file on your own server;
-- Integrate the SurveyCompo web component into your website or application;
+To set up self-hosting, follow these steps:
+
+- Host the survey JSON file on your own server.
+- Host the SurveyCompo web component JavaScript file on your server.
+- Integrate the SurveyCompo web component into your website or application.
 - Collect survey responses and performance data using your preferred server-side technology.
 
-SurveyCompo provides downloads for the survey JSON file and the SurveyCompo web component JavaScript file. You can download and host them on your server.
+![Publish and Share](../assets/images/tutorial-self-hosted.png){: .center .md}
 
-![Publish and Share](../assets/images/tutorial-selfhosting.png){: .center .md}
+You can download both the survey JSON file and the SurveyCompo JavaScript library and host them on your server.
 
-For collecting survey responses and performance data, you can use SurveyCompo Events.
-For more details on collecting survey data, refer to the [Survey Events](/integration/event-and-api/) and [Data Collection](/integration/data-collection) documentation.
+For collecting survey responses and performance data, you can also use **SurveyCompo Events**. For more details on collecting survey data, refer to the [Survey Events](/integration/event-and-api/) and [Data Collection](/integration/data-collection) documentation.
+
+!!! note "Note"
+
+    Collecting survey responses with self-hosted surveys requires a Premium Plan or higher. For more details, please refer to the [Pricing page](https://www.surveycompo.com/pricing).

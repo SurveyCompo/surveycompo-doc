@@ -6,8 +6,7 @@ date: 2024-08-13
 
 Imagine you're a startup founder with a great idea, but you need to gauge interest from potential users. Or maybe you're a small business owner looking to create a simple contact form for customer support requests. You don't have a full CRM system yet, and you don't need one. What you need is a straightforward form that captures essential user input, notifies you upon submission, and stores the data for later use. Sound familiar?
 
-
-![Collecting User Input](../../assets/images/blog-collecting-0.png){: .center  }
+![Collecting User Input](../../assets/images/blog-collecting-0.png){: .center }
 
 <!-- more -->
 
@@ -31,7 +30,6 @@ That's where SurveyCompo comes in –– a versatile survey tool that offers fle
 - Download submitted data for further analysis
 
 And the best part? SurveyCompo offers a free plan to get you started!
-
 
 ## Step-by-Step Guide to Setting Up Your SurveyCompo Form
 
@@ -60,7 +58,6 @@ SurveyCompo supports various features and customization options, including diffe
 We've added some special traits to make the form more user-friendly and visually appealing when embedding it on a webpage. We disabled the padding around the form, set the primary color to match the brand, disabled the full-width buttons, hid both the progress label and navigation buttons, and used 'memory' for caching.
 
 You can quickly get started by copying and pasting the following JSON code into the Survey Builder:
-
 
 === "Preview"
 
@@ -136,7 +133,6 @@ You can quickly get started by copying and pasting the following JSON code into 
     }
     ```
 
-
 #### 4. Publish the Survey
 
 After customizing your form, it's time to publish it. Click on the "Publish" button on the "Publish & Share" page and choose the appropriate settings.
@@ -145,7 +141,6 @@ SurveyCompo offers both hosted and self-hosted solutions. Self-hosted options ar
 
 ![Publish your Form](../../assets/images/blog-collecting-5.png){: .small .embedded}
 
-
 #### 5. Embed the Form on Your Webpage
 
 Embedding your form on your website is simple with SurveyCompo. Click the 'Embed' button to view the code needed to embed your form. Our example code includes a script tag to load the SurveyCompo library and a custom HTML tag to render the form:
@@ -153,9 +148,10 @@ Embedding your form on your website is simple with SurveyCompo. Click the 'Embed
 ```html
 <div class="myForm">
   <script async src="https://tag.surveycompo.com/v1.js"></script>
-  <survey-compo src="https://app.surveycompo.com/src/cZ05J4Mo4NQoPjY1Em8I.json"
-                sendevents="surveycompo"
-                cache="memory" />
+  <survey-compo
+    src="https://app.surveycompo.com/src/cZ05J4Mo4NQoPjY1Em8I.json"
+    cache="memory"
+  />
 </div>
 ```
 
@@ -172,12 +168,11 @@ This is how it looks (see [full page view](https://codepen.io/surveycompo/full/P
 
 Please feel free the explore the code and customize it to fit your needs.
 
-
 #### 6. Add a Webhook for Slack Notifications
 
 To receive notifications when a form is submitted, set up a webhook. In this example, we'll use Slack notifications.
 
-First, create a webhook in your Slack workspace. Slack provides a simple process for creating a webhook, detailed in the [Slack API documentation](https://api.slack.com/messaging/webhooks). Follow the steps to create a webhook URL, which should look something like this:  `https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX`.
+First, create a webhook in your Slack workspace. Slack provides a simple process for creating a webhook, detailed in the [Slack API documentation](https://api.slack.com/messaging/webhooks). Follow the steps to create a webhook URL, which should look something like this: `https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX`.
 
 Next, set up the webhook in SurveyCompo. Navigate to the "Settings" section in your SurveyCompo dashboard, create a new webhook, and paste the Slack webhook URL you created earlier. Save the webhook.
 
@@ -198,4 +193,3 @@ Finally, accessing the data submitted through your form is straightforward. Go t
 SurveyCompo simplifies the process of creating, customizing, and managing web forms, making it a great tool for startups and small businesses. Whether you need to capture early user interest, handle customer support requests, or gather any other type of data, SurveyCompo offers a simple, flexible, and cost-effective solution.
 
 For more information, visit the SurveyCompo [homepage](https://www.surveycompo.com) or check out the SurveyCompo [documentation](https://doc.surveycompo.com) for detailed guides and tips.
-
