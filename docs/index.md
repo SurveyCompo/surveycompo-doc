@@ -15,6 +15,7 @@ With SurveyCompo, you have full control over every aspect of your surveys. Build
 <div class="survey-demo">
 	<survey-compo
 		src="https://surveycompo.github.io/examples/examples/basic/source.json"
+		data-endpoint="null"
 	/>
 </div>
 

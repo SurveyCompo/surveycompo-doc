@@ -212,5 +212,6 @@ You can also obtain the `api` interface from the survey component instance. Here
       <survey-compo
         onload="addCloseButton"
         src="https://surveycompo.github.io/examples/examples/basic/source.json"
+        data-endpoint="null"
       />
     </div>

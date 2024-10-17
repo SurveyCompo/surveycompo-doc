@@ -190,6 +190,7 @@ Let's look at the following example that demonstrates the use of input and block
 <div class="survey-demo">
 	<survey-compo
 		src="https://surveycompo.github.io/examples/examples/validation/source.json"
+      data-endpoint="null"
 	/>
 </div>
 

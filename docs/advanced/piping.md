@@ -55,7 +55,6 @@ The following piping modifiers are available in SurveyCompo:
 
     Parameters for modifiers are divided by a colon `:`. If a parameter includes a colon within it, you should escape it with an underscores, like this: `_:_`. If a parameter is not provided, it's assumed to be an empty string.
 
-
 You can use multiple modifiers in a single piping expression. The modifiers are applied in the order they are written. For example, `{#name|title|default:John}` will first convert the value to title case and then use 'John' if the value is falsy.
 
 Let's bring it all together with this example:
@@ -63,6 +62,7 @@ Let's bring it all together with this example:
 <div class="survey-demo">
 	<survey-compo
 		src="https://surveycompo.github.io/examples/examples/piping/source.json"
+		data-endpoint="null"
 	/>
 </div>
 
