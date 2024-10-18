@@ -100,15 +100,9 @@ With SurveyCompo, you have full control over every aspect of your surveys. Build
     }
     ```
 
-## Key Features
+## Key Benefits
 
 <div class="grid cards" markdown>
-
-- :material-security:{ .left-icon } **Full Data Control**
-
-      ---
-
-      With the **self-hosting option**, you maintain full control and ownership of your sensitive survey data. Ensure compliance with privacy regulations and meet your specific security needs.
 
 - :fontawesome-solid-sliders:{ .left-icon } **Highly Customizable**
 
@@ -139,5 +133,11 @@ With SurveyCompo, you have full control over every aspect of your surveys. Build
       ---
 
       SurveyCompo’s JSON-based design makes your surveys truly adaptable. It allows you to **manage versions**, load content **dynamically**, conduct **A/B testing**, and implement advanced strategies like Survey **Segmentation** and Audience **Retargeting**.
+
+- :material-security:{ .left-icon } **Full Data Control**
+
+      ---
+
+      With the **self-hosting option**, you maintain full control and ownership of your sensitive survey data. Ensure compliance with privacy regulations and meet your specific security needs.
 
 </div>

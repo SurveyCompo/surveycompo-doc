@@ -73,7 +73,7 @@ You can quickly get started by copying and pasting the following JSON code into 
     {
       "name": "Pre-launch Sign-up Form",
       "uiUseFullWidthButtons": false,
-      "uiResponsiveFootbar": false,
+      "uiResponsiveFooterbar": false,
       "uiUsePadding": false,
       "uiShowNavigation": false,
       "uiShowProgress": false,

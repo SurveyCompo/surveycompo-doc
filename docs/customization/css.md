@@ -175,4 +175,3 @@ There are a few limitations to be aware of when using CSS with SurveyCompo:
 
 - Does not support stylesheets from external URLs.
 - Supports applying CSS rules from only one static `style` HTML tag.
-- CSS rules do not apply to the SurveyCompo branding icon.
