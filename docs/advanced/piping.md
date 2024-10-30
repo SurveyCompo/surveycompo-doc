@@ -62,7 +62,7 @@ Let's bring it all together with this example:
 <div class="survey-demo">
 	<survey-compo
 		src="https://surveycompo.github.io/examples/examples/piping/source.json"
-		data-endpoint="null"
+		mode="demo"
 	/>
 </div>
 

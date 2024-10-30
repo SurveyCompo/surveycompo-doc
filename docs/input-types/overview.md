@@ -3,6 +3,6 @@ SurveyCompo supports a variety of input types. Each input type is designed to ca
 <div index="1" class="survey-demo center">
 	<survey-compo
 		src="https://surveycompo.github.io/examples/examples/inputs/source.json"
-		data-endpoint="null"
+		mode="demo"
 	/>
 </div>

@@ -18,7 +18,7 @@ To render the survey, include the Survey Component in your HTML file and specify
   </head>
   <body>
     <survey-compo
-      src="https://example.host.com/survey-source.json"
+      src="Survey ID or URL"
       cache="localhost"
       onchange="console.log"
     />
@@ -30,9 +30,9 @@ To render the survey, include the Survey Component in your HTML file and specify
 
 The `survey-compo` element accepts the following attributes:
 
-| Attribute      | Description                                                                                                                                             | Example Value                                       |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
-| `src`          | The URL of the survey JSON file or a JSON string itself.                                                                                                | `https://example.host.com/survey-source.json`       |
-| `cache`        | Defines the caching strategy or location. Using `localstorage` enables persisting the current survey session data after a page refresh.                 | `localstorage` or `memory`, default: `localstorage` |
-| `onchange`     | The JavaScript function to be called on a survey change event. This should be a string referring to a function name in the `window` scope.              | `console.log`                                       |
-| `dataEndpoint` | The URL where survey event data is sent for collection. If this value is an empty string or `surveycompo`, events are sent to SurveyCompo for analysis. | `https://your-data-collection-service.com/events`   |
+| Attribute  | Description                                                                                                                                    | Example Value                                                           |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `src`      | Survey ID, or the URL of the survey JSON file or a JSON string itself.                                                                         | `IIYzdICTFtJhQHgmLCzY` or `https://example.host.com/survey-source.json` |
+| `cache`    | Defines the caching strategy or location. Using `localstorage` enables persisting the current survey session data after a page refresh.        | `localstorage` or `memory`, default: `localstorage`                     |
+| `onchange` | The JavaScript function to be called on a survey change event. This should be a string referring to a function name in the `window` scope.     | `console.log`                                                           |
+| `mode`     | By default, survey events are sent to SurveyCompo for analysis and reporting. You can turn this off by setting the `mode` attribute to `demo`. | `live` or `demo`                                                        |

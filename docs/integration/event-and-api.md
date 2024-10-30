@@ -10,18 +10,14 @@ Survey Events and the API interfaces are pivotal features of the SurveyCompo web
 
 The SurveyCompo web component is a custom HTML element. You can listen to its events using the `addEventListener` method.
 
-```html linenums="1" hl_lines="15"
+```html linenums="1" hl_lines="11"
 <html>
   <head>
     <title>My Survey</title>
     <script async src="https://tag.surveycompo.com/v1.js"></script>
   </head>
   <body>
-    <survey-compo
-      id="my-survey"
-      src="https://example.host.com/survey-source.json"
-    />
-
+    <survey-compo id="my-survey" src="Survey ID or URL" />
     <script>
       document
         .getElementById("my-survey")
@@ -63,7 +59,7 @@ The SurveyCompo web component supports the `onChange` callback attribute. Use th
   <body>
     <survey-compo
       id="my-survey"
-      src="https://example.host.com/survey-source.json"
+      src="[Survey ID or URL]"
       onchange="onSurveyChange"
     />
   </body>
@@ -212,6 +208,6 @@ You can also obtain the `api` interface from the survey component instance. Here
       <survey-compo
         onload="addCloseButton"
         src="https://surveycompo.github.io/examples/examples/basic/source.json"
-        data-endpoint="null"
+        mode="demo"
       />
     </div>

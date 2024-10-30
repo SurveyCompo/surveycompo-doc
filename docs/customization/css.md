@@ -20,7 +20,7 @@ To apply CSS to your survey, you can utilize the `css` key in the survey's JSON 
     <div class="survey-demo">
       <survey-compo
         src="https://surveycompo.github.io/examples/examples/style/source.json"
-        data-endpoint="null"
+        mode="demo"
       />
     </div>
 
@@ -44,9 +44,7 @@ To reference a CSS style tag, add a `<style>` tag to the hosting page's HTML wit
     </style>
   </head>
   <body>
-    <survey-compo
-      src="https://your-domain.com/survey-source.json"
-    ></survey-compo>
+    <survey-compo src="[Survey ID or URL]"></survey-compo>
   </body>
 </html>
 ```

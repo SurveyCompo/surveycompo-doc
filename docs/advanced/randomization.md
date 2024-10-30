@@ -7,7 +7,7 @@ The `randomWithinGroup` key is a powerful tool for adding randomization to your 
 <div class="survey-demo">
 	<survey-compo
 		src="https://surveycompo.github.io/examples/examples/randomization/source.json"
-		data-endpoint="null"
+		mode="demo"
 	/>
 </div>
 

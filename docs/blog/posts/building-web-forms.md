@@ -148,10 +148,7 @@ Embedding your form on your website is simple with SurveyCompo. Click the 'Embed
 ```html
 <div class="myForm">
   <script async src="https://tag.surveycompo.com/v1.js"></script>
-  <survey-compo
-    src="https://app.surveycompo.com/src/cZ05J4Mo4NQoPjY1Em8I.json"
-    cache="memory"
-  />
+  <survey-compo src="cZ05J4Mo4NQoPjY1Em8I" cache="memory" />
 </div>
 ```
 

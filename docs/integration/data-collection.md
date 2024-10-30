@@ -1,8 +1,8 @@
 ## Event Tracking with SurveyCompo
 
-SurveyCompo automatically captures all survey events to facilitate comprehensive data collection and analysis. This default behavior ensures that you receive complete insights into user interactions without additional setup.
+By default, SurveyCompo automatically captures all survey events to facilitate data collection and analysis. This default behavior ensures that you receive insights into user interactions without additional setup.
 
-f you need to disable the automatic sending of survey events to SurveyCompo, you can do so by modifying the `data-endpoint` attribute. Set this attribute to null or provide an invalid URL string to prevent event transmission.
+if you need to disable the automatic sending of survey events to SurveyCompo, you can do so by modifying the `mode` attribute. Set this attribute to "demo" to disable event tracking. This is useful when you want to test the survey without sending events to SurveyCompo.
 
 The following example demonstrates a survey with Event Tracking **disabled**.
 
@@ -13,30 +13,31 @@ The following example demonstrates a survey with Event Tracking **disabled**.
     <script async src="https://tag.surveycompo.com/v1.js"></script>
   </head>
   <body>
-    <survey-compo src="https://your-survey-json-src-url" data-endpoint="null" />
+    <survey-compo src="[Survey ID or URL]" mode="demo" />
   </body>
 </html>
 ```
 
 ## Sending All Events To Your Own Server
 
-If you need to collect all survey events for detailed data reporting or other specific purposes, you can configure SurveyCompo to send these events directly to your own server. To achieve this, set the data-endpoint attribute to a valid URL that points to your designated data collection endpoint.
+If you need to collect all survey events for detailed data reporting or other specific purposes, you can define the 'dataEndpoint' key in your Survey JSON configuration. This key specifies the URL of the server where you want to send the survey events. SurveyCompo then sends all events to this server in real-time.
 
 The following example demonstrates how to send all survey events to a remote data collection server:
 
-```html linenums="1" hl_lines="9"
-<html>
-  <head>
-    <title>My Survey</title>
-    <script async src="https://tag.surveycompo.com/v1.js"></script>
-  </head>
-  <body>
-    <survey-compo
-      src="https://your-survey-json-src-url"
-      data-endpoint="https://your-data-collection-service.com/events"
-    />
-  </body>
-</html>
+```json linenums="1" hl_lines="12"
+{
+  "name": "test",
+  "startScreens": [
+    /** ... **/
+  ],
+  "pages": [
+    /** ... **/
+  ],
+  "completeScreens": [
+    /** ... **/
+  ],
+  "dataEndpoint": "https://my-server.com/survey-data-endpoint"
+}
 ```
 
 SurveyCompo uses the `navigator.sendBeacon()` method to send event data to a server. This method is part of the Beacon API, which allows web pages to send data to a server in the background, independently of the page lifecycle. This ensures the data is sent reliably without blocking the user’s navigation. However, it sends data as a POST request with a content type of `text/plain`, so the server must be able to handle this format and parse the event data from stringified JSON accordingly.
@@ -79,7 +80,7 @@ The following example demonstrates how to send survey response data to a remote 
   <body>
     <survey-compo
       id="my-survey"
-      src="https://example.host.com/survey-source.json"
+      src="[Survey ID or URL]"
       onchange="onSurveyChange"
     />
   </body>
