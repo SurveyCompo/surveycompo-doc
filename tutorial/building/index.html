@@ -1,0 +1,1120 @@
+<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link href=https://doc.surveycompo.com/tutorial/building/ rel=canonical><link rel=prev href=../..><link href=../publishing/ rel=next><link rel=icon href=../../assets/icons/favicon-32x32.png><meta name=generator content="mkdocs-1.6.1, mkdocs-material-9.5.42"><title>Building A Survey - SurveyCompo Docs</title><link rel=stylesheet href=../../assets/stylesheets/main.0253249f.min.css><link rel=stylesheet href=../../assets/stylesheets/palette.06af60db.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style><link rel=stylesheet href=../../stylesheets/extra.css><script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script><script id=__analytics>function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-M9G5HS23NK"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-M9G5HS23NK",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-M9G5HS23NK",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script><script>"undefined"!=typeof __md_analytics&&__md_analytics()</script></head> <body dir=ltr data-md-color-scheme=default data-md-color-primary=indigo data-md-color-accent=indigo> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#the-product-satisfaction-survey class=md-skip> Skip to content </a> </div> <div data-md-component=announce> </div> <header class="md-header md-header--shadow" data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Header> <a href=https://www.surveycompo.com title="SurveyCompo Docs" class="md-header__button md-logo" aria-label="SurveyCompo Docs" data-md-component=logo> <img src=../../assets/logo.png alt=logo> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> SurveyCompo Docs </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> Building A Survey </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media=(prefers-color-scheme) data-md-color-scheme=default data-md-color-primary=indigo data-md-color-accent=indigo aria-label="Switch to light mode" type=radio name=__palette id=__palette_0> <label class="md-header__button md-icon" title="Switch to light mode" for=__palette_1 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg> </label> <input class=md-option data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme=default data-md-color-primary=white data-md-color-accent=blue aria-label="Switch to dark mode" type=radio name=__palette id=__palette_1> <label class="md-header__button md-icon" title="Switch to dark mode" for=__palette_2 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg> </label> <input class=md-option data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme=slate data-md-color-primary=grey data-md-color-accent=blue aria-label="Switch to light mode" type=radio name=__palette id=__palette_2> <label class="md-header__button md-icon" title="Switch to light mode" for=__palette_0 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg> </label> </form> <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg> </label> <nav class=md-search__options aria-label=Search> <a href=javascript:void(0) class="md-search__icon md-icon" title=Share aria-label=Share data-clipboard data-clipboard-text data-md-component=search-share tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg> </a> <button type=reset class="md-search__icon md-icon" title=Clear aria-label=Clear tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg> </button> </nav> <div class=md-search__suggest data-md-component=search-suggest></div> </form> <div class=md-search__output> <div class=md-search__scrollwrap tabindex=0 data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list role=presentation></ol> </div> </div> </div> </div> </div> </nav> </header> <div class=md-container data-md-component=container> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--integrated" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=https://www.surveycompo.com title="SurveyCompo Docs" class="md-nav__button md-logo" aria-label="SurveyCompo Docs" data-md-component=logo> <img src=../../assets/logo.png alt=logo> </a> SurveyCompo Docs </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../.. class=md-nav__link> <span class=md-ellipsis> Introduction </span> </a> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2 checked> <label class=md-nav__link for=__nav_2 id=__nav_2_label tabindex=0> <span class=md-ellipsis> Tutorial </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_2_label aria-expanded=true> <label class=md-nav__title for=__nav_2> <span class="md-nav__icon md-icon"></span> Tutorial </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> <span class=md-ellipsis> Building A Survey </span> <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> <span class=md-ellipsis> Building A Survey </span> </a> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#the-product-satisfaction-survey class=md-nav__link> <span class=md-ellipsis> The Product Satisfaction Survey </span> </a> <nav class=md-nav aria-label="The Product Satisfaction Survey"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#about-you class=md-nav__link> <span class=md-ellipsis> About You </span> </a> </li> <li class=md-nav__item> <a href=#product-satisfaction class=md-nav__link> <span class=md-ellipsis> Product Satisfaction </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#surveycompo-survey-builder class=md-nav__link> <span class=md-ellipsis> SurveyCompo Survey Builder </span> </a> </li> <li class=md-nav__item> <a href=#creating-a-new-survey class=md-nav__link> <span class=md-ellipsis> Creating a New Survey </span> </a> </li> <li class=md-nav__item> <a href=#adding-the-start-screen class=md-nav__link> <span class=md-ellipsis> Adding the Start Screen </span> </a> </li> <li class=md-nav__item> <a href=#adding-the-first-page class=md-nav__link> <span class=md-ellipsis> Adding the First Page </span> </a> </li> <li class=md-nav__item> <a href=#adding-the-second-page class=md-nav__link> <span class=md-ellipsis> Adding the Second Page </span> </a> </li> <li class=md-nav__item> <a href=#adding-the-completion-screen class=md-nav__link> <span class=md-ellipsis> Adding the Completion Screen </span> </a> </li> <li class=md-nav__item> <a href=#randomization class=md-nav__link> <span class=md-ellipsis> Randomization </span> </a> </li> <li class=md-nav__item> <a href=#disqualification class=md-nav__link> <span class=md-ellipsis> Disqualification </span> </a> </li> <li class=md-nav__item> <a href=#piping class=md-nav__link> <span class=md-ellipsis> Piping </span> </a> </li> <li class=md-nav__item> <a href=#validation class=md-nav__link> <span class=md-ellipsis> Validation </span> </a> </li> <li class=md-nav__item> <a href=#conditional-logic class=md-nav__link> <span class=md-ellipsis> Conditional Logic </span> </a> </li> <li class=md-nav__item> <a href=#customization-with-theme class=md-nav__link> <span class=md-ellipsis> Customization with Theme </span> </a> </li> <li class=md-nav__item> <a href=#html-text class=md-nav__link> <span class=md-ellipsis> HTML Text </span> </a> </li> <li class=md-nav__item> <a href=#using-templates class=md-nav__link> <span class=md-ellipsis> Using Templates </span> </a> </li> <li class=md-nav__item> <a href=#adding-input-identifiers class=md-nav__link> <span class=md-ellipsis> Adding Input Identifiers </span> </a> </li> <li class=md-nav__item> <a href=#whats-next class=md-nav__link> <span class=md-ellipsis> What's Next? </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../publishing/ class=md-nav__link> <span class=md-ellipsis> Sharing A Survey </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_3> <label class=md-nav__link for=__nav_3 id=__nav_3_label tabindex=0> <span class=md-ellipsis> Data Models </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_3_label aria-expanded=false> <label class=md-nav__title for=__nav_3> <span class="md-nav__icon md-icon"></span> Data Models </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../data-models/survey/ class=md-nav__link> <span class=md-ellipsis> Survey </span> </a> </li> <li class=md-nav__item> <a href=../../data-models/screen/ class=md-nav__link> <span class=md-ellipsis> Screen </span> </a> </li> <li class=md-nav__item> <a href=../../data-models/page/ class=md-nav__link> <span class=md-ellipsis> Page </span> </a> </li> <li class=md-nav__item> <a href=../../data-models/block/ class=md-nav__link> <span class=md-ellipsis> Block </span> </a> </li> <li class=md-nav__item> <a href=../../data-models/input/ class=md-nav__link> <span class=md-ellipsis> Input </span> </a> </li> <li class=md-nav__item> <a href=../../data-models/other-models/ class=md-nav__link> <span class=md-ellipsis> Other models </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_4> <label class=md-nav__link for=__nav_4 id=__nav_4_label tabindex=0> <span class=md-ellipsis> Input Types </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_4_label aria-expanded=false> <label class=md-nav__title for=__nav_4> <span class="md-nav__icon md-icon"></span> Input Types </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../input-types/overview/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../input-types/checkbox/ class=md-nav__link> <span class=md-ellipsis> Checkbox </span> </a> </li> <li class=md-nav__item> <a href=../../input-types/checkbox-text/ class=md-nav__link> <span class=md-ellipsis> Checkbox text </span> </a> </li> <li class=md-nav__item> <a href=../../input-types/radio/ class=md-nav__link> <span class=md-ellipsis> Radio </span> </a> </li> <li class=md-nav__item> <a href=../../input-types/radio-text/ class=md-nav__link> <span class=md-ellipsis> RadioText </span> </a> </li> <li class=md-nav__item> <a href=../../input-types/text/ class=md-nav__link> <span class=md-ellipsis> Text </span> </a> </li> <li class=md-nav__item> <a href=../../input-types/textarea/ class=md-nav__link> <span class=md-ellipsis> Textarea </span> </a> </li> <li class=md-nav__item> <a href=../../input-types/dropdown/ class=md-nav__link> <span class=md-ellipsis> Dropdown </span> </a> </li> <li class=md-nav__item> <a href=../../input-types/number-scale/ class=md-nav__link> <span class=md-ellipsis> NumberScale </span> </a> </li> <li class=md-nav__item> <a href=../../input-types/star-scale/ class=md-nav__link> <span class=md-ellipsis> StarScale </span> </a> </li> <li class=md-nav__item> <a href=../../input-types/image/ class=md-nav__link> <span class=md-ellipsis> Image </span> </a> </li> <li class=md-nav__item> <a href=../../input-types/toggle/ class=md-nav__link> <span class=md-ellipsis> Toggle </span> </a> </li> <li class=md-nav__item> <a href=../../input-types/likert/ class=md-nav__link> <span class=md-ellipsis> Likert </span> </a> </li> <li class=md-nav__item> <a href=../../input-types/likert-matrix/ class=md-nav__link> <span class=md-ellipsis> LikertMatrix </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_5> <label class=md-nav__link for=__nav_5 id=__nav_5_label tabindex=0> <span class=md-ellipsis> Customization </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_5_label aria-expanded=false> <label class=md-nav__title for=__nav_5> <span class="md-nav__icon md-icon"></span> Customization </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../customization/overview/ class=md-nav__link> <span class=md-ellipsis> Style Overview </span> </a> </li> <li class=md-nav__item> <a href=../../customization/toplevel/ class=md-nav__link> <span class=md-ellipsis> Top Level Style </span> </a> </li> <li class=md-nav__item> <a href=../../customization/theme/ class=md-nav__link> <span class=md-ellipsis> Theme </span> </a> </li> <li class=md-nav__item> <a href=../../customization/css/ class=md-nav__link> <span class=md-ellipsis> Css </span> </a> </li> <li class=md-nav__item> <a href=../../customization/custom-html/ class=md-nav__link> <span class=md-ellipsis> Custom HTML </span> </a> </li> <li class=md-nav__item> <a href=../../customization/layout/ class=md-nav__link> <span class=md-ellipsis> Layout </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_6> <label class=md-nav__link for=__nav_6 id=__nav_6_label tabindex=0> <span class=md-ellipsis> Advanced Features </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_6_label aria-expanded=false> <label class=md-nav__title for=__nav_6> <span class="md-nav__icon md-icon"></span> Advanced Features </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../advanced/randomization/ class=md-nav__link> <span class=md-ellipsis> Randomization </span> </a> </li> <li class=md-nav__item> <a href=../../advanced/variables/ class=md-nav__link> <span class=md-ellipsis> Variables </span> </a> </li> <li class=md-nav__item> <a href=../../advanced/piping/ class=md-nav__link> <span class=md-ellipsis> Piping </span> </a> </li> <li class=md-nav__item> <a href=../../advanced/conditional-logic/ class=md-nav__link> <span class=md-ellipsis> Conditional Logic </span> </a> </li> <li class=md-nav__item> <a href=../../advanced/disqualification/ class=md-nav__link> <span class=md-ellipsis> Disqualification </span> </a> </li> <li class=md-nav__item> <a href=../../advanced/validation/ class=md-nav__link> <span class=md-ellipsis> Validation </span> </a> </li> <li class=md-nav__item> <a href=../../advanced/templates/ class=md-nav__link> <span class=md-ellipsis> Templates </span> </a> </li> <li class=md-nav__item> <a href=../../advanced/prefill/ class=md-nav__link> <span class=md-ellipsis> Prefilling </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../publish/ class=md-nav__link> <span class=md-ellipsis> Publish and Share </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_8> <label class=md-nav__link for=__nav_8 id=__nav_8_label tabindex=0> <span class=md-ellipsis> Integration </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_8_label aria-expanded=false> <label class=md-nav__title for=__nav_8> <span class="md-nav__icon md-icon"></span> Integration </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../integration/component/ class=md-nav__link> <span class=md-ellipsis> The Survey Component </span> </a> </li> <li class=md-nav__item> <a href=../../integration/event-and-api/ class=md-nav__link> <span class=md-ellipsis> Survey Events and API </span> </a> </li> <li class=md-nav__item> <a href=../../integration/data-collection/ class=md-nav__link> <span class=md-ellipsis> Data collection </span> </a> </li> <li class=md-nav__item> <a href=../../integration/webhooks/ class=md-nav__link> <span class=md-ellipsis> Webhooks </span> </a> </li> <li class=md-nav__item> <a href=../../integration/react/ class=md-nav__link> <span class=md-ellipsis> React.js </span> </a> </li> <li class=md-nav__item> <a href=../../integration/angular/ class=md-nav__link> <span class=md-ellipsis> Angular.js </span> </a> </li> <li class=md-nav__item> <a href=../../integration/vue/ class=md-nav__link> <span class=md-ellipsis> Vue.js </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_9> <label class=md-nav__link for=__nav_9 id=__nav_9_label tabindex=0> <span class=md-ellipsis> Miscellaneous </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_9_label aria-expanded=false> <label class=md-nav__title for=__nav_9> <span class="md-nav__icon md-icon"></span> Miscellaneous </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../miscellaneous/browser-supports/ class=md-nav__link> <span class=md-ellipsis> Browser Support </span> </a> </li> <li class=md-nav__item> <a href=../../miscellaneous/feedback-and-issues/ class=md-nav__link> <span class=md-ellipsis> Feedback & Issues </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../blog/ class=md-nav__link> <span class=md-ellipsis> Blog </span> </a> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <h1>Building A Survey</h1> <p>Welcome to the Getting Started Tutorial!</p> <p>In this guide, we’ll walk you through building a Product Satisfaction Survey using SurveyCompo. This type of survey is an excellent tool for gathering valuable customer feedback to better understand their needs and preferences. Throughout the tutorial, we'll cover the essentials of creating a survey, adding conditional logic, and leveraging advanced features to customize the survey experience to your requirements.</p> <h2 id=the-product-satisfaction-survey>The Product Satisfaction Survey</h2> <p>The survey starts with a welcome screen and concludes with a thank-you message. To gather demographic insights, we will ask participants about their age and preferred method of contact. Additionally, we’ll inquire about how participants learned about our product or service. The survey will assess product satisfaction using a rating scale and open-ended feedback questions. Participants under the age of 18 will be ineligible to complete the survey.</p> <p>Let's review the questions that will be included in our interactive survey:</p> <h3 id=about-you>About You</h3> <ul> <li><strong>Question 1</strong>: Please enter your age.</li> <li><strong>Question 2</strong>: What is your preferred method of contact?</li> <li><strong>Question 3</strong>: How did you hear about us?</li> </ul> <h3 id=product-satisfaction>Product Satisfaction</h3> <ul> <li><strong>Question 4</strong>: Overall, how satisfied are you with our product?</li> <li><strong>Question 5</strong>: What do you like most about our product? <em>(if satisfied)</em></li> <li><strong>Question 6</strong>: What could be improved about our product? <em>(if not satisfied)</em></li> </ul> <!-- todo: add screen shot and links to source code --> <div class="admonition tip"> <p class=admonition-title>Tip</p> <p>If you don’t have a SurveyCompo account yet, you can register for a free one at <a href=https://www.surveycompo.com/ >SurveyCompo</a>. Once registered, log in to the SurveyCompo Portal to start creating surveys.</p> </div> <h2 id=surveycompo-survey-builder>SurveyCompo Survey Builder</h2> <p>The SurveyCompo Survey Builder is a powerful tool for creating and managing surveys. Whether you prefer using the Visual Editor or working directly with JSON, our builder provides the flexibility and ease of use to suit your needs.</p> <p><img alt="Survey Builder" class="center embedded" src=../../assets/images/survey-builder.png></p> <p><strong>Key Features</strong>:</p> <ul> <li><strong>Intuitive Visual Editor</strong>: Build surveys with a drag-and-drop interface that requires no coding skills.</li> <li><strong>Advanced JSON Editing</strong>: Create and modify survey definitions directly in JSON using a feature-rich editor with auto-formatting, code hints, and validation.</li> <li><strong>Real-time Preview</strong>: Instantly view your survey as it takes shape while editing the JSON code.</li> <li><strong>Survey Templates</strong>: Jumpstart survey creation with a library of pre-made templates tailored to common use cases.</li> <li><strong>Theme Editor</strong>: Customize the look and feel of your survey with personalized colors, fonts, and styles.</li> <li><strong>Import/Export</strong>: Easily import JSON survey files or export your surveys for offline use.</li> </ul> <p>You can easily access the Survey Builder at <a href=https://app.surveycompo.com/surveys>https://app.surveycompo.com/surveys</a>.</p> <p>The following sections of this tutorial will explore the JSON data model used to define surveys in SurveyCompo. We will focus less on the visual interface of the Survey Builder itself. While the Survey Builder offers powerful tools for creating surveys, understanding the JSON data model gives you direct control and greater flexibility in designing your survey.</p> <h2 id=creating-a-new-survey>Creating a New Survey</h2> <p>To create a new survey, click the <strong>New Survey</strong> button on the <a href=https://app.surveycompo.com>SurveyCompo App</a>. You can start from scratch or choose from a list of pre-designed templates. For this tutorial, we will begin by creating a new survey from scratch.</p> <p>A minimal survey JSON source looks like this:</p> <div class=highlight><pre><span></span><code><a id=__codelineno-0-1 name=__codelineno-0-1 href=#__codelineno-0-1></a><span class=p>{</span>
+<a id=__codelineno-0-2 name=__codelineno-0-2 href=#__codelineno-0-2></a><span class=w>  </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction Survey&quot;</span>
+<a id=__codelineno-0-3 name=__codelineno-0-3 href=#__codelineno-0-3></a><span class=p>}</span>
+</code></pre></div> <p>The survey JSON source is a structured document that defines the survey's questions, answers, and logic. This JSON serves as the foundation for your survey and is used to build it within the Survey Builder. The <code>name</code> field is mandatory and is the only required key. It appears in the SurveyCompo Portal to help identify your survey.</p> <p>Next, let’s add the start screen.</p> <h2 id=adding-the-start-screen>Adding the Start Screen</h2> <p>The start screen is the first thing participants see when they begin the survey, introducing them and setting the stage for the questions ahead.</p> <p>Here's an example of the JSON source with a start screen:</p> <div class="tabbed-set tabbed-alternate" data-tabs=1:2><input checked=checked id=__tabbed_1_1 name=__tabbed_1 type=radio><input id=__tabbed_1_2 name=__tabbed_1 type=radio><div class=tabbed-labels><label for=__tabbed_1_1>JSON Code</label><label for=__tabbed_1_2>Visual Editor</label></div> <div class=tabbed-content> <div class=tabbed-block> <div class=highlight><pre><span></span><code><a id=__codelineno-1-1 name=__codelineno-1-1 href=#__codelineno-1-1></a><span class=p>{</span>
+<a id=__codelineno-1-2 name=__codelineno-1-2 href=#__codelineno-1-2></a><span class=w>  </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction Survey&quot;</span><span class=p>,</span>
+<a id=__codelineno-1-3 name=__codelineno-1-3 href=#__codelineno-1-3></a><span class=w>  </span><span class=nt>&quot;startScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-1-4 name=__codelineno-1-4 href=#__codelineno-1-4></a><span class=w>    </span><span class=p>{</span>
+<a id=__codelineno-1-5 name=__codelineno-1-5 href=#__codelineno-1-5></a><span class=w>      </span><span class=nt>&quot;header&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Welcome to Our Survey!&quot;</span><span class=p>,</span>
+<a id=__codelineno-1-6 name=__codelineno-1-6 href=#__codelineno-1-6></a><span class=w>      </span><span class=nt>&quot;description&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Thank you for participating.&quot;</span><span class=p>,</span>
+<a id=__codelineno-1-7 name=__codelineno-1-7 href=#__codelineno-1-7></a><span class=w>      </span><span class=nt>&quot;okButtonLabel&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Start Survey&quot;</span>
+<a id=__codelineno-1-8 name=__codelineno-1-8 href=#__codelineno-1-8></a><span class=w>    </span><span class=p>}</span>
+<a id=__codelineno-1-9 name=__codelineno-1-9 href=#__codelineno-1-9></a><span class=w>  </span><span class=p>]</span>
+<a id=__codelineno-1-10 name=__codelineno-1-10 href=#__codelineno-1-10></a><span class=p>}</span>
+</code></pre></div> </div> <div class=tabbed-block> <p><img alt="Tutorial - Welcome Screen Visual Editor" class="center embedded md" src=../../assets/images/tutorial-welcome-screen-form.png></p> </div> </div> </div> <p>The JSON for the start screen includes the following keys:</p> <ul> <li><code>header</code>: The title displayed on the welcome screen.</li> <li><code>description</code>: The introductory message shown to participants.</li> <li><code>okButtonLabel</code>: The text on the button participants click to begin the survey.</li> </ul> <p>The <code>startScreens</code> key is an array that can hold multiple start screens. If there are multiple screens, one is randomly selected when the survey loads. In this example, we only have a single screen.</p> <div class="admonition info"> <p class=admonition-title>Info</p> <p>For a comprehensive list of screen properties, refer to the <a href=/data-models/screen/ >Screen</a> documentation.</p> </div> <p>Let's preview the welcome screen in the Survey Builder.</p> <p><img alt="Tutorial - Welcome Screen" class="center small" src=../../assets/images/tutorial-welcome-screen.png></p> <h2 id=adding-the-first-page>Adding the First Page</h2> <p>The first page of the survey will ask participants to provide their personal info. We will add a text input field for this question.</p> <p>Here’s the JSON source for the first page:</p> <div class="tabbed-set tabbed-alternate" data-tabs=2:2><input checked=checked id=__tabbed_2_1 name=__tabbed_2 type=radio><input id=__tabbed_2_2 name=__tabbed_2 type=radio><div class=tabbed-labels><label for=__tabbed_2_1>JSON Code</label><label for=__tabbed_2_2>Visual Editor</label></div> <div class=tabbed-content> <div class=tabbed-block> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-2-1> 1</a></span>
+<span class=normal><a href=#__codelineno-2-2> 2</a></span>
+<span class=normal><a href=#__codelineno-2-3> 3</a></span>
+<span class=normal><a href=#__codelineno-2-4> 4</a></span>
+<span class=normal><a href=#__codelineno-2-5> 5</a></span>
+<span class=normal><a href=#__codelineno-2-6> 6</a></span>
+<span class=normal><a href=#__codelineno-2-7> 7</a></span>
+<span class=normal><a href=#__codelineno-2-8> 8</a></span>
+<span class=normal><a href=#__codelineno-2-9> 9</a></span>
+<span class=normal><a href=#__codelineno-2-10>10</a></span>
+<span class=normal><a href=#__codelineno-2-11>11</a></span>
+<span class=normal><a href=#__codelineno-2-12>12</a></span>
+<span class=normal><a href=#__codelineno-2-13>13</a></span>
+<span class=normal><a href=#__codelineno-2-14>14</a></span>
+<span class=normal><a href=#__codelineno-2-15>15</a></span>
+<span class=normal><a href=#__codelineno-2-16>16</a></span>
+<span class=normal><a href=#__codelineno-2-17>17</a></span>
+<span class=normal><a href=#__codelineno-2-18>18</a></span>
+<span class=normal><a href=#__codelineno-2-19>19</a></span>
+<span class=normal><a href=#__codelineno-2-20>20</a></span>
+<span class=normal><a href=#__codelineno-2-21>21</a></span>
+<span class=normal><a href=#__codelineno-2-22>22</a></span>
+<span class=normal><a href=#__codelineno-2-23>23</a></span>
+<span class=normal><a href=#__codelineno-2-24>24</a></span>
+<span class=normal><a href=#__codelineno-2-25>25</a></span>
+<span class=normal><a href=#__codelineno-2-26>26</a></span>
+<span class=normal><a href=#__codelineno-2-27>27</a></span>
+<span class=normal><a href=#__codelineno-2-28>28</a></span>
+<span class=normal><a href=#__codelineno-2-29>29</a></span>
+<span class=normal><a href=#__codelineno-2-30>30</a></span>
+<span class=normal><a href=#__codelineno-2-31>31</a></span>
+<span class=normal><a href=#__codelineno-2-32>32</a></span>
+<span class=normal><a href=#__codelineno-2-33>33</a></span>
+<span class=normal><a href=#__codelineno-2-34>34</a></span>
+<span class=normal><a href=#__codelineno-2-35>35</a></span>
+<span class=normal><a href=#__codelineno-2-36>36</a></span>
+<span class=normal><a href=#__codelineno-2-37>37</a></span>
+<span class=normal><a href=#__codelineno-2-38>38</a></span>
+<span class=normal><a href=#__codelineno-2-39>39</a></span>
+<span class=normal><a href=#__codelineno-2-40>40</a></span>
+<span class=normal><a href=#__codelineno-2-41>41</a></span>
+<span class=normal><a href=#__codelineno-2-42>42</a></span>
+<span class=normal><a href=#__codelineno-2-43>43</a></span>
+<span class=normal><a href=#__codelineno-2-44>44</a></span>
+<span class=normal><a href=#__codelineno-2-45>45</a></span>
+<span class=normal><a href=#__codelineno-2-46>46</a></span>
+<span class=normal><a href=#__codelineno-2-47>47</a></span>
+<span class=normal><a href=#__codelineno-2-48>48</a></span>
+<span class=normal><a href=#__codelineno-2-49>49</a></span>
+<span class=normal><a href=#__codelineno-2-50>50</a></span>
+<span class=normal><a href=#__codelineno-2-51>51</a></span>
+<span class=normal><a href=#__codelineno-2-52>52</a></span>
+<span class=normal><a href=#__codelineno-2-53>53</a></span>
+<span class=normal><a href=#__codelineno-2-54>54</a></span>
+<span class=normal><a href=#__codelineno-2-55>55</a></span>
+<span class=normal><a href=#__codelineno-2-56>56</a></span>
+<span class=normal><a href=#__codelineno-2-57>57</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-2-1 name=__codelineno-2-1></a><span class=p>{</span>
+<a id=__codelineno-2-2 name=__codelineno-2-2></a><span class=w>  </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction Survey&quot;</span><span class=p>,</span>
+<a id=__codelineno-2-3 name=__codelineno-2-3></a><span class=w>  </span><span class=nt>&quot;startScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-2-4 name=__codelineno-2-4></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-2-5 name=__codelineno-2-5></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-2-6 name=__codelineno-2-6></a><span class=w>  </span><span class=nt>&quot;pages&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-2-7 name=__codelineno-2-7></a><span class=hll><span class=w>    </span><span class=p>{</span>
+</span><a id=__codelineno-2-8 name=__codelineno-2-8></a><span class=hll><span class=w>      </span><span class=nt>&quot;header&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;About You&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-2-9 name=__codelineno-2-9></a><span class=hll><span class=w>      </span><span class=nt>&quot;blocks&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+</span><a id=__codelineno-2-10 name=__codelineno-2-10></a><span class=hll><span class=w>        </span><span class=p>{</span>
+</span><a id=__codelineno-2-11 name=__codelineno-2-11></a><span class=hll><span class=w>          </span><span class=nt>&quot;title&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Please enter your age&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-2-12 name=__codelineno-2-12></a><span class=hll><span class=w>          </span><span class=nt>&quot;inputs&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+</span><a id=__codelineno-2-13 name=__codelineno-2-13></a><span class=hll><span class=w>            </span><span class=p>{</span>
+</span><a id=__codelineno-2-14 name=__codelineno-2-14></a><span class=hll><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;TEXT&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-2-15 name=__codelineno-2-15></a><span class=hll><span class=w>              </span><span class=nt>&quot;textInputType&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;NUMBER&quot;</span>
+</span><a id=__codelineno-2-16 name=__codelineno-2-16></a><span class=hll><span class=w>            </span><span class=p>}</span>
+</span><a id=__codelineno-2-17 name=__codelineno-2-17></a><span class=hll><span class=w>          </span><span class=p>]</span>
+</span><a id=__codelineno-2-18 name=__codelineno-2-18></a><span class=hll><span class=w>        </span><span class=p>},</span>
+</span><a id=__codelineno-2-19 name=__codelineno-2-19></a><span class=hll><span class=w>        </span><span class=p>{</span>
+</span><a id=__codelineno-2-20 name=__codelineno-2-20></a><span class=hll><span class=w>          </span><span class=nt>&quot;title&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;What is your preferred method of contact?&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-2-21 name=__codelineno-2-21></a><span class=hll><span class=w>          </span><span class=nt>&quot;inputs&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+</span><a id=__codelineno-2-22 name=__codelineno-2-22></a><span class=hll><span class=w>            </span><span class=p>{</span>
+</span><a id=__codelineno-2-23 name=__codelineno-2-23></a><span class=hll><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;DROPDOWN&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-2-24 name=__codelineno-2-24></a><span class=hll><span class=w>              </span><span class=nt>&quot;hint&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Please select&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-2-25 name=__codelineno-2-25></a><span class=hll><span class=w>              </span><span class=nt>&quot;dropdownInputOptions&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span><span class=s2>&quot;Email&quot;</span><span class=p>,</span><span class=w> </span><span class=s2>&quot;Phone&quot;</span><span class=p>,</span><span class=w> </span><span class=s2>&quot;Text Message&quot;</span><span class=p>]</span>
+</span><a id=__codelineno-2-26 name=__codelineno-2-26></a><span class=hll><span class=w>            </span><span class=p>}</span>
+</span><a id=__codelineno-2-27 name=__codelineno-2-27></a><span class=hll><span class=w>          </span><span class=p>]</span>
+</span><a id=__codelineno-2-28 name=__codelineno-2-28></a><span class=hll><span class=w>        </span><span class=p>},</span>
+</span><a id=__codelineno-2-29 name=__codelineno-2-29></a><span class=hll><span class=w>        </span><span class=p>{</span>
+</span><a id=__codelineno-2-30 name=__codelineno-2-30></a><span class=hll><span class=w>          </span><span class=nt>&quot;title&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;How did you hear about us?&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-2-31 name=__codelineno-2-31></a><span class=hll><span class=w>          </span><span class=nt>&quot;inputs&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+</span><a id=__codelineno-2-32 name=__codelineno-2-32></a><span class=hll><span class=w>            </span><span class=p>{</span>
+</span><a id=__codelineno-2-33 name=__codelineno-2-33></a><span class=hll><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;CHECKBOX&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-2-34 name=__codelineno-2-34></a><span class=hll><span class=w>              </span><span class=nt>&quot;label&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Friend/Family&quot;</span>
+</span><a id=__codelineno-2-35 name=__codelineno-2-35></a><span class=hll><span class=w>            </span><span class=p>},</span>
+</span><a id=__codelineno-2-36 name=__codelineno-2-36></a><span class=hll><span class=w>            </span><span class=p>{</span>
+</span><a id=__codelineno-2-37 name=__codelineno-2-37></a><span class=hll><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;CHECKBOX&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-2-38 name=__codelineno-2-38></a><span class=hll><span class=w>              </span><span class=nt>&quot;label&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Online Ad&quot;</span>
+</span><a id=__codelineno-2-39 name=__codelineno-2-39></a><span class=hll><span class=w>            </span><span class=p>},</span>
+</span><a id=__codelineno-2-40 name=__codelineno-2-40></a><span class=hll><span class=w>            </span><span class=p>{</span>
+</span><a id=__codelineno-2-41 name=__codelineno-2-41></a><span class=hll><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;CHECKBOX&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-2-42 name=__codelineno-2-42></a><span class=hll><span class=w>              </span><span class=nt>&quot;label&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Social Media&quot;</span>
+</span><a id=__codelineno-2-43 name=__codelineno-2-43></a><span class=hll><span class=w>            </span><span class=p>},</span>
+</span><a id=__codelineno-2-44 name=__codelineno-2-44></a><span class=hll><span class=w>            </span><span class=p>{</span>
+</span><a id=__codelineno-2-45 name=__codelineno-2-45></a><span class=hll><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;CHECKBOX&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-2-46 name=__codelineno-2-46></a><span class=hll><span class=w>              </span><span class=nt>&quot;label&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Search Engine&quot;</span>
+</span><a id=__codelineno-2-47 name=__codelineno-2-47></a><span class=hll><span class=w>            </span><span class=p>},</span>
+</span><a id=__codelineno-2-48 name=__codelineno-2-48></a><span class=hll><span class=w>            </span><span class=p>{</span>
+</span><a id=__codelineno-2-49 name=__codelineno-2-49></a><span class=hll><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;CHECKBOX_TEXT&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-2-50 name=__codelineno-2-50></a><span class=hll><span class=w>              </span><span class=nt>&quot;label&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Others&quot;</span>
+</span><a id=__codelineno-2-51 name=__codelineno-2-51></a><span class=hll><span class=w>            </span><span class=p>}</span>
+</span><a id=__codelineno-2-52 name=__codelineno-2-52></a><span class=hll><span class=w>          </span><span class=p>]</span>
+</span><a id=__codelineno-2-53 name=__codelineno-2-53></a><span class=hll><span class=w>        </span><span class=p>}</span>
+</span><a id=__codelineno-2-54 name=__codelineno-2-54></a><span class=hll><span class=w>      </span><span class=p>]</span>
+</span><a id=__codelineno-2-55 name=__codelineno-2-55></a><span class=hll><span class=w>    </span><span class=p>}</span>
+</span><a id=__codelineno-2-56 name=__codelineno-2-56></a><span class=w>  </span><span class=p>]</span>
+<a id=__codelineno-2-57 name=__codelineno-2-57></a><span class=p>}</span>
+</code></pre></div></td></tr></table></div> </div> <div class=tabbed-block> <p><img alt="Tutorial - First Page Visual Editor" class="center embedded md" src=../../assets/images/tutorial-first-page-form.png></p> </div> </div> </div> <p>The JSON source for the first page includes the following keys:</p> <ul> <li><strong><code>header</code></strong>: The page header.</li> <li><strong><code>blocks</code></strong>: An array containing three blocks, each representing a section of the page with questions or content.</li> </ul> <p>Each block includes:</p> <ul> <li><strong><code>title</code></strong>: The title of the block, which serves as the question text.</li> <li><strong><code>inputs</code></strong>: An array of input fields within the block.</li> </ul> <p>For the '<strong>Age</strong>' question input:</p> <ul> <li><strong><code>type</code></strong>: Specifies it as a text input field.</li> <li><strong><code>textInputType</code></strong>: Indicates that it expects a number input.</li> </ul> <p>For the '<strong>Method of Contact</strong>' question input:</p> <ul> <li><strong><code>type</code></strong>: Specifies it as a dropdown input field.</li> <li><strong><code>hint</code></strong>: Displays a hint within the dropdown.</li> <li><strong><code>dropdownInputOptions</code></strong>: An array offering the options for the dropdown.</li> </ul> <p>For the '<strong>How did you hear about us?</strong>' question input:</p> <ul> <li><strong><code>type</code></strong>: Specifies it as a checkbox input field.</li> <li><strong><code>label</code></strong>: Displays the label or question text for the input field.</li> </ul> <p>Note that the last input field uses <strong><code>CHECKBOX_TEXT</code></strong>, which includes a text input field for additional participant information.</p> <div class="admonition tip"> <p class=admonition-title>Tip</p> <p>The values for the <strong><code>type</code></strong> and <strong><code>textInputType</code></strong> keys are case-insensitive. You can use uppercase, lowercase, or a mix of both, but for consistency, it's recommended to use UPPERCASE.</p> </div> <div class="admonition info"> <p class=admonition-title>Info</p> <p>The <strong><code>type</code></strong> key specifies the type of input field displayed in the survey. SurveyCompo supports various input types such as text, radio buttons, checkboxes, dropdowns, and more. For a complete list of input properties, refer to the <a href=/input-types/overview>Input documentation</a>.</p> </div> <p>Let’s add the first page into our survey JSON source and preview it in the Survey Builder.</p> <p><img alt="Tutorial - First Page" class="center small" src=../../assets/images/tutorial-first-page.png></p> <h2 id=adding-the-second-page>Adding the Second Page</h2> <p>The second page of the survey will prompt participants to rate their overall satisfaction with our product.</p> <p>Here's the JSON source for the second page:</p> <div class="tabbed-set tabbed-alternate" data-tabs=3:2><input checked=checked id=__tabbed_3_1 name=__tabbed_3 type=radio><input id=__tabbed_3_2 name=__tabbed_3 type=radio><div class=tabbed-labels><label for=__tabbed_3_1>JSON Source</label><label for=__tabbed_3_2>Visual Editor</label></div> <div class=tabbed-content> <div class=tabbed-block> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-3-1> 1</a></span>
+<span class=normal><a href=#__codelineno-3-2> 2</a></span>
+<span class=normal><a href=#__codelineno-3-3> 3</a></span>
+<span class=normal><a href=#__codelineno-3-4> 4</a></span>
+<span class=normal><a href=#__codelineno-3-5> 5</a></span>
+<span class=normal><a href=#__codelineno-3-6> 6</a></span>
+<span class=normal><a href=#__codelineno-3-7> 7</a></span>
+<span class=normal><a href=#__codelineno-3-8> 8</a></span>
+<span class=normal><a href=#__codelineno-3-9> 9</a></span>
+<span class=normal><a href=#__codelineno-3-10>10</a></span>
+<span class=normal><a href=#__codelineno-3-11>11</a></span>
+<span class=normal><a href=#__codelineno-3-12>12</a></span>
+<span class=normal><a href=#__codelineno-3-13>13</a></span>
+<span class=normal><a href=#__codelineno-3-14>14</a></span>
+<span class=normal><a href=#__codelineno-3-15>15</a></span>
+<span class=normal><a href=#__codelineno-3-16>16</a></span>
+<span class=normal><a href=#__codelineno-3-17>17</a></span>
+<span class=normal><a href=#__codelineno-3-18>18</a></span>
+<span class=normal><a href=#__codelineno-3-19>19</a></span>
+<span class=normal><a href=#__codelineno-3-20>20</a></span>
+<span class=normal><a href=#__codelineno-3-21>21</a></span>
+<span class=normal><a href=#__codelineno-3-22>22</a></span>
+<span class=normal><a href=#__codelineno-3-23>23</a></span>
+<span class=normal><a href=#__codelineno-3-24>24</a></span>
+<span class=normal><a href=#__codelineno-3-25>25</a></span>
+<span class=normal><a href=#__codelineno-3-26>26</a></span>
+<span class=normal><a href=#__codelineno-3-27>27</a></span>
+<span class=normal><a href=#__codelineno-3-28>28</a></span>
+<span class=normal><a href=#__codelineno-3-29>29</a></span>
+<span class=normal><a href=#__codelineno-3-30>30</a></span>
+<span class=normal><a href=#__codelineno-3-31>31</a></span>
+<span class=normal><a href=#__codelineno-3-32>32</a></span>
+<span class=normal><a href=#__codelineno-3-33>33</a></span>
+<span class=normal><a href=#__codelineno-3-34>34</a></span>
+<span class=normal><a href=#__codelineno-3-35>35</a></span>
+<span class=normal><a href=#__codelineno-3-36>36</a></span>
+<span class=normal><a href=#__codelineno-3-37>37</a></span>
+<span class=normal><a href=#__codelineno-3-38>38</a></span>
+<span class=normal><a href=#__codelineno-3-39>39</a></span>
+<span class=normal><a href=#__codelineno-3-40>40</a></span>
+<span class=normal><a href=#__codelineno-3-41>41</a></span>
+<span class=normal><a href=#__codelineno-3-42>42</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-3-1 name=__codelineno-3-1></a><span class=p>{</span>
+<a id=__codelineno-3-2 name=__codelineno-3-2></a><span class=w>  </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction Survey&quot;</span><span class=p>,</span>
+<a id=__codelineno-3-3 name=__codelineno-3-3></a><span class=w>  </span><span class=nt>&quot;startScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-3-4 name=__codelineno-3-4></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-3-5 name=__codelineno-3-5></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-3-6 name=__codelineno-3-6></a><span class=w>  </span><span class=nt>&quot;pages&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-3-7 name=__codelineno-3-7></a><span class=w>    </span><span class=cm>/* ... First Page ... */</span>
+<a id=__codelineno-3-8 name=__codelineno-3-8></a><span class=hll><span class=w>    </span><span class=p>{</span>
+</span><a id=__codelineno-3-9 name=__codelineno-3-9></a><span class=hll><span class=w>      </span><span class=nt>&quot;header&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-3-10 name=__codelineno-3-10></a><span class=hll><span class=w>      </span><span class=nt>&quot;blocks&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+</span><a id=__codelineno-3-11 name=__codelineno-3-11></a><span class=hll><span class=w>        </span><span class=p>{</span>
+</span><a id=__codelineno-3-12 name=__codelineno-3-12></a><span class=hll><span class=w>          </span><span class=nt>&quot;title&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Overall, how satisfied are you with our product?&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-3-13 name=__codelineno-3-13></a><span class=hll><span class=w>          </span><span class=nt>&quot;inputs&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+</span><a id=__codelineno-3-14 name=__codelineno-3-14></a><span class=hll><span class=w>            </span><span class=p>{</span>
+</span><a id=__codelineno-3-15 name=__codelineno-3-15></a><span class=hll><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;LIKERT_SCALE&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-3-16 name=__codelineno-3-16></a><span class=hll><span class=w>              </span><span class=nt>&quot;likertInputPreset&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;SATISFACTION&quot;</span>
+</span><a id=__codelineno-3-17 name=__codelineno-3-17></a><span class=hll><span class=w>            </span><span class=p>}</span>
+</span><a id=__codelineno-3-18 name=__codelineno-3-18></a><span class=hll><span class=w>          </span><span class=p>]</span>
+</span><a id=__codelineno-3-19 name=__codelineno-3-19></a><span class=hll><span class=w>        </span><span class=p>},</span>
+</span><a id=__codelineno-3-20 name=__codelineno-3-20></a><span class=hll><span class=w>        </span><span class=p>{</span>
+</span><a id=__codelineno-3-21 name=__codelineno-3-21></a><span class=hll><span class=w>          </span><span class=nt>&quot;title&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;What do you like most about our product?&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-3-22 name=__codelineno-3-22></a><span class=hll><span class=w>          </span><span class=nt>&quot;inputs&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+</span><a id=__codelineno-3-23 name=__codelineno-3-23></a><span class=hll><span class=w>            </span><span class=p>{</span>
+</span><a id=__codelineno-3-24 name=__codelineno-3-24></a><span class=hll><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;TEXTAREA&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-3-25 name=__codelineno-3-25></a><span class=hll><span class=w>              </span><span class=nt>&quot;hint&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Please share your thoughts&quot;</span>
+</span><a id=__codelineno-3-26 name=__codelineno-3-26></a><span class=hll><span class=w>            </span><span class=p>}</span>
+</span><a id=__codelineno-3-27 name=__codelineno-3-27></a><span class=hll><span class=w>          </span><span class=p>]</span>
+</span><a id=__codelineno-3-28 name=__codelineno-3-28></a><span class=hll><span class=w>        </span><span class=p>},</span>
+</span><a id=__codelineno-3-29 name=__codelineno-3-29></a><span class=hll><span class=w>        </span><span class=p>{</span>
+</span><a id=__codelineno-3-30 name=__codelineno-3-30></a><span class=hll><span class=w>          </span><span class=nt>&quot;title&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;What could be improved about our product?&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-3-31 name=__codelineno-3-31></a><span class=hll><span class=w>          </span><span class=nt>&quot;inputs&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+</span><a id=__codelineno-3-32 name=__codelineno-3-32></a><span class=hll><span class=w>            </span><span class=p>{</span>
+</span><a id=__codelineno-3-33 name=__codelineno-3-33></a><span class=hll><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;TEXTAREA&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-3-34 name=__codelineno-3-34></a><span class=hll><span class=w>              </span><span class=nt>&quot;hint&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Please share your thoughts&quot;</span>
+</span><a id=__codelineno-3-35 name=__codelineno-3-35></a><span class=hll><span class=w>            </span><span class=p>}</span>
+</span><a id=__codelineno-3-36 name=__codelineno-3-36></a><span class=hll><span class=w>          </span><span class=p>]</span>
+</span><a id=__codelineno-3-37 name=__codelineno-3-37></a><span class=hll><span class=w>        </span><span class=p>}</span>
+</span><a id=__codelineno-3-38 name=__codelineno-3-38></a><span class=hll><span class=w>      </span><span class=p>],</span>
+</span><a id=__codelineno-3-39 name=__codelineno-3-39></a><span class=hll><span class=w>      </span><span class=nt>&quot;nextButtonLabel&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Submit&quot;</span>
+</span><a id=__codelineno-3-40 name=__codelineno-3-40></a><span class=hll><span class=w>    </span><span class=p>}</span>
+</span><a id=__codelineno-3-41 name=__codelineno-3-41></a><span class=w>  </span><span class=p>]</span>
+<a id=__codelineno-3-42 name=__codelineno-3-42></a><span class=p>}</span>
+</code></pre></div></td></tr></table></div> </div> <div class=tabbed-block> <p><img alt="Tutorial - Second Page Visual Editor" class="center embedded md" src=../../assets/images/tutorial-second-page-form.png></p> </div> </div> </div> <p>The second page of the survey includes three blocks/questions:</p> <ul> <li> <p>The <strong><code>Overall satisfaction</code></strong> question uses an input of type <strong><code>LIKERT_SCALE</code></strong>. Instead of specifying options directly with <code>likertInputOptions</code>, SurveyCompo provides presets to simplify survey creation. In this case, we use <code>likertInputPreset</code> to apply a 5-point satisfaction scale called <strong><code>SATISFACTION</code></strong>.</p> </li> <li> <p>The following two questions ask participants for open-ended feedback on what they like most and what could be improved about the product. These questions use a <strong><code>TEXTAREA</code></strong> input field.</p> </li> </ul> <div class="admonition info"> <p class=admonition-title>Info</p> <p>The <strong><code>LIKERT_SCALE</code></strong> input acts similarly to a collection of <code>RADIO</code> inputs, making it an effective tool for gathering feedback on a scale. SurveyCompo offers several Likert scale presets such as <strong><code>SATISFACTION</code></strong>, <strong><code>LIKELIHOOD</code></strong>, and <strong><code>AGREEMENT</code></strong> to simplify survey creation. For a full list of available Likert scale presets, refer to the <a href=/input-types/likert/ >Likert Scale documentation</a>.</p> </div> <p>Let’s preview the second page in the Survey Builder.</p> <p><img alt="Tutorial - Second Page" class="center small" src=../../assets/images/tutorial-second-page.png></p> <p>The <strong><code>nextButtonLabel</code></strong> key is set to "Submit," serving as the label on the button participants click to proceed to the next page. If left unspecified, the default label is "Next." As multiple pages are added, a navigation bar appears at the bottom of each page. This bar allows participants to navigate between pages and shows the current page number alongside the total number of pages in the survey. To hide the navigation bar, use the <strong><code>uiShowNavigation</code></strong> survey key. For more details, refer to the <a href=/data-models/survey/#survey-data-keys>Survey Data Key documentation</a>.</p> <h2 id=adding-the-completion-screen>Adding the Completion Screen</h2> <p>The final screen of the survey is the completion screen. It provides participants with a closing message and confirms that their responses have been recorded.</p> <p>Here’s the JSON source for the completion screen:</p> <div class="tabbed-set tabbed-alternate" data-tabs=4:2><input checked=checked id=__tabbed_4_1 name=__tabbed_4 type=radio><input id=__tabbed_4_2 name=__tabbed_4 type=radio><div class=tabbed-labels><label for=__tabbed_4_1>JSON Source</label><label for=__tabbed_4_2>Visual Editor</label></div> <div class=tabbed-content> <div class=tabbed-block> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-4-1> 1</a></span>
+<span class=normal><a href=#__codelineno-4-2> 2</a></span>
+<span class=normal><a href=#__codelineno-4-3> 3</a></span>
+<span class=normal><a href=#__codelineno-4-4> 4</a></span>
+<span class=normal><a href=#__codelineno-4-5> 5</a></span>
+<span class=normal><a href=#__codelineno-4-6> 6</a></span>
+<span class=normal><a href=#__codelineno-4-7> 7</a></span>
+<span class=normal><a href=#__codelineno-4-8> 8</a></span>
+<span class=normal><a href=#__codelineno-4-9> 9</a></span>
+<span class=normal><a href=#__codelineno-4-10>10</a></span>
+<span class=normal><a href=#__codelineno-4-11>11</a></span>
+<span class=normal><a href=#__codelineno-4-12>12</a></span>
+<span class=normal><a href=#__codelineno-4-13>13</a></span>
+<span class=normal><a href=#__codelineno-4-14>14</a></span>
+<span class=normal><a href=#__codelineno-4-15>15</a></span>
+<span class=normal><a href=#__codelineno-4-16>16</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-4-1 name=__codelineno-4-1></a><span class=p>{</span>
+<a id=__codelineno-4-2 name=__codelineno-4-2></a><span class=w>  </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction Survey&quot;</span><span class=p>,</span>
+<a id=__codelineno-4-3 name=__codelineno-4-3></a><span class=w>  </span><span class=nt>&quot;startScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-4-4 name=__codelineno-4-4></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-4-5 name=__codelineno-4-5></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-4-6 name=__codelineno-4-6></a><span class=w>  </span><span class=nt>&quot;pages&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-4-7 name=__codelineno-4-7></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-4-8 name=__codelineno-4-8></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-4-9 name=__codelineno-4-9></a><span class=w>  </span><span class=nt>&quot;completeScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-4-10 name=__codelineno-4-10></a><span class=hll><span class=w>    </span><span class=p>{</span>
+</span><a id=__codelineno-4-11 name=__codelineno-4-11></a><span class=hll><span class=w>      </span><span class=nt>&quot;header&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Thank You!&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-4-12 name=__codelineno-4-12></a><span class=hll><span class=w>      </span><span class=nt>&quot;description&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Your feedback is greatly appreciated.&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-4-13 name=__codelineno-4-13></a><span class=hll><span class=w>      </span><span class=nt>&quot;okButtonLabel&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Close&quot;</span>
+</span><a id=__codelineno-4-14 name=__codelineno-4-14></a><span class=hll><span class=w>    </span><span class=p>}</span>
+</span><a id=__codelineno-4-15 name=__codelineno-4-15></a><span class=w>  </span><span class=p>]</span>
+<a id=__codelineno-4-16 name=__codelineno-4-16></a><span class=p>}</span>
+</code></pre></div></td></tr></table></div> </div> <div class=tabbed-block> <p><img alt="Tutorial - Complete Screen Visual Editor" class="center embedded md" src=../../assets/images/tutorial-complete-screen-form.png></p> </div> </div> </div> <p>Let's preview the complete screen in the Survey Builder.</p> <p><img alt="Tutorial - Complete Screen" class="center small" src=../../assets/images/tutorial-complete-screen.png></p> <h2 id=randomization>Randomization</h2> <p>SurveyCompo supports randomizing questions and answer options, a valuable feature for reducing bias and providing each participant with a unique survey experience. Randomization can be applied to pages, blocks, and inputs. For more detailed guidance on implementing randomization, refer to the <a href=/advanced/randomization>Randomization documentation</a>.</p> <p>In this tutorial, we will add randomization to the "How did you hear about us?" question, ensuring the input options are randomized to avoid order bias.</p> <div class="tabbed-set tabbed-alternate" data-tabs=5:2><input checked=checked id=__tabbed_5_1 name=__tabbed_5 type=radio><input id=__tabbed_5_2 name=__tabbed_5 type=radio><div class=tabbed-labels><label for=__tabbed_5_1>JSON Source</label><label for=__tabbed_5_2>Visual Editor</label></div> <div class=tabbed-content> <div class=tabbed-block> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-5-1> 1</a></span>
+<span class=normal><a href=#__codelineno-5-2> 2</a></span>
+<span class=normal><a href=#__codelineno-5-3> 3</a></span>
+<span class=normal><a href=#__codelineno-5-4> 4</a></span>
+<span class=normal><a href=#__codelineno-5-5> 5</a></span>
+<span class=normal><a href=#__codelineno-5-6> 6</a></span>
+<span class=normal><a href=#__codelineno-5-7> 7</a></span>
+<span class=normal><a href=#__codelineno-5-8> 8</a></span>
+<span class=normal><a href=#__codelineno-5-9> 9</a></span>
+<span class=normal><a href=#__codelineno-5-10>10</a></span>
+<span class=normal><a href=#__codelineno-5-11>11</a></span>
+<span class=normal><a href=#__codelineno-5-12>12</a></span>
+<span class=normal><a href=#__codelineno-5-13>13</a></span>
+<span class=normal><a href=#__codelineno-5-14>14</a></span>
+<span class=normal><a href=#__codelineno-5-15>15</a></span>
+<span class=normal><a href=#__codelineno-5-16>16</a></span>
+<span class=normal><a href=#__codelineno-5-17>17</a></span>
+<span class=normal><a href=#__codelineno-5-18>18</a></span>
+<span class=normal><a href=#__codelineno-5-19>19</a></span>
+<span class=normal><a href=#__codelineno-5-20>20</a></span>
+<span class=normal><a href=#__codelineno-5-21>21</a></span>
+<span class=normal><a href=#__codelineno-5-22>22</a></span>
+<span class=normal><a href=#__codelineno-5-23>23</a></span>
+<span class=normal><a href=#__codelineno-5-24>24</a></span>
+<span class=normal><a href=#__codelineno-5-25>25</a></span>
+<span class=normal><a href=#__codelineno-5-26>26</a></span>
+<span class=normal><a href=#__codelineno-5-27>27</a></span>
+<span class=normal><a href=#__codelineno-5-28>28</a></span>
+<span class=normal><a href=#__codelineno-5-29>29</a></span>
+<span class=normal><a href=#__codelineno-5-30>30</a></span>
+<span class=normal><a href=#__codelineno-5-31>31</a></span>
+<span class=normal><a href=#__codelineno-5-32>32</a></span>
+<span class=normal><a href=#__codelineno-5-33>33</a></span>
+<span class=normal><a href=#__codelineno-5-34>34</a></span>
+<span class=normal><a href=#__codelineno-5-35>35</a></span>
+<span class=normal><a href=#__codelineno-5-36>36</a></span>
+<span class=normal><a href=#__codelineno-5-37>37</a></span>
+<span class=normal><a href=#__codelineno-5-38>38</a></span>
+<span class=normal><a href=#__codelineno-5-39>39</a></span>
+<span class=normal><a href=#__codelineno-5-40>40</a></span>
+<span class=normal><a href=#__codelineno-5-41>41</a></span>
+<span class=normal><a href=#__codelineno-5-42>42</a></span>
+<span class=normal><a href=#__codelineno-5-43>43</a></span>
+<span class=normal><a href=#__codelineno-5-44>44</a></span>
+<span class=normal><a href=#__codelineno-5-45>45</a></span>
+<span class=normal><a href=#__codelineno-5-46>46</a></span>
+<span class=normal><a href=#__codelineno-5-47>47</a></span>
+<span class=normal><a href=#__codelineno-5-48>48</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-5-1 name=__codelineno-5-1></a><span class=p>{</span>
+<a id=__codelineno-5-2 name=__codelineno-5-2></a><span class=w>  </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction Survey&quot;</span><span class=p>,</span>
+<a id=__codelineno-5-3 name=__codelineno-5-3></a><span class=w>  </span><span class=nt>&quot;startScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-5-4 name=__codelineno-5-4></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-5-5 name=__codelineno-5-5></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-5-6 name=__codelineno-5-6></a><span class=w>  </span><span class=nt>&quot;pages&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-5-7 name=__codelineno-5-7></a><span class=w>    </span><span class=p>{</span>
+<a id=__codelineno-5-8 name=__codelineno-5-8></a><span class=w>      </span><span class=nt>&quot;header&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction&quot;</span><span class=p>,</span>
+<a id=__codelineno-5-9 name=__codelineno-5-9></a><span class=w>      </span><span class=nt>&quot;blocks&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-5-10 name=__codelineno-5-10></a><span class=w>        </span><span class=cm>/* ... first block ...  */</span>
+<a id=__codelineno-5-11 name=__codelineno-5-11></a><span class=w>        </span><span class=cm>/* ... second block ... */</span>
+<a id=__codelineno-5-12 name=__codelineno-5-12></a><span class=w>        </span><span class=p>{</span>
+<a id=__codelineno-5-13 name=__codelineno-5-13></a><span class=w>          </span><span class=nt>&quot;title&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;How did you hear about us?&quot;</span><span class=p>,</span>
+<a id=__codelineno-5-14 name=__codelineno-5-14></a><span class=w>          </span><span class=nt>&quot;inputs&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-5-15 name=__codelineno-5-15></a><span class=w>            </span><span class=p>{</span>
+<a id=__codelineno-5-16 name=__codelineno-5-16></a><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;CHECKBOX&quot;</span><span class=p>,</span>
+<a id=__codelineno-5-17 name=__codelineno-5-17></a><span class=hll><span class=w>              </span><span class=nt>&quot;randomWithinGroup&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;something&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-5-18 name=__codelineno-5-18></a><span class=w>              </span><span class=nt>&quot;label&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Friend/Family&quot;</span>
+<a id=__codelineno-5-19 name=__codelineno-5-19></a><span class=w>            </span><span class=p>},</span>
+<a id=__codelineno-5-20 name=__codelineno-5-20></a><span class=w>            </span><span class=p>{</span>
+<a id=__codelineno-5-21 name=__codelineno-5-21></a><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;CHECKBOX&quot;</span><span class=p>,</span>
+<a id=__codelineno-5-22 name=__codelineno-5-22></a><span class=hll><span class=w>              </span><span class=nt>&quot;randomWithinGroup&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;something&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-5-23 name=__codelineno-5-23></a><span class=w>              </span><span class=nt>&quot;label&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Online Ad&quot;</span>
+<a id=__codelineno-5-24 name=__codelineno-5-24></a><span class=w>            </span><span class=p>},</span>
+<a id=__codelineno-5-25 name=__codelineno-5-25></a><span class=w>            </span><span class=p>{</span>
+<a id=__codelineno-5-26 name=__codelineno-5-26></a><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;CHECKBOX&quot;</span><span class=p>,</span>
+<a id=__codelineno-5-27 name=__codelineno-5-27></a><span class=hll><span class=w>              </span><span class=nt>&quot;randomWithinGroup&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;something&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-5-28 name=__codelineno-5-28></a><span class=w>              </span><span class=nt>&quot;label&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Social Media&quot;</span>
+<a id=__codelineno-5-29 name=__codelineno-5-29></a><span class=w>            </span><span class=p>},</span>
+<a id=__codelineno-5-30 name=__codelineno-5-30></a><span class=w>            </span><span class=p>{</span>
+<a id=__codelineno-5-31 name=__codelineno-5-31></a><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;CHECKBOX&quot;</span><span class=p>,</span>
+<a id=__codelineno-5-32 name=__codelineno-5-32></a><span class=hll><span class=w>              </span><span class=nt>&quot;randomWithinGroup&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;something&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-5-33 name=__codelineno-5-33></a><span class=w>              </span><span class=nt>&quot;label&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Search Engine&quot;</span>
+<a id=__codelineno-5-34 name=__codelineno-5-34></a><span class=w>            </span><span class=p>},</span>
+<a id=__codelineno-5-35 name=__codelineno-5-35></a><span class=w>            </span><span class=p>{</span>
+<a id=__codelineno-5-36 name=__codelineno-5-36></a><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;CHECKBOX_TEXT&quot;</span><span class=p>,</span>
+<a id=__codelineno-5-37 name=__codelineno-5-37></a><span class=w>              </span><span class=nt>&quot;label&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Others&quot;</span>
+<a id=__codelineno-5-38 name=__codelineno-5-38></a><span class=w>            </span><span class=p>}</span>
+<a id=__codelineno-5-39 name=__codelineno-5-39></a><span class=w>          </span><span class=p>]</span>
+<a id=__codelineno-5-40 name=__codelineno-5-40></a><span class=w>        </span><span class=p>}</span>
+<a id=__codelineno-5-41 name=__codelineno-5-41></a><span class=w>      </span><span class=p>]</span>
+<a id=__codelineno-5-42 name=__codelineno-5-42></a><span class=w>    </span><span class=p>}</span>
+<a id=__codelineno-5-43 name=__codelineno-5-43></a><span class=w>    </span><span class=cm>/* ... Second Page ... */</span>
+<a id=__codelineno-5-44 name=__codelineno-5-44></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-5-45 name=__codelineno-5-45></a><span class=w>  </span><span class=nt>&quot;completeScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-5-46 name=__codelineno-5-46></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-5-47 name=__codelineno-5-47></a><span class=w>  </span><span class=p>]</span>
+<a id=__codelineno-5-48 name=__codelineno-5-48></a><span class=p>}</span>
+</code></pre></div></td></tr></table></div> </div> <div class=tabbed-block> <p><img alt="Tutorial - Second Page Visual Editor" class="center embedded md" src=../../assets/images/tutorial-randomization-form.png></p> </div> </div> </div> <p>The <strong><code>randomWithinGroup</code></strong> key is a powerful feature for introducing randomization within your survey. By assigning the same <code>randomWithinGroup</code> string value to a group of inputs, you can shuffle their order while keeping other questions in sequence.</p> <p>In our example, all inputs except the final "Others" option are grouped for randomization. This ensures that the "Others" input consistently appears at the end of the list, regardless of the randomization applied to the preceding inputs.</p> <p>It's important to note that randomization occurs when the survey loads and remains consistent throughout the survey session. To view the effects of randomization, simply refresh the page.</p> <p>Let’s preview the randomization in the Survey Builder:</p> <p><img alt="Tutorial - Second Page" class="center small" src=../../assets/images/tutorial-randomization.png></p> <h2 id=disqualification>Disqualification</h2> <p>SurveyCompo supports disqualification logic to exclude participants who do not meet specific criteria. This feature ensures that only eligible participants complete the survey. You can disqualify participants based on their inputs and variables. For detailed instructions on implementing disqualification logic, refer to the <a href=/advanced/disqualification>Disqualification documentation</a>.</p> <p>In this tutorial, we will integrate disqualification logic into the survey to exclude participants under the age of 18. The disqualification logic will be applied to the "Age" input and an Abort Screen.</p> <div class="tabbed-set tabbed-alternate" data-tabs=6:2><input checked=checked id=__tabbed_6_1 name=__tabbed_6 type=radio><input id=__tabbed_6_2 name=__tabbed_6 type=radio><div class=tabbed-labels><label for=__tabbed_6_1>JSON Source</label><label for=__tabbed_6_2>Visual Editor</label></div> <div class=tabbed-content> <div class=tabbed-block> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-6-1> 1</a></span>
+<span class=normal><a href=#__codelineno-6-2> 2</a></span>
+<span class=normal><a href=#__codelineno-6-3> 3</a></span>
+<span class=normal><a href=#__codelineno-6-4> 4</a></span>
+<span class=normal><a href=#__codelineno-6-5> 5</a></span>
+<span class=normal><a href=#__codelineno-6-6> 6</a></span>
+<span class=normal><a href=#__codelineno-6-7> 7</a></span>
+<span class=normal><a href=#__codelineno-6-8> 8</a></span>
+<span class=normal><a href=#__codelineno-6-9> 9</a></span>
+<span class=normal><a href=#__codelineno-6-10>10</a></span>
+<span class=normal><a href=#__codelineno-6-11>11</a></span>
+<span class=normal><a href=#__codelineno-6-12>12</a></span>
+<span class=normal><a href=#__codelineno-6-13>13</a></span>
+<span class=normal><a href=#__codelineno-6-14>14</a></span>
+<span class=normal><a href=#__codelineno-6-15>15</a></span>
+<span class=normal><a href=#__codelineno-6-16>16</a></span>
+<span class=normal><a href=#__codelineno-6-17>17</a></span>
+<span class=normal><a href=#__codelineno-6-18>18</a></span>
+<span class=normal><a href=#__codelineno-6-19>19</a></span>
+<span class=normal><a href=#__codelineno-6-20>20</a></span>
+<span class=normal><a href=#__codelineno-6-21>21</a></span>
+<span class=normal><a href=#__codelineno-6-22>22</a></span>
+<span class=normal><a href=#__codelineno-6-23>23</a></span>
+<span class=normal><a href=#__codelineno-6-24>24</a></span>
+<span class=normal><a href=#__codelineno-6-25>25</a></span>
+<span class=normal><a href=#__codelineno-6-26>26</a></span>
+<span class=normal><a href=#__codelineno-6-27>27</a></span>
+<span class=normal><a href=#__codelineno-6-28>28</a></span>
+<span class=normal><a href=#__codelineno-6-29>29</a></span>
+<span class=normal><a href=#__codelineno-6-30>30</a></span>
+<span class=normal><a href=#__codelineno-6-31>31</a></span>
+<span class=normal><a href=#__codelineno-6-32>32</a></span>
+<span class=normal><a href=#__codelineno-6-33>33</a></span>
+<span class=normal><a href=#__codelineno-6-34>34</a></span>
+<span class=normal><a href=#__codelineno-6-35>35</a></span>
+<span class=normal><a href=#__codelineno-6-36>36</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-6-1 name=__codelineno-6-1></a><span class=p>{</span>
+<a id=__codelineno-6-2 name=__codelineno-6-2></a><span class=w>  </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction Survey&quot;</span><span class=p>,</span>
+<a id=__codelineno-6-3 name=__codelineno-6-3></a><span class=w>  </span><span class=nt>&quot;startScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-6-4 name=__codelineno-6-4></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-6-5 name=__codelineno-6-5></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-6-6 name=__codelineno-6-6></a><span class=w>  </span><span class=nt>&quot;pages&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-6-7 name=__codelineno-6-7></a><span class=w>    </span><span class=p>{</span>
+<a id=__codelineno-6-8 name=__codelineno-6-8></a><span class=w>      </span><span class=nt>&quot;header&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;About You&quot;</span><span class=p>,</span>
+<a id=__codelineno-6-9 name=__codelineno-6-9></a><span class=w>      </span><span class=nt>&quot;blocks&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-6-10 name=__codelineno-6-10></a><span class=w>        </span><span class=p>{</span>
+<a id=__codelineno-6-11 name=__codelineno-6-11></a><span class=w>          </span><span class=nt>&quot;title&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Please enter your age&quot;</span><span class=p>,</span>
+<a id=__codelineno-6-12 name=__codelineno-6-12></a><span class=w>          </span><span class=nt>&quot;inputs&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-6-13 name=__codelineno-6-13></a><span class=w>            </span><span class=p>{</span>
+<a id=__codelineno-6-14 name=__codelineno-6-14></a><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;TEXT&quot;</span><span class=p>,</span>
+<a id=__codelineno-6-15 name=__codelineno-6-15></a><span class=hll><span class=w>              </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;age&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-6-16 name=__codelineno-6-16></a><span class=w>              </span><span class=nt>&quot;textInputType&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;NUMBER&quot;</span>
+<a id=__codelineno-6-17 name=__codelineno-6-17></a><span class=w>            </span><span class=p>}</span>
+<a id=__codelineno-6-18 name=__codelineno-6-18></a><span class=w>          </span><span class=p>]</span>
+<a id=__codelineno-6-19 name=__codelineno-6-19></a><span class=w>        </span><span class=p>}</span>
+<a id=__codelineno-6-20 name=__codelineno-6-20></a><span class=w>        </span><span class=cm>/* ... other blocks ... */</span>
+<a id=__codelineno-6-21 name=__codelineno-6-21></a><span class=w>      </span><span class=p>]</span>
+<a id=__codelineno-6-22 name=__codelineno-6-22></a><span class=w>    </span><span class=p>}</span>
+<a id=__codelineno-6-23 name=__codelineno-6-23></a><span class=w>    </span><span class=cm>/* ... other pages ... */</span>
+<a id=__codelineno-6-24 name=__codelineno-6-24></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-6-25 name=__codelineno-6-25></a><span class=w>  </span><span class=nt>&quot;completeScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-6-26 name=__codelineno-6-26></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-6-27 name=__codelineno-6-27></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-6-28 name=__codelineno-6-28></a><span class=w>  </span><span class=nt>&quot;abortScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-6-29 name=__codelineno-6-29></a><span class=w>    </span><span class=p>{</span>
+<a id=__codelineno-6-30 name=__codelineno-6-30></a><span class=hll><span class=w>      </span><span class=nt>&quot;header&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Disqualified&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-6-31 name=__codelineno-6-31></a><span class=hll><span class=w>      </span><span class=nt>&quot;description&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;You must be 18 years or older to participate.&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-6-32 name=__codelineno-6-32></a><span class=hll><span class=w>      </span><span class=nt>&quot;okButtonLabel&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Close&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-6-33 name=__codelineno-6-33></a><span class=hll><span class=w>      </span><span class=nt>&quot;visibleIf&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;#age &lt; 18&quot;</span>
+</span><a id=__codelineno-6-34 name=__codelineno-6-34></a><span class=w>    </span><span class=p>}</span>
+<a id=__codelineno-6-35 name=__codelineno-6-35></a><span class=w>  </span><span class=p>]</span>
+<a id=__codelineno-6-36 name=__codelineno-6-36></a><span class=p>}</span>
+</code></pre></div></td></tr></table></div> </div> <div class=tabbed-block> <p><img alt="Tutorial - Disqualification Visual Editor" class="center embedded md" src=../../assets/images/tutorial-abort-screen-form.png></p> </div> </div> </div> <p>The "Age" input is assigned an <strong><code>id</code></strong> key to uniquely identify it within the survey. This <strong><code>id</code></strong> is essential for referencing the input in disqualification logic. The disqualification condition is defined using the <strong><code>visibleIf</code></strong> key in the Abort Screen. In this case, participants are disqualified if the value of the "Age" input is less than 18.</p> <p>SurveyCompo supports multiple abort screens, allowing you to create customized disqualification messages for different scenarios. When the disqualification condition is met, the appropriate abort screen is displayed, ensuring participants understand why they are excluded from completing the survey.</p> <div class="admonition info"> <p class=admonition-title>Info</p> <p>The <strong><code>visibleIf</code></strong> key allows you to implement powerful conditional logic in your survey. By referencing input values and external variables, you can dynamically control the visibility of pages, screens, blocks, and inputs based on participant responses. For more details, refer to the <a href=/advanced/conditional-logic>Conditional Logic documentation</a>.</p> </div> <p>Let’s preview the disqualification logic in the Survey Builder:</p> <p><img alt="Tutorial - Disqualification" class="center small" src=../../assets/images/tutorial-abort-screen.png></p> <h2 id=piping>Piping</h2> <p>SurveyCompo supports piping, allowing you to personalize survey questions and responses based on participant inputs. This feature enables the creation of dynamic surveys that adapt to individual participants by inserting input values and external variables into the survey content. For detailed instructions on implementing piping, refer to the <a href=/advanced/piping/ >Piping documentation</a>.</p> <p>In this tutorial, we will incorporate piping to personalize the "Disqualified Screen" with the participant's age.</p> <div class="tabbed-set tabbed-alternate" data-tabs=7:2><input checked=checked id=__tabbed_7_1 name=__tabbed_7 type=radio><input id=__tabbed_7_2 name=__tabbed_7 type=radio><div class=tabbed-labels><label for=__tabbed_7_1>JSON Source</label><label for=__tabbed_7_2>Visual Editor</label></div> <div class=tabbed-content> <div class=tabbed-block> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-7-1> 1</a></span>
+<span class=normal><a href=#__codelineno-7-2> 2</a></span>
+<span class=normal><a href=#__codelineno-7-3> 3</a></span>
+<span class=normal><a href=#__codelineno-7-4> 4</a></span>
+<span class=normal><a href=#__codelineno-7-5> 5</a></span>
+<span class=normal><a href=#__codelineno-7-6> 6</a></span>
+<span class=normal><a href=#__codelineno-7-7> 7</a></span>
+<span class=normal><a href=#__codelineno-7-8> 8</a></span>
+<span class=normal><a href=#__codelineno-7-9> 9</a></span>
+<span class=normal><a href=#__codelineno-7-10>10</a></span>
+<span class=normal><a href=#__codelineno-7-11>11</a></span>
+<span class=normal><a href=#__codelineno-7-12>12</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-7-1 name=__codelineno-7-1></a><span class=p>{</span>
+<a id=__codelineno-7-2 name=__codelineno-7-2></a><span class=w>  </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction Survey&quot;</span><span class=p>,</span>
+<a id=__codelineno-7-3 name=__codelineno-7-3></a><span class=w>  </span><span class=cm>/*  ... */</span>
+<a id=__codelineno-7-4 name=__codelineno-7-4></a><span class=w>  </span><span class=nt>&quot;abortScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-7-5 name=__codelineno-7-5></a><span class=w>    </span><span class=p>{</span>
+<a id=__codelineno-7-6 name=__codelineno-7-6></a><span class=w>      </span><span class=nt>&quot;header&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Disqualified&quot;</span><span class=p>,</span>
+<a id=__codelineno-7-7 name=__codelineno-7-7></a><span class=hll><span class=w>      </span><span class=nt>&quot;description&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;You must be 18 years or older to participate. You are currently {#age} years old.&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-7-8 name=__codelineno-7-8></a><span class=w>      </span><span class=nt>&quot;okButtonLabel&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Close&quot;</span><span class=p>,</span>
+<a id=__codelineno-7-9 name=__codelineno-7-9></a><span class=w>      </span><span class=nt>&quot;visibleIf&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;#age &lt; 18&quot;</span>
+<a id=__codelineno-7-10 name=__codelineno-7-10></a><span class=w>    </span><span class=p>}</span>
+<a id=__codelineno-7-11 name=__codelineno-7-11></a><span class=w>  </span><span class=p>]</span>
+<a id=__codelineno-7-12 name=__codelineno-7-12></a><span class=p>}</span>
+</code></pre></div></td></tr></table></div> </div> <div class=tabbed-block> <p><img alt="Tutorial - Pipe Visual Editor" class="center embedded md" src=../../assets/images/tutorial-piping-form.png></p> </div> </div> </div> <p>The <strong><code>description</code></strong> key of the Abort Screen includes the <code>{#age}</code> placeholder, which dynamically references the value of the "Age" input using its unique identifier, <strong><code>age</code></strong>. When a participant is disqualified, this placeholder is replaced with the participant's actual age. Piping functionality enhances survey personalization by delivering relevant information based on participant responses.</p> <p>Let’s preview the piping feature in the Survey Builder by entering an age value of 11 to observe the personalized message:</p> <p><img alt="Tutorial - Piping" class="center small" src=../../assets/images/tutorial-piping.png></p> <h2 id=validation>Validation</h2> <p>SurveyCompo supports input validation to enhance data accuracy and minimize errors in survey responses. This feature ensures that participants provide valid and complete information based on specified criteria such as input type, format, and value. For detailed instructions on implementing validation, refer to the <a href=/advanced/validation>Validation documentation</a>.</p> <p>In this tutorial, we will guide you through the process of setting up validation rules to improve your survey. You’ll configure the "Age" input to accept only numerical entries within the 0–100 range. Additionally, you'll make the "Method of Contact" question mandatory and require participants to select at least two options for the "How did you hear about us?" question.</p> <p>The updated JSON source will include the following validation rules:</p> <div class="tabbed-set tabbed-alternate" data-tabs=8:2><input checked=checked id=__tabbed_8_1 name=__tabbed_8 type=radio><input id=__tabbed_8_2 name=__tabbed_8 type=radio><div class=tabbed-labels><label for=__tabbed_8_1>JSON Source</label><label for=__tabbed_8_2>Visual Editor</label></div> <div class=tabbed-content> <div class=tabbed-block> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-8-1> 1</a></span>
+<span class=normal><a href=#__codelineno-8-2> 2</a></span>
+<span class=normal><a href=#__codelineno-8-3> 3</a></span>
+<span class=normal><a href=#__codelineno-8-4> 4</a></span>
+<span class=normal><a href=#__codelineno-8-5> 5</a></span>
+<span class=normal><a href=#__codelineno-8-6> 6</a></span>
+<span class=normal><a href=#__codelineno-8-7> 7</a></span>
+<span class=normal><a href=#__codelineno-8-8> 8</a></span>
+<span class=normal><a href=#__codelineno-8-9> 9</a></span>
+<span class=normal><a href=#__codelineno-8-10>10</a></span>
+<span class=normal><a href=#__codelineno-8-11>11</a></span>
+<span class=normal><a href=#__codelineno-8-12>12</a></span>
+<span class=normal><a href=#__codelineno-8-13>13</a></span>
+<span class=normal><a href=#__codelineno-8-14>14</a></span>
+<span class=normal><a href=#__codelineno-8-15>15</a></span>
+<span class=normal><a href=#__codelineno-8-16>16</a></span>
+<span class=normal><a href=#__codelineno-8-17>17</a></span>
+<span class=normal><a href=#__codelineno-8-18>18</a></span>
+<span class=normal><a href=#__codelineno-8-19>19</a></span>
+<span class=normal><a href=#__codelineno-8-20>20</a></span>
+<span class=normal><a href=#__codelineno-8-21>21</a></span>
+<span class=normal><a href=#__codelineno-8-22>22</a></span>
+<span class=normal><a href=#__codelineno-8-23>23</a></span>
+<span class=normal><a href=#__codelineno-8-24>24</a></span>
+<span class=normal><a href=#__codelineno-8-25>25</a></span>
+<span class=normal><a href=#__codelineno-8-26>26</a></span>
+<span class=normal><a href=#__codelineno-8-27>27</a></span>
+<span class=normal><a href=#__codelineno-8-28>28</a></span>
+<span class=normal><a href=#__codelineno-8-29>29</a></span>
+<span class=normal><a href=#__codelineno-8-30>30</a></span>
+<span class=normal><a href=#__codelineno-8-31>31</a></span>
+<span class=normal><a href=#__codelineno-8-32>32</a></span>
+<span class=normal><a href=#__codelineno-8-33>33</a></span>
+<span class=normal><a href=#__codelineno-8-34>34</a></span>
+<span class=normal><a href=#__codelineno-8-35>35</a></span>
+<span class=normal><a href=#__codelineno-8-36>36</a></span>
+<span class=normal><a href=#__codelineno-8-37>37</a></span>
+<span class=normal><a href=#__codelineno-8-38>38</a></span>
+<span class=normal><a href=#__codelineno-8-39>39</a></span>
+<span class=normal><a href=#__codelineno-8-40>40</a></span>
+<span class=normal><a href=#__codelineno-8-41>41</a></span>
+<span class=normal><a href=#__codelineno-8-42>42</a></span>
+<span class=normal><a href=#__codelineno-8-43>43</a></span>
+<span class=normal><a href=#__codelineno-8-44>44</a></span>
+<span class=normal><a href=#__codelineno-8-45>45</a></span>
+<span class=normal><a href=#__codelineno-8-46>46</a></span>
+<span class=normal><a href=#__codelineno-8-47>47</a></span>
+<span class=normal><a href=#__codelineno-8-48>48</a></span>
+<span class=normal><a href=#__codelineno-8-49>49</a></span>
+<span class=normal><a href=#__codelineno-8-50>50</a></span>
+<span class=normal><a href=#__codelineno-8-51>51</a></span>
+<span class=normal><a href=#__codelineno-8-52>52</a></span>
+<span class=normal><a href=#__codelineno-8-53>53</a></span>
+<span class=normal><a href=#__codelineno-8-54>54</a></span>
+<span class=normal><a href=#__codelineno-8-55>55</a></span>
+<span class=normal><a href=#__codelineno-8-56>56</a></span>
+<span class=normal><a href=#__codelineno-8-57>57</a></span>
+<span class=normal><a href=#__codelineno-8-58>58</a></span>
+<span class=normal><a href=#__codelineno-8-59>59</a></span>
+<span class=normal><a href=#__codelineno-8-60>60</a></span>
+<span class=normal><a href=#__codelineno-8-61>61</a></span>
+<span class=normal><a href=#__codelineno-8-62>62</a></span>
+<span class=normal><a href=#__codelineno-8-63>63</a></span>
+<span class=normal><a href=#__codelineno-8-64>64</a></span>
+<span class=normal><a href=#__codelineno-8-65>65</a></span>
+<span class=normal><a href=#__codelineno-8-66>66</a></span>
+<span class=normal><a href=#__codelineno-8-67>67</a></span>
+<span class=normal><a href=#__codelineno-8-68>68</a></span>
+<span class=normal><a href=#__codelineno-8-69>69</a></span>
+<span class=normal><a href=#__codelineno-8-70>70</a></span>
+<span class=normal><a href=#__codelineno-8-71>71</a></span>
+<span class=normal><a href=#__codelineno-8-72>72</a></span>
+<span class=normal><a href=#__codelineno-8-73>73</a></span>
+<span class=normal><a href=#__codelineno-8-74>74</a></span>
+<span class=normal><a href=#__codelineno-8-75>75</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-8-1 name=__codelineno-8-1></a><span class=p>{</span>
+<a id=__codelineno-8-2 name=__codelineno-8-2></a><span class=w>  </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction Survey&quot;</span><span class=p>,</span>
+<a id=__codelineno-8-3 name=__codelineno-8-3></a><span class=w>  </span><span class=nt>&quot;startScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-8-4 name=__codelineno-8-4></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-8-5 name=__codelineno-8-5></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-8-6 name=__codelineno-8-6></a><span class=w>  </span><span class=nt>&quot;pages&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-8-7 name=__codelineno-8-7></a><span class=w>    </span><span class=p>{</span>
+<a id=__codelineno-8-8 name=__codelineno-8-8></a><span class=w>      </span><span class=nt>&quot;header&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;About You&quot;</span><span class=p>,</span>
+<a id=__codelineno-8-9 name=__codelineno-8-9></a><span class=w>      </span><span class=nt>&quot;blocks&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-8-10 name=__codelineno-8-10></a><span class=w>        </span><span class=p>{</span>
+<a id=__codelineno-8-11 name=__codelineno-8-11></a><span class=w>          </span><span class=nt>&quot;title&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Please enter your age&quot;</span><span class=p>,</span>
+<a id=__codelineno-8-12 name=__codelineno-8-12></a><span class=w>          </span><span class=nt>&quot;inputs&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-8-13 name=__codelineno-8-13></a><span class=w>            </span><span class=p>{</span>
+<a id=__codelineno-8-14 name=__codelineno-8-14></a><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;TEXT&quot;</span><span class=p>,</span>
+<a id=__codelineno-8-15 name=__codelineno-8-15></a><span class=w>              </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;age&quot;</span><span class=p>,</span>
+<a id=__codelineno-8-16 name=__codelineno-8-16></a><span class=w>              </span><span class=nt>&quot;textInputType&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;NUMBER&quot;</span><span class=p>,</span>
+<a id=__codelineno-8-17 name=__codelineno-8-17></a><span class=hll><span class=w>              </span><span class=nt>&quot;validations&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+</span><a id=__codelineno-8-18 name=__codelineno-8-18></a><span class=hll><span class=w>                </span><span class=p>{</span>
+</span><a id=__codelineno-8-19 name=__codelineno-8-19></a><span class=hll><span class=w>                  </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;INTEGER&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-8-20 name=__codelineno-8-20></a><span class=hll><span class=w>                  </span><span class=nt>&quot;message&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Please enter your age in whole number&quot;</span>
+</span><a id=__codelineno-8-21 name=__codelineno-8-21></a><span class=hll><span class=w>                </span><span class=p>},</span>
+</span><a id=__codelineno-8-22 name=__codelineno-8-22></a><span class=hll><span class=w>                </span><span class=p>{</span>
+</span><a id=__codelineno-8-23 name=__codelineno-8-23></a><span class=hll><span class=w>                  </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;MAX_VALUE&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-8-24 name=__codelineno-8-24></a><span class=hll><span class=w>                  </span><span class=nt>&quot;value&quot;</span><span class=p>:</span><span class=w> </span><span class=mi>100</span><span class=p>,</span>
+</span><a id=__codelineno-8-25 name=__codelineno-8-25></a><span class=hll><span class=w>                  </span><span class=nt>&quot;message&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Please enter a valid age&quot;</span>
+</span><a id=__codelineno-8-26 name=__codelineno-8-26></a><span class=hll><span class=w>                </span><span class=p>},</span>
+</span><a id=__codelineno-8-27 name=__codelineno-8-27></a><span class=hll><span class=w>                </span><span class=p>{</span>
+</span><a id=__codelineno-8-28 name=__codelineno-8-28></a><span class=hll><span class=w>                  </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;REQUIRED&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-8-29 name=__codelineno-8-29></a><span class=hll><span class=w>                  </span><span class=nt>&quot;message&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Please enter your age&quot;</span>
+</span><a id=__codelineno-8-30 name=__codelineno-8-30></a><span class=hll><span class=w>                </span><span class=p>}</span>
+</span><a id=__codelineno-8-31 name=__codelineno-8-31></a><span class=hll><span class=w>              </span><span class=p>]</span>
+</span><a id=__codelineno-8-32 name=__codelineno-8-32></a><span class=w>            </span><span class=p>}</span>
+<a id=__codelineno-8-33 name=__codelineno-8-33></a><span class=w>          </span><span class=p>]</span>
+<a id=__codelineno-8-34 name=__codelineno-8-34></a><span class=w>        </span><span class=p>},</span>
+<a id=__codelineno-8-35 name=__codelineno-8-35></a><span class=w>        </span><span class=p>{</span>
+<a id=__codelineno-8-36 name=__codelineno-8-36></a><span class=w>          </span><span class=nt>&quot;title&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;What is your preferred method of contact?&quot;</span><span class=p>,</span>
+<a id=__codelineno-8-37 name=__codelineno-8-37></a><span class=w>          </span><span class=nt>&quot;inputs&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-8-38 name=__codelineno-8-38></a><span class=w>            </span><span class=p>{</span>
+<a id=__codelineno-8-39 name=__codelineno-8-39></a><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;DROPDOWN&quot;</span><span class=p>,</span>
+<a id=__codelineno-8-40 name=__codelineno-8-40></a><span class=w>              </span><span class=nt>&quot;hint&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Please select&quot;</span><span class=p>,</span>
+<a id=__codelineno-8-41 name=__codelineno-8-41></a><span class=w>              </span><span class=nt>&quot;dropdownInputOptions&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span><span class=s2>&quot;Email&quot;</span><span class=p>,</span><span class=w> </span><span class=s2>&quot;Phone&quot;</span><span class=p>,</span><span class=w> </span><span class=s2>&quot;Text Message&quot;</span><span class=p>],</span>
+<a id=__codelineno-8-42 name=__codelineno-8-42></a><span class=hll><span class=w>              </span><span class=nt>&quot;validations&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+</span><a id=__codelineno-8-43 name=__codelineno-8-43></a><span class=hll><span class=w>                </span><span class=p>{</span>
+</span><a id=__codelineno-8-44 name=__codelineno-8-44></a><span class=hll><span class=w>                  </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;REQUIRED&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-8-45 name=__codelineno-8-45></a><span class=hll><span class=w>                  </span><span class=nt>&quot;message&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Please select your preferred method of contact&quot;</span>
+</span><a id=__codelineno-8-46 name=__codelineno-8-46></a><span class=hll><span class=w>                </span><span class=p>}</span>
+</span><a id=__codelineno-8-47 name=__codelineno-8-47></a><span class=hll><span class=w>              </span><span class=p>]</span>
+</span><a id=__codelineno-8-48 name=__codelineno-8-48></a><span class=w>            </span><span class=p>}</span>
+<a id=__codelineno-8-49 name=__codelineno-8-49></a><span class=w>          </span><span class=p>]</span>
+<a id=__codelineno-8-50 name=__codelineno-8-50></a><span class=w>        </span><span class=p>},</span>
+<a id=__codelineno-8-51 name=__codelineno-8-51></a><span class=w>        </span><span class=p>{</span>
+<a id=__codelineno-8-52 name=__codelineno-8-52></a><span class=w>          </span><span class=nt>&quot;title&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;How did you hear about us?&quot;</span><span class=p>,</span>
+<a id=__codelineno-8-53 name=__codelineno-8-53></a><span class=w>          </span><span class=nt>&quot;subtitle&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Please select 2&quot;</span><span class=p>,</span>
+<a id=__codelineno-8-54 name=__codelineno-8-54></a><span class=w>          </span><span class=nt>&quot;inputs&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-8-55 name=__codelineno-8-55></a><span class=w>            </span><span class=cm>/** ... **/</span>
+<a id=__codelineno-8-56 name=__codelineno-8-56></a><span class=w>          </span><span class=p>],</span>
+<a id=__codelineno-8-57 name=__codelineno-8-57></a><span class=hll><span class=w>          </span><span class=nt>&quot;validations&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+</span><a id=__codelineno-8-58 name=__codelineno-8-58></a><span class=hll><span class=w>            </span><span class=p>{</span>
+</span><a id=__codelineno-8-59 name=__codelineno-8-59></a><span class=hll><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;MIN_SELECTION&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-8-60 name=__codelineno-8-60></a><span class=hll><span class=w>              </span><span class=nt>&quot;value&quot;</span><span class=p>:</span><span class=w> </span><span class=mi>2</span><span class=p>,</span>
+</span><a id=__codelineno-8-61 name=__codelineno-8-61></a><span class=hll><span class=w>              </span><span class=nt>&quot;message&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Please select 2 or more options&quot;</span>
+</span><a id=__codelineno-8-62 name=__codelineno-8-62></a><span class=hll><span class=w>            </span><span class=p>}</span>
+</span><a id=__codelineno-8-63 name=__codelineno-8-63></a><span class=hll><span class=w>          </span><span class=p>]</span>
+</span><a id=__codelineno-8-64 name=__codelineno-8-64></a><span class=w>        </span><span class=p>}</span>
+<a id=__codelineno-8-65 name=__codelineno-8-65></a><span class=w>      </span><span class=p>]</span>
+<a id=__codelineno-8-66 name=__codelineno-8-66></a><span class=w>    </span><span class=p>}</span>
+<a id=__codelineno-8-67 name=__codelineno-8-67></a><span class=w>    </span><span class=cm>/* ... other pages ... */</span>
+<a id=__codelineno-8-68 name=__codelineno-8-68></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-8-69 name=__codelineno-8-69></a><span class=w>  </span><span class=nt>&quot;completeScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-8-70 name=__codelineno-8-70></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-8-71 name=__codelineno-8-71></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-8-72 name=__codelineno-8-72></a><span class=w>  </span><span class=nt>&quot;abortScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-8-73 name=__codelineno-8-73></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-8-74 name=__codelineno-8-74></a><span class=w>  </span><span class=p>]</span>
+<a id=__codelineno-8-75 name=__codelineno-8-75></a><span class=p>}</span>
+</code></pre></div></td></tr></table></div> </div> <div class=tabbed-block> <p><img alt="Tutorial - Validation Visual Editor" class="center embedded md" src=../../assets/images/tutorial-validation-form.png></p> </div> </div> </div> <p>The "Age" input incorporates three essential validation rules:</p> <ul> <li><strong><code>INTEGER</code></strong>: Ensures the input value is an integer.</li> <li><strong><code>MAX_VALUE</code></strong>: Specifies the maximum permissible value for the input.</li> <li><strong><code>REQUIRED</code></strong>: Makes the input mandatory.</li> </ul> <p>For the "Method of Contact" question, a <strong><code>REQUIRED</code></strong> validation rule ensures participants select a preferred contact method.</p> <p>In the "How did you hear about us?" block, a <strong><code>MIN_SELECTION</code></strong> validation rule enforces a minimum selection of two options.</p> <p>When a block includes a "required" validation rule, SurveyCompo automatically appends an asterisk (<code>*</code>) after the block index number to indicate its mandatory status.</p> <div class="admonition note"> <p class=admonition-title>Note</p> <p>Setting <strong><code>textInputType</code></strong> to <strong><code>NUMBER</code></strong> for the "Age" input enhances the user interface by enabling features like a number keyboard and stepper. However, this setting alone does not enforce numerical validation. To ensure correct input format and value range, it’s essential to apply the <strong><code>INTEGER</code></strong> validation rule. For comprehensive details on input types and their associated validation rules, refer to the <a href=/advanced/validation>Validation documentation</a>.</p> </div> <p>Let’s explore how these validation rules work within the Survey Builder:</p> <p><img alt="Tutorial - Validation" class="center small" src=../../assets/images/tutorial-validation.png></p> <h2 id=conditional-logic>Conditional Logic</h2> <p>SurveyCompo supports conditional logic, allowing you to dynamically show or hide specific pages, blocks, and inputs based on participant responses or external variables. This feature personalizes the survey experience, ensuring participants receive relevant questions based on their previous answers. For detailed guidance on implementing conditional logic, refer to the <a href=/advanced/conditional-logic>Conditional Logic documentation</a>.</p> <p>In this tutorial, we will integrate conditional logic into the survey. Based on the participant's response to the "Overall satisfaction" question, we will adjust the survey flow:</p> <ul> <li>If a participant expresses dissatisfaction, we will prompt them for additional feedback on potential product improvements.</li> <li>If a participant is satisfied, we will ask them to share what they appreciate most about the product.</li> </ul> <p>Below is the updated JSON source code for the second page of the survey:</p> <div class="tabbed-set tabbed-alternate" data-tabs=9:2><input checked=checked id=__tabbed_9_1 name=__tabbed_9 type=radio><input id=__tabbed_9_2 name=__tabbed_9 type=radio><div class=tabbed-labels><label for=__tabbed_9_1>JSON Source</label><label for=__tabbed_9_2>Visual Editor</label></div> <div class=tabbed-content> <div class=tabbed-block> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-9-1> 1</a></span>
+<span class=normal><a href=#__codelineno-9-2> 2</a></span>
+<span class=normal><a href=#__codelineno-9-3> 3</a></span>
+<span class=normal><a href=#__codelineno-9-4> 4</a></span>
+<span class=normal><a href=#__codelineno-9-5> 5</a></span>
+<span class=normal><a href=#__codelineno-9-6> 6</a></span>
+<span class=normal><a href=#__codelineno-9-7> 7</a></span>
+<span class=normal><a href=#__codelineno-9-8> 8</a></span>
+<span class=normal><a href=#__codelineno-9-9> 9</a></span>
+<span class=normal><a href=#__codelineno-9-10>10</a></span>
+<span class=normal><a href=#__codelineno-9-11>11</a></span>
+<span class=normal><a href=#__codelineno-9-12>12</a></span>
+<span class=normal><a href=#__codelineno-9-13>13</a></span>
+<span class=normal><a href=#__codelineno-9-14>14</a></span>
+<span class=normal><a href=#__codelineno-9-15>15</a></span>
+<span class=normal><a href=#__codelineno-9-16>16</a></span>
+<span class=normal><a href=#__codelineno-9-17>17</a></span>
+<span class=normal><a href=#__codelineno-9-18>18</a></span>
+<span class=normal><a href=#__codelineno-9-19>19</a></span>
+<span class=normal><a href=#__codelineno-9-20>20</a></span>
+<span class=normal><a href=#__codelineno-9-21>21</a></span>
+<span class=normal><a href=#__codelineno-9-22>22</a></span>
+<span class=normal><a href=#__codelineno-9-23>23</a></span>
+<span class=normal><a href=#__codelineno-9-24>24</a></span>
+<span class=normal><a href=#__codelineno-9-25>25</a></span>
+<span class=normal><a href=#__codelineno-9-26>26</a></span>
+<span class=normal><a href=#__codelineno-9-27>27</a></span>
+<span class=normal><a href=#__codelineno-9-28>28</a></span>
+<span class=normal><a href=#__codelineno-9-29>29</a></span>
+<span class=normal><a href=#__codelineno-9-30>30</a></span>
+<span class=normal><a href=#__codelineno-9-31>31</a></span>
+<span class=normal><a href=#__codelineno-9-32>32</a></span>
+<span class=normal><a href=#__codelineno-9-33>33</a></span>
+<span class=normal><a href=#__codelineno-9-34>34</a></span>
+<span class=normal><a href=#__codelineno-9-35>35</a></span>
+<span class=normal><a href=#__codelineno-9-36>36</a></span>
+<span class=normal><a href=#__codelineno-9-37>37</a></span>
+<span class=normal><a href=#__codelineno-9-38>38</a></span>
+<span class=normal><a href=#__codelineno-9-39>39</a></span>
+<span class=normal><a href=#__codelineno-9-40>40</a></span>
+<span class=normal><a href=#__codelineno-9-41>41</a></span>
+<span class=normal><a href=#__codelineno-9-42>42</a></span>
+<span class=normal><a href=#__codelineno-9-43>43</a></span>
+<span class=normal><a href=#__codelineno-9-44>44</a></span>
+<span class=normal><a href=#__codelineno-9-45>45</a></span>
+<span class=normal><a href=#__codelineno-9-46>46</a></span>
+<span class=normal><a href=#__codelineno-9-47>47</a></span>
+<span class=normal><a href=#__codelineno-9-48>48</a></span>
+<span class=normal><a href=#__codelineno-9-49>49</a></span>
+<span class=normal><a href=#__codelineno-9-50>50</a></span>
+<span class=normal><a href=#__codelineno-9-51>51</a></span>
+<span class=normal><a href=#__codelineno-9-52>52</a></span>
+<span class=normal><a href=#__codelineno-9-53>53</a></span>
+<span class=normal><a href=#__codelineno-9-54>54</a></span>
+<span class=normal><a href=#__codelineno-9-55>55</a></span>
+<span class=normal><a href=#__codelineno-9-56>56</a></span>
+<span class=normal><a href=#__codelineno-9-57>57</a></span>
+<span class=normal><a href=#__codelineno-9-58>58</a></span>
+<span class=normal><a href=#__codelineno-9-59>59</a></span>
+<span class=normal><a href=#__codelineno-9-60>60</a></span>
+<span class=normal><a href=#__codelineno-9-61>61</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-9-1 name=__codelineno-9-1></a><span class=p>{</span>
+<a id=__codelineno-9-2 name=__codelineno-9-2></a><span class=w>  </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction Survey&quot;</span><span class=p>,</span>
+<a id=__codelineno-9-3 name=__codelineno-9-3></a><span class=w>  </span><span class=nt>&quot;startScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-9-4 name=__codelineno-9-4></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-9-5 name=__codelineno-9-5></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-9-6 name=__codelineno-9-6></a><span class=w>  </span><span class=nt>&quot;pages&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-9-7 name=__codelineno-9-7></a><span class=w>    </span><span class=cm>/* ... first page ... */</span>
+<a id=__codelineno-9-8 name=__codelineno-9-8></a><span class=w>    </span><span class=p>{</span>
+<a id=__codelineno-9-9 name=__codelineno-9-9></a><span class=w>      </span><span class=nt>&quot;header&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction&quot;</span><span class=p>,</span>
+<a id=__codelineno-9-10 name=__codelineno-9-10></a><span class=w>      </span><span class=nt>&quot;nextButtonLabel&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Submit&quot;</span><span class=p>,</span>
+<a id=__codelineno-9-11 name=__codelineno-9-11></a><span class=w>      </span><span class=nt>&quot;blocks&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-9-12 name=__codelineno-9-12></a><span class=w>        </span><span class=p>{</span>
+<a id=__codelineno-9-13 name=__codelineno-9-13></a><span class=w>          </span><span class=nt>&quot;title&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Overall, how satisfied are you with our product?&quot;</span><span class=p>,</span>
+<a id=__codelineno-9-14 name=__codelineno-9-14></a><span class=w>          </span><span class=nt>&quot;inputs&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-9-15 name=__codelineno-9-15></a><span class=w>            </span><span class=p>{</span>
+<a id=__codelineno-9-16 name=__codelineno-9-16></a><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;LIKERT_SCALE&quot;</span><span class=p>,</span>
+<a id=__codelineno-9-17 name=__codelineno-9-17></a><span class=hll><span class=w>              </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;satisfaction&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-9-18 name=__codelineno-9-18></a><span class=w>              </span><span class=nt>&quot;likertInputPreset&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;SATISFACTION&quot;</span>
+<a id=__codelineno-9-19 name=__codelineno-9-19></a><span class=w>            </span><span class=p>}</span>
+<a id=__codelineno-9-20 name=__codelineno-9-20></a><span class=w>          </span><span class=p>]</span>
+<a id=__codelineno-9-21 name=__codelineno-9-21></a><span class=w>        </span><span class=p>},</span>
+<a id=__codelineno-9-22 name=__codelineno-9-22></a><span class=w>        </span><span class=p>{</span>
+<a id=__codelineno-9-23 name=__codelineno-9-23></a><span class=w>          </span><span class=nt>&quot;title&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;What do you like most about our product?&quot;</span><span class=p>,</span>
+<a id=__codelineno-9-24 name=__codelineno-9-24></a><span class=w>          </span><span class=nt>&quot;inputs&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-9-25 name=__codelineno-9-25></a><span class=w>            </span><span class=p>{</span>
+<a id=__codelineno-9-26 name=__codelineno-9-26></a><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;TEXTAREA&quot;</span><span class=p>,</span>
+<a id=__codelineno-9-27 name=__codelineno-9-27></a><span class=w>              </span><span class=nt>&quot;hint&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Please share your thoughts&quot;</span>
+<a id=__codelineno-9-28 name=__codelineno-9-28></a><span class=w>            </span><span class=p>}</span>
+<a id=__codelineno-9-29 name=__codelineno-9-29></a><span class=w>          </span><span class=p>],</span>
+<a id=__codelineno-9-30 name=__codelineno-9-30></a><span class=hll><span class=w>          </span><span class=nt>&quot;visibleIf&quot;</span><span class=p>:</span><span class=w> </span><span class=p>{</span>
+</span><a id=__codelineno-9-31 name=__codelineno-9-31></a><span class=hll><span class=w>            </span><span class=nt>&quot;$or&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+</span><a id=__codelineno-9-32 name=__codelineno-9-32></a><span class=hll><span class=w>              </span><span class=s2>&quot;#satisfaction == Very satisfied&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-9-33 name=__codelineno-9-33></a><span class=hll><span class=w>              </span><span class=s2>&quot;#satisfaction == Satisfied&quot;</span>
+</span><a id=__codelineno-9-34 name=__codelineno-9-34></a><span class=hll><span class=w>            </span><span class=p>]</span>
+</span><a id=__codelineno-9-35 name=__codelineno-9-35></a><span class=w>          </span><span class=p>}</span>
+<a id=__codelineno-9-36 name=__codelineno-9-36></a><span class=w>        </span><span class=p>},</span>
+<a id=__codelineno-9-37 name=__codelineno-9-37></a><span class=w>        </span><span class=p>{</span>
+<a id=__codelineno-9-38 name=__codelineno-9-38></a><span class=w>          </span><span class=nt>&quot;title&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;What could be improved about our product?&quot;</span><span class=p>,</span>
+<a id=__codelineno-9-39 name=__codelineno-9-39></a><span class=w>          </span><span class=nt>&quot;inputs&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-9-40 name=__codelineno-9-40></a><span class=w>            </span><span class=p>{</span>
+<a id=__codelineno-9-41 name=__codelineno-9-41></a><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;TEXTAREA&quot;</span><span class=p>,</span>
+<a id=__codelineno-9-42 name=__codelineno-9-42></a><span class=w>              </span><span class=nt>&quot;hint&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Please share your thoughts&quot;</span>
+<a id=__codelineno-9-43 name=__codelineno-9-43></a><span class=w>            </span><span class=p>}</span>
+<a id=__codelineno-9-44 name=__codelineno-9-44></a><span class=w>          </span><span class=p>],</span>
+<a id=__codelineno-9-45 name=__codelineno-9-45></a><span class=hll><span class=w>          </span><span class=nt>&quot;visibleIf&quot;</span><span class=p>:</span><span class=w> </span><span class=p>{</span>
+</span><a id=__codelineno-9-46 name=__codelineno-9-46></a><span class=hll><span class=w>            </span><span class=nt>&quot;$or&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+</span><a id=__codelineno-9-47 name=__codelineno-9-47></a><span class=hll><span class=w>              </span><span class=s2>&quot;#satisfaction == Very dissatisfied&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-9-48 name=__codelineno-9-48></a><span class=hll><span class=w>              </span><span class=s2>&quot;#satisfaction == Dissatisfied&quot;</span>
+</span><a id=__codelineno-9-49 name=__codelineno-9-49></a><span class=hll><span class=w>            </span><span class=p>]</span>
+</span><a id=__codelineno-9-50 name=__codelineno-9-50></a><span class=w>          </span><span class=p>}</span>
+<a id=__codelineno-9-51 name=__codelineno-9-51></a><span class=w>        </span><span class=p>}</span>
+<a id=__codelineno-9-52 name=__codelineno-9-52></a><span class=w>      </span><span class=p>]</span>
+<a id=__codelineno-9-53 name=__codelineno-9-53></a><span class=w>    </span><span class=p>}</span>
+<a id=__codelineno-9-54 name=__codelineno-9-54></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-9-55 name=__codelineno-9-55></a><span class=w>  </span><span class=nt>&quot;completeScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-9-56 name=__codelineno-9-56></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-9-57 name=__codelineno-9-57></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-9-58 name=__codelineno-9-58></a><span class=w>  </span><span class=nt>&quot;abortScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-9-59 name=__codelineno-9-59></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-9-60 name=__codelineno-9-60></a><span class=w>  </span><span class=p>]</span>
+<a id=__codelineno-9-61 name=__codelineno-9-61></a><span class=p>}</span>
+</code></pre></div></td></tr></table></div> </div> <div class=tabbed-block> <p><img alt="Tutorial - Conditional Logic Visual Editor" class="center embedded md" src=../../assets/images/tutorial-condition-form.png></p> </div> </div> </div> <p>We assign an <strong><code>id</code></strong> (<code>satisfaction</code>) to the "How satisfied are you?" input. This <strong><code>id</code></strong> is then used to define the <strong><code>visibleIf</code></strong> conditional logic, a powerful tool for creating dynamic survey experiences. By referencing input values or external variables, you can dynamically show or hide pages, screens, blocks, and inputs based on participant responses.</p> <p>SurveyCompo uses Condition Expressions to define visibility conditions. In this case, we use the <strong><code>$or</code></strong> operator to display the "What do you like most about our product?" block if the participant selects "Very satisfied" or "Satisfied" on the "Overall satisfaction" question. Conversely, selecting "Very dissatisfied" or "Dissatisfied" will display the "What could be improved about our product?" block. If the participant selects "Neither dissatisfied nor satisfied," follow-up questions are hidden.</p> <p>Condition Expressions support a variety of operators such as <strong><code>$and</code></strong>, <strong><code>$or</code></strong>, <strong><code>$not</code></strong>, <strong><code>&gt;=</code></strong>, <strong><code>&lt;=</code></strong>, <strong><code>==</code></strong>, <strong><code>!=</code></strong>, <strong><code>&gt;</code></strong>, and <strong><code>&lt;</code></strong>. For a full list of operators and their usage, refer to the <a href=/advanced/conditional-logic>Conditional Logic documentation</a>.</p> <p>For an optimal user experience, consider placing conditional blocks on separate pages. However, for this tutorial, we will keep them on the same page to demonstrate how conditional logic dynamically controls block visibility based on participant responses.</p> <p>Let’s preview the conditional logic in the Survey Builder:</p> <p><img alt="Tutorial - Conditional Logic" class="center small" src=../../assets/images/tutorial-condition.png></p> <h2 id=customization-with-theme>Customization with Theme</h2> <p>In this tutorial, we customize the survey theme to use a custom color palette and default radius for buttons, boxes, and inputs. Additionally, we change the font family to Arial.</p> <div class="tabbed-set tabbed-alternate" data-tabs=10:2><input checked=checked id=__tabbed_10_1 name=__tabbed_10 type=radio><input id=__tabbed_10_2 name=__tabbed_10 type=radio><div class=tabbed-labels><label for=__tabbed_10_1>JSON Source</label><label for=__tabbed_10_2>Visual Editor</label></div> <div class=tabbed-content> <div class=tabbed-block> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-10-1> 1</a></span>
+<span class=normal><a href=#__codelineno-10-2> 2</a></span>
+<span class=normal><a href=#__codelineno-10-3> 3</a></span>
+<span class=normal><a href=#__codelineno-10-4> 4</a></span>
+<span class=normal><a href=#__codelineno-10-5> 5</a></span>
+<span class=normal><a href=#__codelineno-10-6> 6</a></span>
+<span class=normal><a href=#__codelineno-10-7> 7</a></span>
+<span class=normal><a href=#__codelineno-10-8> 8</a></span>
+<span class=normal><a href=#__codelineno-10-9> 9</a></span>
+<span class=normal><a href=#__codelineno-10-10>10</a></span>
+<span class=normal><a href=#__codelineno-10-11>11</a></span>
+<span class=normal><a href=#__codelineno-10-12>12</a></span>
+<span class=normal><a href=#__codelineno-10-13>13</a></span>
+<span class=normal><a href=#__codelineno-10-14>14</a></span>
+<span class=normal><a href=#__codelineno-10-15>15</a></span>
+<span class=normal><a href=#__codelineno-10-16>16</a></span>
+<span class=normal><a href=#__codelineno-10-17>17</a></span>
+<span class=normal><a href=#__codelineno-10-18>18</a></span>
+<span class=normal><a href=#__codelineno-10-19>19</a></span>
+<span class=normal><a href=#__codelineno-10-20>20</a></span>
+<span class=normal><a href=#__codelineno-10-21>21</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-10-1 name=__codelineno-10-1></a><span class=p>{</span>
+<a id=__codelineno-10-2 name=__codelineno-10-2></a><span class=w>  </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction Survey&quot;</span><span class=p>,</span>
+<a id=__codelineno-10-3 name=__codelineno-10-3></a><span class=hll><span class=w>  </span><span class=nt>&quot;theme&quot;</span><span class=p>:</span><span class=w> </span><span class=p>{</span>
+</span><a id=__codelineno-10-4 name=__codelineno-10-4></a><span class=hll><span class=w>    </span><span class=nt>&quot;primaryColor&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;#3b82f6&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-10-5 name=__codelineno-10-5></a><span class=hll><span class=w>    </span><span class=nt>&quot;fontFamily&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Arial, sans-serif&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-10-6 name=__codelineno-10-6></a><span class=hll><span class=w>    </span><span class=nt>&quot;defaultRadius&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;2em&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-10-7 name=__codelineno-10-7></a><span class=hll><span class=w>    </span><span class=nt>&quot;textareaRadius&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;1em&quot;</span>
+</span><a id=__codelineno-10-8 name=__codelineno-10-8></a><span class=hll><span class=w>  </span><span class=p>},</span>
+</span><a id=__codelineno-10-9 name=__codelineno-10-9></a><span class=w>  </span><span class=nt>&quot;startScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-10-10 name=__codelineno-10-10></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-10-11 name=__codelineno-10-11></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-10-12 name=__codelineno-10-12></a><span class=w>  </span><span class=nt>&quot;pages&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-10-13 name=__codelineno-10-13></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-10-14 name=__codelineno-10-14></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-10-15 name=__codelineno-10-15></a><span class=w>  </span><span class=nt>&quot;completeScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-10-16 name=__codelineno-10-16></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-10-17 name=__codelineno-10-17></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-10-18 name=__codelineno-10-18></a><span class=w>  </span><span class=nt>&quot;abortScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-10-19 name=__codelineno-10-19></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-10-20 name=__codelineno-10-20></a><span class=w>  </span><span class=p>]</span>
+<a id=__codelineno-10-21 name=__codelineno-10-21></a><span class=p>}</span>
+</code></pre></div></td></tr></table></div> </div> <div class=tabbed-block> <p><img alt="Tutorial - Customization Visual Editor" class="center embedded md" src=../../assets/images/tutorial-customization-form.png></p> </div> </div> </div> <p>By default, SurveyCompo generates a color palette based on the <strong><code>primaryColor</code></strong> provided. These colors are applied to buttons, boxes, and inputs throughout the survey. The <strong><code>fontFamily</code></strong> key sets the font family for all text elements, while the <strong><code>defaultRadius</code></strong> key defines the default corner radius for buttons, boxes, and inputs. If not specified, <strong><code>textareaRadius</code></strong> will use the value from <strong><code>defaultRadius</code></strong> for textarea inputs.</p> <p>Preview the customization in the Survey Builder:</p> <p><img alt="Tutorial - Customization" class="center small" src=../../assets/images/tutorial-customization.png></p> <p>SurveyCompo offers extensive customization options beyond themes. You can customize surveys using custom CSS, HTML text, and various layout options to ensure they align with your brand and effectively engage your audience. For comprehensive details on customization options, refer to the <a href=/advanced/customization>Customization section</a> of our documentation.</p> <h2 id=html-text>HTML Text</h2> <p>SurveyCompo supports HTML text within surveys to enhance the visual appeal and readability of your questions and descriptions. HTML text allows you to format content, add images, and embed videos. For more information on using HTML text, refer to the <a href=/customization/custom-html>HTML Text documentation</a>.</p> <p>In this tutorial, we’ll incorporate HTML text into the page footer to include a link to the privacy policy.</p> <div class="tabbed-set tabbed-alternate" data-tabs=11:2><input checked=checked id=__tabbed_11_1 name=__tabbed_11 type=radio><input id=__tabbed_11_2 name=__tabbed_11 type=radio><div class=tabbed-labels><label for=__tabbed_11_1>JSON Source</label><label for=__tabbed_11_2>Visual Editor</label></div> <div class=tabbed-content> <div class=tabbed-block> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-11-1> 1</a></span>
+<span class=normal><a href=#__codelineno-11-2> 2</a></span>
+<span class=normal><a href=#__codelineno-11-3> 3</a></span>
+<span class=normal><a href=#__codelineno-11-4> 4</a></span>
+<span class=normal><a href=#__codelineno-11-5> 5</a></span>
+<span class=normal><a href=#__codelineno-11-6> 6</a></span>
+<span class=normal><a href=#__codelineno-11-7> 7</a></span>
+<span class=normal><a href=#__codelineno-11-8> 8</a></span>
+<span class=normal><a href=#__codelineno-11-9> 9</a></span>
+<span class=normal><a href=#__codelineno-11-10>10</a></span>
+<span class=normal><a href=#__codelineno-11-11>11</a></span>
+<span class=normal><a href=#__codelineno-11-12>12</a></span>
+<span class=normal><a href=#__codelineno-11-13>13</a></span>
+<span class=normal><a href=#__codelineno-11-14>14</a></span>
+<span class=normal><a href=#__codelineno-11-15>15</a></span>
+<span class=normal><a href=#__codelineno-11-16>16</a></span>
+<span class=normal><a href=#__codelineno-11-17>17</a></span>
+<span class=normal><a href=#__codelineno-11-18>18</a></span>
+<span class=normal><a href=#__codelineno-11-19>19</a></span>
+<span class=normal><a href=#__codelineno-11-20>20</a></span>
+<span class=normal><a href=#__codelineno-11-21>21</a></span>
+<span class=normal><a href=#__codelineno-11-22>22</a></span>
+<span class=normal><a href=#__codelineno-11-23>23</a></span>
+<span class=normal><a href=#__codelineno-11-24>24</a></span>
+<span class=normal><a href=#__codelineno-11-25>25</a></span>
+<span class=normal><a href=#__codelineno-11-26>26</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-11-1 name=__codelineno-11-1></a><span class=p>{</span>
+<a id=__codelineno-11-2 name=__codelineno-11-2></a><span class=w>  </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction Survey&quot;</span><span class=p>,</span>
+<a id=__codelineno-11-3 name=__codelineno-11-3></a><span class=w>  </span><span class=nt>&quot;theme&quot;</span><span class=p>:</span><span class=w> </span><span class=p>{</span>
+<a id=__codelineno-11-4 name=__codelineno-11-4></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-11-5 name=__codelineno-11-5></a><span class=w>  </span><span class=p>},</span>
+<a id=__codelineno-11-6 name=__codelineno-11-6></a><span class=w>  </span><span class=nt>&quot;startScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-11-7 name=__codelineno-11-7></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-11-8 name=__codelineno-11-8></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-11-9 name=__codelineno-11-9></a><span class=w>  </span><span class=nt>&quot;pages&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-11-10 name=__codelineno-11-10></a><span class=w>    </span><span class=cm>/* ... first page ... */</span>
+<a id=__codelineno-11-11 name=__codelineno-11-11></a><span class=w>    </span><span class=p>{</span>
+<a id=__codelineno-11-12 name=__codelineno-11-12></a><span class=w>      </span><span class=nt>&quot;header&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction&quot;</span><span class=p>,</span>
+<a id=__codelineno-11-13 name=__codelineno-11-13></a><span class=w>      </span><span class=nt>&quot;nextButtonLabel&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Submit&quot;</span><span class=p>,</span>
+<a id=__codelineno-11-14 name=__codelineno-11-14></a><span class=w>      </span><span class=nt>&quot;blocks&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-11-15 name=__codelineno-11-15></a><span class=w>        </span><span class=cm>/* ... */</span>
+<a id=__codelineno-11-16 name=__codelineno-11-16></a><span class=w>      </span><span class=p>],</span>
+<a id=__codelineno-11-17 name=__codelineno-11-17></a><span class=hll><span class=w>      </span><span class=nt>&quot;htmlFooter&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;&lt;p&gt;By submitting this survey, you agree to our &lt;a href=&#39;https://www.surveycompo.com/privacy&#39;&gt;Privacy Policy&lt;/a&gt;&lt;/p&gt;&quot;</span>
+</span><a id=__codelineno-11-18 name=__codelineno-11-18></a><span class=w>    </span><span class=p>}</span>
+<a id=__codelineno-11-19 name=__codelineno-11-19></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-11-20 name=__codelineno-11-20></a><span class=w>  </span><span class=nt>&quot;completeScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-11-21 name=__codelineno-11-21></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-11-22 name=__codelineno-11-22></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-11-23 name=__codelineno-11-23></a><span class=w>  </span><span class=nt>&quot;abortScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-11-24 name=__codelineno-11-24></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-11-25 name=__codelineno-11-25></a><span class=w>  </span><span class=p>]</span>
+<a id=__codelineno-11-26 name=__codelineno-11-26></a><span class=p>}</span>
+</code></pre></div></td></tr></table></div> </div> <div class=tabbed-block> <p><img alt="Tutorial - HTML footer Visual Editor" class="center embedded md" src=../../assets/images/tutorial-customization-footer-form.png></p> </div> </div> </div> <p>The <strong><code>htmlFooter</code></strong> key allows you to incorporate HTML text into the footer of the page. This feature supports HTML tags for formatting text, adding links, and embedding media. In the following example, we use an anchor tag to create a hyperlink to the privacy policy.</p> <p><img alt="Tutorial - HTML footer" class="center md" src=../../assets/images/tutorial-customization-footer1.png></p> <p>However, a common issue is that the link in the footer may not appear as a standard hyperlink. Typically, hyperlinks are distinguished by a different color and often underlined for clarity.</p> <p>SurveyCompo does not apply default styles to custom HTML elements. To improve the appearance of the hyperlink, you can use inline styles or CSS customization.</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-12-1> 1</a></span>
+<span class=normal><a href=#__codelineno-12-2> 2</a></span>
+<span class=normal><a href=#__codelineno-12-3> 3</a></span>
+<span class=normal><a href=#__codelineno-12-4> 4</a></span>
+<span class=normal><a href=#__codelineno-12-5> 5</a></span>
+<span class=normal><a href=#__codelineno-12-6> 6</a></span>
+<span class=normal><a href=#__codelineno-12-7> 7</a></span>
+<span class=normal><a href=#__codelineno-12-8> 8</a></span>
+<span class=normal><a href=#__codelineno-12-9> 9</a></span>
+<span class=normal><a href=#__codelineno-12-10>10</a></span>
+<span class=normal><a href=#__codelineno-12-11>11</a></span>
+<span class=normal><a href=#__codelineno-12-12>12</a></span>
+<span class=normal><a href=#__codelineno-12-13>13</a></span>
+<span class=normal><a href=#__codelineno-12-14>14</a></span>
+<span class=normal><a href=#__codelineno-12-15>15</a></span>
+<span class=normal><a href=#__codelineno-12-16>16</a></span>
+<span class=normal><a href=#__codelineno-12-17>17</a></span>
+<span class=normal><a href=#__codelineno-12-18>18</a></span>
+<span class=normal><a href=#__codelineno-12-19>19</a></span>
+<span class=normal><a href=#__codelineno-12-20>20</a></span>
+<span class=normal><a href=#__codelineno-12-21>21</a></span>
+<span class=normal><a href=#__codelineno-12-22>22</a></span>
+<span class=normal><a href=#__codelineno-12-23>23</a></span>
+<span class=normal><a href=#__codelineno-12-24>24</a></span>
+<span class=normal><a href=#__codelineno-12-25>25</a></span>
+<span class=normal><a href=#__codelineno-12-26>26</a></span>
+<span class=normal><a href=#__codelineno-12-27>27</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-12-1 name=__codelineno-12-1></a><span class=p>{</span>
+<a id=__codelineno-12-2 name=__codelineno-12-2></a><span class=w>  </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction Survey&quot;</span><span class=p>,</span>
+<a id=__codelineno-12-3 name=__codelineno-12-3></a><span class=w>  </span><span class=nt>&quot;theme&quot;</span><span class=p>:</span><span class=w> </span><span class=p>{</span>
+<a id=__codelineno-12-4 name=__codelineno-12-4></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-12-5 name=__codelineno-12-5></a><span class=w>  </span><span class=p>},</span>
+<a id=__codelineno-12-6 name=__codelineno-12-6></a><span class=hll><span class=w>  </span><span class=nt>&quot;css&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;.my-link { color: #3b82f6; text-decoration: underline; }&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-12-7 name=__codelineno-12-7></a><span class=w>  </span><span class=nt>&quot;startScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-12-8 name=__codelineno-12-8></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-12-9 name=__codelineno-12-9></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-12-10 name=__codelineno-12-10></a><span class=w>  </span><span class=nt>&quot;pages&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-12-11 name=__codelineno-12-11></a><span class=w>    </span><span class=cm>/* ... first page ... */</span>
+<a id=__codelineno-12-12 name=__codelineno-12-12></a><span class=w>    </span><span class=p>{</span>
+<a id=__codelineno-12-13 name=__codelineno-12-13></a><span class=w>      </span><span class=nt>&quot;header&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction&quot;</span><span class=p>,</span>
+<a id=__codelineno-12-14 name=__codelineno-12-14></a><span class=w>      </span><span class=nt>&quot;nextButtonLabel&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Submit&quot;</span><span class=p>,</span>
+<a id=__codelineno-12-15 name=__codelineno-12-15></a><span class=w>      </span><span class=nt>&quot;blocks&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-12-16 name=__codelineno-12-16></a><span class=w>        </span><span class=cm>/* ... */</span>
+<a id=__codelineno-12-17 name=__codelineno-12-17></a><span class=w>      </span><span class=p>],</span>
+<a id=__codelineno-12-18 name=__codelineno-12-18></a><span class=hll><span class=w>      </span><span class=nt>&quot;htmlFooter&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;&lt;p&gt;By submitting this survey, you agree to our &lt;a href=&#39;https://www.surveycompo.com/privacy&#39; class=&#39;my-link&#39;&gt;Privacy Policy&lt;/a&gt;&lt;/p&gt;&quot;</span>
+</span><a id=__codelineno-12-19 name=__codelineno-12-19></a><span class=w>    </span><span class=p>}</span>
+<a id=__codelineno-12-20 name=__codelineno-12-20></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-12-21 name=__codelineno-12-21></a><span class=w>  </span><span class=nt>&quot;completeScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-12-22 name=__codelineno-12-22></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-12-23 name=__codelineno-12-23></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-12-24 name=__codelineno-12-24></a><span class=w>  </span><span class=nt>&quot;abortScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-12-25 name=__codelineno-12-25></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-12-26 name=__codelineno-12-26></a><span class=w>  </span><span class=p>]</span>
+<a id=__codelineno-12-27 name=__codelineno-12-27></a><span class=p>}</span>
+</code></pre></div></td></tr></table></div> <p>We assign the class name <code>my-link</code> to the hyperlink within the <code>htmlFooter</code> key. Next, we define the CSS class <code>my-link</code> in the <code>css</code> key to specify the hyperlink's color and text decoration. This customization allows us to enhance the appearance of the hyperlink.</p> <p>Preview the customized hyperlink in the Survey Builder:</p> <p><img alt="Tutorial - HTML footer" class="center small" src=../../assets/images/tutorial-customization-footer2.png></p> <p>The use of HTML text extends to various elements within the survey, including Screens, Pages, and Blocks. For more details on incorporating HTML text, refer to the <a href=/customization/custom-html>HTML Text</a> documentation.</p> <h2 id=using-templates>Using Templates</h2> <p>We recently added an HTML footer to the final page of our survey. However, if we want this footer to appear on every page, manually duplicating the HTML across each page can be time-consuming and prone to errors. Fortunately, SurveyCompo offers a solution: templates. Templates are reusable components designed to define common elements like headers, footers, and styles, allowing you to apply them consistently throughout your survey. For detailed instructions on using templates, refer to the <a href=/advanced/templates>Templates documentation</a>.</p> <p>In this tutorial, we’ll create a template specifically for the HTML footer and apply it universally across all pages of the survey.</p> <div class="tabbed-set tabbed-alternate" data-tabs=12:2><input checked=checked id=__tabbed_12_1 name=__tabbed_12 type=radio><input id=__tabbed_12_2 name=__tabbed_12 type=radio><div class=tabbed-labels><label for=__tabbed_12_1>JSON Source</label><label for=__tabbed_12_2>Visual Editor</label></div> <div class=tabbed-content> <div class=tabbed-block> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-13-1> 1</a></span>
+<span class=normal><a href=#__codelineno-13-2> 2</a></span>
+<span class=normal><a href=#__codelineno-13-3> 3</a></span>
+<span class=normal><a href=#__codelineno-13-4> 4</a></span>
+<span class=normal><a href=#__codelineno-13-5> 5</a></span>
+<span class=normal><a href=#__codelineno-13-6> 6</a></span>
+<span class=normal><a href=#__codelineno-13-7> 7</a></span>
+<span class=normal><a href=#__codelineno-13-8> 8</a></span>
+<span class=normal><a href=#__codelineno-13-9> 9</a></span>
+<span class=normal><a href=#__codelineno-13-10>10</a></span>
+<span class=normal><a href=#__codelineno-13-11>11</a></span>
+<span class=normal><a href=#__codelineno-13-12>12</a></span>
+<span class=normal><a href=#__codelineno-13-13>13</a></span>
+<span class=normal><a href=#__codelineno-13-14>14</a></span>
+<span class=normal><a href=#__codelineno-13-15>15</a></span>
+<span class=normal><a href=#__codelineno-13-16>16</a></span>
+<span class=normal><a href=#__codelineno-13-17>17</a></span>
+<span class=normal><a href=#__codelineno-13-18>18</a></span>
+<span class=normal><a href=#__codelineno-13-19>19</a></span>
+<span class=normal><a href=#__codelineno-13-20>20</a></span>
+<span class=normal><a href=#__codelineno-13-21>21</a></span>
+<span class=normal><a href=#__codelineno-13-22>22</a></span>
+<span class=normal><a href=#__codelineno-13-23>23</a></span>
+<span class=normal><a href=#__codelineno-13-24>24</a></span>
+<span class=normal><a href=#__codelineno-13-25>25</a></span>
+<span class=normal><a href=#__codelineno-13-26>26</a></span>
+<span class=normal><a href=#__codelineno-13-27>27</a></span>
+<span class=normal><a href=#__codelineno-13-28>28</a></span>
+<span class=normal><a href=#__codelineno-13-29>29</a></span>
+<span class=normal><a href=#__codelineno-13-30>30</a></span>
+<span class=normal><a href=#__codelineno-13-31>31</a></span>
+<span class=normal><a href=#__codelineno-13-32>32</a></span>
+<span class=normal><a href=#__codelineno-13-33>33</a></span>
+<span class=normal><a href=#__codelineno-13-34>34</a></span>
+<span class=normal><a href=#__codelineno-13-35>35</a></span>
+<span class=normal><a href=#__codelineno-13-36>36</a></span>
+<span class=normal><a href=#__codelineno-13-37>37</a></span>
+<span class=normal><a href=#__codelineno-13-38>38</a></span>
+<span class=normal><a href=#__codelineno-13-39>39</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-13-1 name=__codelineno-13-1></a><span class=p>{</span>
+<a id=__codelineno-13-2 name=__codelineno-13-2></a><span class=w>  </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction Survey&quot;</span><span class=p>,</span>
+<a id=__codelineno-13-3 name=__codelineno-13-3></a><span class=w>  </span><span class=nt>&quot;theme&quot;</span><span class=p>:</span><span class=w> </span><span class=p>{</span>
+<a id=__codelineno-13-4 name=__codelineno-13-4></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-13-5 name=__codelineno-13-5></a><span class=w>  </span><span class=p>},</span>
+<a id=__codelineno-13-6 name=__codelineno-13-6></a><span class=w>  </span><span class=nt>&quot;css&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;.my-link { color: #3b82f6; text-decoration: underline; }&quot;</span><span class=p>,</span>
+<a id=__codelineno-13-7 name=__codelineno-13-7></a><span class=hll><span class=w>  </span><span class=nt>&quot;pageTemplates&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+</span><a id=__codelineno-13-8 name=__codelineno-13-8></a><span class=hll><span class=w>    </span><span class=p>{</span>
+</span><a id=__codelineno-13-9 name=__codelineno-13-9></a><span class=hll><span class=w>      </span><span class=nt>&quot;templateName&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;pageWithFooter&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-13-10 name=__codelineno-13-10></a><span class=hll><span class=w>      </span><span class=nt>&quot;htmlFooter&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;&lt;p&gt;By submitting this survey, you agree to our &lt;a href=&#39;https://www.surveycompo.com/privacy&#39; class=&#39;my-link&#39;&gt;Privacy Policy&lt;/a&gt;&lt;/p&gt;&quot;</span>
+</span><a id=__codelineno-13-11 name=__codelineno-13-11></a><span class=hll><span class=w>    </span><span class=p>}</span>
+</span><a id=__codelineno-13-12 name=__codelineno-13-12></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-13-13 name=__codelineno-13-13></a><span class=w>  </span><span class=nt>&quot;startScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-13-14 name=__codelineno-13-14></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-13-15 name=__codelineno-13-15></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-13-16 name=__codelineno-13-16></a><span class=w>  </span><span class=nt>&quot;pages&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-13-17 name=__codelineno-13-17></a><span class=w>    </span><span class=p>{</span>
+<a id=__codelineno-13-18 name=__codelineno-13-18></a><span class=w>      </span><span class=nt>&quot;header&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction&quot;</span><span class=p>,</span>
+<a id=__codelineno-13-19 name=__codelineno-13-19></a><span class=hll><span class=w>      </span><span class=nt>&quot;templateName&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;pageWithFooter&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-13-20 name=__codelineno-13-20></a><span class=w>      </span><span class=nt>&quot;blocks&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-13-21 name=__codelineno-13-21></a><span class=w>        </span><span class=cm>/* ... */</span>
+<a id=__codelineno-13-22 name=__codelineno-13-22></a><span class=w>      </span><span class=p>]</span>
+<a id=__codelineno-13-23 name=__codelineno-13-23></a><span class=w>    </span><span class=p>},</span>
+<a id=__codelineno-13-24 name=__codelineno-13-24></a><span class=w>    </span><span class=p>{</span>
+<a id=__codelineno-13-25 name=__codelineno-13-25></a><span class=w>      </span><span class=nt>&quot;header&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction&quot;</span><span class=p>,</span>
+<a id=__codelineno-13-26 name=__codelineno-13-26></a><span class=hll><span class=w>      </span><span class=nt>&quot;templateName&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;pageWithFooter&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-13-27 name=__codelineno-13-27></a><span class=w>      </span><span class=nt>&quot;nextButtonLabel&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Submit&quot;</span><span class=p>,</span>
+<a id=__codelineno-13-28 name=__codelineno-13-28></a><span class=w>      </span><span class=nt>&quot;blocks&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-13-29 name=__codelineno-13-29></a><span class=w>        </span><span class=cm>/* ... */</span>
+<a id=__codelineno-13-30 name=__codelineno-13-30></a><span class=w>      </span><span class=p>]</span>
+<a id=__codelineno-13-31 name=__codelineno-13-31></a><span class=w>    </span><span class=p>}</span>
+<a id=__codelineno-13-32 name=__codelineno-13-32></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-13-33 name=__codelineno-13-33></a><span class=w>  </span><span class=nt>&quot;completeScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-13-34 name=__codelineno-13-34></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-13-35 name=__codelineno-13-35></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-13-36 name=__codelineno-13-36></a><span class=w>  </span><span class=nt>&quot;abortScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-13-37 name=__codelineno-13-37></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-13-38 name=__codelineno-13-38></a><span class=w>  </span><span class=p>]</span>
+<a id=__codelineno-13-39 name=__codelineno-13-39></a><span class=p>}</span>
+</code></pre></div></td></tr></table></div> </div> <div class=tabbed-block> <p><img alt="Tutorial - Template Visual Editor" class="center embedded md" src=../../assets/images/tutorial-template-form.png></p> </div> </div> </div> <p>We’ve successfully created a page template named <strong><code>pageWithFooter</code></strong> that incorporates an HTML footer. This template has been applied to both survey pages, ensuring consistency across the survey. You also have the flexibility to override template properties on specific pages as needed.</p> <p>When previewed in the Survey Builder, the HTML footer will be consistently visible on both pages where the <strong><code>pageWithFooter</code></strong> template is applied.</p> <h2 id=adding-input-identifiers>Adding Input Identifiers</h2> <p>As we finalize the survey’s appearance, it’s crucial to ensure its functionality. SurveyCompo records respondents’ inputs and selections for each survey item. For example, if a respondent enters "18" for the age input, the expected data format would be <code>{input: 'age', value: 18}</code>. Therefore, assigning identifiers to each input in the survey is essential.</p> <p>These identifiers are also used for referencing inputs in conditional logic, validation rules, and data piping. We’ve already introduced the <strong><code>id</code></strong> key to the "Age" input on the survey’s first page to implement disqualification logic. The <strong><code>id</code></strong> ensures that the input’s values are accurately captured upon survey completion. Without this identifier, determining which input corresponds to which value would be challenging.</p> <div class="tabbed-set tabbed-alternate" data-tabs=13:2><input checked=checked id=__tabbed_13_1 name=__tabbed_13 type=radio><input id=__tabbed_13_2 name=__tabbed_13 type=radio><div class=tabbed-labels><label for=__tabbed_13_1>JSON Source</label><label for=__tabbed_13_2>Visual Editor</label></div> <div class=tabbed-content> <div class=tabbed-block> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-14-1> 1</a></span>
+<span class=normal><a href=#__codelineno-14-2> 2</a></span>
+<span class=normal><a href=#__codelineno-14-3> 3</a></span>
+<span class=normal><a href=#__codelineno-14-4> 4</a></span>
+<span class=normal><a href=#__codelineno-14-5> 5</a></span>
+<span class=normal><a href=#__codelineno-14-6> 6</a></span>
+<span class=normal><a href=#__codelineno-14-7> 7</a></span>
+<span class=normal><a href=#__codelineno-14-8> 8</a></span>
+<span class=normal><a href=#__codelineno-14-9> 9</a></span>
+<span class=normal><a href=#__codelineno-14-10>10</a></span>
+<span class=normal><a href=#__codelineno-14-11>11</a></span>
+<span class=normal><a href=#__codelineno-14-12>12</a></span>
+<span class=normal><a href=#__codelineno-14-13>13</a></span>
+<span class=normal><a href=#__codelineno-14-14>14</a></span>
+<span class=normal><a href=#__codelineno-14-15>15</a></span>
+<span class=normal><a href=#__codelineno-14-16>16</a></span>
+<span class=normal><a href=#__codelineno-14-17>17</a></span>
+<span class=normal><a href=#__codelineno-14-18>18</a></span>
+<span class=normal><a href=#__codelineno-14-19>19</a></span>
+<span class=normal><a href=#__codelineno-14-20>20</a></span>
+<span class=normal><a href=#__codelineno-14-21>21</a></span>
+<span class=normal><a href=#__codelineno-14-22>22</a></span>
+<span class=normal><a href=#__codelineno-14-23>23</a></span>
+<span class=normal><a href=#__codelineno-14-24>24</a></span>
+<span class=normal><a href=#__codelineno-14-25>25</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-14-1 name=__codelineno-14-1></a><span class=p>{</span>
+<a id=__codelineno-14-2 name=__codelineno-14-2></a><span class=w>  </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction Survey&quot;</span><span class=p>,</span>
+<a id=__codelineno-14-3 name=__codelineno-14-3></a><span class=w>  </span><span class=nt>&quot;startScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-14-4 name=__codelineno-14-4></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-14-5 name=__codelineno-14-5></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-14-6 name=__codelineno-14-6></a><span class=w>  </span><span class=nt>&quot;pages&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-14-7 name=__codelineno-14-7></a><span class=w>    </span><span class=p>{</span>
+<a id=__codelineno-14-8 name=__codelineno-14-8></a><span class=w>      </span><span class=nt>&quot;header&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;About You&quot;</span><span class=p>,</span>
+<a id=__codelineno-14-9 name=__codelineno-14-9></a><span class=w>      </span><span class=nt>&quot;blocks&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-14-10 name=__codelineno-14-10></a><span class=w>        </span><span class=p>{</span>
+<a id=__codelineno-14-11 name=__codelineno-14-11></a><span class=w>          </span><span class=nt>&quot;title&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Please enter your age&quot;</span><span class=p>,</span>
+<a id=__codelineno-14-12 name=__codelineno-14-12></a><span class=w>          </span><span class=nt>&quot;inputs&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-14-13 name=__codelineno-14-13></a><span class=w>            </span><span class=p>{</span>
+<a id=__codelineno-14-14 name=__codelineno-14-14></a><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;TEXT&quot;</span><span class=p>,</span>
+<a id=__codelineno-14-15 name=__codelineno-14-15></a><span class=hll><span class=w>              </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;age&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-14-16 name=__codelineno-14-16></a><span class=w>              </span><span class=nt>&quot;textInputType&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;NUMBER&quot;</span>
+<a id=__codelineno-14-17 name=__codelineno-14-17></a><span class=w>            </span><span class=p>}</span>
+<a id=__codelineno-14-18 name=__codelineno-14-18></a><span class=w>          </span><span class=p>]</span>
+<a id=__codelineno-14-19 name=__codelineno-14-19></a><span class=w>        </span><span class=p>}</span>
+<a id=__codelineno-14-20 name=__codelineno-14-20></a><span class=w>        </span><span class=cm>/* ... other blocks ... */</span>
+<a id=__codelineno-14-21 name=__codelineno-14-21></a><span class=w>      </span><span class=p>]</span>
+<a id=__codelineno-14-22 name=__codelineno-14-22></a><span class=w>    </span><span class=p>}</span>
+<a id=__codelineno-14-23 name=__codelineno-14-23></a><span class=w>    </span><span class=cm>/* ... other pages ... */</span>
+<a id=__codelineno-14-24 name=__codelineno-14-24></a><span class=w>  </span><span class=p>]</span>
+<a id=__codelineno-14-25 name=__codelineno-14-25></a><span class=p>}</span>
+</code></pre></div></td></tr></table></div> </div> <div class=tabbed-block> <p><img alt="Tutorial - Input Identifiers Visual Editor" class="center embedded md" src=../../assets/images/tutorial-identifiers-form.png></p> </div> </div> </div> <p>SurveyCompo supports several optional input identifiers:</p> <ul> <li><strong><code>id</code></strong>: An optional identifier for the input, used for referencing in conditional logic, validation rules, and piping.</li> <li><strong><code>name</code></strong>: A descriptive name for the input, primarily for human reference. If <strong><code>id</code></strong> is not provided, <strong><code>name</code></strong> is used to generate an <strong><code>id</code></strong> value.</li> <li><strong><code>customRef</code></strong>: An optional custom reference for the input, useful for referencing in external systems.</li> </ul> <p>Let’s proceed by adding identifiers to the inputs in our survey:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-15-1> 1</a></span>
+<span class=normal><a href=#__codelineno-15-2> 2</a></span>
+<span class=normal><a href=#__codelineno-15-3> 3</a></span>
+<span class=normal><a href=#__codelineno-15-4> 4</a></span>
+<span class=normal><a href=#__codelineno-15-5> 5</a></span>
+<span class=normal><a href=#__codelineno-15-6> 6</a></span>
+<span class=normal><a href=#__codelineno-15-7> 7</a></span>
+<span class=normal><a href=#__codelineno-15-8> 8</a></span>
+<span class=normal><a href=#__codelineno-15-9> 9</a></span>
+<span class=normal><a href=#__codelineno-15-10>10</a></span>
+<span class=normal><a href=#__codelineno-15-11>11</a></span>
+<span class=normal><a href=#__codelineno-15-12>12</a></span>
+<span class=normal><a href=#__codelineno-15-13>13</a></span>
+<span class=normal><a href=#__codelineno-15-14>14</a></span>
+<span class=normal><a href=#__codelineno-15-15>15</a></span>
+<span class=normal><a href=#__codelineno-15-16>16</a></span>
+<span class=normal><a href=#__codelineno-15-17>17</a></span>
+<span class=normal><a href=#__codelineno-15-18>18</a></span>
+<span class=normal><a href=#__codelineno-15-19>19</a></span>
+<span class=normal><a href=#__codelineno-15-20>20</a></span>
+<span class=normal><a href=#__codelineno-15-21>21</a></span>
+<span class=normal><a href=#__codelineno-15-22>22</a></span>
+<span class=normal><a href=#__codelineno-15-23>23</a></span>
+<span class=normal><a href=#__codelineno-15-24>24</a></span>
+<span class=normal><a href=#__codelineno-15-25>25</a></span>
+<span class=normal><a href=#__codelineno-15-26>26</a></span>
+<span class=normal><a href=#__codelineno-15-27>27</a></span>
+<span class=normal><a href=#__codelineno-15-28>28</a></span>
+<span class=normal><a href=#__codelineno-15-29>29</a></span>
+<span class=normal><a href=#__codelineno-15-30>30</a></span>
+<span class=normal><a href=#__codelineno-15-31>31</a></span>
+<span class=normal><a href=#__codelineno-15-32>32</a></span>
+<span class=normal><a href=#__codelineno-15-33>33</a></span>
+<span class=normal><a href=#__codelineno-15-34>34</a></span>
+<span class=normal><a href=#__codelineno-15-35>35</a></span>
+<span class=normal><a href=#__codelineno-15-36>36</a></span>
+<span class=normal><a href=#__codelineno-15-37>37</a></span>
+<span class=normal><a href=#__codelineno-15-38>38</a></span>
+<span class=normal><a href=#__codelineno-15-39>39</a></span>
+<span class=normal><a href=#__codelineno-15-40>40</a></span>
+<span class=normal><a href=#__codelineno-15-41>41</a></span>
+<span class=normal><a href=#__codelineno-15-42>42</a></span>
+<span class=normal><a href=#__codelineno-15-43>43</a></span>
+<span class=normal><a href=#__codelineno-15-44>44</a></span>
+<span class=normal><a href=#__codelineno-15-45>45</a></span>
+<span class=normal><a href=#__codelineno-15-46>46</a></span>
+<span class=normal><a href=#__codelineno-15-47>47</a></span>
+<span class=normal><a href=#__codelineno-15-48>48</a></span>
+<span class=normal><a href=#__codelineno-15-49>49</a></span>
+<span class=normal><a href=#__codelineno-15-50>50</a></span>
+<span class=normal><a href=#__codelineno-15-51>51</a></span>
+<span class=normal><a href=#__codelineno-15-52>52</a></span>
+<span class=normal><a href=#__codelineno-15-53>53</a></span>
+<span class=normal><a href=#__codelineno-15-54>54</a></span>
+<span class=normal><a href=#__codelineno-15-55>55</a></span>
+<span class=normal><a href=#__codelineno-15-56>56</a></span>
+<span class=normal><a href=#__codelineno-15-57>57</a></span>
+<span class=normal><a href=#__codelineno-15-58>58</a></span>
+<span class=normal><a href=#__codelineno-15-59>59</a></span>
+<span class=normal><a href=#__codelineno-15-60>60</a></span>
+<span class=normal><a href=#__codelineno-15-61>61</a></span>
+<span class=normal><a href=#__codelineno-15-62>62</a></span>
+<span class=normal><a href=#__codelineno-15-63>63</a></span>
+<span class=normal><a href=#__codelineno-15-64>64</a></span>
+<span class=normal><a href=#__codelineno-15-65>65</a></span>
+<span class=normal><a href=#__codelineno-15-66>66</a></span>
+<span class=normal><a href=#__codelineno-15-67>67</a></span>
+<span class=normal><a href=#__codelineno-15-68>68</a></span>
+<span class=normal><a href=#__codelineno-15-69>69</a></span>
+<span class=normal><a href=#__codelineno-15-70>70</a></span>
+<span class=normal><a href=#__codelineno-15-71>71</a></span>
+<span class=normal><a href=#__codelineno-15-72>72</a></span>
+<span class=normal><a href=#__codelineno-15-73>73</a></span>
+<span class=normal><a href=#__codelineno-15-74>74</a></span>
+<span class=normal><a href=#__codelineno-15-75>75</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-15-1 name=__codelineno-15-1></a><span class=p>{</span>
+<a id=__codelineno-15-2 name=__codelineno-15-2></a><span class=w>  </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Product Satisfaction Survey&quot;</span><span class=p>,</span>
+<a id=__codelineno-15-3 name=__codelineno-15-3></a><span class=w>  </span><span class=nt>&quot;startScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-15-4 name=__codelineno-15-4></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-15-5 name=__codelineno-15-5></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-15-6 name=__codelineno-15-6></a><span class=w>  </span><span class=nt>&quot;pages&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-15-7 name=__codelineno-15-7></a><span class=w>    </span><span class=p>{</span>
+<a id=__codelineno-15-8 name=__codelineno-15-8></a><span class=w>      </span><span class=nt>&quot;header&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;About You&quot;</span><span class=p>,</span>
+<a id=__codelineno-15-9 name=__codelineno-15-9></a><span class=w>      </span><span class=nt>&quot;blocks&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-15-10 name=__codelineno-15-10></a><span class=w>        </span><span class=p>{</span>
+<a id=__codelineno-15-11 name=__codelineno-15-11></a><span class=w>          </span><span class=nt>&quot;title&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Please enter your age&quot;</span><span class=p>,</span>
+<a id=__codelineno-15-12 name=__codelineno-15-12></a><span class=w>          </span><span class=nt>&quot;inputs&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-15-13 name=__codelineno-15-13></a><span class=w>            </span><span class=p>{</span>
+<a id=__codelineno-15-14 name=__codelineno-15-14></a><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;TEXT&quot;</span><span class=p>,</span>
+<a id=__codelineno-15-15 name=__codelineno-15-15></a><span class=hll><span class=w>              </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;age&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-15-16 name=__codelineno-15-16></a><span class=w>              </span><span class=nt>&quot;textInputType&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;NUMBER&quot;</span>
+<a id=__codelineno-15-17 name=__codelineno-15-17></a><span class=w>            </span><span class=p>}</span>
+<a id=__codelineno-15-18 name=__codelineno-15-18></a><span class=w>          </span><span class=p>]</span>
+<a id=__codelineno-15-19 name=__codelineno-15-19></a><span class=w>        </span><span class=p>},</span>
+<a id=__codelineno-15-20 name=__codelineno-15-20></a><span class=w>        </span><span class=p>{</span>
+<a id=__codelineno-15-21 name=__codelineno-15-21></a><span class=w>          </span><span class=nt>&quot;title&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;What is your preferred method of contact?&quot;</span><span class=p>,</span>
+<a id=__codelineno-15-22 name=__codelineno-15-22></a><span class=w>          </span><span class=nt>&quot;inputs&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-15-23 name=__codelineno-15-23></a><span class=w>            </span><span class=p>{</span>
+<a id=__codelineno-15-24 name=__codelineno-15-24></a><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;DROPDOWN&quot;</span><span class=p>,</span>
+<a id=__codelineno-15-25 name=__codelineno-15-25></a><span class=hll><span class=w>              </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;contactMethod&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-15-26 name=__codelineno-15-26></a><span class=w>              </span><span class=nt>&quot;hint&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Please select&quot;</span><span class=p>,</span>
+<a id=__codelineno-15-27 name=__codelineno-15-27></a><span class=w>              </span><span class=nt>&quot;dropdownInputOptions&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span><span class=s2>&quot;Email&quot;</span><span class=p>,</span><span class=w> </span><span class=s2>&quot;Phone&quot;</span><span class=p>,</span><span class=w> </span><span class=s2>&quot;Text Message&quot;</span><span class=p>]</span>
+<a id=__codelineno-15-28 name=__codelineno-15-28></a><span class=w>            </span><span class=p>}</span>
+<a id=__codelineno-15-29 name=__codelineno-15-29></a><span class=w>          </span><span class=p>]</span>
+<a id=__codelineno-15-30 name=__codelineno-15-30></a><span class=w>        </span><span class=p>},</span>
+<a id=__codelineno-15-31 name=__codelineno-15-31></a><span class=w>        </span><span class=p>{</span>
+<a id=__codelineno-15-32 name=__codelineno-15-32></a><span class=w>          </span><span class=nt>&quot;title&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;How did you hear about us?&quot;</span><span class=p>,</span>
+<a id=__codelineno-15-33 name=__codelineno-15-33></a><span class=w>          </span><span class=nt>&quot;inputs&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-15-34 name=__codelineno-15-34></a><span class=w>            </span><span class=p>{</span>
+<a id=__codelineno-15-35 name=__codelineno-15-35></a><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;CHECKBOX&quot;</span><span class=p>,</span>
+<a id=__codelineno-15-36 name=__codelineno-15-36></a><span class=hll><span class=w>              </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;friendFamily&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-15-37 name=__codelineno-15-37></a><span class=w>              </span><span class=nt>&quot;randomWithinGroup&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;something&quot;</span><span class=p>,</span>
+<a id=__codelineno-15-38 name=__codelineno-15-38></a><span class=w>              </span><span class=nt>&quot;label&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Friend/Family&quot;</span>
+<a id=__codelineno-15-39 name=__codelineno-15-39></a><span class=w>            </span><span class=p>},</span>
+<a id=__codelineno-15-40 name=__codelineno-15-40></a><span class=w>            </span><span class=p>{</span>
+<a id=__codelineno-15-41 name=__codelineno-15-41></a><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;CHECKBOX&quot;</span><span class=p>,</span>
+<a id=__codelineno-15-42 name=__codelineno-15-42></a><span class=hll><span class=w>              </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;onlineAd&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-15-43 name=__codelineno-15-43></a><span class=w>              </span><span class=nt>&quot;randomWithinGroup&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;something&quot;</span><span class=p>,</span>
+<a id=__codelineno-15-44 name=__codelineno-15-44></a><span class=w>              </span><span class=nt>&quot;label&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Online Ad&quot;</span>
+<a id=__codelineno-15-45 name=__codelineno-15-45></a><span class=w>            </span><span class=p>},</span>
+<a id=__codelineno-15-46 name=__codelineno-15-46></a><span class=w>            </span><span class=p>{</span>
+<a id=__codelineno-15-47 name=__codelineno-15-47></a><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;CHECKBOX&quot;</span><span class=p>,</span>
+<a id=__codelineno-15-48 name=__codelineno-15-48></a><span class=hll><span class=w>              </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;socialMedia&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-15-49 name=__codelineno-15-49></a><span class=w>              </span><span class=nt>&quot;randomWithinGroup&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;something&quot;</span><span class=p>,</span>
+<a id=__codelineno-15-50 name=__codelineno-15-50></a><span class=w>              </span><span class=nt>&quot;label&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Social Media&quot;</span>
+<a id=__codelineno-15-51 name=__codelineno-15-51></a><span class=w>            </span><span class=p>},</span>
+<a id=__codelineno-15-52 name=__codelineno-15-52></a><span class=w>            </span><span class=p>{</span>
+<a id=__codelineno-15-53 name=__codelineno-15-53></a><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;CHECKBOX&quot;</span><span class=p>,</span>
+<a id=__codelineno-15-54 name=__codelineno-15-54></a><span class=hll><span class=w>              </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;searchEngine&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-15-55 name=__codelineno-15-55></a><span class=w>              </span><span class=nt>&quot;randomWithinGroup&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;something&quot;</span><span class=p>,</span>
+<a id=__codelineno-15-56 name=__codelineno-15-56></a><span class=w>              </span><span class=nt>&quot;label&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Search Engine&quot;</span>
+<a id=__codelineno-15-57 name=__codelineno-15-57></a><span class=w>            </span><span class=p>},</span>
+<a id=__codelineno-15-58 name=__codelineno-15-58></a><span class=w>            </span><span class=p>{</span>
+<a id=__codelineno-15-59 name=__codelineno-15-59></a><span class=w>              </span><span class=nt>&quot;type&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;CHECKBOX_TEXT&quot;</span><span class=p>,</span>
+<a id=__codelineno-15-60 name=__codelineno-15-60></a><span class=hll><span class=w>              </span><span class=nt>&quot;id&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;others&quot;</span><span class=p>,</span>
+</span><a id=__codelineno-15-61 name=__codelineno-15-61></a><span class=w>              </span><span class=nt>&quot;label&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;Others&quot;</span>
+<a id=__codelineno-15-62 name=__codelineno-15-62></a><span class=w>            </span><span class=p>}</span>
+<a id=__codelineno-15-63 name=__codelineno-15-63></a><span class=w>          </span><span class=p>]</span>
+<a id=__codelineno-15-64 name=__codelineno-15-64></a><span class=w>        </span><span class=p>}</span>
+<a id=__codelineno-15-65 name=__codelineno-15-65></a><span class=w>      </span><span class=p>]</span>
+<a id=__codelineno-15-66 name=__codelineno-15-66></a><span class=w>    </span><span class=p>}</span>
+<a id=__codelineno-15-67 name=__codelineno-15-67></a><span class=w>    </span><span class=cm>/* ... other pages ... */</span>
+<a id=__codelineno-15-68 name=__codelineno-15-68></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-15-69 name=__codelineno-15-69></a><span class=w>  </span><span class=nt>&quot;completeScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-15-70 name=__codelineno-15-70></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-15-71 name=__codelineno-15-71></a><span class=w>  </span><span class=p>],</span>
+<a id=__codelineno-15-72 name=__codelineno-15-72></a><span class=w>  </span><span class=nt>&quot;abortScreens&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span>
+<a id=__codelineno-15-73 name=__codelineno-15-73></a><span class=w>    </span><span class=cm>/* ... */</span>
+<a id=__codelineno-15-74 name=__codelineno-15-74></a><span class=w>  </span><span class=p>]</span>
+<a id=__codelineno-15-75 name=__codelineno-15-75></a><span class=p>}</span>
+</code></pre></div></td></tr></table></div> <p>Identifiers can also be assigned to blocks and pages. These identifiers will be accessible within SurveyCompo events. Events are triggered when participants interact with the survey, providing valuable insights into their behavior and responses. This is also how survey data is collected and analyzed. For more details on survey events, refer to the <a href=/integration/event-and-api/ >Events documentation</a>.</p> <h2 id=whats-next>What's Next?</h2> <p>Congratulations on successfully creating a survey in SurveyCompo using the JSON data model! You’ve learned how to define survey questions, answers, logic, and customization options. Additionally, you’ve explored advanced features such as randomization, disqualification, validation, conditional logic, and HTML text. Mastering these concepts will help you build engaging and interactive surveys that generate valuable insights.</p> <p>Feel free to preview the <a href=https://surveycompo.github.io/examples/examples/tutorial/index.html target=_blank>survey</a> and explore its corresponding <a href=https://github.com/SurveyCompo/examples/tree/main/examples/tutorial target=_blank>source code</a> on GitHub.</p> <p>In the next part of the tutorial, we’ll cover distributing your survey, collecting responses, and analyzing results. We’ll also explore advanced topics including survey events, webhooks, and integrations. Stay tuned for more exciting content!</p> </article> </div> <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script> <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script> </div> <button type=button class="md-top md-icon" data-md-component=top hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg> Back to top </button> </main> <footer class=md-footer> <nav class="md-footer__inner md-grid" aria-label=Footer> <a href=../.. class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction"> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg> </div> <div class=md-footer__title> <span class=md-footer__direction> Previous </span> <div class=md-ellipsis> Introduction </div> </div> </a> <a href=../publishing/ class="md-footer__link md-footer__link--next" aria-label="Next: Sharing A Survey"> <div class=md-footer__title> <span class=md-footer__direction> Next </span> <div class=md-ellipsis> Sharing A Survey </div> </div> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg> </div> </a> </nav> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> &copy; 2024 <a href=https://www.surveycompo.com target=_blank rel=noopener>SurveyCompo</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href=https://www.surveycompo.com/privacy target=_blank rel=noopener>Privacy</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href=https://www.surveycompo.com/terms target=_blank rel=noopener>Terms of Service</a> </div> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"base": "../..", "features": ["navigation.footer", "navigation.top", "toc.integrate", "search.suggest", "search.highlight", "search.share", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script> <script src=../../assets/javascripts/bundle.83f73b43.min.js></script> <script src=https://tag.surveycompo.com/v1.js></script> <script src=../../javascripts/doc.js></script> </body> </html>
